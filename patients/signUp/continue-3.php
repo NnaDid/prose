@@ -180,8 +180,8 @@
                             <option disabled selected>e.g caregiver</option>
                             <option value="caregiver">Caregiver</option>
                             <option value ="self">Self</option> 
+                          </select>  
                         </div>
-                      </select> 
                     </div> 
                    <div class="form-group mb-3">
                         <small class="input_text_label">Relationship with caregiver</small>
@@ -192,8 +192,9 @@
                             <option value ="child">Child</option>
                             <option value ="sibling">Sibling</option>
                             <option value ="parents">Parents</option>
+                          </select>
                         </div>
-                      </select> 
+                      
                     </div> 
                     <div class="form-group">
                         <button class="btn-block btn btn-primary form-control-lg  continue_2"  data-toggle="modal" data-target="#accounModal" type="button">Continue</button>

@@ -189,6 +189,21 @@
 			align-items: center; 
 			color: #7A667B;
 		}
+		.h5_heading_text{
+            font-family: Inter;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 20px;
+            line-height: 28px; 
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #7A667B; 
+            flex: none;
+            order: 0;
+            flex-grow: 0;
+            margin: 32px 0px;
+		}
 		.text_input_label{
 			font-family: Inter;
 			font-style: normal;
@@ -203,6 +218,70 @@
 			flex-grow: 0;
 			margin: 0px 10px;
 		}
+    /* .custom-checkbox .custom-control-label::before {
+        border-radius: 999px; 
+        height: 28px;   
+        width: 28px;
+      } */
+
+      .round {
+        position: relative;
+      /* left:-70px; */
+      }
+
+      .round label {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+      height: 28px;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 28px;
+      }
+
+      .round label:after {
+        border: 2px solid #fff;
+        border-top: none;
+        border-right: none;
+        content: "";
+        height: 6px;
+        left: 7px;
+        opacity: 0;
+        position: absolute;
+        top: 8px;
+        transform: rotate(-45deg);
+        width: 12px;
+      }
+
+      .round input[type="checkbox"] {
+         visibility: hidden;
+      }
+
+      .round input[type="checkbox"]:checked + label{
+            background-color: #8D2D91 !important;
+            border-color:#8D2D91 !important;
+      }
+
+      .round input[type="checkbox"]:checked + label:after {
+        opacity: 1;
+      }
+	  .__LogMissed__holder{
+		  cursor: pointer;
+	  }
+
+
+	  .missed_treatment_reason{
+		background: #FFFFFF; 
+		border: 1px solid #D7D1D7;
+		box-sizing: border-box;
+		border-radius: 15px; 
+		flex: none;
+		order: 1;
+		flex-grow: 0;
+		margin: 0px 0px;
+	  }
 	</style>
 	
 
@@ -329,7 +408,7 @@
 				    <div class="col-12 col-lg-7" style="height:100vh;">
 					    <div class="app-card app-card-basic mx-4 my-4"  style="background: #e5d2e80c !important;">
 							<h1 class="h1">Log Treatment Interruptions</h1>
-							<p class="left_heading-text">Log Treatment Interruptions Here</p>
+							<p class="left_heading-text">Log Treatment Interruptions Here</p>  
 						    <div class="app-card-body mx-auto text-center ">  
 							    <div id="dncalendar-container" class=" app-card app-card-basic shadow-sm px-4 py-4" style="width:45% !important"></div>
 						    </div><!--//app-card-body--> 
@@ -349,21 +428,89 @@
 						    </div><!--//app-card-body--> 
 
                              <div class="col-12 col-lg-8 log_symptom_container" style="display:none;">
-                                <div class="row">
+                                <div class="row log_missed__home">
                                     <div class="col-12 box my-2" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
-                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_missed_chemo" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row __LogMissed__holder" style="border-radius:8px !important;">
+                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_missed_chemo" class="__LogMissed" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-9"> Log Missed Chemotherapy </div>
                                         </div><!--//app-card-->
-                                    </div><!--//col-->
+                                    </div><!--//col--> 
                                     
                                     <div class="col-12 box my-2" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
-                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_missed_radiotherapy" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row __LogMissed__holder" style="border-radius:8px !important;">
+                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_missed_radiotherapy" class="__LogMissed" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-9">Log Missed Radiotherapy</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->  
+
+								     	<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
+                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                                <div class="log_type col-md-9">Missed Radiotherapy</div>
+                                                <div class="log_type col-md-12 mx-4 py-1"><strong>Reason:</strong> I missed the appointment</div>
+                                                <div class="log_type col-md-12 text-right">
+													<button class="btn text-success editRadiotherapyRecord">Edit</button>
+													<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
+												</div>
+                                        </div><!--//app-card-->
+	  									<p>&nbsp;</p>
+								     	<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
+                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                                <div class="log_type col-md-9">Missed Radiotherapy</div> 
+												  <div class="log_type col-md-12 text-right">
+													<button class="btn text-success editRadiotherapyRecord">Edit</button>
+													<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
+												</div>
+                                        </div><!--//app-card-->
+
+
                                 </div> <!-- //row-->
+
+                                <div class="row my-auto mx-auto ChemotherapySection" style="display:none;">
+                                   <h5 class="h5_heading_text">Log Missed Chemotherapy</h5> 
+                                   <p class="log_type"> Click on any of the options below </p>
+                                    <form class="logMissedChemoForm col-12">
+									       <div class="custom-control custom-checkbox d-flex justify-content-start">
+                                                <div class="round mx-4">
+                                                    <input type="checkbox" class="custom-control-input no_treatment give_consent" name ="no_treatment" value="no_treatment" id="checkbox_2" />  
+                                                    <label for="checkbox_2"></label>
+                                                </div>
+                                                <label class="left_heading-text" style=""> No Treatment </label>
+                                            </div> 
+
+                                            <div class="custom-control custom-checkbox d-flex justify-content-start">
+                                                <div class="round mx-4">
+                                                    <input type="checkbox" class="custom-control-input missed_treament give_consent" name ="missed_treament" value="missed_treament" id="checkbox_3" />    
+                                                    <label for="checkbox_3"></label>
+                                                </div>
+                                                <label class="left_heading-text" style="">Missed Treatment</label>
+                                            </div> 
+											<div class="next__Missed"></div>
+                                    </form>
+                                </div><!--//logMissedChemoForm Cotainer-->
+
+                                <div class="row my-auto mx-auto radiotherapySection" style="display:none;">
+                                   <h5 class="h5_heading_text">Log Missed Radiotherapy</h5> 
+                                   <p class="log_type"> Click on any of the options below </p>
+                                    <form class="logMissedChemoForm col-12">
+									       <div class="custom-control custom-checkbox d-flex justify-content-start">
+                                                <div class="round mx-4">
+                                                    <input type="checkbox" class="custom-control-input no_treatment give_consent radio_consent" name ="no_treatment" value="no_treatment" id="checkbox_4" />  
+                                                    <label for="checkbox_4"></label>
+                                                </div>
+                                                <label class="left_heading-text" style=""> No Treatment </label>
+                                            </div> 
+
+                                            <div class="custom-control custom-checkbox d-flex justify-content-start">
+                                                <div class="round mx-4">
+                                                    <input type="checkbox" class="custom-control-input missed_treament give_consent radio_consent" name ="missed_treament" value="missed_treament" id="checkbox_5" />    
+                                                    <label for="checkbox_5"></label>
+                                                </div>
+                                                <label class="left_heading-text" style="">Missed Treatment</label>
+                                            </div> 
+											<div class="next__Radio__Missed"></div>
+                                    </form>
+                                </div><!--//logMissedRadiotherapyForm Cotainer-->
+
                             </div><!--//log_symptom-->
                         </div><!--//app-card--> 
 				    </div><!--//col--> 
@@ -404,6 +551,87 @@
 			$(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);
 
          });
+
+         // __LogMissed__holder  log_missed_chemo  log_missed_radiotherapy  log_missed__home ChemotherapySection
+         $(document).on("click", ".__LogMissed__holder",function(e){
+                let id_section = $(this).find(".__LogMissed").attr("id");
+                if(id_section=="log_missed_chemo"){
+                    $(".log_missed__home").slideDown(2000).hide();
+                    $(".ChemotherapySection").slideUp(2000).show();
+                }else if(id_section=="log_missed_radiotherapy"){
+                    // do sth else here
+					$(".log_missed__home").slideDown(2000).hide();
+					$(".radiotherapySection").slideUp(2000).show();
+                }
+         });
+
+ 		// Handles the selection Options for Chemodtherapy
+		 $(document).on("change", ".give_consent",function(e){
+			let id_section = $(this).attr("id");
+			$("input [type=checkbox]").attr("checked",false);
+			$(this).attr("checked",true);
+			if(id_section=="checkbox_2" && $("#"+id_section).is(":checked")){
+				$(".next__Missed").html(`<div class="text-center my-4">
+											<button type="submit" class="btn btn-primary btn-block text-center">
+													<span> Save </span> 
+													<img src="../assets/img/arrow_.svg" class="mx-2"/> 
+											</button>
+										</div>`);
+			}else if(id_section=="checkbox_3" && $("#"+id_section).is(":checked")){
+				$(".next__Missed").html(`<div class="form-group mb-3 mt-4">
+												<label class="text_input_label" for="tired">Reason for missed treatment</label>
+												<textarea name="missed_treatment_reason" placeholder="Type your reason here:" class="form-control form-control-lg missed_treatment_reason"></textarea>
+											</div> 
+											<div class="text-center my-4">
+												<button type="submit" class="btn btn-primary btn-block text-center">
+														<span> Save </span> 
+														<img src="../assets/img/arrow_.svg" class="mx-2"/> 
+												</button>
+											</div>`);
+			}else{
+				$(".next__Missed").html(``);
+			}
+			
+
+		 });
+
+		 // Handles the selection Options for Radiotherapy
+		 $(document).on("change", ".radio_consent",function(e){
+			let id_section = $(this).attr("id");
+			$("input [type=checkbox]").attr("checked",false);
+			$(this).attr("checked",true);
+			if(id_section=="checkbox_4" && $("#"+id_section).is(":checked")){
+				$(".next__Radio__Missed").html(`<div class="text-center my-4">
+											<button type="submit" class="btn btn-primary btn-block text-center">
+													<span> Save </span> 
+													<img src="../assets/img/arrow_.svg" class="mx-2"/> 
+											</button>
+										</div>`);
+			}else if(id_section=="checkbox_5" && $("#"+id_section).is(":checked")){
+				$(".next__Radio__Missed").html(` <div class="form-group mb-3 mt-4">
+													<label class="text_input_label" for="tired">Reason for missed treatment</label>
+													<textarea name="missed_treatment_reason" placeholder="Type your reason here" class="form-control form-control-lg missed_treatment_reason"></textarea>
+												</div>  
+												<div class="form-group mb-3 mt-4">
+													<label class="text_input_label" for="tired">Change in Treatment Schedule</label>
+													<textarea name="new_treatment_schedule" placeholder="Type here" class="form-control form-control-lg new_treatment_schedule"></textarea>
+												</div> 
+											<div class="text-center my-4">
+												<button type="submit" class="btn btn-primary btn-block text-center">
+														<span> Save </span> 
+														<img src="../assets/img/arrow_.svg" class="mx-2"/> 
+												</button>
+											</div> `);
+			}else{
+				$(".next__Radio__Missed").html(``);
+			}
+			
+
+		 });
+		  
+		 
+
+
 	</script>
 
 		</script>

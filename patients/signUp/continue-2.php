@@ -290,7 +290,7 @@
         $(document).ready(function(){  
           //----------------------------------------------------------------------
             $("#phone").intlTelInput(); 
-            $("#phone").intlTelInput("setNumber", "+234"); 
+            $("#phone").intlTelInput("setNumber", "+23409011122233"); 
             $("#phone").intlTelInput("setCountry", "ng");
             // --------------------------------------------------------------------
             let togleView  = document.querySelectorAll(".togleView"); 
