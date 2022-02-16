@@ -99,13 +99,11 @@
                         <span class="input-group-text"><i class="fa fa-eye-slash togleView"></i></span>
                     </div>
                 </div>
-              </div>
-
-
+              </div> 
 
                 <div class="form-group ___result"> </div>
                 <div class="form-group">
-                  <button class="btn-block btn btn-primary btn-lg signIn" type="submit">Sign in</button>
+                  <button class="btn-block btn btn-primary btn-lg signIn" type="submit">Sign Up</button>
                 </div>  
              </form>
 
