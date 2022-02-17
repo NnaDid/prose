@@ -446,10 +446,15 @@
 									 
                                       <div class="form-group form_drug_input mb-1">
 										<label class="text_input_label" for="drug">Drug</label>
-										<input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
-									 </div>  
+										<div class="input-group">
+											<input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
+											<div class="input-group-append">
+												<span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
+											</div>
+										</div>
+									</div>  
 
-									<div class="mb-3 align-items-right text-right">
+									<div class="mb-3 align-items-right text-right addDrugContainer">
                                         <button type="button" class="btn btn-outline-primary addNewDrug"><span>New Drug</span></button>
 									</div> 
 
@@ -492,8 +497,8 @@
 						console.log(el.id);
 						// check if the Id is the same as the one clicked
 						if(el.id == "log_other_medication"){
-							     $(".log_begin_cotainer").slideUp(2000).hide(2000);
-								 $(".log_OtherMedication_Container").slideUp(2000).show(2000).css("zoom",0.88); 
+							     $(".log_begin_cotainer").hide();
+								 $(".log_OtherMedication_Container").show().css("zoom",0.88); 
 						}
                     },false);
                 });
@@ -503,8 +508,7 @@
 
 
           $(document).on("click",".addNewDrug",function(e){
-             $(this).closest("form").find(".form-group:last").
-                append(`
+             $(".addDrugContainer").prepend(`
                         <div class="form-group form_drug_input mb-1">
                            <label class="text_input_label" for="drug">Drug</label> 
                            <div class="input-group">

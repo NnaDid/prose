@@ -345,14 +345,14 @@
 									<div class="my-2 mx-2">
 										<img src="../assets/img/begin.svg" alt="info"/>
 									</div><!--//icon-holder-->
-									<br/>
+									<br/>              
 									<a href="#start">Click on a day to begin</a>
 								</div>
 						    </div><!--//app-card-body--> 
 
 							<div class="col-12 col-md-6 col-lg-8 log_symptom_container" style="display:none;margin-bottom:100px;">
 								<form class="py-4 my-4">   
-									<h5 class="auth-heading text-center mb-4 left_heading-text">Log Symptom</h5>					
+									<h5 class="auth-heading text-center mb-4 left_heading-text">Log Side Effects</h5>					
 									<label style="font-size:20px;">No symptoms have been logged today. Log them below</label>      
 									<div class="form-group mb-3">
 										<label class="text_input_label" for="tired">Feeling Week or Tired</label>
@@ -474,7 +474,7 @@
 									</div>    												
 									<div class="text-center">
 										<button type="submit" class="btn btn-primary mx-auto d-flex justify-content-between align-items-center">
-											    <span>Log Symptom </span> 
+											    <span>Log Side Effects </span> 
 											    <img src="../assets/img/arrow_.svg"/> 
 										</button>
 									</div>
@@ -516,8 +516,8 @@
 		.on("changeDate", function(e) {
 			console.log(e.date);
 			// log_begin_cotainer  log_symptom_container
-			$(".log_begin_cotainer").slideUp(2000).hide();
-			$(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);
+			$(".log_begin_cotainer").hide();
+			$(".log_symptom_container").show().css("zoom",0.88);
 
          });
 	</script>

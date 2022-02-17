@@ -446,24 +446,33 @@
                                         </div><!--//app-card-->
                                     </div><!--//col-->  
 
-								     	<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
-                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                                <div class="log_type col-md-9">Missed Radiotherapy</div>
+
+	  						<!--=================================== THE LOGGED ITEMS ===================================================== /-->
+
+							  <!-- REMOVE DISAPLY:none to display -->
+								     	<!-- <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;"> -->
+                                              <!-- <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div> -->
+											  <!--//icon-holder-->
+                                                <!-- <div class="log_type col-md-9">Missed Radiotherapy</div>
                                                 <div class="log_type col-md-12 mx-4 py-1"><strong>Reason:</strong> I missed the appointment</div>
                                                 <div class="log_type col-md-12 text-right">
 													<button class="btn text-success editRadiotherapyRecord">Edit</button>
 													<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
 												</div>
-                                        </div><!--//app-card-->
-	  									<p>&nbsp;</p>
-								     	<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
-                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        </div>   -->
+										<!--//app-card-->
+	  									<!-- <p>&nbsp;</p> -->
+								     	<!-- <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;"> -->
+                                                <!-- <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div>
+												//icon-holder
                                                 <div class="log_type col-md-9">Missed Radiotherapy</div> 
 												  <div class="log_type col-md-12 text-right">
 													<button class="btn text-success editRadiotherapyRecord">Edit</button>
 													<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
 												</div>
-                                        </div><!--//app-card-->
+                                        </div> -->
+										<!--//app-card-->
+							<!-- =================================== THE LOGGED ITEMS ===================================================== /- -->
 
 
                                 </div> <!-- //row-->
@@ -550,8 +559,8 @@
 		.on("changeDate", function(e) {
 			console.log(e.date);
 			// log_begin_cotainer  log_symptom_container
-			$(".log_begin_cotainer").slideUp(2000).hide();
-			$(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);
+			$(".log_begin_cotainer").hide();
+			$(".log_symptom_container").show().css("zoom",0.88);
 
          });
 
@@ -559,12 +568,12 @@
          $(document).on("click", ".__LogMissed__holder",function(e){
                 let id_section = $(this).find(".__LogMissed").attr("id");
                 if(id_section=="log_missed_chemo"){
-                    $(".log_missed__home").slideDown(2000).hide();
-                    $(".ChemotherapySection").slideUp(2000).show();
+                    $(".log_missed__home").hide();
+                    $(".ChemotherapySection").show();
                 }else if(id_section=="log_missed_radiotherapy"){
                     // do sth else here
-					$(".log_missed__home").slideDown(2000).hide();
-					$(".radiotherapySection").slideUp(2000).show();
+					$(".log_missed__home").hide();
+					$(".radiotherapySection").show();
                 }
          });
 

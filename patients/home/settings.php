@@ -149,9 +149,9 @@
           border: 0;
           border-radius: 5px;
           height: 34px;
-          background: url('../assets/img/Forward.png') no-repeat right #ddd;
+          background: url('../assets/img/Forward.png') no-repeat right #fff !important;
           -webkit-appearance: none;
-          background-position-x: 333px;
+          background-position-x: 300px;
         }
 		.activities{
 			font-family: Inter;
@@ -267,6 +267,21 @@
 			margin-top:150px;
 		}
 
+		.reminder_heading{
+			font-family: Inter;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 28px; 
+			display: flex;
+			align-items: center;
+			text-align: center; 
+			color: #7A667B;  
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: 36px 0px;
+		}
 		/* Alert Messages */
 		.danger_message{
 			display: flex; 
@@ -334,13 +349,44 @@
 		.close_btn{ 
 			cursor: pointer;
 		}
+
+		.btnNewReminder{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			padding: 8px; 
+			width: 180px;
+			height: 40px;  
+			background: #DDDEFF; 
+			box-shadow: -6px 14px 154px 26px rgba(141, 45, 145, 0.05);
+			border-radius: 20px; 
+			border: 0px; 
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: 20px 0px;
+		}
+		.log_type{
+			font-family: Inter;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 14px;
+			line-height: 24px; 
+			display: flex;
+			align-items: center; 
+			color: #2A2F9E; flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: 4px 0px;
+		}
 	</style>
 	
 
 </head> 
 
 <body class="app"> 
-	<div class="success_message m_alert" style="display:non">
+	<div class="success_message m_alert" style="display:non;">
 		<img src="../assets/img/success_message.svg" alt="info"/>
 		<div class="msg mx-1">
 			<h6>Success!</h6>
@@ -349,7 +395,7 @@
 		<div class="close_btn"><i class="fa fa-times"></i></div>
 	</div>  
 
-	<div class="danger_message m_alert" style="display:non">
+	<div class="danger_message m_alert" style="display:non;">
 		<img src="../assets/img/error_message.svg" alt="info"/>
 		<div class="errmsg mx-1">
 			<h6>Something went wrong</h6>
@@ -576,12 +622,87 @@
 
 							<div class="col-12 col-md-5 col-lg-8 reminder_Container" style="display:none;margin-bottom:100px;">
                                     
-								<form class="py-4 my-4 log_chemo">   
-									<h5 class="auth-heading text-center mb-4 left_heading-text"><a href="#start">Set Reminder to Log Symptoms</a></h5> 
+								<form class="py-4 my-4 reminderForm">   
+									<h5 class="text-center mb-4 reminder_heading">Set Reminder to Log Symptoms</h5> 
                                       <div class="form-group form_drug_input mb-1">
-										<label class="text_input_label" for="drug">Time</label>
-										<input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
+										<label class="text_input_label" for="time">Time</label>  
+												<select name="time" class="form-control form-control-lg time" id="time">
+													<option disabled selected>eg. 4:30pm</option>
+													<option value="00:00">12.00 AM</option>
+													<option value="00:30">12.30 AM</option>
+													<option value="01:00">01.00 AM</option>
+													<option value="01:30">01.30 AM</option>
+													<option value="02:00">02.00 AM</option>
+													<option value="02:30">02.30 AM</option>
+													<option value="03:00">03.00 AM</option>
+													<option value="03:30">03.30 AM</option>
+													<option value="04:00">04.00 AM</option>
+													<option value="04:30">04.30 AM</option>
+													<option value="05:00">05.00 AM</option>
+													<option value="05:30">05.30 AM</option>
+													<option value="06:00">06.00 AM</option>
+													<option value="06:30">06.30 AM</option>
+													<option value="07:00">07.00 AM</option>
+													<option value="07:30">07.30 AM</option>
+													<option value="08:00">08.00 AM</option>
+													<option value="08:30">08.30 AM</option>
+													<option value="09:00">09.00 AM</option>
+													<option value="09:30">09.30 AM</option>
+													<option value="10:00">10.00 AM</option>
+													<option value="10:30">10.30 AM</option>
+													<option value="11:00">11.00 AM</option>
+													<option value="11:30">11.30 AM</option>
+													<option value="12:00">12.00 PM</option>
+													<option value="12:30">12.30 PM</option>
+													<option value="13:00">01.00 PM</option>
+													<option value="13:30">01.30 PM</option>
+													<option value="14:00">02.00 PM</option>
+													<option value="14:30">02.30 PM</option>
+													<option value="15:00">03.00 PM</option>
+													<option value="15:30">03.30 PM</option>
+													<option value="16:00">04.00 PM</option>
+													<option value="16:30">04.30 PM</option>
+													<option value="17:00">05.00 PM</option>
+													<option value="17:30">05.30 PM</option>
+													<option value="18:00">06.00 PM</option>
+													<option value="18:30">06.30 PM</option>
+													<option value="19:00">07.00 PM</option>
+													<option value="19:30">07.30 PM</option>
+													<option value="20:00">08.00 PM</option>
+													<option value="20:30">08.30 PM</option>
+													<option value="21:00">09.00 PM</option>
+													<option value="21:30">09.30 PM</option>
+													<option value="22:00">10.00 PM</option>
+													<option value="22:30">10.30 PM</option>
+													<option value="23:00">11.00 PM</option>
+													<option value="23:30">11.30 PM</option>
+												</select> 
 									 </div>   
+									 <div class="text-center my-4">
+										<button type="submit" class="btn btn-primary btn-block text-center setReminderBtn">
+											    <span>Set Reminder</span> 
+											    <img src="../assets/img/arrow_.svg" class="mx-2"/> 
+										</button>
+									</div>
+								</form><!--//auth-form-->   
+   
+
+
+								<form class="py-4 my-4 reminderForm">   
+									<h5 class="text-center mb-4 reminder_heading">Your Reminder(s)</h5> 
+									<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
+                                        <div class="py-1 col-md-3"> <img src="../../patients/assets/img/reminder_calendar.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                            <div class="log_type col-md-9">Log Medication</div> 
+												<div class="log_type col-md-12 text-right">
+														<button class="btn text-success editRadiotherapyRecord">Edit</button>
+														<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
+												</div>
+                                    </div><!--//app-card-->  
+									 <div class="text-center my-4">
+										<button type="submit" class="btnNewReminder text-center setNewReminderBtn">
+											    <span>Set New Reminder</span>  
+										</button>
+									</div>
 								</form><!--//auth-form-->   
    
 							</div><!--//auth-main-col-->
