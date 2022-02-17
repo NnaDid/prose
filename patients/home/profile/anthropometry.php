@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Prose | Patient - Treatment</title>
+    <title>Prose | anthropometry</title>
     
     <!-- Meta mc-calendar.min.js-->
     <meta charset="utf-8">
@@ -10,25 +10,26 @@
     
     <meta name="description" content="PROSE">
     <meta name="author" content="Prose Care">    
-	<link rel="shortcut icon" href="../../patients/assets/img/logo.png"> 
+	<link rel="shortcut icon" href="../../../patients/assets/img/logo.png"> 
     
     <!-- FontAwesome JS-->
-    <script defer src="assets/plugins/fontawesome/js/all.min.js"></script>
+    <script defer src="../../assets/plugins/fontawesome/js/all.min.js"></script>
     
     <!-- App CSS -->  
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-    <link id="theme-style" rel="stylesheet" href="assets/css/portal.css"> 
-    <link id="theme-style" rel="stylesheet" href="../assets/css/custom.css">
+    <link id="theme-style" rel="stylesheet" href="../assets/css/portal.css"> 
+    <link id="theme-style" rel="stylesheet" href="../../assets/css/custom.css">
 
-	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
+	<link href="../../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css" />
+
 	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
 	
 	<!-- Page Specific JS -->
-	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
+	<link id="theme-style" rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
 	<style>
         .removeDrugItem{
             cursor:pointer;
@@ -297,7 +298,7 @@
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
+							<img src="../assets/images/user.png" alt="user profile"></a>
 				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
 								<li><a class="dropdown-item" href="account.html">Profile</a></li>
 								<li><a class="dropdown-item" href="settings.html">Settings</a></li>
@@ -322,7 +323,7 @@
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding mb-4 text-center">
 		            <a class="app-logo py-4" href="index.php">
-						<img class="logo-icon me-2" src="../../patients/assets/img/logo.svg" alt="logo"  style="width: 100%; height: 100%;"/></a>
+						<img class="logo-icon me-2" src="../../../patients/assets/img/logo.svg" alt="logo"  style="width: 100%; height: 100%;"/></a>
 		        </div><!--//app-branding-->  
 		        
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
@@ -331,7 +332,7 @@
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link d-flex justify-content-start align-items-center" href="index.php">
 						        <span class="">
-								   <img class="logo-icon" src="../assets/img/home.svg" alt="logo"  style="width: 100%; height: 100%;"/> 
+								   <img class="logo-icon" src="../../assets/img/home.svg" alt="logo"  style="width: 100%; height: 100%;"/> 
 								</span>
 		                         <span class="nav-link-text w-60 mx-2">Home</span>
 					        </a><!--//nav-link-->
@@ -340,7 +341,7 @@
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link d-flex justify-content-start align-items-center"href="side-effect.php">
 						        <span class=""> 
-									<img class="logo-icon" src="../assets/img/side-effects.svg" alt="logo"  style="width: 100%; height: 100%;"/>
+									<img class="logo-icon" src="../../assets/img/side-effects.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
 		                         <span class="nav-link-text  w-60 mx-2">Side Effects</span>
 					        </a><!--//nav-link-->
@@ -349,7 +350,7 @@
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link d-flex justify-content-start align-items-center" href="treatment.php">
 						        <span class=""> 
-									<img class="logo-icon" src="../assets/img/treatment.svg" alt="logo"  style="width: 100%; height: 100%;"/>
+									<img class="logo-icon" src="../../assets/img/treatment.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
 		                         <span class="nav-link-text  w-60 mx-2">Treatment</span>
 					        </a><!--//nav-link-->
@@ -359,7 +360,7 @@
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link d-flex justify-content-start align-items-center"href="resources.php">
 						        <span class=""> 
-									<img class="logo-icon" src="../assets/img/resources.svg" alt="logo"  style="width: 100%; height: 100%;"/>
+									<img class="logo-icon" src="../../assets/img/resources.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
 		                         <span class="nav-link-text  w-60 mx-2">Resources</span>
 					        </a><!--//nav-link-->
@@ -369,7 +370,7 @@
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 					        <a class="nav-link active d-flex justify-content-start align-items-center"href="profile.php">
 						        <span class=""> 
-									<img class="logo-icon" src="../assets/img/profile.svg" alt="profile"  style="width: 100%; height: 100%;"/>
+									<img class="logo-icon" src="../../assets/img/profile.svg" alt="profile"  style="width: 100%; height: 100%;"/>
 								 </span>
 		                         <span class="nav-link-text  w-60 mx-2">Profile</span>
 					        </a><!--//nav-link-->
@@ -378,7 +379,7 @@
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
 							<a class="nav-link d-flex justify-content-start align-items-center"href="settings.php">
 						        <span class=""> 
-									<img class="logo-icon" src="../assets/img/settings.svg" alt="logo"  style="width: 100%; height: 100%;"/>
+									<img class="logo-icon" src="../../assets/img/settings.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
 		                         <span class="nav-link-text  w-60 mx-2">Settings</span>
 					        </a><!--//nav-link-->
@@ -404,21 +405,21 @@
                                 <div class="col-12 col-lg-4" style="">
                                     <div class="col-md-12 box" >
                                         <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2" style="border-radius:10px !important;">
-                                                <img src="../../patients/assets/img/user.svg" id="bio" class="profileItem ml-3" style="height:60px; width:60px" />  <!--//icon-holder-->
+                                                <img src="../../../patients/assets/img/user.svg" id="bio" class="profileItem ml-3" style="height:60px; width:60px" />  <!--//icon-holder-->
                                                 <div class="log_type mx-2"> Bio </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-md-12 box">
                                         <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2" style="border-radius:10px !important;">
-                                                 <img src="../../patients/assets/img/user.svg" id="disease_characteristics" class="profileItem  ml-3" style="height:60px; width:60px"/> <!--//icon-holder-->
+                                                 <img src="../../../patients/assets/img/user.svg" id="disease_characteristics" class="profileItem  ml-3" style="height:60px; width:60px"/> <!--//icon-holder-->
                                                 <div class="log_type mx-2">Disease Characteristics</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-md-12 box">
                                         <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm py-2 activeTab" style="border-radius:10px !important;">
-                                                <img src="../../patients/assets/img/user.svg" id="anthropy" class="profileItem  ml-3"  style="height:60px; width:60px" /> <!--//icon-holder-->
+                                                <img src="../../../patients/assets/img/user.svg" id="anthropy" class="profileItem  ml-3"  style="height:60px; width:60px" /> <!--//icon-holder-->
                                                 <div class="log_type mx-2 activeTab"> Anthropometry </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->

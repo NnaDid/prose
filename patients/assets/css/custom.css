@@ -44,10 +44,11 @@
     color: #8D2D91 !important;
   }
 
-  .app{
-    background: #eacfed83 !important;
+  .app{ 
+    background: #f5d5f848 !important;
   }
-  .nav-link.active,.topBase,.topBase h3{
+  
+  nav-link.active,.topBase,.topBase h3{
     background: #8D2D91 !important;
     color:#fff !important;
     font-weight: 600 !important;

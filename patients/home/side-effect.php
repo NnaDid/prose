@@ -231,15 +231,15 @@
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
 							<img src="assets/images/user.png" alt="user profile"></a>
 				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.html">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.html">Settings</a></li>
+								<li><a class="dropdown-item" href="./profile">Profile</a></li>
+								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="login.html">Log Out</a></li>
 							</ul>
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
-				            <a href="settings.html" title="Settings">Logout </a>
+				            <a href="settings.php" title="Settings">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -299,7 +299,7 @@
 					    
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link d-flex justify-content-start align-items-center"href="profile.php">
+					        <a class="nav-link d-flex justify-content-start align-items-center"href="./profile">
 						        <span class=""> 
 									<img class="logo-icon" src="../assets/img/profile.svg" alt="profile"  style="width: 100%; height: 100%;"/>
 								 </span>
@@ -342,7 +342,7 @@
 					    <div class="app-card app-card-basic d-flex justify-content-center flex-column align-items-center shadow-sm" style="min-height:70vh; overflow-y: scroll;">
 						    <div class="app-card-body px-4 py-2 log_begin_cotainer"> 
 							    <div class="intro mb-4 text-center"> 
-									<div class="app-icon-holder my-2 mx-2">
+									<div class="my-2 mx-2">
 										<img src="../assets/img/begin.svg" alt="info"/>
 									</div><!--//icon-holder-->
 									<br/>

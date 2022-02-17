@@ -378,7 +378,7 @@
 					    
 					    <li class="nav-item">
 					        <!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-					        <a class="nav-link d-flex justify-content-start align-items-center"href="profile.php">
+					        <a class="nav-link d-flex justify-content-start align-items-center"href="./profile">
 						        <span class=""> 
 									<img class="logo-icon" src="../assets/img/profile.svg" alt="profile"  style="width: 100%; height: 100%;"/>
 								 </span>

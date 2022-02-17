@@ -18,14 +18,14 @@
     <!-- App CSS -->  
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
 	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 	<link href="../assets/css/custom.css"    rel="stylesheet" type="text/css" media="all" />
 	<style>
-		.app{
-			background: #eacfed83 !important;
+		.app{ 
+			background: #f5d5f848 !important;
 		}
 		.nav-link.active,.topBase,.topBase h3{
 			background: #8D2D91 !important;

@@ -221,7 +221,7 @@
           <div class="modal-content"> 
             <div class="modal-body text-center">
                 <center>
-                    <form action="../signIn" method="post">
+                    <form action="../home" method="post">
                         <h4 class="mb-1 begin_text my-4">Account Set Up Successfully</h4>
                         <div class="check_container" style="border:4px solid rgb(19, 114, 105); border-radius: 50%; width: 100px; height: 100px;">
                             <img src="../assets/img/check.png" alt="prose_check" style="width: 80px; height: 80px;"/> 
