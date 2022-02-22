@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Prose | HCP ~ Patients</title>
+    <title>Prose | HCP ~ HCP</title>
     
     <!-- Meta mc-calendar.min.js-->
     <meta charset="utf-8">
@@ -301,7 +301,7 @@
 					    </li><!--//nav-item--> 
 					   
 					    <li class="nav-item"> 					        
-					        <a class="nav-link active d-flex justify-content-start align-items-center"href="patients.php">
+					        <a class="nav-link d-flex justify-content-start align-items-center"href="patients.php">
 						        <span class=""> 
 									<img class="logo-icon" src="../assets/img/patients.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
@@ -309,9 +309,8 @@
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
 
-
                         <li class="nav-item"> 					        
-					        <a class="nav-link d-flex justify-content-start align-items-center"href="hcp.php">
+					        <a class="active nav-link d-flex justify-content-start align-items-center"href="hcp.php">
 						        <span class="w-40"> 
 									<img class="logo-icon" src="../assets/img/patients.svg" alt="logo"  style="width: 35px; height: 35px;"/>
 								 </span>
@@ -351,7 +350,7 @@
 			    <div class="row g-4 mb-4"> 
 					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
                             <div class="topHeader d-flex justify-content-between align-items-center">
-                                <h1 class="h1 mx-2">&nbsp;Patients <span><i class="fa fa-users"></i> 32</span></h1>  
+                                <h1 class="h1 mx-2">&nbsp;Health Care Professionals <span><i class="fa fa-users"></i> 32</span></h1>  
                                 <div class="d-flex align-items-center">
                                     <span style="position:relative;left:30px;"><i class="fa fa-search"></i></span>
                                     <input type="text" class="form-control searchInput" placeholder="Search table" value="search table"/> 
@@ -367,7 +366,7 @@
 
                 <div class="app-card app-card-basic mx-4">
                      <div class="table-responsive">
-                     <table class="table table-bordered">
+                            <table class="table table-bordered">
                                 <thead>
                                     <tr>
                                     <th scope="col">SN</th>

@@ -110,12 +110,11 @@
             align-items: center;
             justify-content: center;
             flex-direction: row;
-            width: 100%;
-            height: 75px;
-            background: #fff;  
+            width: 50%;
+            height: 75px;  
             position: fixed;
             bottom: 0;
-            left: 0;  
+            right: 0;  
             padding: 20px;
             background: #400E55;
         }
@@ -138,14 +137,11 @@
             justify-content: center;
             align-items: flex-start;
             padding: 36px; 
-            width: 500px;
+            width: 400px;
             height: 176px;
-            left: 0px;
-            top: 0px; 
-            background: #FFFFFF; 
-            flex: none;
-            order: 0;
-            flex-grow: 0;
+            left: 0;
+            position:absolute;
+            background: #FFFFFF;  
             margin: 10px 0px;
             border-radius:15px;
         }
@@ -155,17 +151,14 @@
             justify-content: center;
             align-items: flex-start;
             padding: 36px; 
-            width: 500px;
+            width: 400px;
             height: 256px;
-            right: 0px;
-            bottom: 0px; 
+            position:absolute;
+            right: 0px; 
             background: #FFFFFF; 
-            flex: none;
-            order: 0;
-            flex-grow: 0;
             margin: 10px 0px;
-            border-radius:15px;
-            margin-left:50%;
+            border-radius:15px; 
+            margin-top:200px;
 
         }
 
@@ -184,8 +177,25 @@
             flex-grow: 0;
             margin: 4px 0px;
         }
-        p.time span{  margin-left:90%;}
-
+      p.time span{  margin-left:90%;}
+      .message_section{
+        position: fixed;
+        padding: 36px; 
+        width: 425px;
+        min-height: 100vh; 
+        height:100%;
+        overflow-y: scroll;
+      }
+      .msg{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        padding: 16px;  
+        width: 350px;
+        height: 88px; 
+        background: #FFFFFF; 
+        flex: none; 
+      }
 	</style>
 </head> 
 
@@ -232,7 +242,8 @@
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding mb-4 text-center">
 		            <a class="app-logo py-4" href="index.php">
-						<img class="logo-icon me-2" src="../../patients/assets/img/logo.svg" alt="logo"  style="width: 100%; height: 100%;"/></a>
+						<img class="logo-icon me-2" src="../../patients/assets/img/logo.svg" alt="logo"  style="width: 100%; height: 100%;"/>
+                    </a>
 		        </div><!--//app-branding-->  
 		        
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
@@ -252,6 +263,15 @@
 									<img class="logo-icon" src="../assets/img/patients.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
 		                         <span class="nav-link-text mx-3">Patients</span>
+					        </a><!--//nav-link-->
+					    </li><!--//nav-item-->
+					   
+					    <li class="nav-item"> 					        
+					        <a class="nav-link d-flex justify-content-start align-items-center"href="../hcp.php">
+						        <span class=""> 
+									<img class="logo-icon" src="../assets/img/patients.svg" alt="logo"  style="width: 100%; height: 100%;"/>
+								 </span>
+		                         <span class="nav-link-text mx-3">Professionals</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
 					    
@@ -285,58 +305,176 @@
 		    <div class="container-xl"> 
   				<!--  Over lapping cards row-->
 			    <div class="row g-4 mb-4"> 
-					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
+					    <div class="col-lg-5 app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
                             <div class="topHeader d-flex justify-content-between align-items-center">
                                 <h1 class="h1 mx-2">&nbsp;Chat</h1>  
                             </div> 
+
+                            <div class="row">
+                                <div class="col-md-12 message_section">
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                    <div class="msg d-flex justify-content-start align-items-center border-bottom"> 
+                                         <img class="logo-icon me-2" src="assets/images/user.png" alt="user"  style="width: 45px; height: 45px;"/>
+                                         <div class="info">
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <h6 style="margin-bottom:-5px;">Michelle Smith</h6>
+                                                    <i>Yesteday</i>
+                                             </div>
+                                              <div class="top d-flex justify-content-between align-items-center">
+                                                    <span>Lorem ipsum is just ...</span>
+                                                    <span class="btn btn-success" style="background: #58DDC8 !important; border-radius:50%;">2</span>
+                                             </div>
+                                         </div>
+                                    </div> <!-- End of msg / -->
+
+                                </div>   
+                           </div>
 						</div><!--//app-card--> 
+
+					        <div class="col-lg-7 app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">  
+                                <div class="chat_area mx-4">
+
+                                        <div class="senderMsg">
+                                                <h5 class="h5">Study Coordinator</h5>
+                                                <span>Hi There!. What do you need help with?</span>
+                                                <span class="time my-2">Now</span>
+                                        </div>
+
+                                        <div class="receiverMsg">
+                                                <h5 class="h5_2">Jane Doe</h5>
+                                                <span>
+                                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                                                    incididunt ut labore et dolore magna aliqua. Ut enim 
+                                                </span>
+                                                <span class="time my-2">11:59pm Tuesday</span>
+                                        </div>
+
+
+                                        <!--  The Chat Input Field -->
+                                        <div class="chat_input_container">
+                                            <input type="text" class="chatInput" placeholder ="Send Message"/>
+                                            <div class="sendIcons d-flex justify-content-between align-items-center w-20">
+                                                <img src="../assets/img/attach.svg"/> 
+                                                <img src="../assets/img/send.svg"/> 
+                                           </div>
+                                        </div>
+                                    <!--  The Chat Input Field /-->
+
+                                </div> 
 			    </div><!--//row-->
 
 
-                <div class="chat_area mx-4">
-
-                    <div class="senderMsg">
-                            <h5 class="h5">Study Coordinator</h5>
-                            <span>Hi There!. What do you need help with?</span>
-                            <span class="time my-2">Now</span>
-                    </div>
-
-                    <div class="receiverMsg">
-                            <h5 class="h5_2">Jane Doe</h5>
-                            <span>
-                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
-                                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
-                                  nostrud exercitation ullamco laboris nisi ut aliqui
-                            </span>
-                            <span class="time my-2">11:59pm Tuesday</span>
-                    </div>
-                    
-
-                </div>
-
-                <div class="mb-4" role="alert">
-				    <div class="inner">
-					    <div class="app-card-body p-3 p-lg-4">
-							<div class="text-center gx-5 gy-3"> 
-                                 <img src="../assets/img/begin.svg" alt="info"/>
-								<div class="">                                                                                                                                                                                                                                                                                                                       </h6>
-							        <div class="activities">Feel free to send a message below</div>
-							    </div><!--//col-->
-						    </div><!--//row--> 
-					    </div><!--//app-card-body-->
-					    
-				    </div><!--//inner-->
-			    </div><!--//app-card-->
-
-                <!--  The Chat Input Field -->
-                    <div class="chat_input_container">
-                        <input type="text" class="chatInput" placeholder ="Send Message"/>
-                        <div class="sendIcons d-flex justify-content-between align-items-center w-20">
-                           <img src="../assets/img/attach.svg"/> 
-                           <img src="../assets/img/send.svg"/> 
-                        </div>
-                    </div>
-                <!--  The Chat Input Field /-->
 			    
 		    </div><!--//container-fluid-->
 	    </div><!--//app-content-->

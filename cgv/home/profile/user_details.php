@@ -27,7 +27,7 @@
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
+
 	<style>
         .removeDrugItem{
             cursor:pointer;
@@ -364,6 +364,15 @@
 		                         <span class="nav-link-text mx-3">Patients</span>
 					        </a><!--//nav-link-->
 					    </li><!--//nav-item-->
+
+                        <li class="nav-item"> 					        
+					        <a class="nav-link d-flex justify-content-start align-items-center"href="../hcp.php">
+						        <span class="w-40"> 
+									<img class="logo-icon" src="../../assets/img/patients.svg" alt="logo"  style="width: 35px; height: 35px;"/>
+								 </span>
+		                         <span class="nav-link-text w-60 mx-3">Professionals</span>
+					        </a><!--//nav-link-->
+					    </li><!--//nav-item-->
 					    
 					    <li class="nav-item"> 					        
 					        <a class="nav-link d-flex justify-content-start align-items-center"href="../chat.php">
@@ -419,12 +428,21 @@
                                     </div><!--//col-->
                                     
                                     <div class="col-md-12 box">
-                                    <a href="./certificates.php">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2" style="border-radius:10px !important;">
-                                                 <img src="../../../patients/assets/img/user.svg" id="disease_characteristics" class="profileItem  ml-3" style="height:55px; width:55px"/> <!--//icon-holder-->
-                                                <div class="log_type mx-2">Disease Characteristics</div>
-                                        </div><!--//app-card-->
-                                    </a>
+                                        <a href="./disease_xteristics.php">
+                                            <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2" style="border-radius:10px !important;">
+                                                    <img src="../../../patients/assets/img/user.svg" id="disease_characteristics" class="profileItem  ml-3" style="height:55px; width:55px"/> <!--//icon-holder-->
+                                                    <div class="log_type mx-2">Disease Characteristics</div>
+                                            </div><!--//app-card-->
+                                        </a>
+                                    </div><!--//col--> 
+
+                                    <div class="col-md-12 box">
+                                        <a href="./anthropometry.php">
+                                            <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2" style="border-radius:10px !important;">
+                                                    <img src="../../../patients/assets/img/user.svg" id="disease_characteristics" class="profileItem  ml-3" style="height:55px; width:55px"/> <!--//icon-holder-->
+                                                    <div class="log_type mx-2">Anthropometry</div>
+                                            </div><!--//app-card-->
+                                        </a>
                                     </div><!--//col--> 
                                     
                                  </div><!--//col-->
@@ -484,9 +502,14 @@
                                                                         <p class="mx-2 log_type" for="other_name">+234908765423</p>
                                                                     </div>  
                                                                     <!-- ===================================  -->
-                                                                    <div class="form-group mb-2 col-md-6">
+                                                                    <div class="form-group mb-2 col-md-12">
                                                                         <label class="text_input_label" for="address">Address</label>
-                                                                        <p class="mx-2 log_type" for="other_name">No 16 Nupe Road Molue</p>
+                                                                        <p class="mx-2 log_type">No 16 Nupe Road Molue</p>
+                                                                    </div>  
+                                                                    <!-- ===================================  -->
+                                                                    <div class="form-group mb-2 col-md-12">
+                                                                        <label class="text_input_label" for="edu_level">Level of Education</label>
+                                                                        <p class="mx-2 log_type">Degree (B.Sc)</p>
                                                                     </div>  
                                                             </div>
 
