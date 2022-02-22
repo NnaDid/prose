@@ -1,3 +1,0 @@
-runtime: php74
-
-entrypoint: serve patients/index.php

@@ -72,7 +72,7 @@
 
 
               <div class="form-group my-2" style="margin-top:120px !important;">
-                <a  href="./intro.php" class="btn-block btn btn-primary btn-lg start_button isDisabled"> Next </a>
+                <a  href="../../intro.php" class="btn-block btn btn-primary btn-lg start_button isDisabled"> Next </a>
               </div>
 
           </div>

@@ -170,9 +170,9 @@
             <div class="logo__holder">
                 <a href="/"><img src="./patients/assets/img/logo.svg" alt="prose Logo" /> </a>
             </div>
-            <div class="btn-group" role="group" aria-label="Oncopadi example"> 
-                <a href ="./patients/signUp/intro.php" class="btn btn-primary mx-2 rounded">SignUp</a>
-                <a href ="./patients/signIn" class="btn btn-outline-primary rounded">SignIn</a>
+            <div class="btn-group" role="group" aria-label="Oncopadi"> 
+                <a href ="./intro.php?onco_type=signUp" class="btn btn-primary mx-2 rounded">SignUp</a>
+                <a href ="./intro.php?onco_type=signIn" class="btn btn-outline-primary rounded">SignIn</a>
             </div>
     </div>
 
@@ -205,6 +205,7 @@
     <script type="text/javascript" src="./patients/assets/js/jquery.min.js"></script>
     <script type="text/javascript" src="./patients/assets/js/popper.min.js"></script>
     <script type="text/javascript" src="./patients/assets/js/bootstrap.js"></script>
+
   </body>
 
 </html>

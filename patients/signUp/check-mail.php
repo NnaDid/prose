@@ -70,9 +70,9 @@
                     <div class="text-desc">
                         Please check your email to complete <br/> your sign-up process
                     </div>  
-                   <a href="./continue-1.php">
+                   <!-- <a href="./continue-1.php"> -->
                       <i class="fa fa-envelope-o fa-3x" style="font-size: 66px; width:45% !important; height:60px !important; color:rgb(19, 114, 105);"></i>
-                   </a>
+                   <!-- </a> -->
                 </div>
 
           </div>
