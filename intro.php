@@ -20,6 +20,16 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="patients/assets/img/logo.png">  
    <style>
+     body{
+            font-family: Inter !important;
+            font-style: normal !important;
+     }
+
+     .custom-control label{
+        font-family: Inter !important;
+        font-style: normal !important;
+        font-size: 14px !important;
+     }
       .sub_text{
             font-family: Inter;
             font-style: normal;

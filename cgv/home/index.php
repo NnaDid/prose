@@ -337,7 +337,7 @@
 				<div class="row g-4 mx-3 overlapping_cards">
 				    <div class="col-12 col-lg-4">
 					    <div class="app-card d-flex px-2 justify-content-space-between align-items-center shadow-sm">
-						  <img src="../assets/img/chat.svg" style="width:60px; height: 60px"/>
+						  <img src="../assets/img/chat.svg" style="width:60px; height: 60px; margin-left:20px;"/>
 							 <div class="di mx-2 mt-2">
 								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number">20</span>
 									<span class="text_desc">Patients</span>
@@ -346,8 +346,8 @@
 				    </div><!--//col-->
 				    <div class="col-12 col-lg-4">
 					    <div class="app-card d-flex px-2 justify-content-space-between align-items-center shadow-sm"> 
-						    <img src="../assets/img/patients.svg" style="width:60px; height: 60px"/>
-							 <div class="di mx-2 mt-2">
+						    <img src="../assets/img/patients.svg" style="width:60px; height: 60px; margin-left:20px;"/>
+							 <div class="di mx-1 mt-2">
 								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number">60</span>
 									<span class="text_desc">Health Care Professionals</span>
 							 </div>
@@ -355,7 +355,7 @@
 				    </div><!--//col-->
 				    <div class="col-12 col-lg-4">
 					    <div class="app-card d-flex px-2 justify-content-space-between align-items-center shadow-sm"> 
-						     <img src="../assets/img/chat.svg" style="width:60px; height: 60px"/>
+						     <img src="../assets/img/chat.svg" style="width:60px; height: 60px; margin-left:20px;"/>
 								<div class="di mx-2 mt-2">
 									<span style="margin-top:20px; margin-bottom:-30px;" class="text_number">20</span>
 									<span class="text_desc">Unread Messages</span>
