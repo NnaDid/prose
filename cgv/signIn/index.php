@@ -146,10 +146,7 @@
                 <div class="form-group mt-4">
                   <button class="btn-block btn btn-primary btn-lg signIn" type="submit">Sign in</button>
                 </div>  
-                  <div class="text-center text-small input_text_label my-4">
-                    <span>Don't have account? <a href="../signUp/"> SignUp here <img src="../assets/img/Forward Arrow.png" /></a>
-                    </span>
-                  </div>
+              
              </form>
 
           </div>
