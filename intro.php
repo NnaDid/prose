@@ -193,20 +193,20 @@
                         case 'hcp':  
                               switch(actionType){
                                   case 'signUp': location.href = "./hcp/signUp/"; break;
-                                  case 'signIn': location.href ="./hcp/signIn/";   break;
+                                  case 'signIn': location.href ="./signIn/";   break;
                               }
                         break;
                         case 'care_giver': 
                              switch(actionType){
-                                  case 'signUp': location.href = "./cgv/signUp/";  break;
-                                  case 'signIn': location.href ="./cgv/signIn/";    break;
+                                  case 'signUp': location.href = "./patients/signUp/";  break;
+                                  case 'signIn': location.href ="./signIn/";    break;
                               }  
                         break;
 
                         case 'patient': 
                              switch(actionType){
                                   case 'signUp': location.href = "./patients/signUp/";  break;
-                                  case 'signIn': location.href ="./patients/signIn/";    break;
+                                  case 'signIn': location.href ="./signIn/";    break;
                               }
                         break;
                     }

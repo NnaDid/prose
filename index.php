@@ -172,7 +172,7 @@
             </div>
             <div class="btn-group" role="group" aria-label="Oncopadi"> 
                 <a href ="./intro.php?onco_type=signUp" class="btn btn-primary mx-2 rounded">SignUp</a>
-                <a href ="./intro.php?onco_type=signIn" class="btn btn-outline-primary rounded">SignIn</a>
+                <a href ="./signIn/" class="btn btn-outline-primary rounded">SignIn</a>
             </div>
     </div>
 

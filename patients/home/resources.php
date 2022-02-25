@@ -17,29 +17,21 @@
     
     <!-- App CSS -->  
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet"> 
 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css"> 
     <link id="theme-style" rel="stylesheet" href="../assets/css/custom.css">
 
 	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
-	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
 	
 	<!-- Page Specific JS -->
-	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
 	<style>
-        .removeDrugItem{
-            cursor:pointer;
-        }
         .btn-outline-primary {
             color: #8D2D91 !important;
             border-color: #8D2D91 !important;
-     }
+        }
 
     .btn-outline-primary:hover {
         color: #fff !important;
@@ -371,17 +363,23 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box " style="">
-                                        <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                       <a href="https://covid19.ncdc.gov.ng/" target="__blank"> 
+										   <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
                                                 <div class="col-md-2"> <img src="../../patients/assets/img/covid.svg" id="log_chemo" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-10"> Stay Informed About Covid </div>
-                                        </div><!--//app-card-->
+										   </div>
+										</a>
+										<!--//app-card-->
                                     </div><!--//col-->
                                     
-                                    <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
-                                                <div class="col-md-2"> <img src="../../patients/assets/img/info.svg" id="log_other_medication" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-10">About Chemotherapy</div>
-                                        </div><!--//app-card-->
+                                    <div class="col-6 box" style=""> 
+									    <a href="https://www.cancer.gov/about-cancer/treatment/types/chemotherapy" target="__blank">
+											<div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+													<div class="col-md-2"> <img src="../../patients/assets/img/info.svg" id="log_other_medication" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+													<div class="log_type py-4 col-md-10">About Chemotherapy</div>
+											</div>
+										</a>
+										<!--//app-card-->
                                     </div><!--//col-->
                                     
                                     
@@ -389,17 +387,126 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                          <a href="https://www.cancer.gov/about-cancer/treatment/types/radiation-therapy" target="__blank"> <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
                                                 <div class="col-md-2"> <img src="../../patients/assets/img/info.svg" id="log_radiotherapy" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-10">About Radiotherapy </div>
-                                        </div><!--//app-card-->
+                                        </div></a>
+										<!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                        <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" 
+										     style="border-radius:8px !important;" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">
                                                 <div class="col-md-2"> <img src="../../patients/assets/img/question.svg" id="log_surgical_procedure" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-10"> FAQs : Relate to the study, using the app</div>
-                                        </div><!--//app-card-->
+                                        </div>
+										<!--//app-card-->
+
+										  
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+	<div class="modal-content">
+	 <div class="modal-header">
+	<h5 class="modal-title" id="exampleModalLabel">FAQs</h5>
+	<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+	</div>
+	<div class="modal-body">
+         <pre>
+PROSECare FAQs
+----------------------------------------------------------
+1. What is Radiotherapy?
+Radiotherapy is a cancer treatment that uses high doses of radiation to kill
+cancer cells and shrink tumours. It may be used in the early stages of cancer or after it
+has started to spread. Radiotherapy is generally considered the most effective cancer
+treatment after surgery, but its effectiveness varies from person to person.
+
+2. How is Radiotherapy different from Chemotherapy?
+Radiotherapy and Chemotherapy are both treatment modalities for cancer.
+Radiotherapy uses high-energy rays to destroy cancer cells while Chemotherapy uses
+special drugs to shrink or kill these cancer cells. Combining both treatments is often
+more effective than having either treatment on its own.
+
+3. What are the common side effects of Radiotherapy and Chemotherapy?
+Radiotherapy and Chemotherapy present with almost similar side effects.
+Radiotherapy side-effects tend to affect the area being treated while Chemotherapy
+side-effects are more likely to affect the whole body. These side-effects depend on the
+dosage of radiation or drugs given, the location on the body, and the overall health
+situation of cancer patients.
+Here are some of the side-effects associated with these cancer treatments: tiredness
+(fatigue), pain, loss of appetite, weight loss, hair loss, sore on the mouth, throat or
+gum, etc.
+
+4. How long do these side effects last?
+Side-effects can happen any time during, immediately after or a few days or weeks
+after treatment.
+Most side-effects start to go away after cancer treatment ends and the healthy cells
+have a chance to grow again. How long this takes depend on a patient’s overall health
+and the types and amounts of drugs and/or radiation he or she had. Remember that the
+type of radiation side-effects you might have depends on the prescribed dose and
+schedule.
+
+5. Is it possible to have no side-effects from Radiotherapy?
+Some patients have no side-effects at all, while others have quite a few.
+There is no accurate way to predict who will have side-effects. It is very important to
+note that individuals react differently to treatment. Side-effects vary from person to
+person depending on various factors such as the radiation dose, and the part of the
+body being treated. 
+
+6. When can I report my side-effects?
+It is important to talk with your health care team about any side-effects
+you experience as soon as possible so they can find ways to help you.
+
+7. How do I report my side-effects using PROSECare?
+
+Log in to your PROSECare account with a valid email address and password. Read
+through the questions and tick relevant options related to the side-effects you are
+experiencing.
+
+8. Is Radiotherapy safe?
+Some patients worry about the safety of radiotherapy. While radiotherapy involves
+exposure to hazardous radioactive particles, it has been used to safely treat cancer for
+more than 100 years. Many advancements have been made that have led to safety
+regulations and checkpoints during treatment. It is important to remember that every
+patient is different, and your safety instructions may be different from other patients
+or people you know who have received radiation therapy to treat cancer. Any
+precautions you might need to take depend on what treatment is used and type and
+dose of radiation that is given. If needed, your heathcare team will give you exact
+instructions so you know what steps to take, and how long any precautions need to be
+followed. You should follow their instructions exactly.
+
+9. How should I care for myself during treatment?
+There is no one right way to go through the experience of cancer. It is all about figuring out
+what is right for you. Be kind to yourself and follow the steps below:
+* Slow down and find quiet time for your body and mind.
+* Make time for things that make you feel fulfilled such as crafting, reading, taking a
+bath, going for a walk or baking.
+* Eat nourishing foods.
+* Do some light exercise.
+* Spend time with loved ones.
+* Prioritize sleep.
+
+10. How much do I pay to access PROSECare?
+PROSECare is free and accessible and will not require you to pay any fee or request
+for your bank details.
+11. Will I get immediate response when I report my side-effects on PROSECare?
+Yes. When you log in your side-effects on PROSECare, your enquiries will be
+attended to as soon as possible.
+
+
+
+</pre> 
+											
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Send message</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+										
                                     </div><!--//col-->
                                     
                                     
@@ -421,11 +528,12 @@
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+	
 	<script>
         $(document).ready(function(){
-             // // log_begin_cotainer  log_symptom_container
-			// $(".log_begin_cotainer").slideUp(2000).hide();
-			// $(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);      log_begin_cotainer
+          // Enable Popover 
+        //   $('[data-toggle="popover"]').popover(); 
+
             let tabsBox = document.querySelectorAll(".addItem");
                 tabsBox.forEach((el)=>{
                     el.addEventListener("click",(e)=>{ 
