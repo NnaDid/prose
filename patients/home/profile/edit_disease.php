@@ -299,7 +299,13 @@
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="../assets/images/user.png" alt="user profile"></a> 
+							<img src="../assets/images/user.png" alt="user profile"></a>
+				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
+								<li><a class="dropdown-item" href="./">Profile</a></li>
+								<li><a class="dropdown-item" href="../settings.php">Settings</a></li>
+								<li><hr class="dropdown-divider"></li>
+								<li><a class="dropdown-item" href="login.html">Log Out</a></li>
+							</ul>
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
@@ -406,21 +412,20 @@
                                    </a>
                                     <!--//col-->
                                     
-                                    <a href="./disease_character.php">
+                                    <a href="./disease_chracter.php">
                                         <div class="col-md-12 box">
-                                            <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2" style="border-radius:10px !important;">
+                                            <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2 activeTab" style="border-radius:10px !important;">
                                                     <img src="../../../patients/assets/img/user.svg" id="disease_characteristics" class="profileItem  ml-3" style="height:60px; width:60px"/> <!--//icon-holder-->
-                                                    <div class="log_type mx-2">Disease Characteristics</div>
+                                                    <div class="log_type mx-2 activeTab">Disease Characteristics</div>
                                             </div><!--//app-card-->
                                         </div>
                                     </a>
                                     <!--//col-->
                                     
-                                    <a href="./anthropometry.php">
-                                       <div class="col-md-12 box">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm py-2 activeTab" style="border-radius:10px !important;">
+                                    <a href="./anthropometry.php"><div class="col-md-12 box">
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm py-2" style="border-radius:10px !important;">
                                                 <img src="../../../patients/assets/img/user.svg" id="anthropy" class="profileItem  ml-3"  style="height:60px; width:60px" /> <!--//icon-holder-->
-                                                <div class="log_type mx-2 activeTab"> Anthropometry </div>
+                                                <div class="log_type mx-2"> Anthropometry </div>
                                             </div><!--//app-card-->
                                         </div>
                                     </a>
@@ -433,37 +438,56 @@
                                                                         
                                         <div class="col-12 col-lg-11 col-md-11  log_OtherMedication_Container" style="">
                                                 <div class="topBio d-flex justify-content-between align-items-center mt-4">
-                                                   <h3 class="h3">Anthropometry</h3> 
+                                                   <h3 class="h3">Disease Characteristics</h3> 
                                                    <button type="button" class="btn btn-outline-primary editBio" style="z-index:29999;"><a href="#">Save</a></button>
                                                 </div>
 
                                                 <form class="bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.90;margin-top:-60px;">   
                                                      <section class="personal_information"> 		     
                                                          <div class="row d-flex justify-content-between align-items-center personal_information">
-                                                             
-                                                                <div class="form-group mb-2 col-md-8">
-                                                                    <label class="text_input_label" for="Height">Height </label>
-                                                                    <input type="text" name="Height" id="Height" placeholder="Height" class="form-control form-control-lg Height" />
-                                                                </div>  
+                                                             <div class="form-group mb-2 col-md-8">
+                                                                    <label class="text_input_label" for="holw_old">How old were you when diagnosed with cancer?</label>
+                                                                    <select name="how_old_were_you" class="form-select form-control form-control-lg how_old_were_you" syle="width:100%;">
+                                                                            <option disabled selected>Choose an option</option>
+                                                                            <option value="18-27 years old">18-27 years old</option>
+                                                                            <option value="28-37 years old">28-37 years old</option>
+                                                                            <option value="38-47 years old">38-47 years old</option>
+                                                                            <option value="48-57 years old">48-57 years old</option>
+                                                                            <option value="58-67 years old">58-67 years old</option>
+                                                                            <option value="Above 67 years old">Above 67 years old</option>
+                                                                    </select> 
+                                                                </div>
 
                                                                 <div class="form-group mb-2 col-md-8">
-                                                                    <label class="text_input_label" for="Weight">Weight</label>
-                                                                    <input type="text" name="Weight" id="Weight" placeholder="Weight" class="form-control form-control-lg Weight" />
-                                                                </div>  
-
-                                                                <div class="form-group mb-2 col-md-8">
-                                                                    <label class="text_input_label" for="bmi">Body Mass Index (BMI)</label>
-                                                                    <input type="text" name="bmi" id="bmi" placeholder="Body Mass Index (BMI)" class="form-control form-control-lg bmi" />
-                                                                </div>  
-
-                                                                <div class="form-group mb-2 col-md-8">
-                                                                    <label class="text_input_label" for="Waist">Waist Circumferecne</label>
-                                                                    <input type="text" name="Waist" id="Waist" placeholder="Waist Circumferecne" class="form-control form-control-lg Waist" />
+                                                                    <label class="text_input_label" for="cancer_type">Type of Cancer</label>
+                                                                    <select  name="cancer_type" id="cancer_type" class="form-select form-control form-control-lg cancer_type" id="cancer_type">
+                                                                        <option disabled selected>Cancer Type</option>
+                                                                        <option value="Breast cancer">Breast cancer</option> 
+                                                                        <option value="Head and Neck Cancer">Head and Neck Cancer</option>  
+                                                                        <option value="Male Pelvic Cancer">Male Pelvic Cancer</option> 
+                                                                        <option value="Female Pelvic Cancer">Female Pelvic Cancer</option> 
+                                                                    </div>
+                                                                </select> 
                                                                 </div> 
+ 
+                                                                <div class="form-group mb-2 col-md-8">
+                                                                    <label class="text_input_label" for="hist_type">Histology Type</label>
+                                                                    <input type="text" name="histology" id="histology" placeholder="Histology" class="form-control form-control-lg histology" />
+                                                                </div>  
 
                                                                 <div class="form-group mb-2 col-md-8">
-                                                                    <label class="text_input_label" for="Head">Head Circumferecne</label>
-                                                                    <input type="text" name="Head" id="Head" placeholder="Head Circumferecne" class="form-control form-control-lg Head" />
+                                                                    <label class="text_input_label" for="cancer_grade">Cancer grade</label>
+                                                                    <input type="text" name="cancer_grade" id="cancer_grade" placeholder="Cancer grade" class="form-control form-control-lg cancer_grade" />
+                                                                </div>  
+
+                                                                <div class="form-group mb-2 col-md-8">
+                                                                    <label class="text_input_label" for="cancer_stage">Cancer Stage</label>
+                                                                    <input type="text" name="camcer_stage" id="camcer_stage" placeholder="Cancer Stage" class="form-control form-control-lg camcer_stage" />
+                                                                </div>  
+
+                                                                <div class="form-group mb-2 col-md-8">
+                                                                    <label class="text_input_label" for="comorbidity">Comorbidity</label>
+                                                                    <input type="text" name="comorbidity" id="comorbidity" placeholder="Comorbidity" class="form-control form-control-lg comorbidity" />
                                                                 </div>  
                                                         </div> 
                                                         
@@ -545,7 +569,9 @@
     <script src="assets/js/index-charts.js"></script> 
     
     <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script>  
+    <script src="assets/js/app.js"></script> 
+
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script> -->
 	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
  
 	<!--Start of Tawk.to Script-->

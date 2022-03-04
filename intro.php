@@ -154,7 +154,7 @@
 
               <div class="custom-control custom-checkbox d-flex justify-content-start">
                 <div class="round mx-4">
-                  <input type="checkbox" class="custom-control-input consent__care_giver give_consent" name ="user_type[]" value="hcp" id="checkbox_3" />    
+                  <input type="checkbox" class="custom-control-input consent__care_giver give_consent" name ="user_type[]" value="professional" id="checkbox_3" />    
                   <label for="checkbox_3"></label>
                 </div>
                 <label class="" style=""> I am a Health Care Professional</label>
@@ -186,11 +186,13 @@
                 let userType     = $(this).val(); 
                 let searchParams = new URLSearchParams(location.search);
                 let actionType   = (searchParams.get('onco_type')!==null) ? searchParams.get('onco_type') :'signIn';
-
+                // Set the sessionStorage with the user type =""
+                sessionStorage.setItem("userType",userType);
+                
                 $(document).on('click','.start_button', function(evt){
                     evt.preventDefault();
                     switch(userType){
-                        case 'hcp':  
+                        case 'professional':  
                               switch(actionType){
                                   case 'signUp': location.href = "./hcp/signUp/"; break;
                                   case 'signIn': location.href ="./signIn/";   break;

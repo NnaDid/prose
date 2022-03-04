@@ -55,7 +55,12 @@
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="text-center mb-4">
               <img src="../assets/img/logo.svg" height ="" width ="100%" alt="prose" style="transform: scale(0.5);"/> 
-              <h1 class="mb-1 begin_text" style="font-size: 36px !important;">Upload Signed Consent Form</h1> 
+              <h4 class="mb-1 begin_text" style="font-size: 36px !important;">Upload Signed Consent Form</h4> 
+              <p class="text-muted mb-0">
+                <a href="../../PROSE informed consent.docx" style="color:red !important; font-size:13px !important;" download>
+                  Click here to download and fill the consent form before uploading <i class="fa fa-arrow-down"></i>
+                </a>
+              </p>
 
                 <form action ="#" enctype ="multipart/form-data" class="drag_drop_area_form text-center card my-4" style="height:200px; border:1px dotted #ccc; border-radius:4px;">
                     <input type="file" class="consent_file" name="file" hidden>

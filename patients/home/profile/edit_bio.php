@@ -403,7 +403,7 @@
 			    <div class="row g-4 mb-4">
 				    
 					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
-							<h1 class="h1">Profile</h1> 
+                        <h1 class="h1 mx-2">&nbsp;Profile</h1> 
                             <div class="row">
                                 <div class="col-12 col-lg-4" style="">
                                     <div class="col-md-12 box" >
@@ -441,10 +441,10 @@
                                             <div class="col-12 col-lg-11 col-md-11  log_OtherMedication_Container" style="">
                                                 <div class="topBio d-flex justify-content-between align-items-center mt-4">
                                                    <h3 class="h3">Bio</h3> 
-                                                   <button type="button" class="btn btn-outline-primary editBio"><a href="./edit_bio.php">Edit</a></button>
+                                                   <button type="button" class="btn btn-outline-primary editBio"  style="z-index:29999;"><a href="#">Save</a></button>
                                                 </div>
 
-                                                <form class="bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.88;">   
+                                                <form class="bio_form col-11 col-lg-11 col-md-11 ml-4"  style="zoom:0.90;margin-top:-60px;">   
                                                      <section class="personal_information">
                                                         <h4 class="auth-heading text-center mb-4 left_heading-text">Personal Information</h4>		     
                                                         <div class="row d-flex justify-content-between align-items-center personal_information">
@@ -459,6 +459,11 @@
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="other_name">Other Names</label>
                                                                     <input name="lname" type="text" id="other_name" class="form-control form-control-lg lname" placeholder="Last Name" required="required" />
+                                                                </div>  
+
+                                                                <div class="form-group mb-2 col-md-6">
+                                                                    <label class="text_input_label" for="PIN">PIN</label>
+                                                                    <input name="PIN" type="text" id="PIN" class="form-control form-control-lg PIN" placeholder="PIN" value="ONC240987" readonly/>
                                                                 </div>  
                                                         </div>
 
@@ -503,30 +508,9 @@
                                                                     <div class="form-group mb-2 col-md-6"><label class="text_input_label">Religion</label>
                                                                         <select name="religion" class="form-control form-control-lg religion" id="religion">
                                                                             <option disabled selected>Religion</option>
-                                                                            <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
-                                                                            <option value="Agnostic">Agnostic</option>
-                                                                            <option value="Atheist">Atheist</option>
-                                                                            <option value="Baha'i">Baha'i</option>
-                                                                            <option value="Buddhism">Buddhism</option>
-                                                                            <option value="Cao Dai">Cao Dai</option>
-                                                                            <option value="Chinese traditional religion">Chinese traditional religion</option>
                                                                             <option value="Christianity">Christianity</option>
-                                                                            <option value="Hinduism">Hinduism</option>
-                                                                            <option value="Islam">Islam</option>
-                                                                            <option value="Jainism">Jainism</option>
-                                                                            <option value="Juche">Juche</option>
-                                                                            <option value="Judaism">Judaism</option>
-                                                                            <option value="Neo-Paganism">Neo-Paganism</option>
-                                                                            <option value="Nonreligious">Nonreligious</option>
-                                                                            <option value="Rastafarianism">Rastafarianism</option>
-                                                                            <option value="Secular">Secular</option>
-                                                                            <option value="Shinto">Shinto</option>
-                                                                            <option value="Sikhism">Sikhism</option>
-                                                                            <option value="Spiritism">Spiritism</option>
-                                                                            <option value="Tenrikyo">Tenrikyo</option>
-                                                                            <option value="Unitarian-Universalism">Unitarian-Universalism</option>
-                                                                            <option value="Zoroastrianism">Zoroastrianism</option>
-                                                                            <option value="primal-indigenous">primal-indigenous</option>
+                                                                            <option value="Traditional Religion">Traditional Religion</option> 
+                                                                            <option value="Islam">Islam</option> 
                                                                             <option value="Other">Other</option>
                                                                         </select>
                                                                     </div>  

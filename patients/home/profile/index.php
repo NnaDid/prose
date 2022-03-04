@@ -10,7 +10,7 @@
     
     <meta name="description" content="PROSE">
     <meta name="author" content="Prose Care">    
-	<link rel="shortcut icon" href="../../patients/assets/img/logo.png"> 
+	<link rel="shortcut icon" href="../../assets/img/logo.png"> 
     
     <!-- FontAwesome JS-->
     <script defer src="../assets/plugins/fontawesome/js/all.min.js"></script>
@@ -301,13 +301,7 @@
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="./index.php">Profile</a></li>
-								<li><a class="dropdown-item" href="../settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="../../signIn/">Log Out</a></li>
-							</ul>
+							<img src="../assets/images/user.png" alt="user profile"></a> 
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
@@ -441,446 +435,150 @@
                                             <div class="col-12 col-lg-11 col-md-11  log_OtherMedication_Container" style="">
                                                 <div class="topBio d-flex justify-content-between align-items-center mt-4">
                                                    <h3 class="h3">Bio</h3> 
-                                                   <button type="button" class="btn btn-outline-primary editBio"><a href="./edit_bio.php">Edit</a></button>
+                                                   <button type="button" class="btn btn-outline-primary editBio" style="z-index:29999;"><a href="./edit_bio.php">Edit</a></button>
                                                 </div>
 
-                                                <form class="bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.88;">   
+                                                <form class="bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.90;margin-top:-60px;">   
                                                      <section class="personal_information">
                                                         <h4 class="auth-heading text-center mb-4 left_heading-text">Personal Information</h4>		     
-                                                        <div class="row d-flex justify-content-between align-items-center personal_information">
+                                                         <div class="row d-flex justify-content-between align-items-center personal_information">
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="fname">First Name</label>
-                                                                    <input name="fname" type="text" id="fname" class="form-control form-control-lg fname" placeholder="First name" required="required" />
-                                                                </div> 
+                                                                    <p class="mx-2 log_type" for="fname">Mark</p>
+                                                                    
+                                                                </div>
+
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="lname">Last Name</label>
-                                                                    <input name="lname" type="text" id="lname" class="form-control form-control-lg lname" placeholder="Last Name" required="required" />
+                                                                    <p class="mx-2 log_type" for="lname">John</p>
                                                                 </div> 
+ 
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="other_name">Other Names</label>
-                                                                    <input name="lname" type="text" id="other_name" class="form-control form-control-lg lname" placeholder="Last Name" required="required" />
+                                                                    <p class="mx-2 log_type" for="other_name">Doe</p>
+                                                                </div> 
+
+                                                                <div class="form-group mb-2 col-md-6">
+                                                                    <label class="text_input_label" for="other_name">PIN</label>
+                                                                    <p class="mx-2 log_type" for="other_name">ONC240987</p>
                                                                 </div>  
                                                         </div>
 
                                                         <div class="row d-flex justify-content-between align-items-center">  
-                                                                    <div class="form-group mb-2 col-md-6"> <label class="text_input_label">Gender</label>
-                                                                        <select name="gender" class="form-select form-control form-control-lg gender" syle="width:100%;">
-                                                                            <option disabled selected>Gender</option>
-                                                                            <option value="male">Male</option>
-                                                                            <option value ="female">Female</option>
-                                                                        </select>
-                                                                    </div> 
+                                                                <div class="form-group mb-2 col-md-6"> 
+                                                                    <label class="text_input_label">Gender</label>
+                                                                   <p class="mx-2 log_type" for="other_name">Male</p>
+                                                                </div> 
 
-                                                                    <div class="form-group mb-2 col-md-6">
-                                                                        <label class="text_input_label">Date of Birth</label>
-                                                                        <input type="text" name="dob" placeholder="Date of Birth" class="form-control form-control-lg dob" />
-                                                                    </div>    
+                                                                <div class="form-group mb-2 col-md-6">
+                                                                    <label class="text_input_label">Date of Birth</label>
+                                                                    <p class="mx-2 log_type" for="other_name">12/12/2000</p>
+                                                                </div>    
                                                         </div>
-
+ 
                                                         <div class="row d-flex justify-content-between align-items-center">  
+                                                                <div class="form-group mb-2 col-md-6"> 
+                                                                    <label class="text_input_label">Age</label>
+                                                                   <p class="mx-2 log_type" for="other_name">90</p>
+                                                                </div> 
+
+                                                                <div class="form-group mb-2 col-md-6">
+                                                                    <label class="text_input_label">Level of Education</label>
+                                                                    <p class="mx-2 log_type" for="other_name">B.Sc</p>
+                                                                </div>    
+                                                        </div>
+ 
+                                                        <div class="row d-flex justify-content-between align-items-center">  
+                                                                <div class="form-group mb-2 col-md-6"> 
+                                                                    <label class="text_input_label">Tribe</label>
+                                                                   <p class="mx-2 log_type" for="other_name">Yoruba</p>
+                                                                </div> 
+
+                                                                <div class="form-group mb-2 col-md-6">
+                                                                    <label class="text_input_label">Religion</label>
+                                                                    <p class="mx-2 log_type" for="other_name">Christianity</p>
+                                                                </div>    
+                                                        </div>
+ 
+                                                        <div class="row d-flex justify-content-between align-items-center">  
+                                                                <div class="form-group mb-2 col-md-6"> 
+                                                                    <label class="text_input_label">Income Level</label>
+                                                                   <p class="mx-2 log_type" for="other_name">>300M</p>
+                                                                </div>     
+                                                        </div>
+ 
+
+                                                            <!-- Contact -->
+                                                            <h4 class="auth-heading text-center mb-4 left_heading-text">Contact</h4>		     
+                                                            <div class="row d-flex justify-content-between align-items-center contact">
                                                                     <div class="form-group mb-2 col-md-6">
-                                                                        <label class="text_input_label">Age</label>
-                                                                        <input type="text" name="age" placeholder="eg 39" class="form-control form-control-lg age"  readonly/>
-                                                                    </div>    
-                                                                    <div class="form-group mb-2 col-md-6"><label class="text_input_label">Level of Education</label>
-                                                                        <select name="education" class="form-select form-control form-control-lg education">
-                                                                            <option disabled selected>eg. Tertiary</option>
-                                                                            <option value="uneducated">Uneducated</option>
-                                                                            <option value="primary">Primary</option>
-                                                                            <option value ="secondary">Secondary</option>
-                                                                            <option value ="tertiary">Teriary</option>
-                                                                            <option value ="OND|HND">OND/HND</option>
-                                                                            <option value ="others">Others</option>
-                                                                        </select>
+                                                                        <label class="text_input_label" for="email">Email</label>
+                                                                        <p class="mx-2 log_type" for="other_name">markjohndoe@gmail.com</p>
                                                                     </div> 
-                                                        </div>
-
-                                                         <div class="row d-flex justify-content-between align-items-center">  
                                                                     <div class="form-group mb-2 col-md-6">
-                                                                        <label class="text_input_label">Tribe</label>
-                                                                        <input type="text" name="tribe" id="tribe" placeholder="eg Yoruba" class="form-control form-control-lg tribe" />                                                           
+                                                                        <label class="text_input_label" for="phone">Phone Number</label>
+                                                                        <p class="mx-2 log_type" for="other_name">+234908765423</p>
                                                                     </div>    
-                                                                    <div class="form-group mb-2 col-md-6"><label class="text_input_label">Religion</label>
-                                                                        <select name="religion" class="form-control form-control-lg religion" id="religion">
-                                                                            <option disabled selected>Religion</option>
-                                                                            <option value="African Traditional &amp; Diasporic">African Traditional &amp; Diasporic</option>
-                                                                            <option value="Agnostic">Agnostic</option>
-                                                                            <option value="Atheist">Atheist</option>
-                                                                            <option value="Baha'i">Baha'i</option>
-                                                                            <option value="Buddhism">Buddhism</option>
-                                                                            <option value="Cao Dai">Cao Dai</option>
-                                                                            <option value="Chinese traditional religion">Chinese traditional religion</option>
-                                                                            <option value="Christianity">Christianity</option>
-                                                                            <option value="Hinduism">Hinduism</option>
-                                                                            <option value="Islam">Islam</option>
-                                                                            <option value="Jainism">Jainism</option>
-                                                                            <option value="Juche">Juche</option>
-                                                                            <option value="Judaism">Judaism</option>
-                                                                            <option value="Neo-Paganism">Neo-Paganism</option>
-                                                                            <option value="Nonreligious">Nonreligious</option>
-                                                                            <option value="Rastafarianism">Rastafarianism</option>
-                                                                            <option value="Secular">Secular</option>
-                                                                            <option value="Shinto">Shinto</option>
-                                                                            <option value="Sikhism">Sikhism</option>
-                                                                            <option value="Spiritism">Spiritism</option>
-                                                                            <option value="Tenrikyo">Tenrikyo</option>
-                                                                            <option value="Unitarian-Universalism">Unitarian-Universalism</option>
-                                                                            <option value="Zoroastrianism">Zoroastrianism</option>
-                                                                            <option value="primal-indigenous">primal-indigenous</option>
-                                                                            <option value="Other">Other</option>
-                                                                        </select>
-                                                                    </div>  
+                                                            </div>
+                                                            <div class="row d-flex justify-content-between align-items-center contact">
                                                                     <div class="form-group mb-2 col-md-6">
-                                                                        <label class="input_text_label">Income Level</label>
-                                                                        <select name="income_level" class="form-control form-control-lg income_level" id="income_level">
-                                                                            <option disabled selected>e.g &#8358;200,000 - &#8358;500,000 Monthly</option>
-                                                                            <option value="less than|200,000">< &#8358;200,000 Monthly</option>
-                                                                            <option value="&#8358;200,000 - &#8358;500,000 Monthly">&#8358;200,000 - &#8358;500,000 Monthly</option>
-                                                                            <option value="&#8358;500,000 - &#8358;1,000,000 Monthly">&#8358;500,000 - &#8358;1,000,000 Monthly</option>
-                                                                            <option value="above &#8358;1,000,000 Monthly">above &#8358;1,000,000 Monthly</option> 
-                                                                        </select>
+                                                                        <label class="text_input_label" for="email">Country</label>
+                                                                        <p class="mx-2 log_type" for="other_name">Nigeria</p>
+                                                                    </div> 
+                                                                    <div class="form-group mb-2 col-md-6">
+                                                                        <label class="text_input_label" for="phone">State of Residence</label>
+                                                                        <p class="mx-2 log_type" for="other_name">Lagos</p>
                                                                     </div>  
-                                                        </div>
+                                                                    <!-- ===================================  -->
+                                                                    <div class="form-group mb-2 col-md-12">
+                                                                        <label class="text_input_label" for="address">Town/City</label>
+                                                                        <p class="mx-2 log_type" for="other_name">Molue</p>
+                                                                    </div>  
+                                                            </div>
 
-                                                        <!-- Contact -->
-                                                        <h4 class="auth-heading text-center mb-4 left_heading-text">Contact</h4>		     
-                                                        <div class="row d-flex justify-content-between align-items-center contact">
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="email">Email</label>
-                                                                    <input name="email" type="email" id="email" class="form-control form-control-lg email" placeholder="Email" required="required" />
-                                                                </div> 
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="phone">Country Code/Phone</label>
-                                                                    <input type="tel" name="phone" id="phone" placeholder="eg 08123457890" class="form-control form-control-lg phone" />
-                                                                </div>  
-                                                                 <!-- ===================================  -->
+                                                            <!-- Nexy of Kin -->
+                                                            <h4 class="auth-heading text-center mb-4 left_heading-text">Next of Kin</h4>		     
+                                                            <div class="row d-flex justify-content-between align-items-center contact">
+                                                                    <div class="form-group mb-2 col-md-6">
+                                                                        <label class="text_input_label" for="nk_name">Name</label>
+                                                                        <p class="mx-2 log_type" for="nk_name">Magnus Linus Doe</p>
+                                                                    </div> 
+                                                                    <div class="form-group mb-2 col-md-6">
+                                                                        <label class="text_input_label" for="nk_phone">Phone Number</label>
+                                                                        <p class="mx-2 log_type" for="nk_phone">+234918165923</p>
+                                                                    </div>  
+                                                                    <!-- ===================================  -->
+                                                                    <div class="form-group mb-2 col-md-6">
+                                                                        <label class="text_input_label" for="nk_address">Address</label>
+                                                                        <p class="mx-2 log_type" for="nk_address">No 16 Nupe Road Molue</p>
+                                                                    </div>  
+                                                            </div>
 
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="country">Country</label>
-                                                                  <select class="form-control form-control-lg country" id="country" name="country">
-                                                                    <option value="Afganistan">Afghanistan</option>
-                                                                    <option value="Albania">Albania</option>
-                                                                    <option value="Algeria">Algeria</option>
-                                                                    <option value="American Samoa">American Samoa</option>
-                                                                    <option value="Andorra">Andorra</option>
-                                                                    <option value="Angola">Angola</option>
-                                                                    <option value="Anguilla">Anguilla</option>
-                                                                    <option value="Antigua & Barbuda">Antigua & Barbuda</option>
-                                                                    <option value="Argentina">Argentina</option>
-                                                                    <option value="Armenia">Armenia</option>
-                                                                    <option value="Aruba">Aruba</option>
-                                                                    <option value="Australia">Australia</option>
-                                                                    <option value="Austria">Austria</option>
-                                                                    <option value="Azerbaijan">Azerbaijan</option>
-                                                                    <option value="Bahamas">Bahamas</option>
-                                                                    <option value="Bahrain">Bahrain</option>
-                                                                    <option value="Bangladesh">Bangladesh</option>
-                                                                    <option value="Barbados">Barbados</option>
-                                                                    <option value="Belarus">Belarus</option>
-                                                                    <option value="Belgium">Belgium</option>
-                                                                    <option value="Belize">Belize</option>
-                                                                    <option value="Benin">Benin</option>
-                                                                    <option value="Bermuda">Bermuda</option>
-                                                                    <option value="Bhutan">Bhutan</option>
-                                                                    <option value="Bolivia">Bolivia</option>
-                                                                    <option value="Bonaire">Bonaire</option>
-                                                                    <option value="Bosnia & Herzegovina">Bosnia & Herzegovina</option>
-                                                                    <option value="Botswana">Botswana</option>
-                                                                    <option value="Brazil">Brazil</option>
-                                                                    <option value="British Indian Ocean Ter">British Indian Ocean Ter</option>
-                                                                    <option value="Brunei">Brunei</option>
-                                                                    <option value="Bulgaria">Bulgaria</option>
-                                                                    <option value="Burkina Faso">Burkina Faso</option>
-                                                                    <option value="Burundi">Burundi</option>
-                                                                    <option value="Cambodia">Cambodia</option>
-                                                                    <option value="Cameroon">Cameroon</option>
-                                                                    <option value="Canada">Canada</option>
-                                                                    <option value="Canary Islands">Canary Islands</option>
-                                                                    <option value="Cape Verde">Cape Verde</option>
-                                                                    <option value="Cayman Islands">Cayman Islands</option>
-                                                                    <option value="Central African Republic">Central African Republic</option>
-                                                                    <option value="Chad">Chad</option>
-                                                                    <option value="Channel Islands">Channel Islands</option>
-                                                                    <option value="Chile">Chile</option>
-                                                                    <option value="China">China</option>
-                                                                    <option value="Christmas Island">Christmas Island</option>
-                                                                    <option value="Cocos Island">Cocos Island</option>
-                                                                    <option value="Colombia">Colombia</option>
-                                                                    <option value="Comoros">Comoros</option>
-                                                                    <option value="Congo">Congo</option>
-                                                                    <option value="Cook Islands">Cook Islands</option>
-                                                                    <option value="Costa Rica">Costa Rica</option>
-                                                                    <option value="Cote DIvoire">Cote DIvoire</option>
-                                                                    <option value="Croatia">Croatia</option>
-                                                                    <option value="Cuba">Cuba</option>
-                                                                    <option value="Curaco">Curacao</option>
-                                                                    <option value="Cyprus">Cyprus</option>
-                                                                    <option value="Czech Republic">Czech Republic</option>
-                                                                    <option value="Denmark">Denmark</option>
-                                                                    <option value="Djibouti">Djibouti</option>
-                                                                    <option value="Dominica">Dominica</option>
-                                                                    <option value="Dominican Republic">Dominican Republic</option>
-                                                                    <option value="East Timor">East Timor</option>
-                                                                    <option value="Ecuador">Ecuador</option>
-                                                                    <option value="Egypt">Egypt</option>
-                                                                    <option value="El Salvador">El Salvador</option>
-                                                                    <option value="Equatorial Guinea">Equatorial Guinea</option>
-                                                                    <option value="Eritrea">Eritrea</option>
-                                                                    <option value="Estonia">Estonia</option>
-                                                                    <option value="Ethiopia">Ethiopia</option>
-                                                                    <option value="Falkland Islands">Falkland Islands</option>
-                                                                    <option value="Faroe Islands">Faroe Islands</option>
-                                                                    <option value="Fiji">Fiji</option>
-                                                                    <option value="Finland">Finland</option>
-                                                                    <option value="France">France</option>
-                                                                    <option value="French Guiana">French Guiana</option>
-                                                                    <option value="French Polynesia">French Polynesia</option>
-                                                                    <option value="French Southern Ter">French Southern Ter</option>
-                                                                    <option value="Gabon">Gabon</option>
-                                                                    <option value="Gambia">Gambia</option>
-                                                                    <option value="Georgia">Georgia</option>
-                                                                    <option value="Germany">Germany</option>
-                                                                    <option value="Ghana">Ghana</option>
-                                                                    <option value="Gibraltar">Gibraltar</option>
-                                                                    <option value="Great Britain">Great Britain</option>
-                                                                    <option value="Greece">Greece</option>
-                                                                    <option value="Greenland">Greenland</option>
-                                                                    <option value="Grenada">Grenada</option>
-                                                                    <option value="Guadeloupe">Guadeloupe</option>
-                                                                    <option value="Guam">Guam</option>
-                                                                    <option value="Guatemala">Guatemala</option>
-                                                                    <option value="Guinea">Guinea</option>
-                                                                    <option value="Guyana">Guyana</option>
-                                                                    <option value="Haiti">Haiti</option>
-                                                                    <option value="Hawaii">Hawaii</option>
-                                                                    <option value="Honduras">Honduras</option>
-                                                                    <option value="Hong Kong">Hong Kong</option>
-                                                                    <option value="Hungary">Hungary</option>
-                                                                    <option value="Iceland">Iceland</option>
-                                                                    <option value="Indonesia">Indonesia</option>
-                                                                    <option value="India">India</option>
-                                                                    <option value="Iran">Iran</option>
-                                                                    <option value="Iraq">Iraq</option>
-                                                                    <option value="Ireland">Ireland</option>
-                                                                    <option value="Isle of Man">Isle of Man</option>
-                                                                    <option value="Israel">Israel</option>
-                                                                    <option value="Italy">Italy</option>
-                                                                    <option value="Jamaica">Jamaica</option>
-                                                                    <option value="Japan">Japan</option>
-                                                                    <option value="Jordan">Jordan</option>
-                                                                    <option value="Kazakhstan">Kazakhstan</option>
-                                                                    <option value="Kenya">Kenya</option>
-                                                                    <option value="Kiribati">Kiribati</option>
-                                                                    <option value="Korea North">Korea North</option>
-                                                                    <option value="Korea Sout">Korea South</option>
-                                                                    <option value="Kuwait">Kuwait</option>
-                                                                    <option value="Kyrgyzstan">Kyrgyzstan</option>
-                                                                    <option value="Laos">Laos</option>
-                                                                    <option value="Latvia">Latvia</option>
-                                                                    <option value="Lebanon">Lebanon</option>
-                                                                    <option value="Lesotho">Lesotho</option>
-                                                                    <option value="Liberia">Liberia</option>
-                                                                    <option value="Libya">Libya</option>
-                                                                    <option value="Liechtenstein">Liechtenstein</option>
-                                                                    <option value="Lithuania">Lithuania</option>
-                                                                    <option value="Luxembourg">Luxembourg</option>
-                                                                    <option value="Macau">Macau</option>
-                                                                    <option value="Macedonia">Macedonia</option>
-                                                                    <option value="Madagascar">Madagascar</option>
-                                                                    <option value="Malaysia">Malaysia</option>
-                                                                    <option value="Malawi">Malawi</option>
-                                                                    <option value="Maldives">Maldives</option>
-                                                                    <option value="Mali">Mali</option>
-                                                                    <option value="Malta">Malta</option>
-                                                                    <option value="Marshall Islands">Marshall Islands</option>
-                                                                    <option value="Martinique">Martinique</option>
-                                                                    <option value="Mauritania">Mauritania</option>
-                                                                    <option value="Mauritius">Mauritius</option>
-                                                                    <option value="Mayotte">Mayotte</option>
-                                                                    <option value="Mexico">Mexico</option>
-                                                                    <option value="Midway Islands">Midway Islands</option>
-                                                                    <option value="Moldova">Moldova</option>
-                                                                    <option value="Monaco">Monaco</option>
-                                                                    <option value="Mongolia">Mongolia</option>
-                                                                    <option value="Montserrat">Montserrat</option>
-                                                                    <option value="Morocco">Morocco</option>
-                                                                    <option value="Mozambique">Mozambique</option>
-                                                                    <option value="Myanmar">Myanmar</option>
-                                                                    <option value="Nambia">Nambia</option>
-                                                                    <option value="Nauru">Nauru</option>
-                                                                    <option value="Nepal">Nepal</option>
-                                                                    <option value="Netherland Antilles">Netherland Antilles</option>
-                                                                    <option value="Netherlands">Netherlands (Holland, Europe)</option>
-                                                                    <option value="Nevis">Nevis</option>
-                                                                    <option value="New Caledonia">New Caledonia</option>
-                                                                    <option value="New Zealand">New Zealand</option>
-                                                                    <option value="Nicaragua">Nicaragua</option>
-                                                                    <option value="Niger">Niger</option>
-                                                                    <option value="Nigeria">Nigeria</option>
-                                                                    <option value="Niue">Niue</option>
-                                                                    <option value="Norfolk Island">Norfolk Island</option>
-                                                                    <option value="Norway">Norway</option>
-                                                                    <option value="Oman">Oman</option>
-                                                                    <option value="Pakistan">Pakistan</option>
-                                                                    <option value="Palau Island">Palau Island</option>
-                                                                    <option value="Palestine">Palestine</option>
-                                                                    <option value="Panama">Panama</option>
-                                                                    <option value="Papua New Guinea">Papua New Guinea</option>
-                                                                    <option value="Paraguay">Paraguay</option>
-                                                                    <option value="Peru">Peru</option>
-                                                                    <option value="Phillipines">Philippines</option>
-                                                                    <option value="Pitcairn Island">Pitcairn Island</option>
-                                                                    <option value="Poland">Poland</option>
-                                                                    <option value="Portugal">Portugal</option>
-                                                                    <option value="Puerto Rico">Puerto Rico</option>
-                                                                    <option value="Qatar">Qatar</option>
-                                                                    <option value="Republic of Montenegro">Republic of Montenegro</option>
-                                                                    <option value="Republic of Serbia">Republic of Serbia</option>
-                                                                    <option value="Reunion">Reunion</option>
-                                                                    <option value="Romania">Romania</option>
-                                                                    <option value="Russia">Russia</option>
-                                                                    <option value="Rwanda">Rwanda</option>
-                                                                    <option value="St Barthelemy">St Barthelemy</option>
-                                                                    <option value="St Eustatius">St Eustatius</option>
-                                                                    <option value="St Helena">St Helena</option>
-                                                                    <option value="St Kitts-Nevis">St Kitts-Nevis</option>
-                                                                    <option value="St Lucia">St Lucia</option>
-                                                                    <option value="St Maarten">St Maarten</option>
-                                                                    <option value="St Pierre & Miquelon">St Pierre & Miquelon</option>
-                                                                    <option value="St Vincent & Grenadines">St Vincent & Grenadines</option>
-                                                                    <option value="Saipan">Saipan</option>
-                                                                    <option value="Samoa">Samoa</option>
-                                                                    <option value="Samoa American">Samoa American</option>
-                                                                    <option value="San Marino">San Marino</option>
-                                                                    <option value="Sao Tome & Principe">Sao Tome & Principe</option>
-                                                                    <option value="Saudi Arabia">Saudi Arabia</option>
-                                                                    <option value="Senegal">Senegal</option>
-                                                                    <option value="Seychelles">Seychelles</option>
-                                                                    <option value="Sierra Leone">Sierra Leone</option>
-                                                                    <option value="Singapore">Singapore</option>
-                                                                    <option value="Slovakia">Slovakia</option>
-                                                                    <option value="Slovenia">Slovenia</option>
-                                                                    <option value="Solomon Islands">Solomon Islands</option>
-                                                                    <option value="Somalia">Somalia</option>
-                                                                    <option value="South Africa">South Africa</option>
-                                                                    <option value="Spain">Spain</option>
-                                                                    <option value="Sri Lanka">Sri Lanka</option>
-                                                                    <option value="Sudan">Sudan</option>
-                                                                    <option value="Suriname">Suriname</option>
-                                                                    <option value="Swaziland">Swaziland</option>
-                                                                    <option value="Sweden">Sweden</option>
-                                                                    <option value="Switzerland">Switzerland</option>
-                                                                    <option value="Syria">Syria</option>
-                                                                    <option value="Tahiti">Tahiti</option>
-                                                                    <option value="Taiwan">Taiwan</option>
-                                                                    <option value="Tajikistan">Tajikistan</option>
-                                                                    <option value="Tanzania">Tanzania</option>
-                                                                    <option value="Thailand">Thailand</option>
-                                                                    <option value="Togo">Togo</option>
-                                                                    <option value="Tokelau">Tokelau</option>
-                                                                    <option value="Tonga">Tonga</option>
-                                                                    <option value="Trinidad & Tobago">Trinidad & Tobago</option>
-                                                                    <option value="Tunisia">Tunisia</option>
-                                                                    <option value="Turkey">Turkey</option>
-                                                                    <option value="Turkmenistan">Turkmenistan</option>
-                                                                    <option value="Turks & Caicos Is">Turks & Caicos Is</option>
-                                                                    <option value="Tuvalu">Tuvalu</option>
-                                                                    <option value="Uganda">Uganda</option>
-                                                                    <option value="United Kingdom">United Kingdom</option>
-                                                                    <option value="Ukraine">Ukraine</option>
-                                                                    <option value="United Arab Erimates">United Arab Emirates</option>
-                                                                    <option value="United States of America">United States of America</option>
-                                                                    <option value="Uraguay">Uruguay</option>
-                                                                    <option value="Uzbekistan">Uzbekistan</option>
-                                                                    <option value="Vanuatu">Vanuatu</option>
-                                                                    <option value="Vatican City State">Vatican City State</option>
-                                                                    <option value="Venezuela">Venezuela</option>
-                                                                    <option value="Vietnam">Vietnam</option>
-                                                                    <option value="Virgin Islands (Brit)">Virgin Islands (Brit)</option>
-                                                                    <option value="Virgin Islands (USA)">Virgin Islands (USA)</option>
-                                                                    <option value="Wake Island">Wake Island</option>
-                                                                    <option value="Wallis & Futana Is">Wallis & Futana Is</option>
-                                                                    <option value="Yemen">Yemen</option>
-                                                                    <option value="Zaire">Zaire</option>
-                                                                    <option value="Zambia">Zambia</option>
-                                                                    <option value="Zimbabwe">Zimbabwe</option>
-                                                                 </select>
-                                                                </div> 
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="phone">State of Residence</label>
-                                                                    <input type="text" name="state" id="state" placeholder="eg Lagos" class="form-control form-control-lg state" />
-                                                                </div>  
-                                                                 <!-- ===================================  -->  
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="town">Town/City</label>
-                                                                    <input type="text" name="town" id="town" placeholder="eg town" class="form-control form-control-lg town" />
-                                                                </div>  
-                                                                 <!-- ===================================  -->
 
-                                                        </div>
-                                                        <!-- Next Of Kin -->
-                                                        <h4 class="auth-heading text-center mb-4 left_heading-text">Next of Kin</h4>		     
-                                                        <div class="row d-flex justify-content-between align-items-center contact">
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="next_kin_name">Name</label>
-                                                                    <input name="next_kin_name" type="text" id="next_kin_name" class="form-control form-control-lg next_kin_name" placeholder="Email" required="required" />
-                                                                </div> 
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="next_kin_phone">Country Code/Phone</label>
-                                                                    <input type="tel" name="next_kin_phone" id="next_kin_phone" placeholder="eg 08123457890" class="form-control form-control-lg next_kin_phone" />
-                                                                </div>  
-                                                                 <!-- ===================================  --> 
-                                                                 <!-- ===================================  -->  
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="next_kin_address">Address</label>
-                                                                    <input type="text" name="next_kin_address" id="next_kin_address" placeholder="eg Next of kin address" class="form-control form-control-lg next_kin_address" />
-                                                                </div>  
-                                                                 <!-- ===================================  -->
-
-                                                         </div>
-                                                        <!-- Next Of Kin -->
-                                                        <h4 class="auth-heading text-center mb-4 left_heading-text">Care Giver</h4>		     
-                                                        <div class="row d-flex justify-content-between align-items-center contact">
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="next_kin_name">Type of device used</label>
-                                                                    <select  name="device_type" id="device_type" class="form-control form-control-lg device_type" id="device_type">
-                                                                            <option disabled selected>e.g smartphone</option>
-                                                                            <option value="Laptop">Laptop</option>
-                                                                            <option value ="smartphone">smartphone</option>
-                                                                            <option value ="Tablet">Tablet</option> 
-                                                                            <option value ="others">Others</option> 
-                                                                        </div>
-                                                                    </select>
-                                                                </div> 
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="side_effect_reporter">Who will report your side effects?</label>
-                                                                    <select  name="side_effect_reporter" id="side_effect_reporter" class="form-control form-control-lg side_effect_reporter">
-                                                                        <option disabled selected>e.g caregiver</option>
-                                                                        <option value="caregiver">Caregiver</option>
-                                                                        <option value ="self">Self</option> 
-                                                                    </select>  
-                                                                </div>  
-                                                                 <!-- ===================================  --> 
-                                                                 <!-- ===================================  -->  
-                                                                <div class="form-group mb-2 col-md-6">
-                                                                    <label class="text_input_label" for="care_giver_relationship">Relationship with caregiver</label>
-                                                                    <select  name="care_giver_relationship" id="care_giver_relationship" class="form-control form-control-lg care_giver_relationship">
-                                                                        <option disabled selected>e.g spouse</option>
-                                                                        <option value="spouse">Spouse</option>
-                                                                        <option value ="child">Child</option>
-                                                                        <option value ="sibling">Sibling</option>
-                                                                        <option value ="parents">Parents</option>
-                                                                    </select>
-                                                                </div>  
-                                                                 <!-- ===================================  -->
-
-                                                         </div>
+                                                            <!-- Care Giver -->
+                                                            <h4 class="auth-heading text-center mb-4 left_heading-text">Care GIver</h4>		     
+                                                            <div class="row d-flex justify-content-between align-items-center contact">
+                                                                    <div class="form-group mb-2 col-md-6">
+                                                                        <label class="text_input_label" for="nk_name">Type of Device Used</label>
+                                                                        <p class="mx-2 log_type" for="nk_name">Laptop</p>
+                                                                    </div> 
+                                                                    <div class="form-group mb-2 col-md-6">
+                                                                        <label class="text_input_label" for="nk_phone">Who will report your side-effects?</label>
+                                                                        <p class="mx-2 log_type" for="nk_phone">Nurse</p>
+                                                                    </div>  
+                                                                    <!-- ===================================  -->
+                                                                    <div class="form-group mb-2 col-md-6">
+                                                                        <label class="text_input_label" for="nk_address">Relationship with caregiver</label>
+                                                                        <p class="mx-2 log_type" for="nk_address">Nurse</p>
+                                                                    </div>  
+                                                            </div>
+                                                        
                                                     </div>
                                                 </section>
                                                       
 
                                                 </form>
-                                                <!--//auth-form-->   
+                                                <!--//auth-form-->    
                 
                                             </div><!--//auth-main-col-->
                                         </div><!--//app-card-->

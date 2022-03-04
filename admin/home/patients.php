@@ -370,88 +370,76 @@
                      <table class="table table-bordered">
                                 <thead>
                                     <tr>
-                                    <th scope="col">SN</th>
+                                    <th scope="col">PIN</th>
                                     <th scope="col">Name</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">Phone</th>
                                     <th scope="col">Age</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Cancer Type</th>
-                                    <th scope="col">Last logged symptom</th>
-                                    <th scope="col"></th>
+                                    <th scope="col">Side Effect Log</th>
+
+                                    <th scope="col">Chemotherapy</th>
+                                    <th scope="col">Radiotherapy</th>
+                                    <th scope="col">Treatment Interruptions</th>
+                                    <th scope="col">Surgical Log</th>
+                                    <th scope="col">Medical Log</th>
+                                    <th scope="col">Last time Active</th>
+                                    <th scope="col">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                       <th scope="row">1</th>
+                                       <th scope="row">HN001</th>
                                         <td> 
                                           <div class="profile_con d-flex justify-content-start align-items-center">
                                               <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
                                               <span class="mx-1">Mark</span>
                                           </div> 
                                         </td>
+                                        <td>ada@gmail.com</td>
+                                        <td>09098765432</td>
                                         <td>56</td>
                                         <td>Male</td>
-                                        <td>Cancer Type</td>
-                                        <td>Today</td>
+                                        <td>Cancer Type</td> 
+                                        <td>Feeling tired</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                        <td>None</td>
+                                        <td>Yes</td>
+                                        <td>None</td>
+                                        <td>Today @ 12 noon</td> 
                                         <td>
-                                            <a href="./profile/user_details.php?userId=12&name=Mark">View More</a>
-                                            <a href="./profile/user_details.php?userId=12&name=Mark"> <i class="fa fa-trash text-danger"></i> </a>
+                                        <a href="./profile/user_details.php?userId=12&name=Mark">View More</a>
+                                        <a href="./profile/user_details.php?userId=12&name=Mark"> <i class="fa fa-trash text-danger"></i> </a>
                                     
-                                    </td>
+                                        </td>
                                     </tr> 
                                     <tr>
-                                       <th scope="row">2</th>
+                                       <th scope="row">HN002</th>
                                         <td>
                                           <div class="profile_con d-flex justify-content-start align-items-center">
                                               <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Mark</span>
+                                              <span class="mx-1">Ada Momodu</span>
                                           </div>
                                         </td>
-                                        <td>76</td>
-                                        <td>Female</td>
-                                        <td>Cancer Type</td>
-                                        <td>Today</td>
+                                        <td>ada@gmail.com</td>
+                                        <td>09098765432</td>
+                                        <td>56</td>
+                                        <td>Male</td>
+                                        <td>Cancer Type</td> 
+                                        <td>feeling tired</td>
+                                        <td>No</td>
+                                        <td>Yes</td>
+                                        <td>None</td>
+                                        <td>Yes</td>
+                                        <td>None</td>
+                                        <td>Today @ 12 noon</td>  
                                        <td>
                                            <a href="./profile/user_details.php?userId=12&name=Mark">View More</a>
-                                           <a href="./profile/user_details.php?userId=12&name=Mark"> <i class="fa fa-trash text-danger"></i> </a>
-                                    
-                                    </td>
-                                    </tr> 
-                                    <tr>
-                                       <th scope="row">3</th>
-                                        <td>
-                                          <div class="profile_con d-flex justify-content-start align-items-center">
-                                              <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Melinda</span>
-                                          </div>
-                                        </td>
-                                        <td>76</td>
-                                        <td>Female</td>
-                                        <td>Cancer Type</td>
-                                        <td>Today</td>
-                                        <td>
-                                            <a href="./profile/user_details.php?userId=13&name=Melinda">View More</a>
-                                            <a href="./profile/user_details.php?userId=13&name=Melinda"> <i class="fa fa-trash text-danger"></i> </a>
-                                    
-                                    </td>
-                                    </tr> 
-                                    <tr>
-                                       <th scope="row">4</th>
-                                        <td>
-                                          <div class="profile_con d-flex justify-content-start align-items-center">
-                                              <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Gates</span>
-                                          </div>
-                                        </td>
-                                        <td>66</td>
-                                        <td>Female</td>
-                                        <td>Cancer Type</td>
-                                        <td>Today</td>
-                                       <td>
-                                           <a href="./profile/user_details.php?userId=14&name=Gates">View More</a>
-                                           <a href="./profile/user_details.php?userId=14&name=Gates"> <i class="fa fa-trash text-danger"></i> </a>
-                                    
-                                    </td>
-                                    </tr> 
+                                           <a href="./profile/user_details.php?userId=12&name=Mark"> <i class="fa fa-trash text-danger"></i> </a>                                   
+                                      </td>
+                                    </tr>  
                                 </tbody>
                             </table>
                      </div>

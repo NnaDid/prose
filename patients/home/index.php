@@ -303,27 +303,31 @@
   				<!--  Over lapping cards row-->
 			    <div class="row g-4 mx-3 overlapping_cards" style="position: relative; top:-100px;">
 				    <div class="col-12 col-lg-4">
-					    <div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
-						    <div class="app-card-header p-3 border-bottom-0">
-						        <div class="row align-items-center gx-3">
-							        <div class="col-auto">
-								        <div class="app-icon-holder" style="background:#F9D7EF">
-										    <img src="../assets/img/effects.png"/>
-									    </div><!--//icon-holder-->
-						                
-							        </div><!--//col--> 
-						        </div><!--//row-->
-						    </div><!--//app-card-header-->
-						    <div class="app-card-body px-4 py-2">  
-							    <div class="intro mb-4 report_log_treatment">
-									<a><h6 class="" style="color:#57166A !important;">Report a symptom</h6></a>
-										<span class="text_desc">Click here to report symptoms you are feeling</span>
-									
+						    <a href="./side-effect.php">
+								<div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
+									<div class="app-card-header p-3 border-bottom-0">
+										<div class="row align-items-center gx-3">
+											<div class="col-auto">
+												<div class="app-icon-holder" style="background:#F9D7EF">
+													<img src="../assets/img/effects.png"/>
+												</div><!--//icon-holder-->
+												
+											</div><!--//col--> 
+										</div><!--//row-->
+									</div><!--//app-card-header-->
+								
+								 <div class="app-card-body px-4 py-2">  
+									<div class="intro mb-4 report_log_treatment">
+										<a href="./side-effect.php"><h6 class="" style="color:#57166A !important;">Report a symptom</h6></a>
+										<span class="text_desc">Click here to report symptoms you are feeling</span>									
+									</div>
 								</div>
-						    </div><!--//app-card-body--> 
+							</a>
+							<!--//app-card-body--> 
 						</div><!--//app-card-->
 				    </div><!--//col-->
 				    <div class="col-12 col-lg-4">
+					<a href="./profile/">
 					    <div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
 						    <div class="app-card-header p-3 border-bottom-0">
 						        <div class="row align-items-center gx-3">
@@ -335,16 +339,19 @@
 							        </div><!--//col--> 
 						        </div><!--//row-->
 						    </div><!--//app-card-header-->
+						 <a href="./profile/">
 						    <div class="app-card-body px-4 py-2"> 
 							    <div class="intro mb-4 log_treatment">
-									<a><h6 style="color:#005267 !important;">Log your treatment </h6>
+								    <a href="./profile/"><h6 style="color:#005267 !important;">Log your treatment </h6>
 										<span class="text_desc">Click here to report symptoms you are feeling</span>
 									</a>
 								</div>
-						    </div><!--//app-card-body--> 
+						    </div>
+						  </a><!--//app-card-body--> 
 						</div><!--//app-card-->
 				    </div><!--//col-->
 				    <div class="col-12 col-lg-4">
+					<a href="./profile/">
 					    <div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
 						    <div class="app-card-header p-3 border-bottom-0">
 						        <div class="row align-items-center gx-3">
@@ -356,13 +363,15 @@
 							        </div><!--//col--> 
 						        </div><!--//row-->
 						    </div><!--//app-card-header-->
-						    <div class="app-card-body px-4 py-2"> 
-							    <div class="intro mb-4 xteristics">
-									<a><h6 style="color: #B62141 !important;">Update disease characteristics</h6>
-										<span class="text_desc">Click here to report symptoms you are feeling</span>
-									</a>
+							
+								<div class="app-card-body px-4 py-2"> 
+									<div class="intro mb-4 xteristics">
+									  <a href="./profile/"><h6 style="color: #B62141 !important;">Update disease characteristics</h6>
+											<span class="text_desc">Click here to report symptoms you are feeling</span>
+										</a>
+									</div>
 								</div>
-						    </div><!--//app-card-body--> 
+	                       </a><!--//app-card-body--> 
 						</div><!--//app-card-->
 				    </div><!--//col-->
 
@@ -393,7 +402,7 @@
   				<!--  Over lapping cards row-->
 			    <div class="row g-4 mb-4 mx-3 overlapping_cards" style="position: relative; top:-100px;">
 				    <div class="col-12 col-lg-4">
-					    <a href="./qol.php">
+					<a href="../../Quality of life Questionnaire.pdf" download>
 							<div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
 								<div class="app-card-header p-3 border-bottom-0">
 									<div class="row align-items-center gx-3">
@@ -407,17 +416,20 @@
 										</div><!--//col--> 
 									</div><!--//row-->
 								</div><!--//app-card-header-->
+							<a href="../../Quality of life Questionnaire.pdf" download>
 								<div class="app-card-body px-4 py-2">  
 									<div class="intro mb-4">
-										<a><h6 style="color:#1C6804">Quality of Life Survey</h6>
+									<a href="../../Quality of life Questionnaire.pdf" download><h6 style="color:#1C6804">Quality of Life Survey</h6>
 										<span class="text_desc">Fill in your QOL at the start, midpoint and end of your treatment.</span>
 										</a>
 									</div>
 								</div><!--//app-card-body--> 
+							</a>
 							</div><!--//app-card-->
 					    </a>
 				    </div><!--//col-->
 				    <div class="col-12 col-lg-4">
+					<a href="./profile/edit_bio.php">
 					    <div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
 						    <div class="app-card-header p-3 border-bottom-0">
 						        <div class="row align-items-center gx-3">
@@ -433,33 +445,39 @@
 						    </div><!--//app-card-header-->
 						    <div class="app-card-body px-4 py-2">  
 							    <div class="intro mb-4">
-									<a><h6 style="color:#1C6804">Update Profile</h6>
+								<a href="./profile/edit_bio.php"><h6 style="color:#1C6804">Update Profile</h6>
 										<span class="text_desc">Click here to update your profile information.</span>
 									</a>
 								</div>
 						    </div><!--//app-card-body--> 
-						</div><!--//app-card-->
+						</div>
+						</a><!--//app-card-->
+
 				    </div><!--//col-->
 				    <div class="col-12 col-lg-4">
-					    <div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
-						    <div class="app-card-header p-3 border-bottom-0">
-						        <div class="row align-items-center gx-3">
-							        <div class="col-auto">
-								        <div class="app-icon-holder" style="background: #FAD39C;">
-										    <img src="../assets/img/covid.png" />
-									    </div><!--//icon-holder-->
-						                
-							        </div><!--//col--> 
-						        </div><!--//row-->
-						    </div><!--//app-card-header-->
-						    <div class="app-card-body px-4 py-2"> 
-							    <div class="intro mb-4">
-									<a><h6 style="color:#923106">Stay Informed Avout Covid</h6> 
-									<span class="text_desc">Click here to get information on Covid-19</span>
-									</a>
-								</div>
-						    </div><!--//app-card-body--> 
-						</div><!--//app-card-->
+						<div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
+						  <a href="./resources.php">
+								<div class="app-card-header p-3 border-bottom-0">
+									<div class="row align-items-center gx-3">
+										<div class="col-auto">
+											<div class="app-icon-holder" style="background: #FAD39C;">
+												<img src="../assets/img/covid.png" />
+											</div><!--//icon-holder-->
+											
+										</div><!--//col--> 
+									</div><!--//row-->
+								</div><!--//app-card-header-->
+								<div class="app-card-body px-4 py-2"> 
+									<div class="intro mb-4">
+									  <a href="./resources.php"><h6 style="color:#923106">Stay Informed Avout Covid</h6> 
+										<span class="text_desc">Click here to get information on Covid-19</span>
+										</a>
+									</div>
+								</div><!--//app-card-body--> 
+						   </a>
+						</div>
+						
+						<!--//app-card-->
 				    </div><!--//col-->
 					
 

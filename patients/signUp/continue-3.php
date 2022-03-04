@@ -148,17 +148,11 @@
                         <div class="cancer__type__container mb-3">
                           <select  name="cancer_type" id="cancer_type" class="form-control form-control-lg cancer_type" id="cancer_type">
                             <option disabled selected>Cancer Type</option>
-                            <option value="Breast cancer">Breast cancer</option>
-                            <option value ="Cervical cancer">Cervical cancer</option>
-                            <option value ="Colorectal cancer">Colorectal cancer</option>
-                            <option value ="Prostrate cancer">Prostrate cancer</option>
-                            <option value ="Liver cancer">Liver cancer</option>
-                            <option value ="Lung cancer">Lung cancer</option>
-                            <option value ="Kidney cancer">Kidney cancer</option>
-                            <option value ="Naso-pharyngeal cancer">Naso-pharyngeal cancer</option>
-                            <option value ="Bladder cancer">Bladder cancer</option>
-                            <option value ="others">others</option>
-                        </div>
+                            <option value="Breast cancer">Breast cancer</option> 
+                            <option value="Head and Neck Cancer">Head and Neck Cancer</option>  
+                            <option value="Male Pelvic Cancer">Male Pelvic Cancer</option> 
+                            <option value="Female Pelvic Cancer">Female Pelvic Cancer</option> 
+                          </div>
                       </select> 
                     </div> 
                    <div class="form-group mb-3">

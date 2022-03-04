@@ -301,15 +301,15 @@
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
 							<img src="../assets/images/user.png" alt="user profile"></a>
 				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.html">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.html">Settings</a></li>
+								<li><a class="dropdown-item" href="./">Profile</a></li>
+								<li><a class="dropdown-item" href="../settings.php">Settings</a></li>
 								<li><hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="login.html">Log Out</a></li>
 							</ul>
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
-				            <a href="settings.html" title="Settings">Logout </a>
+				            <a href="../../../index.php" title="logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -378,7 +378,7 @@
 					    </li><!--//nav-item-->	
 						<li class="nav-item">
 							<!--//Bootstrap Icons: https://icons.getbootstrap.com/ -->
-							<a class="nav-link d-flex justify-content-start align-items-center"href="settings.php">
+							<a class="nav-link d-flex justify-content-start align-items-center"href="../settings.php">
 						        <span class=""> 
 									<img class="logo-icon" src="../../assets/img/settings.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
@@ -398,97 +398,89 @@
 	    <div class="app-content pt-1 p-md-1 p-lg-2">
 		    <div class="container-xl"> 
   				<!--  Over lapping cards row-->
-			    <div class="row g-4 mb-4">
-				    
+			    <div class="row g-4 mb-4"> 
 					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
-							<h1 class="h1">Profile</h1> 
+                         <h1 class="h1 mx-2">&nbsp;Profile</h1> 
                             <div class="row">
                                 <div class="col-12 col-lg-4" style="">
+                                <a href="./">
                                     <div class="col-md-12 box" >
                                         <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2" style="border-radius:10px !important;">
                                                 <img src="../../../patients/assets/img/user.svg" id="bio" class="profileItem ml-3" style="height:60px; width:60px" />  <!--//icon-holder-->
                                                 <div class="log_type mx-2"> Bio </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
+                                </a>
                                     
+                                <a href="./disease_character.php">
                                     <div class="col-md-12 box">
                                         <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm profileItem py-2 activeTab" style="border-radius:10px !important;">
                                                  <img src="../../../patients/assets/img/user.svg" id="disease_characteristics" class="profileItem  ml-3" style="height:60px; width:60px"/> <!--//icon-holder-->
                                                 <div class="log_type mx-2 activeTab">Disease Characteristics</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
-                                    
+                                </a>
+                                   
+                                <a href="./anthropometry.php">
                                     <div class="col-md-12 box">
                                         <div class="app-card app-card-basic d-flex align-items-center justify-content-start shadow-sm py-2" style="border-radius:10px !important;">
                                                 <img src="../../../patients/assets/img/user.svg" id="anthropy" class="profileItem  ml-3"  style="height:60px; width:60px" /> <!--//icon-holder-->
                                                 <div class="log_type mx-2"> Anthropometry </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
+                                </a>
                                     
                                  </div><!--//col-->
                                  
                                     <div class="col-12 col-lg-8">
                                         <div class="app-card app-card-basic d-flex justify-content-center align-items-center shadow-sm" style="margin-right:10px;">
                                                                         
-                                            <div class="col-12 col-lg-11 col-md-11  log_OtherMedication_Container" style="">
+                                        <div class="col-12 col-lg-11 col-md-11  log_OtherMedication_Container" style="">
                                                 <div class="topBio d-flex justify-content-between align-items-center mt-4">
-                                                   <h3 class="h3">Bio</h3> 
-                                                   <button type="button" class="btn btn-outline-primary saveBio"><span>Save</span></button>
+                                                   <h3 class="h3">Disease Characteristics</h3> 
+                                                   <button type="button" class="btn btn-outline-primary editBio" style="z-index:29999;"><a href="./edit_disease.php">Edit</a></button>
                                                 </div>
 
-                                                <form class="my-4 bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.88">   
-                                                    
-                                                    <h4 class="auth-heading text-center mb-4 left_heading-text">Personal Information</h4>		     
-                                                      <div class="form-row d-flex justify-content-between align-items-center personal_information">
-                                                            <div class="form-group mb-1">
-                                                                <label class="text_input_label" for="fname">First Name</label>
-                                                                <input name="fname" type="text" id="fname" class="form-control form-control-lg fname" placeholder="First name" required="required" />
-                                                            </div> 
-                                                            <div class="form-group mb-1">
-                                                                <label class="text_input_label" for="lname">Last Name</label>
-                                                                <input name="lname" type="text" id="lname" class="form-control form-control-lg lname" placeholder="Last Name" required="required" />
-                                                            </div> 
-                                                            <div class="form-group mb-1">
-                                                                <label class="text_input_label" for="other_name">Other Names</label>
-                                                                <input name="lname" type="text" id="other_name" class="form-control form-control-lg lname" placeholder="Last Name" required="required" />
-                                                            </div>  
-                                                      </div>
-
-                                                      <div class="form-row d-flex justify-content-between align-items-center">  
-                                                                 <div class="form-group mb-1"> <label class="text_input_label">Gender</label>
-                                                                    <select name="gender" class="form-control form-control-lg gender" syle="width:100%;">
-                                                                        <option disabled selected>Gender</option>
-                                                                        <option value="male">Male</option>
-                                                                        <option value ="female">Female</option>
-                                                                    </select>
-                                                                </div> 
-
-                                                                <div class="form-group mb-1">
-                                                                    <label class="text_input_label">Date of Birth</label>
-                                                                    <input type="text" name="dob" placeholder="Date of Birth" class="form-control form-control-lg dob" />
-                                                                </div>    
-                                                      </div>
-
-                                                      <div class="form-row d-flex justify-content-between align-items-center">  
-                                                                <div class="form-group mb-1">
-                                                                    <small class="text_input_label">Age</small>
-                                                                    <input type="text" name="age" placeholder="eg 39" class="form-control form-control-lg age"  readonly/>
-                                                                </div>    
-                                                                <div class="form-group mb-1"><small class="text_input_label">Level of Education</small>
-                                                                    <select name="education" class="form-control form-control-lg education">
-                                                                        <option disabled selected>eg. Tertiary</option>
-                                                                        <option value="uneducated">Uneducated</option>
-                                                                        <option value="primary">Primary</option>
-                                                                        <option value ="secondary">Secondary</option>
-                                                                        <option value ="tertiary">Teriary</option>
-                                                                        <option value ="OND|HND">OND/HND</option>
-                                                                        <option value ="others">Others</option>
-                                                                    </select>
+                                                <form class="bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.90;margin-top:-60px;">   
+                                                     <section class="personal_information"> 		     
+                                                         <div class="row d-flex justify-content-between align-items-center personal_information">
+                                                                <div class="form-group mb-2 col-md-12">
+                                                                    <label class="text_input_label" for="holw_old">How old were you when diagnosed with cancer?</label>
+                                                                    <p class="mx-2 log_type" for="holw_old">79 years</p> 
                                                                 </div>
-                                                               
-                                                      </div>
+
+                                                                <div class="form-group mb-2 col-md-12">
+                                                                    <label class="text_input_label" for="cancer_type">Type of Cancer</label>
+                                                                    <p class="mx-2 log_type" for="cancer_type">Some cancer type here</p>
+                                                                </div> 
  
-                                                </form><!--//auth-form-->   
+                                                                <div class="form-group mb-2 col-md-12">
+                                                                    <label class="text_input_label" for="hist_type">Histology Type</label>
+                                                                    <p class="mx-2 log_type" for="hist_type">Some placeholder</p>
+                                                                </div>  
+
+                                                                <div class="form-group mb-2 col-md-12">
+                                                                    <label class="text_input_label" for="cancer_grade">Cancer grade</label>
+                                                                    <p class="mx-2 log_type" for="cancer_grade">Some placeholder</p>
+                                                                </div>  
+
+                                                                <div class="form-group mb-2 col-md-12">
+                                                                    <label class="text_input_label" for="cancer_stage">Cancer Stage</label>
+                                                                    <p class="mx-2 log_type" for="cancer_stage">Some placeholder</p>
+                                                                </div>  
+
+                                                                <div class="form-group mb-2 col-md-12">
+                                                                    <label class="text_input_label" for="comorbidity">Comorbidity</label>
+                                                                    <p class="mx-2 log_type" for="comorbidity">Some placeholder</p>
+                                                                </div>  
+                                                        </div> 
+                                                        
+                                                    </div>
+                                                </section>
+                                                      
+
+                                                </form>
+                                                <!--//auth-form-->    
                 
                                             </div><!--//auth-main-col-->
                                         </div><!--//app-card-->

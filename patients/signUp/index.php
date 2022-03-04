@@ -95,7 +95,7 @@
               <div class="form-group">
                   <small class="input_text_label">Confirm Password</small>
                     <div class="input-group mb-3">
-                        <input type="password" class="form-control form-control-lg pwd pwd2 py-3" name ="pwd"  Placeholder="Enter your password here" required />
+                        <input type="password" class="form-control form-control-lg pwd pwd2 py-3" name ="pwd2"  Placeholder="Enter your password here" required />
                         <div class="input-group-append">
                         <span class="input-group-text"><i class="fa fa-eye-slash togleView"></i></span>
                     </div>
@@ -162,11 +162,14 @@
           evt.preventDefault();
           let result  = $('.___result');
           let email   = $('#email').val();
-          let data    = {  email: email };
+          let p1      = $(".pwd").val();
+          let p2      = $(".pwd2").val();
+          let userType = sessionStorage.getItem("userType") || "patient"
+          let data    = {  email: email, p1:p1,p2:p2,userType:userType};
           console.log(data);
           result.html('Please wait...');
 
-        fetch('../../api/patients/register.php', {
+        fetch('../../api/patients/auth/register.php', {
             method: "POST",
             body: JSON.stringify(data),
             headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -176,8 +179,8 @@
           console.log(json);
           
           if(json.msg=='success'){
-            result.html('<span style="color:green;">Successful!</span>'); 
-            Toast.fire({ icon: 'success',title: 'Successful! Please check you email to confirm'});
+            result.html('<span style="color:green;">Successful!  Please check you email to confirm</span>'); 
+            Toast.fire({ icon: 'success',title: 'Successful!'});
             setTimeout(()=>{  window.location.href = './check-mail.php';  }, 2000);
           }else{
             result.html('<span style="color:red;">'+json.msg+'</span>');
