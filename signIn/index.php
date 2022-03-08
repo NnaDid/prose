@@ -126,7 +126,7 @@
               <h1 class="mb-1 begin_text">Sign In</h1>
               <p class="text-start">Welcome to PROSE Care, To get <br/> started, Sign-in here</p>
             </div>  
-            <form class ="signInForm" action="../patients/home/" method="post">
+            <form class ="signInForm"  method="post">
                 <div class="form-group">
                     <small class="input_text_label">Email</small>
                     <input type="email" name="email" placeholder="eg omalicha@gmail.com" class="form-control form-control-lg email">
@@ -185,8 +185,63 @@
               toast.addEventListener('mouseleave', Swal.resumeTimer)
               }
           });
-        //   Toast.fire({ icon: 'success',title: 'Signed Up Successfully'});
-        // move to :: check-mail.html
+
+
+
+      $(document).on('submit','.signInForm', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result'); 
+          // ===========================================================//
+          let email       = $('.email').val();
+          let pwd         = $(".pwd").val(); 
+          // ===========================================================//
+          let data  = { email: email,pwd: pwd };                    
+         
+         // console.log(data);
+          result.html('Please wait...');
+
+        fetch('../api/patients/auth/login.php', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        })
+        .then(response => response.json()) 
+        .then((json)=>{
+          console.log(json);
+          
+          if(json.msg.success == 'success'){
+            result.html('<div class="alert alert-success" style="color:green;">Successful!</div>'); 
+            Toast.fire({ icon: 'success',title: 'Successful!'});
+            let userType = json.msg.user_type;
+            switch(userType){
+              case 'patient':
+                window.location.href = "../patients/home/";
+                break;
+              case 'care_giver':
+                window.location.href = "../patients/home/";
+                break;
+              case 'professional':
+                window.location.href = "../hcp/home/";
+                break;
+              case 'admin':
+                window.location.href = "../admin/home/";
+                break;
+              default:
+                window.location.href = "../patients/home/";
+                break;
+            }
+            // setTimeout(()=>{  window.location.href = './continue-2.php';  }, 3000);
+          }else{
+            result.html('<div class="alert alert-danger" style="color:red;">'+json.msg+'</div>');
+          }
+        })
+        .catch(err => console.log(err.toString()));
+
+        });
+
+
+
+ 
           
         });
     </script>

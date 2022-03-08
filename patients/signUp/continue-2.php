@@ -154,7 +154,7 @@
 
                     <div class="form-group">
                         <small class="input_text_label">Country</small>
-                        <select name="country" class="form-control form-control-lg country" name ="country" id="country">
+                        <select name="country" class="form-control form-control-lg country" name ="country" id="country" required>
                           <option disabled selected>Country</option>
                           <option value="Nigeria">Nigeria</option>
                           <option value ="Ghana">Ghana</option>
@@ -163,8 +163,8 @@
     
                     <div class="form-group">
                         <small class="input_text_label">State of residence</small>
-                        <select onchange="toggleLGA(this);" name="state" id="state" class="form-control form-control-lg ">
-                          <option value="" selected="selected">- Select -</option>
+                        <select onchange="toggleLGA(this);" name="state" id="state" class="form-control form-control-lg state">
+                          <option value="" selected="selected" disabled>- Select -</option>
                           <option value="Abia">Abia</option>
                           <option value="Adamawa">Adamawa</option>
                           <option value="AkwaIbom">AkwaIbom</option>
@@ -207,7 +207,7 @@
     
                     <div class="form-group mb-3">
                         <small class="input_text_label">Town/City</small>
-                        <select name="lga" id="lga" class="form-control  form-control-lg select-lga" required>
+                        <select name="lga" id="lga" class="form-control  form-control-lg select-lga town" required>
                         </select>
                     </div>   
        
@@ -230,7 +230,7 @@
     
                     <div class="form-group">
                         <small class="input_text_label">Income Level</small>
-                        <select name="income_level" class="form-control form-control-lg religion" id="income_level">
+                        <select name="income_level" class="form-control form-control-lg income_level" id="income_level">
                           <option disabled selected>e.g 200,000 - 500,000 naira monthly</option>
                           <option value="less_than|200,000">less than 200,000 naira monthly</option>
                           <option value="200,000 - 500,000 naira monthly">200,000 - 500,000 naira monthly</option>
@@ -238,13 +238,13 @@
                           <option value="above 1,000,000 naira monthly">above 1,000,000 naira monthly</option> 
                       </select>
                     </div>    
-
+                   <div class="form-group ___result"> </div>
     
                     <div class="form-group">
                         <button class="btn-block btn btn-primary   form-control-lg  continue_2" type="submit">Continue</button>
                     </div>   
 
-                    <div class="form-group ___result"> </div>
+                    
                 </fieldset>
 
                 </form>   
@@ -281,21 +281,6 @@
                 },false);
             });
 
-            //----------------------------------------------------------------------
-            // Check when the user choses others as type of cancer
-            $(".cancer_type").change(function(){
-                if($(this).val()==="others"){
-                    $(".cancer__type__container").append(`
-                        <div class="form-group mb-3">
-                            <small class="input_text_label">Other Cancer Type</small>
-                            <input type="text" name="other_cancer_type" id="other_cancer_type" class="form-control form-control-lg" placeholder="Other Cancer Type">
-                        </div>
-                    `);
-                }else{
-                    $(".cancer__type__container").find(".form-group").remove();
-                }
-            });
-            //----------------------------------------------------------------------
 
         const Toast = Swal.mixin({
               toast: true,
@@ -308,6 +293,59 @@
               toast.addEventListener('mouseleave', Swal.resumeTimer)
               }
           });
+
+
+      $(document).on('submit','#msform', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result');  
+          // ===========================================================//
+          let phone          = $('.phone').val();
+          let country        = $(".country").val();
+          let state          = $(".state").val();
+          let town           = $(".town").val();
+          let tribe          = $(".tribe").val();
+          let religion       = $(".religion").val();
+          let income_level   = $(".income_level").val();
+          // =======================================================//
+          let userEmail       = sessionStorage.getItem("userEmail"); 
+          //============================================================//
+          let data  = { 
+                        email: userEmail,
+                        phone: phone,
+                        country: country,
+                        state: state,
+                        town: town,
+                        tribe: tribe, 
+                        religion: religion,
+                        income_level: income_level,
+                      };
+          console.log(data);
+          result.html('Please wait...');
+
+        fetch('../../api/patients/auth/continue-2.php', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        })
+        .then(response => response.json()) 
+        .then((json)=>{
+          console.log(json);
+          
+          if(json.msg=='success'){
+            result.html('<span class="alert alert-success" style="color:green;">Successful!</span>'); 
+            Toast.fire({ icon: 'success',title: 'Successful!'});
+            setTimeout(()=>{  window.location.href = './continue-3.php';  }, 3000);
+          }else{
+            result.html('<span class="alert alert-danger" style="color:red;">'+json.msg+'</span>');
+          }
+        })
+        .catch(err => console.log(err));
+
+        });
+
+
+
+
 
         });
     </script>

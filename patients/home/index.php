@@ -1,3 +1,10 @@
+<?php
+//  session_start();
+//  require_once('../../api/common.php');
+//  $email = $_SESSION["PROSE_CARE__USER_EMAIL"];
+//  $fname  = $base->getUserByEmail($email)['fname'];
+require_once("../../top.php");
+?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -181,17 +188,11 @@
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
 				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.php">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="../signIn/">Log Out</a></li>
-							</ul>
+							<img src="assets/images/user.png" alt="user profile"></a> 
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
-				            <a href="../signIn" title="Settings">Logout </a>
+				            <a href="?u=logout" title="Settings">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -285,7 +286,7 @@
 					    <div class="app-card-body p-3 p-lg-4">
 							<div class="d-flex justify-content-between align-items-center gx-5 gy-3">
 								<div class="">
-									<h3 class="mb-3">Hi, John Doe!</h3>
+									<h3 class="mb-3">Hi, <?=$fname; ?>!</h3>
 							        <div>What would you like to do today?</div>
 							    </div><!--//col-->
 							    <div class="">

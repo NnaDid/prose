@@ -73,11 +73,12 @@
                             <div class="progress_report" style="height:10px; display:none; background-color:#8D2D91; border-radius:6px;"></div>
                             <span class="percent"></span> 
                     </div>
-              </form>
+              </form> 
 
+              <span class="___result"></span>
 
               <div class="form-group my-2" style="margin-top:120px !important;">
-                <a  href="../../intro.php" class="btn-block btn btn-primary btn-lg start_button isDisabled"> Next </a>
+                <a  href="./continue-1.php" class="btn-block btn btn-primary btn-lg start_button isDisabled"> Next </a>
               </div>
 
           </div>
@@ -104,13 +105,15 @@
         // Triger file upload when the form is clicked
         let form         = document.querySelector('form');
         let consent_file = form.querySelector('.consent_file');
+        let result       = $('.___result');
 
         form.addEventListener('click', function(e) {
-            //e.preventDefault();
+            //e.preventDefault(); 
             consent_file.click();
         });
 
         consent_file.onchange =({target})=>{
+            result.html('Please wait...');
             let file = target.files[0];  // get only one file
             if(file){
                 let fileName = file.name;
@@ -120,7 +123,53 @@
                 }
                 console.log(fileName);
                 uploadFile(fileName);
-            }
+
+            } 
+            //========================================================================     
+            // Uploading the file to Cloudinary and saving the url in the database  //      
+            const CLOUDINARY_URL           = 'https://api.cloudinary.com/v1_1/dkazbyl4x/image/upload';
+            const CLOUDINARY_UPLOAD_PRESET = 'prosecare';  
+            const formData     = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+              fetch(CLOUDINARY_URL, {
+                  method: 'POST',
+                  body: formData,
+              })
+              .then(response => response.json())
+                  .then((data) => {
+                      if (data.secure_url !== '') {
+                          console.log(data.secure_url);
+                          const uploadedFileUrl = data.secure_url;
+                          localStorage.setItem('consent_doc_Url', uploadedFileUrl);
+                          // get the email of the user when he first started the application from the sessionStorage
+                          let userEmail   = sessionStorage.getItem("userEmail");
+                          let UserData    = {  email: userEmail, consent_doc_Url: uploadedFileUrl };
+                            console.log(data); 
+
+                          fetch('../../api/patients/auth/upload_consent.php', {
+                              method: "POST",
+                              body: JSON.stringify(UserData),
+                              headers: {"Content-type": "application/json; charset=UTF-8"}
+                          })
+                          .then(response => response.json()) 
+                          .then((json)=>{
+                            console.log(json); 
+                            if(json.msg=='success'){
+                              result.html('<div class="alert alert-success"><span style="color:green;">Successful!</span></div>'); 
+                              $(".start_button").removeClass("isDisabled"); // enable the NEXT button
+                              
+                                setTimeout(()=>{  window.location.href = './continue-1.php';  }, 3000);
+                              
+                            }else{
+                              result.html('<span style="color:red;">'+json.msg+'</span>');
+                            }
+                          })
+                          .catch(err => console.log(err));
+                      }
+                  })
+                .catch(err => console.error(err));
+        
         }
 
       function uploadFile(fileName){
@@ -134,7 +183,7 @@
                 $('.percent').html(percentComplete + '% Done');
                 $('.progress_report').css('width', percentComplete+ '%');
                 if(percentComplete>=100){ 
-                    $(".start_button").removeClass("isDisabled");
+                    // $(".start_button").removeClass("isDisabled");
                     $(".details").addClass("my-auto");
                     $('.name').html(fileName + " uploaded");
                 } 
@@ -154,45 +203,19 @@
             uploadFormData(formImage);
         }
 
-        function uploadFormData(formData){
-            $.ajax({
-                url: "../../api/patients/upload_consent.php",
-                type: "POST",
-                data: formData,
-                contentType:false,
-                cache: false,
-                processData: false,
-                success: function(data){
-                    $('#drop-area').html(data);
-                },
-                progress: function(e) {
-                if (e.lengthComputable) {
-                    var pct = (e.loaded / e.total) * 100;
-                    $('.progress_report').show();
-                    $('.progress-bar').css({
-                        "width": pct + "%"
-                    });
-                    $('.progress-bar span').html(pct + '% complete');
-                } else {
-                    console.warn('Content Length not reported!');
-                }
-             }
-            });
-        }
+        $("#drop-area").on('dragenter', function (e){
+                e.preventDefault();
+                $(this).parent().css('background', '#f1f1f1'); 
+        });
 
-            $("#drop-area").on('dragenter', function (e){
-                    e.preventDefault();
-                    $(this).parent().css('background', '#f1f1f1'); 
-            });
+        $("#drop-area").on('dragleave', function (e){
+                e.preventDefault();
+                $(this).parent().css('background', '#fff');
+        });
 
-            $("#drop-area").on('dragleave', function (e){
-                    e.preventDefault();
-                    $(this).parent().css('background', '#fff');
-            });
-
-            $("#drop-area").on('dragover', function (e){
-                 e.preventDefault();
-            });
+        $("#drop-area").on('dragover', function (e){
+              e.preventDefault();
+        });
 
         $("#drop-area").on('drop', function (e){ 
                 e.preventDefault();

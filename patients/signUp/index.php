@@ -164,7 +164,10 @@
           let email   = $('#email').val();
           let p1      = $(".pwd").val();
           let p2      = $(".pwd2").val();
-          let userType = sessionStorage.getItem("userType") || "patient"
+          let userType = sessionStorage.getItem("userType") || "patient";
+          // Setup the email in sessionStorage to be used during consent upload
+          sessionStorage.setItem("userEmail", email);
+          //=================================================================
           let data    = {  email: email, p1:p1,p2:p2,userType:userType};
           console.log(data);
           result.html('Please wait...');

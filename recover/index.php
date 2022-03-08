@@ -133,10 +133,10 @@
               <h1 class="mb-1 begin_text">Forgot Password</h1>
               <p class="text-start my-2">Enter the email associated with this account and we’ll send you a link to change your password</p>
             </div>  
-            <form class ="forgotPasswordForm" method="post" action="./check-mail.php">
+            <form class ="forgotPasswordForm" method="post">
                 <div class="form-group">
                     <small class="input_text_label">Email</small>
-                    <input type="email" name="email" placeholder="eg omalicha@gmail.com" class="form-control form-control-lg email">
+                    <input type="email" name="email" placeholder="eg omalicha@gmail.com" class="form-control form-control-lg email" required>
                 </div> 
 
                 <div class="form-group ___result"> </div>
@@ -170,8 +170,40 @@
               toast.addEventListener('mouseleave', Swal.resumeTimer)
               }
           });
-        //   Toast.fire({ icon: 'success',title: 'Signed Up Successfully'});
-        // move to :: check-mail.html
+
+       $(document).on('submit','.forgotPasswordForm', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result'); 
+          // ===========================================================//
+          let email       = $('.email').val(); 
+          // ===========================================================//
+          let data  = { email: email};                    
+         
+         // console.log(data);
+          result.html('Please wait...');
+
+        fetch('../api/patients/auth/recover.php', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        })
+        .then(response => response.json()) 
+        .then((json)=>{
+          console.log(json);
+          
+          if(json.msg=='success'){
+            result.html('<span class="alert alert-success" style="color:green;">Successful!</span>'); 
+            Toast.fire({ icon: 'success',title: 'Successful!'});
+            setTimeout(()=>{  window.location.href = './check-email.php';  }, 3000);
+          }else{
+            result.html('<span class="alert alert-success" style="color:red;">'+json.msg+'</span>');
+          }
+        })
+        .catch(err => console.log(err));
+
+        });
+
+
           
         });
     </script>

@@ -146,7 +146,7 @@
                    <div class="form-group mb-3">
                         <small class="input_text_label">Cancer Type</small>
                         <div class="cancer__type__container mb-3">
-                          <select  name="cancer_type" id="cancer_type" class="form-control form-control-lg cancer_type" id="cancer_type">
+                          <select  name="cancer_type" id="cancer_type" class="form-control form-control-lg cancer_type" required>
                             <option disabled selected>Cancer Type</option>
                             <option value="Breast cancer">Breast cancer</option> 
                             <option value="Head and Neck Cancer">Head and Neck Cancer</option>  
@@ -158,7 +158,7 @@
                    <div class="form-group mb-3">
                         <small class="input_text_label">Type of device used</small>
                         <div class="cancer__type__container mb-3">
-                          <select  name="device_type" id="device_type" class="form-control form-control-lg device_type" id="device_type">
+                          <select  name="device_type" id="device_type" class="form-control form-control-lg device_type" required>
                             <option disabled selected>e.g smartphone</option>
                             <option value="Laptop">Laptop</option>
                             <option value ="smartphone">smartphone</option>
@@ -170,7 +170,7 @@
                    <div class="form-group mb-3">
                         <small class="input_text_label">Who will report your side effects?</small>
                         <div class="cancer__type__container mb-3">
-                          <select  name="cancer_type" id="cancer_type" class="form-control form-control-lg cancer_type" id="cancer_type">
+                          <select  name="effect_reporter" id="effect_reporter" class="form-control form-control-lg effect_reporter"  required>
                             <option disabled selected>e.g caregiver</option>
                             <option value="caregiver">Caregiver</option>
                             <option value ="self">Self</option> 
@@ -180,7 +180,7 @@
                    <div class="form-group mb-3">
                         <small class="input_text_label">Relationship with caregiver</small>
                         <div class="cancer__type__container mb-3">
-                          <select  name="cancer_type" id="cancer_type" class="form-control form-control-lg cancer_type" id="cancer_type">
+                          <select  name="caregiver_relationship" id="caregiver_relationship" class="form-control form-control-lg caregiver_relationship"  required>
                             <option disabled selected>e.g spouse</option>
                             <option value="spouse">Spouse</option>
                             <option value ="child">Child</option>
@@ -190,11 +190,14 @@
                         </div>
                       
                     </div> 
-                    <div class="form-group">
-                        <button class="btn-block btn btn-primary form-control-lg  continue_2"  data-toggle="modal" data-target="#accounModal" type="button">Continue</button>
-                    </div>   
-
+                    
                     <div class="form-group ___result"> </div>
+                    
+                    <div class="form-group">
+                        <button class="btn-block btn btn-primary form-control-lg  continue_2" type="submit">Continue</button>
+                    </div>   
+                    <!-- data-toggle="modal" data-target="#accounModal" -->
+                    
                 </fieldset>
 
                 </form>   
@@ -268,6 +271,52 @@
               toast.addEventListener('mouseleave', Swal.resumeTimer)
               }
           });
+
+      $(document).on('submit','#msform', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result');  
+          // ===========================================================//
+          let cancer_type        = $('.cancer_type').val();
+          let device_type          = $(".device_type").val();
+          let effect_reporter        = $(".effect_reporter").val();
+          let caregiver_relationship   = $(".caregiver_relationship").val(); 
+
+          // =======================================================//
+          let userEmail       = sessionStorage.getItem("userEmail"); 
+          //============================================================//
+          let data  = { 
+                        email: userEmail,
+                        cancer_type: cancer_type,
+                        device_type: device_type,
+                        effect_reporter: effect_reporter,
+                        caregiver_relationship: caregiver_relationship, 
+                      };
+              console.log(data);
+              result.html('Please wait...');
+
+            fetch('../../api/patients/auth/continue-3.php', {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            .then(response => response.json()) 
+            .then((json)=>{
+              console.log(json);
+              
+              if(json.msg=='success'){
+                result.html('<span class="alert alert-success" style="color:green;">Successful!</span>'); 
+                Toast.fire({ icon: 'success',title: 'Successful!'});
+                setTimeout(()=>{  
+                  $('#accounModal').modal('show');
+                 }, 3000);
+              }else{
+                result.html('<span class="alert alert-danger" style="color:red;">'+json.msg+'</span>');
+              }
+            })
+            .catch(err => console.log(err));
+
+            });
+
 
         });
     </script>

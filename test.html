@@ -37,6 +37,34 @@
                     })
                     .catch(err => console.error(err));
             });
+
+
+
+            function uploadImage(id,email){
+                const CLOUDINARY_URL           = 'https://api.cloudinary.com/v1_1/dkazbyl4x/image/upload';
+                const CLOUDINARY_UPLOAD_PRESET = 'prosecare';
+                const image                    = document.querySelector('#fileupload');
+                image.addEventListener('change', (e) => {
+                    const file                 = e.target.files[0];
+                    const formData             = new FormData();
+                    formData.append('file', file);
+                    formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+
+                    fetch(CLOUDINARY_URL, {
+                        method: 'POST',
+                        body: formData,
+                    })
+                    .then(response => response.json())
+                        .then((data) => {
+                            if (data.secure_url !== '') {
+                                console.log(data.secure_url);
+                                const uploadedFileUrl = data.secure_url;
+                                localStorage.setItem('passportUrl', uploadedFileUrl);
+                            }
+                        })
+                        .catch(err => console.error(err));
+                });
+            }
         })()
 
     </script>

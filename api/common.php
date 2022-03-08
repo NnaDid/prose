@@ -72,22 +72,22 @@ public function exists($val,$table,$col){
 
 //-----------------------------------------------------//
 public function checkLoggedIn($loc){
-    if(!isset($_SESSION["zGITS_USER_EMAIL"])){
+    if(!isset($_SESSION["PROSE_CARE__USER_EMAIL"])){
         header("location:$loc");
     }
     
-    if(isset($_SESSION["zGITS_USER_EMAIL"])){
+    if(isset($_SESSION["PROSE_CARE__USER_EMAIL"])){
       if(isset($_GET['u']) && $_GET['u']=="logout"){ 
-        unset($_SESSION["zGITS_USER_EMAIL"]);
+        unset($_SESSION["PROSE_CARE__USER_EMAIL"]);
         session_destroy(); 
         header("location:$loc");
       }
     }
 }
 
-// Logout From all sessions set zGITS_USER_EMAIL
+// Logout From all sessions set PROSE_CARE__USER_EMAIL 
 public function logOut(){  
-    $this->checkLoggedIn("../index.php"); 
+    $this->checkLoggedIn("../../signIn/"); 
 }
 
 
@@ -95,12 +95,12 @@ public function logOut(){
 
 // include_once 'admin/index.php';
 // // Use this as a base class
-// class  Base extends Admin{
-//     use Common;
+class  Base {
+    use Common;
 
-// }
+}
 
-// $base = new Base();
+$base = new Base();
 
 
 ?>

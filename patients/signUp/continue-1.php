@@ -170,7 +170,7 @@
 
                     <div class="form-group mb-3">
                         <small class="input_text_label">Level of Education</small>
-                        <select name="gender" class="form-control form-control-lg gender">
+                        <select name="education_level" class="form-control form-control-lg education_level">
                             <option disabled selected>eg. Tertiary</option>
                             <option value="uneducated">Uneducated</option>
                             <option value="primary">Primary</option>
@@ -180,12 +180,14 @@
                             <option value ="others">Others</option>
                         </select>
                     </div>    
-    
+                  
+                    <div class="___result py-2 my-1"> </div>
+
                     <div class="form-group">
                         <button class="btn-block btn btn-primary btn-lg continue_1" type="submit">Continue</button>
                     </div>   
 
-                    <div class="form-group ___result"> </div>
+                   
                 </fieldset>
 
                 </form>   
@@ -216,7 +218,7 @@
                 },false);
             });
 
-        const Toast = Swal.mixin({
+         const Toast = Swal.mixin({
               toast: true,
               position: 'top-end',
               showConfirmButton: false,
@@ -228,7 +230,7 @@
               }
           });
           
-            function calculateAge(birthday) { // birthday is a date
+          function calculateAge(birthday) { // birthday is a date
                 var ageDifMs = Date.now() - birthday;
                 var ageDate = new Date(ageDifMs); // miliseconds from epoch
                 return Math.abs(ageDate.getUTCFullYear() - 1970);
@@ -239,6 +241,54 @@
               $('.age').val(calculateAge(new Date($(".dob").val())));
               console.log($(".dob").val());
           });
+
+
+
+      $(document).on('submit','#msform', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result'); 
+          // ===========================================================//
+          let firstName       = $('.firstName').val();
+          let lastName        = $(".lastName").val();
+          let education_level = $(".education_level").val();
+          let dob             = $(".dob").val();
+          let age             = $(".age").val();
+          let gender          = $(".gender").val();
+          // =======================================================//
+          let userEmail       = sessionStorage.getItem("userEmail"); 
+          //============================================================//
+          let data  = { 
+                        email: userEmail,
+                        firstName: firstName,
+                        lastName: lastName,
+                        education_level: education_level,
+                        dob: dob,
+                        age: age, 
+                        gender: gender,
+                      };
+          console.log(data);
+          result.html('Please wait...');
+
+        fetch('../../api/patients/auth/continue-1.php', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        })
+        .then(response => response.json()) 
+        .then((json)=>{
+          console.log(json);
+          
+          if(json.msg=='success'){
+            result.html('<span class="alert alert-success" style="color:green;">Successful!</span>'); 
+            Toast.fire({ icon: 'success',title: 'Successful!'});
+            setTimeout(()=>{  window.location.href = './continue-2.php';  }, 3000);
+          }else{
+            result.html('<span class="alert alert-success" style="color:red;">'+json.msg+'</span>');
+          }
+        })
+        .catch(err => console.log(err));
+
+        });
 
 
 
