@@ -63,6 +63,9 @@
           font-family: Inter !important;
 		  zoom:0.98;
       }
+	  pre{
+		font-family: Inter !important;
+	  }
       .begin_text{
         font-family: Inter;
         font-style: normal;
@@ -233,7 +236,7 @@
         .activeTab{
             background: #DEF0FF !important;
         }
-		pre strong{
+		pre h5{
 			font-size:18px;
 			font-weight:800;
 		}
@@ -367,7 +370,7 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box " style="">
-                                       <a href="https://covid19.ncdc.gov.ng/"> 
+                                       <a href="https://covid19.ncdc.gov.ng/" target="__blank"> 
 										   <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
                                                 <div class="col-md-2"> <img src="../../patients/assets/img/covid.svg" id="log_chemo" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-10"> Stay Informed About Covid </div>
@@ -377,7 +380,7 @@
                                     </div><!--//col-->
                                     
                                     <div class="col-6 box" style=""> 
-									    <a href="https://www.cancer.gov/about-cancer/treatment/types/chemotherapy">
+									    <a href="https://www.cancer.gov/about-cancer/treatment/types/chemotherapy" target="__blank">
 											<div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
 													<div class="col-md-2"> <img src="../../patients/assets/img/info.svg" id="log_other_medication" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
 													<div class="log_type py-4 col-md-10">About Chemotherapy</div>
@@ -391,7 +394,7 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box" style="">
-                                          <a href="https://www.cancer.gov/about-cancer/treatment/types/radiation-therapy"> 
+                                          <a href="https://www.cancer.gov/about-cancer/treatment/types/radiation-therapy" target="__blank"> 
 											   <div class="app-card app-card-basic py-1 d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
                                                 <div class="col-md-2"> <img src="../../patients/assets/img/info.svg" id="log_radiotherapy" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-10">About Radiotherapy </div>
@@ -418,20 +421,20 @@
 	</div>
 	<div class="modal-body">
          <pre>
-<h5>PROSECare FAQs</h5> 
-1. <strong>What is Radiotherapy?</strong>
+<h5>PROSEcare FAQs</h5> 
+<h5>1. What is Radiotherapy?</h5>
 Radiotherapy is a cancer treatment that uses high doses of radiation to kill
 cancer cells and shrink tumours. It may be used in the early stages of cancer or after it
 has started to spread. Radiotherapy is generally considered the most effective cancer
 treatment after surgery, but its effectiveness varies from person to person.
 
-2. <strong>How is Radiotherapy different from Chemotherapy?</strong>
+<h5>2. How is Radiotherapy different from Chemotherapy?</h5>
 Radiotherapy and Chemotherapy are both treatment modalities for cancer.
 Radiotherapy uses high-energy rays to destroy cancer cells while Chemotherapy uses
 special drugs to shrink or kill these cancer cells. Combining both treatments is often
 more effective than having either treatment on its own.
 
-3. <strong>What are the common side effects of Radiotherapy and Chemotherapy?</strong>
+<h5> 3. What are the common side effects of Radiotherapy and Chemotherapy?</h5>
 Radiotherapy and Chemotherapy present with almost similar side effects.
 Radiotherapy side-effects tend to affect the area being treated while Chemotherapy
 side-effects are more likely to affect the whole body. These side-effects depend on the
@@ -441,7 +444,7 @@ Here are some of the side-effects associated with these cancer treatments: tired
 (fatigue), pain, loss of appetite, weight loss, hair loss, sore on the mouth, throat or
 gum, etc.
 
-4. <strong>How long do these side effects last?</strong>
+ <h5>4.How long do these side effects last?</h5>
 Side-effects can happen any time during, immediately after or a few days or weeks
 after treatment.
 Most side-effects start to go away after cancer treatment ends and the healthy cells
@@ -450,24 +453,24 @@ and the types and amounts of drugs and/or radiation he or she had. Remember that
 type of radiation side-effects you might have depends on the prescribed dose and
 schedule.
 
-5. <strong>Is it possible to have no side-effects from Radiotherapy?</strong>
+<h5>5. Is it possible to have no side-effects from Radiotherapy?</h5>
 Some patients have no side-effects at all, while others have quite a few.
 There is no accurate way to predict who will have side-effects. It is very important to
 note that individuals react differently to treatment. Side-effects vary from person to
 person depending on various factors such as the radiation dose, and the part of the
 body being treated. 
 
-6. <strong>When can I report my side-effects?</strong>
+ <h5>6.When can I report my side-effects?</h5>
 It is important to talk with your health care team about any side-effects
 you experience as soon as possible so they can find ways to help you.
 
-7. <strong>How do I report my side-effects using PROSECare?</strong>
+ <h5>7.How do I report my side-effects using PROSEcare?</h5>
 
-Log in to your PROSECare account with a valid email address and password. Read
+Log in to your PROSEcare account with a valid email address and password. Read
 through the questions and tick relevant options related to the side-effects you are
 experiencing.
 
-8. <strong>Is Radiotherapy safe?</strong>
+<h5>8. Is Radiotherapy safe?</h5>
 Some patients worry about the safety of radiotherapy. While radiotherapy involves
 exposure to hazardous radioactive particles, it has been used to safely treat cancer for
 more than 100 years. Many advancements have been made that have led to safety
@@ -479,7 +482,7 @@ dose of radiation that is given. If needed, your heathcare team will give you ex
 instructions so you know what steps to take, and how long any precautions need to be
 followed. You should follow their instructions exactly.
 
-9. <strong>How should I care for myself during treatment?</strong>
+<h5>9. How should I care for myself during treatment?</h5>
 There is no one right way to go through the experience of cancer. It is all about figuring out
 what is right for you. Be kind to yourself and follow the steps below:
 * Slow down and find quiet time for your body and mind.
@@ -490,11 +493,12 @@ bath, going for a walk or baking.
 * Spend time with loved ones.
 * Prioritize sleep.
 
-10. <strong>How much do I pay to access PROSECare?</strong>
-PROSECare is free and accessible and will not require you to pay any fee or request
+<h5>10. How much do I pay to access PROSEcare?</h5>
+PROSEcare is free and accessible and will not require you to pay any fee or request
 for your bank details.
-11. Will I get immediate response when I report my side-effects on PROSECare?
-Yes. When you log in your side-effects on PROSECare, your enquiries will be
+
+<h5>11. Will I get immediate response when I report my side-effects on PROSEcare?</h5>
+Yes. When you log in your side-effects on PROSEcare, your enquiries will be
 attended to as soon as possible.
 
 

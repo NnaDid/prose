@@ -28,9 +28,10 @@ class Register {
         $device_type          = $obj['device_type']; 
         $effect_reporter        = $obj['effect_reporter'];  
         $caregiver_relationship   = $obj['caregiver_relationship'];    
+        $mgt_team                  = $obj['mgt_team'];    
       
       if(self::exists($email,"users","email")){ 
-                $sql      = "UPDATE `users` SET `cancer_type`='$cancer_type',`device_type`='$device_type', `effect_reporter`='$effect_reporter', `care_giver_relationship`='$caregiver_relationship',`updatedAt`=NOW() WHERE `email`='$email'";
+                $sql      = "UPDATE `users` SET `cancer_type`='$cancer_type',`device_type`='$device_type', `effect_reporter`='$effect_reporter', `care_giver_relationship`='$caregiver_relationship',`mgt_team`='$mgt_team',`updatedAt`=NOW() WHERE `email`='$email'";
                 $statment = $con->query($sql);
                 if($statment){
                       

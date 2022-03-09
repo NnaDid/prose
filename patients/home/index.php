@@ -319,8 +319,8 @@ require_once("../../top.php");
 								
 								 <div class="app-card-body px-4 py-2">  
 									<div class="intro mb-4 report_log_treatment">
-										<a href="./side-effect.php"><h6 class="" style="color:#57166A !important;">Report a symptom</h6></a>
-										<span class="text_desc">Click here to report symptoms you are feeling</span>									
+										<a href="./side-effect.php"><h6 class="" style="color:#57166A !important;">Report a effect</h6></a>
+										<span class="text_desc">Click here to report a side effect you are experiencing.</span>									
 									</div>
 								</div>
 							</a>
@@ -344,7 +344,7 @@ require_once("../../top.php");
 						    <div class="app-card-body px-4 py-2"> 
 							    <div class="intro mb-4 log_treatment">
 								    <a href="./profile/"><h6 style="color:#005267 !important;">Log your treatment </h6>
-										<span class="text_desc">Click here to report symptoms you are feeling</span>
+										<span class="text_desc">Click here to log your treatment record.</span>
 									</a>
 								</div>
 						    </div>
@@ -368,7 +368,7 @@ require_once("../../top.php");
 								<div class="app-card-body px-4 py-2"> 
 									<div class="intro mb-4 xteristics">
 									  <a href="./profile/"><h6 style="color: #B62141 !important;">Update disease characteristics</h6>
-											<span class="text_desc">Click here to report symptoms you are feeling</span>
+											<span class="text_desc">Click here to update your disease characteristics.</span>
 										</a>
 									</div>
 								</div>
@@ -470,7 +470,7 @@ require_once("../../top.php");
 								</div><!--//app-card-header-->
 								<div class="app-card-body px-4 py-2"> 
 									<div class="intro mb-4">
-									  <a href="./resources.php"><h6 style="color:#923106">Stay Informed Avout Covid</h6> 
+									  <a href="https://covid19.ncdc.gov.ng/" target="blank" ><h6 style="color:#923106">Stay Informed About Covid</h6> 
 										<span class="text_desc">Click here to get information on Covid-19</span>
 										</a>
 									</div>

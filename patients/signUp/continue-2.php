@@ -213,7 +213,7 @@
        
 
                     <div class="form-group mb-3">
-                        <small class="input_text_label">Tribe</small>
+                        <small class="input_text_label">Ethnicity</small>
                         <input type="text" name="tribe" id="tribe" placeholder="eg Yoruba" class="form-control form-control-lg tribe" />
                     </div>    
     

@@ -156,8 +156,14 @@
 
                     <div class="form-group">
                         <small class="input_text_label">Managing Team</small>
-                        <input type="text" name="managing_team" placeholder="Team" class="rounded form-control form-control-lg managing_team" />
-                    </div> 
+                        <div class="cancer__type__container mb-3">
+                          <select  name="mgt_team" id="mgt_team" class="form-control form-control-lg mgt_team"  required>
+                            <option disabled selected>e.g Team A</option>
+                            <option value="Team A">Team A</option>
+                            <option value ="Team B">Team B</option> 
+                          </select>  
+                        </div>
+                      </div> 
 
                     <div class="form-group">
                         <small class="input_text_label">Professional Bio</small>

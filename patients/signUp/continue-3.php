@@ -190,6 +190,17 @@
                         </div>
                       
                     </div> 
+
+                    <div class="form-group mb-3">
+                        <small class="input_text_label">Choose Managment Team</small>
+                        <div class="cancer__type__container mb-3">
+                          <select  name="mgt_team" id="mgt_team" class="form-control form-control-lg mgt_team"  required>
+                            <option disabled selected>e.g Team A</option>
+                            <option value="Team A">Team A</option>
+                            <option value ="Team B">Team B</option> 
+                          </select>  
+                        </div>
+                    </div> 
                     
                     <div class="form-group ___result"> </div>
                     
@@ -280,6 +291,7 @@
           let device_type          = $(".device_type").val();
           let effect_reporter        = $(".effect_reporter").val();
           let caregiver_relationship   = $(".caregiver_relationship").val(); 
+          let mgt_team                  = $(".mgt_team").val(); 
 
           // =======================================================//
           let userEmail       = sessionStorage.getItem("userEmail"); 
@@ -290,6 +302,7 @@
                         device_type: device_type,
                         effect_reporter: effect_reporter,
                         caregiver_relationship: caregiver_relationship, 
+                        mgt_team:mgt_team,
                       };
               console.log(data);
               result.html('Please wait...');
