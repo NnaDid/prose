@@ -1,10 +1,25 @@
 <?php
 
 trait Common{
-    public $host = "localhost" ?? "localhost";
-    public $user = "root"      ?? "proseDbUser";
-    public $pass = ""          ?? "prosePassword";
-    public $db   = "prose"     ?? "proseOnlineDb";
+    //Get Heroku ClearDB connection information
+    // public $cleardb_url        = parse_url(getenv("CLEARDB_DATABASE_URL")); 
+    public $host = "localhost" ?? $this->cleardb_url["host"];
+    public $user = "root"      ?? $this->cleardb_url["user"];
+    public $pass = ""          ?? $this->cleardb_url["pass"];
+    public $db   = "prose"     ?? substr($this->cleardb_url["path"],1);
+    //----------------------------------------------------------------//
+    public $active_group   = 'default';
+    public $query_builder  = TRUE;
+
+    // // $cleardb_server         = $cleardb_url["host"];
+    // // $cleardb_username       = $cleardb_url["user"];
+    // // $cleardb_password       = $cleardb_url["pass"];
+    // // $cleardb_db             = substr($cleardb_url["path"],1);
+    // // $active_group           = 'default';
+    // // $query_builder          = TRUE;
+    // // Connect to DB
+    // $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
 
 public function con(){
     $con = new mysqli($this->host,$this->user,$this->pass,$this->db);
@@ -68,6 +83,10 @@ public function exists($val,$table,$col){
     $stmt->close();
     }
     }
+}
+
+public function getSideEffects($cancerType, $cancer_array){
+    
 }
 
 //-----------------------------------------------------//

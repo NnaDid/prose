@@ -343,134 +343,541 @@
 						    </div><!--//app-card-body--> 
 
 							<div class="col-12 col-md-6 col-lg-8 log_symptom_container" style="display:none;margin-bottom:100px;">
-								<form class="py-4 my-4">   
-									<h5 class="auth-heading text-center mb-4 left_heading-text">Log Side Effects</h5>					
-									<label style="font-size:20px;">No side effects have been logged today. Log them below</label>      
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Feeling Week or Tired</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (normal activity with effort)">Mild (normal activity with effort)</option>
-											<option value="Moderate (in bed less than half of the day)">Moderate (in bed less than half of the day)</option>
-											<option value="Severe (in bed more than half of the day) ">Severe (in bed more than half of the day) </option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Skin Irritation  (in areas where radiation therapy is given)</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (faint redness/darkening and scaling)">Mild (faint redness/darkening and scaling)</option>
-											<option value="Moderate (redness/darkening or moist peeling especially at skin folds)">Moderate (redness/darkening or moist peeling especially at skin folds) </option>
-											<option value="Severe (swelling and moist peeling in large area or ulcer in skin)">Severe (swelling and moist peeling in large area or ulcer in skin) </option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Itching or rash</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (rash, no fever)">Mild (rash, no fever)</option>
-											<option value="Moderate (rash, fever &lt; 38 Celsius)">Moderate (rash, fever &lt;38 Celsius)</option>
-											<option value="Severe (rash, fever &lt; 38 Celsius)">Severe (rash, fever >38 Celsius)</option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Fever/Chills</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="None (≤37 Celsius)">None (≤37 Celsius)</option>
-											<option value="Mild (>37 – 38 Celsius)">Mild (>37 – 38 Celsius)</option>
-											<option value="Moderate (>38 – 40 Celsius) ">Moderate (>38 – 40 Celsius) </option>
-											<option value="Severe (> 40 Celsius)">Severe (> 40 Celsius) </option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Nausea</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lgtired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (can eat)">Mild (can eat)</option>
-											<option value="Moderate (eating/drinking less than normal)">Moderate (eating/drinking less than normal)</option>
-											<option value="Severe (cannot eat or drink)">Severe (cannot eat or drink)</option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Vomiting</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (vomited once during the day)">Mild (vomited once during the day)</option>
-											<option value="Moderate (vomited 2-5 times during the day)">Moderate (vomited 2-5 times during the day)</option>
-											<option value="Severe (vomited more than 5 times during the day)">Severe (vomited more than 5 times during the day)</option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Mouth sores</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (soreness, with no ulcer)">Mild (soreness, with no ulcer)</option>
-											<option value="Moderate (soreness or painful ulcer, able to eat) ">Moderate (soreness or painful ulcer, able to eat) </option>
-											<option value="Severe (painful ulcer and cannot eat or toothache) ">Severe (painful ulcer and cannot eat or toothache) </option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Dry mouth</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="Decreased saliva">Decreased saliva</option>
-											<option value="Thick saliva">Thick saliva</option>
-											<option value="No saliva">No saliva</option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Loss of appetite</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (slightly decreased appetite)">Mild (slightly decreased appetite)</option>
-											<option value="Moderate (usually not hungry)">Moderate (usually not hungry)</option>
-											<option value="Severe (unable to eat)">Severe (unable to eat)</option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Diarrhea </label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (loose stools)">Mild (loose stools)</option>
-											<option value="Moderate (watery stools)">Moderate (watery stools)</option>
-											<option value="Severe (constant or bloody stools causing dizziness)">Severe (constant or bloody stools causing dizziness)</option>
-										</select>
-									</div>    												
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Constipation</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild  (no bowel movement for 2 days)">Mild  (no bowel movement for 2 days)</option>
-											<option value="Moderate (no bowel movement for 3-4 days)">Moderate (no bowel movement for 3-4 days)</option>
-											<option value="Severe  (no bowel movement for more than 4 days or swollen abdomen)">Severe  (no bowel movement for more than 4 days or swollen abdomen)</option>
-										</select>
-									</div> 
+								       <!-- Breast cancer -->
+										<form class="py-4 my-4 breast_cancer">   
+												<h5 class="auth-heading text-center mb-4 left_heading-text">Log Side Effects</h5>					
+												<label style="font-size:20px;">No side effects have been logged today. Log them below</label>      
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="hair_loss">Hair loss in armpit</label>
+													<select id="hair_loss" name="hair_loss" type="text" class="form-control form-control-lg hair_loss" required="required">
+														<option value="No hair loss">No hair loss</option>
+														<option value="Yes, patchy hair loss">Yes, patchy hair loss</option>
+														<option value="Yes, complete hair loss">Yes, complete hair loss</option> 
+													</select> 
+												</div>    
+														 
+												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Arm swelling and changes</label>
+													<select id="arm_swelling" name="arm_swelling" type="text" class="form-control form-control-lg arm_swelling" required="required">
+														<option value="No arm swelling">No arm swelling</option>
+														<option value="Mild (faint redness/darkening and scaling)">Slight swelling or a slight change in skin color of the arm</option>
+														<option value="Obvious swelling or obvious change in skin color of the arm.">Obvious swelling or obvious change in skin color of the arm. </option>
+														<option value="Swollen arm changes are limiting cooking, self-care, feeding, and bathing.">Swollen arm changes are limiting cooking, self-care, feeding, and bathing.</option>
+													</select>
+												</div>  
 
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Pain on Swallowing</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild (pain but can eat)">Mild (pain but can eat)</option>
-											<option value="Moderate (pain requiring soft or liquid diet)">Moderate (pain requiring soft or liquid diet)</option>
-											<option value="Severe (unable to eat at all)">Severe (unable to eat at all)</option>
-										</select>
-									</div>    
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="swallowing_difficulty">Difficulty in swallowing</label>
+													<select id="swallowing_difficulty" name="swallowing_difficulty" type="text" class="form-control form-control-lg swallowing_difficulty" required="required">
+														<option value="I have no difficulty in swallowing">I have no difficulty in swallowing</option>
+														<option value="Difficulty eating solid or soft foods">Difficulty eating solid or soft foods</option>
+														<option value="Difficulty swallowing liquid">Difficulty swallowing liquid</option>
+														<option value="Unable to swallow liquid, solid and soft food">Unable to swallow liquid, solid and soft food</option>
+													</select>
+												</div>    
+											 												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="chest_wall_pain">In the area where you are receiving radiotherapy, do you experience pain in the chest wall?</label>
+													<select id="chest_wall_pain" name="chest_wall_pain" type="text" class="form-control form-control-lg chest_wall_pain" required="required">
+														<option value="I have no pain on my chest">I have no pain on my chest</option>
+														<option value="I have a little pain">I have a little pain</option>
+														<option value="I have pain and it sometimes limit my daily activities"> I have pain and it sometimes limit my daily activities</option>
+														<option value="The pain is severe and limits my self care">The pain is severe and limits my self care</option>
+													</select>
+												</div>    	
+												 
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="breats_swelling">Breast swelling (To be answered if you haven’t done a mastectomy)</label>
+													<select id="breats_swelling" name="breats_swelling" type="text" class="form-control form-control-lg breats_swelling" required="required">
+														<option value="No"> No</option>
+														<option value="Yes">Yes</option> 
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Vomiting</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (vomited once during the day)">Mild (vomited once during the day)</option>
+														<option value="Moderate (vomited 2-5 times during the day)">Moderate (vomited 2-5 times during the day)</option>
+														<option value="Severe (vomited more than 5 times during the day)">Severe (vomited more than 5 times during the day)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Mouth sores</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (soreness, with no ulcer)">Mild (soreness, with no ulcer)</option>
+														<option value="Moderate (soreness or painful ulcer, able to eat) ">Moderate (soreness or painful ulcer, able to eat) </option>
+														<option value="Severe (painful ulcer and cannot eat or toothache) ">Severe (painful ulcer and cannot eat or toothache) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Dry mouth</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="Decreased saliva">Decreased saliva</option>
+														<option value="Thick saliva">Thick saliva</option>
+														<option value="No saliva">No saliva</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Loss of appetite</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (slightly decreased appetite)">Mild (slightly decreased appetite)</option>
+														<option value="Moderate (usually not hungry)">Moderate (usually not hungry)</option>
+														<option value="Severe (unable to eat)">Severe (unable to eat)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Diarrhea </label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (loose stools)">Mild (loose stools)</option>
+														<option value="Moderate (watery stools)">Moderate (watery stools)</option>
+														<option value="Severe (constant or bloody stools causing dizziness)">Severe (constant or bloody stools causing dizziness)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Constipation</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild  (no bowel movement for 2 days)">Mild  (no bowel movement for 2 days)</option>
+														<option value="Moderate (no bowel movement for 3-4 days)">Moderate (no bowel movement for 3-4 days)</option>
+														<option value="Severe  (no bowel movement for more than 4 days or swollen abdomen)">Severe  (no bowel movement for more than 4 days or swollen abdomen)</option>
+													</select>
+												</div> 
 
-									<div class="form-group mb-3">
-										<label class="text_input_label" for="tired">Change in taste</label>
-										<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
-											<option value="none">None</option>
-											<option value="Mild">Mild</option>
-											<option value="Moderate">Moderate</option>
-											<option value="Severe">Severe</option>
-										</select>
-									</div>    												
-									<div class="text-center">
-										<button type="submit" class="btn btn-primary mx-auto d-flex justify-content-between align-items-center">
-											    <span>Log Side Effects </span> 
-											    <img src="../assets/img/arrow_.svg"/> 
-										</button>
-									</div>
-								</form><!--//auth-form-->   
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Pain on Swallowing</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (pain but can eat)">Mild (pain but can eat)</option>
+														<option value="Moderate (pain requiring soft or liquid diet)">Moderate (pain requiring soft or liquid diet)</option>
+														<option value="Severe (unable to eat at all)">Severe (unable to eat at all)</option>
+													</select>
+												</div>    
+
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Change in taste</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild">Mild</option>
+														<option value="Moderate">Moderate</option>
+														<option value="Severe">Severe</option>
+													</select>
+												</div>    												
+												<div class="text-center">
+													<button type="submit" class="btn btn-primary mx-auto d-flex justify-content-between align-items-center">
+															<span>Log Side Effects </span> 
+															<img src="../assets/img/arrow_.svg"/> 
+													</button>
+												</div>
+											</form><!--//auth-form-->   
+
+
+											<!-- Breast cancer, Head and Neck Cancer,Male Pelvic Cancer,Female Pelvic Cancer -->										
+											<!-- Head and Neck Cancer -->
+											<form class="py-4 my-4 Head_and_Neck_Cancer">   
+												<h5 class="auth-heading text-center mb-4 left_heading-text">Log Side Effects</h5>					
+												<label style="font-size:20px;">No side effects have been logged today. Log them below</label>      
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Feeling Week or Tired</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (normal activity with effort)">Mild (normal activity with effort)</option>
+														<option value="Moderate (in bed less than half of the day)">Moderate (in bed less than half of the day)</option>
+														<option value="Severe (in bed more than half of the day) ">Severe (in bed more than half of the day) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Skin Irritation  (in areas where radiation therapy is given)</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (faint redness/darkening and scaling)">Mild (faint redness/darkening and scaling)</option>
+														<option value="Moderate (redness/darkening or moist peeling especially at skin folds)">Moderate (redness/darkening or moist peeling especially at skin folds) </option>
+														<option value="Severe (swelling and moist peeling in large area or ulcer in skin)">Severe (swelling and moist peeling in large area or ulcer in skin) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Itching or rash</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (rash, no fever)">Mild (rash, no fever)</option>
+														<option value="Moderate (rash, fever &lt; 38 Celsius)">Moderate (rash, fever &lt;38 Celsius)</option>
+														<option value="Severe (rash, fever &lt; 38 Celsius)">Severe (rash, fever >38 Celsius)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Fever/Chills</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="None (≤37 Celsius)">None (≤37 Celsius)</option>
+														<option value="Mild (>37 – 38 Celsius)">Mild (>37 – 38 Celsius)</option>
+														<option value="Moderate (>38 – 40 Celsius) ">Moderate (>38 – 40 Celsius) </option>
+														<option value="Severe (> 40 Celsius)">Severe (> 40 Celsius) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Nausea</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lgtired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (can eat)">Mild (can eat)</option>
+														<option value="Moderate (eating/drinking less than normal)">Moderate (eating/drinking less than normal)</option>
+														<option value="Severe (cannot eat or drink)">Severe (cannot eat or drink)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Vomiting</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (vomited once during the day)">Mild (vomited once during the day)</option>
+														<option value="Moderate (vomited 2-5 times during the day)">Moderate (vomited 2-5 times during the day)</option>
+														<option value="Severe (vomited more than 5 times during the day)">Severe (vomited more than 5 times during the day)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Mouth sores</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (soreness, with no ulcer)">Mild (soreness, with no ulcer)</option>
+														<option value="Moderate (soreness or painful ulcer, able to eat) ">Moderate (soreness or painful ulcer, able to eat) </option>
+														<option value="Severe (painful ulcer and cannot eat or toothache) ">Severe (painful ulcer and cannot eat or toothache) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Dry mouth</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="Decreased saliva">Decreased saliva</option>
+														<option value="Thick saliva">Thick saliva</option>
+														<option value="No saliva">No saliva</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Loss of appetite</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (slightly decreased appetite)">Mild (slightly decreased appetite)</option>
+														<option value="Moderate (usually not hungry)">Moderate (usually not hungry)</option>
+														<option value="Severe (unable to eat)">Severe (unable to eat)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Diarrhea </label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (loose stools)">Mild (loose stools)</option>
+														<option value="Moderate (watery stools)">Moderate (watery stools)</option>
+														<option value="Severe (constant or bloody stools causing dizziness)">Severe (constant or bloody stools causing dizziness)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Constipation</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild  (no bowel movement for 2 days)">Mild  (no bowel movement for 2 days)</option>
+														<option value="Moderate (no bowel movement for 3-4 days)">Moderate (no bowel movement for 3-4 days)</option>
+														<option value="Severe  (no bowel movement for more than 4 days or swollen abdomen)">Severe  (no bowel movement for more than 4 days or swollen abdomen)</option>
+													</select>
+												</div> 
+
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Pain on Swallowing</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (pain but can eat)">Mild (pain but can eat)</option>
+														<option value="Moderate (pain requiring soft or liquid diet)">Moderate (pain requiring soft or liquid diet)</option>
+														<option value="Severe (unable to eat at all)">Severe (unable to eat at all)</option>
+													</select>
+												</div>    
+
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Change in taste</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild">Mild</option>
+														<option value="Moderate">Moderate</option>
+														<option value="Severe">Severe</option>
+													</select>
+												</div>    												
+												<div class="text-center">
+													<button type="submit" class="btn btn-primary mx-auto d-flex justify-content-between align-items-center">
+															<span>Log Side Effects </span> 
+															<img src="../assets/img/arrow_.svg"/> 
+													</button>
+												</div>
+											</form><!--//auth-form-->   
+
+
+
+
+
+							
+							                 <!-- Male Pelvic Cancer -->
+											<form class="py-4 my-4 Male_Pelvic_Cancer">   
+												<h5 class="auth-heading text-center mb-4 left_heading-text">Log Side Effects</h5>					
+												<label style="font-size:20px;">No side effects have been logged today. Log them below</label>      
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Feeling Week or Tired</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (normal activity with effort)">Mild (normal activity with effort)</option>
+														<option value="Moderate (in bed less than half of the day)">Moderate (in bed less than half of the day)</option>
+														<option value="Severe (in bed more than half of the day) ">Severe (in bed more than half of the day) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Skin Irritation  (in areas where radiation therapy is given)</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (faint redness/darkening and scaling)">Mild (faint redness/darkening and scaling)</option>
+														<option value="Moderate (redness/darkening or moist peeling especially at skin folds)">Moderate (redness/darkening or moist peeling especially at skin folds) </option>
+														<option value="Severe (swelling and moist peeling in large area or ulcer in skin)">Severe (swelling and moist peeling in large area or ulcer in skin) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Itching or rash</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (rash, no fever)">Mild (rash, no fever)</option>
+														<option value="Moderate (rash, fever &lt; 38 Celsius)">Moderate (rash, fever &lt;38 Celsius)</option>
+														<option value="Severe (rash, fever &lt; 38 Celsius)">Severe (rash, fever >38 Celsius)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Fever/Chills</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="None (≤37 Celsius)">None (≤37 Celsius)</option>
+														<option value="Mild (>37 – 38 Celsius)">Mild (>37 – 38 Celsius)</option>
+														<option value="Moderate (>38 – 40 Celsius) ">Moderate (>38 – 40 Celsius) </option>
+														<option value="Severe (> 40 Celsius)">Severe (> 40 Celsius) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Nausea</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lgtired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (can eat)">Mild (can eat)</option>
+														<option value="Moderate (eating/drinking less than normal)">Moderate (eating/drinking less than normal)</option>
+														<option value="Severe (cannot eat or drink)">Severe (cannot eat or drink)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Vomiting</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (vomited once during the day)">Mild (vomited once during the day)</option>
+														<option value="Moderate (vomited 2-5 times during the day)">Moderate (vomited 2-5 times during the day)</option>
+														<option value="Severe (vomited more than 5 times during the day)">Severe (vomited more than 5 times during the day)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Mouth sores</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (soreness, with no ulcer)">Mild (soreness, with no ulcer)</option>
+														<option value="Moderate (soreness or painful ulcer, able to eat) ">Moderate (soreness or painful ulcer, able to eat) </option>
+														<option value="Severe (painful ulcer and cannot eat or toothache) ">Severe (painful ulcer and cannot eat or toothache) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Dry mouth</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="Decreased saliva">Decreased saliva</option>
+														<option value="Thick saliva">Thick saliva</option>
+														<option value="No saliva">No saliva</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Loss of appetite</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (slightly decreased appetite)">Mild (slightly decreased appetite)</option>
+														<option value="Moderate (usually not hungry)">Moderate (usually not hungry)</option>
+														<option value="Severe (unable to eat)">Severe (unable to eat)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Diarrhea </label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (loose stools)">Mild (loose stools)</option>
+														<option value="Moderate (watery stools)">Moderate (watery stools)</option>
+														<option value="Severe (constant or bloody stools causing dizziness)">Severe (constant or bloody stools causing dizziness)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Constipation</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild  (no bowel movement for 2 days)">Mild  (no bowel movement for 2 days)</option>
+														<option value="Moderate (no bowel movement for 3-4 days)">Moderate (no bowel movement for 3-4 days)</option>
+														<option value="Severe  (no bowel movement for more than 4 days or swollen abdomen)">Severe  (no bowel movement for more than 4 days or swollen abdomen)</option>
+													</select>
+												</div> 
+
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Pain on Swallowing</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (pain but can eat)">Mild (pain but can eat)</option>
+														<option value="Moderate (pain requiring soft or liquid diet)">Moderate (pain requiring soft or liquid diet)</option>
+														<option value="Severe (unable to eat at all)">Severe (unable to eat at all)</option>
+													</select>
+												</div>    
+
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Change in taste</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild">Mild</option>
+														<option value="Moderate">Moderate</option>
+														<option value="Severe">Severe</option>
+													</select>
+												</div>    												
+												<div class="text-center">
+													<button type="submit" class="btn btn-primary mx-auto d-flex justify-content-between align-items-center">
+															<span>Log Side Effects </span> 
+															<img src="../assets/img/arrow_.svg"/> 
+													</button>
+												</div>
+											</form><!--//auth-form-->   
+
+
+
+											<!-- Female Pelvic Cancer -->
+											<form class="py-4 my-4 Female_Pelvic_Cancer">   
+												<h5 class="auth-heading text-center mb-4 left_heading-text">Log Side Effects</h5>					
+												<label style="font-size:20px;">No side effects have been logged today. Log them below</label>      
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Feeling Week or Tired</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (normal activity with effort)">Mild (normal activity with effort)</option>
+														<option value="Moderate (in bed less than half of the day)">Moderate (in bed less than half of the day)</option>
+														<option value="Severe (in bed more than half of the day) ">Severe (in bed more than half of the day) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Skin Irritation  (in areas where radiation therapy is given)</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (faint redness/darkening and scaling)">Mild (faint redness/darkening and scaling)</option>
+														<option value="Moderate (redness/darkening or moist peeling especially at skin folds)">Moderate (redness/darkening or moist peeling especially at skin folds) </option>
+														<option value="Severe (swelling and moist peeling in large area or ulcer in skin)">Severe (swelling and moist peeling in large area or ulcer in skin) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Itching or rash</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (rash, no fever)">Mild (rash, no fever)</option>
+														<option value="Moderate (rash, fever &lt; 38 Celsius)">Moderate (rash, fever &lt;38 Celsius)</option>
+														<option value="Severe (rash, fever &lt; 38 Celsius)">Severe (rash, fever >38 Celsius)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Fever/Chills</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="None (≤37 Celsius)">None (≤37 Celsius)</option>
+														<option value="Mild (>37 – 38 Celsius)">Mild (>37 – 38 Celsius)</option>
+														<option value="Moderate (>38 – 40 Celsius) ">Moderate (>38 – 40 Celsius) </option>
+														<option value="Severe (> 40 Celsius)">Severe (> 40 Celsius) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Nausea</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lgtired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (can eat)">Mild (can eat)</option>
+														<option value="Moderate (eating/drinking less than normal)">Moderate (eating/drinking less than normal)</option>
+														<option value="Severe (cannot eat or drink)">Severe (cannot eat or drink)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Vomiting</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (vomited once during the day)">Mild (vomited once during the day)</option>
+														<option value="Moderate (vomited 2-5 times during the day)">Moderate (vomited 2-5 times during the day)</option>
+														<option value="Severe (vomited more than 5 times during the day)">Severe (vomited more than 5 times during the day)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Mouth sores</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (soreness, with no ulcer)">Mild (soreness, with no ulcer)</option>
+														<option value="Moderate (soreness or painful ulcer, able to eat) ">Moderate (soreness or painful ulcer, able to eat) </option>
+														<option value="Severe (painful ulcer and cannot eat or toothache) ">Severe (painful ulcer and cannot eat or toothache) </option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Dry mouth</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="Decreased saliva">Decreased saliva</option>
+														<option value="Thick saliva">Thick saliva</option>
+														<option value="No saliva">No saliva</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Loss of appetite</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (slightly decreased appetite)">Mild (slightly decreased appetite)</option>
+														<option value="Moderate (usually not hungry)">Moderate (usually not hungry)</option>
+														<option value="Severe (unable to eat)">Severe (unable to eat)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Diarrhea </label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (loose stools)">Mild (loose stools)</option>
+														<option value="Moderate (watery stools)">Moderate (watery stools)</option>
+														<option value="Severe (constant or bloody stools causing dizziness)">Severe (constant or bloody stools causing dizziness)</option>
+													</select>
+												</div>    												
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Constipation</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild  (no bowel movement for 2 days)">Mild  (no bowel movement for 2 days)</option>
+														<option value="Moderate (no bowel movement for 3-4 days)">Moderate (no bowel movement for 3-4 days)</option>
+														<option value="Severe  (no bowel movement for more than 4 days or swollen abdomen)">Severe  (no bowel movement for more than 4 days or swollen abdomen)</option>
+													</select>
+												</div> 
+
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Pain on Swallowing</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild (pain but can eat)">Mild (pain but can eat)</option>
+														<option value="Moderate (pain requiring soft or liquid diet)">Moderate (pain requiring soft or liquid diet)</option>
+														<option value="Severe (unable to eat at all)">Severe (unable to eat at all)</option>
+													</select>
+												</div>    
+
+												<div class="form-group mb-3">
+													<label class="text_input_label" for="tired">Change in taste</label>
+													<select id="tired" name="tired" type="text" class="form-control form-control-lg tired" placeholder="Full name" required="required">
+														<option value="none">None</option>
+														<option value="Mild">Mild</option>
+														<option value="Moderate">Moderate</option>
+														<option value="Severe">Severe</option>
+													</select>
+												</div>    												
+												<div class="text-center">
+													<button type="submit" class="btn btn-primary mx-auto d-flex justify-content-between align-items-center">
+															<span>Log Side Effects </span> 
+															<img src="../assets/img/arrow_.svg"/> 
+													</button>
+												</div>
+											</form><!--//auth-form-->   
+
+
+
+							
+							
 							</div><!--//auth-main-col-->
 						</div><!--//app-card-->
 

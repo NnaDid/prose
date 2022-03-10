@@ -1,7 +1,9 @@
+<?php require_once("../../top.php"); ?>
+
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Prose | Care Giver | home</title>
+    <title>Prose | Admin</title>
     
     <!-- Meta mc-calendar.min.js-->
     <meta charset="utf-8">
@@ -234,18 +236,12 @@
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.php">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="../signIn/">Log Out</a></li>
-							</ul>
+				            <a href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile"></a>
+				            
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
-				            <a href="../signIn" title="Settings">Logout </a>
+				            <a href="?u=logout" title="logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -324,7 +320,7 @@
 			    <div class="row mx-3 mb-4 my-4"> 
 					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
                             <div class="topHeader d-flex justify-content-between align-items-center">
-                                <h1 class="h1 mx-2">Hi Jane Doe</h1>  
+                                <h1 class="h1 mx-2">Hi <?=$fname; ?></h1>  
                                 <div class="imagHolder d-flex align-items-center mx-2"> 
 							     	<img src="../assets/img/wave.svg" class="mx-2" style="width: 60px; height: 60px"/>
                                 </div>
