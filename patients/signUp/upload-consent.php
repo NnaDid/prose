@@ -162,7 +162,7 @@
                                 setTimeout(()=>{  window.location.href = './continue-1.php';  }, 3000);
                               
                             }else{
-                              result.html('<span style="color:red;">'+json.msg+'</span>');
+                              result.html('<div style="color:red;">'+json.msg+'</div>');
                             }
                           })
                           .catch(err => console.log(err));

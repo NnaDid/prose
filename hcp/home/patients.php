@@ -357,75 +357,49 @@
 
                 <div class="app-card app-card-basic mx-4">
                      <div class="table-responsive">
-                            <table class="table table-bordered">
+                            <table class="table">
                                 <thead>
                                     <tr>
-                                    <th scope="col">SN</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Age</th>
-                                    <th scope="col">Gender</th>
-                                    <th scope="col">Cancer Type</th>
-                                    <th scope="col">Last logged symptom</th>
-                                    <th scope="col"></th>
+                                    <th scope="" style="width:180px !important;">PIN</th>
+                                    <th scope="" style="width:180px !important;">Name</th>
+                                    <th scope="" style="width:180px !important;">Email</th>
+                                    <th scope="" style="width:180px !important;">Phone</th>
+                                    <th scope="" style="width:180px !important;">Age</th>
+                                    <th scope="" style="width:180px !important;">Gender</th>
+                                    <th scope="" style="width:180px !important;">Cancer Type</th>
+                                    <th scope="" style="width:180px !important;">Side Effects Log </th>
+                                    <th scope="" style="width:180px !important;">Chemotherapy Log </th>
+                                    <th scope="" style="width:180px !important;">Radiotherapy Log </th>
+                                    <th scope="" style="width:180px !important;">Treatment Interuptions </th>
+                                    <th scope="" style="width:180px !important;">Surgical Log </th>
+                                    <th scope="" style="width:180px !important;">Medication Log </th>
+                                    <th scope="" style="width:180px !important;">Last time Active</th>
+                                    <th scope="" style="width:180px !important;">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                       <th scope="row">1</th>
+                                       <th scope="row">HN001</th>
                                         <td> 
                                           <div class="profile_con d-flex justify-content-start align-items-center">
                                               <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Mark</span>
+                                              <span class="mx-1">Adamodu Mark</span>
                                           </div> 
                                         </td>
-                                        <td>56</td>
-                                        <td>Male</td>
-                                        <td>Cancer Type</td>
+                                        <td>adamodumark@gmail.com</td>
+                                        <td>+2340908876534</td>
+                                        <td>73</td>
+                                        <td>Female</td>
+                                        <td>Breast Cancer</td>
+                                        <td>Feeling tired in green</td>
+                                        <td>Yes</td>
+                                        <td>No</td>
+                                        <td>None</td>
+                                        <td>Yes</td>
+                                        <td>None</td>
                                         <td>Today</td>
                                         <td><a href="./profile/user_details.php?userId=12&name=Mark">View More</a></td>
-                                    </tr> 
-                                    <tr>
-                                       <th scope="row">2</th>
-                                        <td>
-                                          <div class="profile_con d-flex justify-content-start align-items-center">
-                                              <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Mark</span>
-                                          </div>
-                                        </td>
-                                        <td>76</td>
-                                        <td>Female</td>
-                                        <td>Cancer Type</td>
-                                        <td>Today</td>
-                                       <td><a href="./profile/user_details.php?userId=12&name=Mark">View More</a></td>
-                                    </tr> 
-                                    <tr>
-                                       <th scope="row">3</th>
-                                        <td>
-                                          <div class="profile_con d-flex justify-content-start align-items-center">
-                                              <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Melinda</span>
-                                          </div>
-                                        </td>
-                                        <td>76</td>
-                                        <td>Female</td>
-                                        <td>Cancer Type</td>
-                                        <td>Today</td>
-                                        <td><a href="./profile/user_details.php?userId=13&name=Melinda">View More</a></td>
-                                    </tr> 
-                                    <tr>
-                                       <th scope="row">4</th>
-                                        <td>
-                                          <div class="profile_con d-flex justify-content-start align-items-center">
-                                              <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Gates</span>
-                                          </div>
-                                        </td>
-                                        <td>66</td>
-                                        <td>Female</td>
-                                        <td>Cancer Type</td>
-                                        <td>Today</td>
-                                       <td><a href="./profile/user_details.php?userId=14&name=Gates">View More</a></td>
-                                    </tr> 
+                                    </tr>   
                                 </tbody>
                             </table>
                      </div>

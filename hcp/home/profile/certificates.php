@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Prose | Profile...</title>
+    <title>Prose | Certificates...</title>
     
     <!-- Meta mc-calendar.min.js-->
     <meta charset="utf-8">
@@ -315,18 +315,11 @@
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.php">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="../signIn/">Log Out</a></li>
-							</ul>
+				            <a class="dropdown-toggle" id="user-dropdown-toggle"><img src="../assets/images/user.png" alt="user profile"></a>
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
-				            <a href="../signIn" title="Settings">Logout </a>
+				            <a href="?u=logout" title="Logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -341,13 +334,13 @@
 		        <a href="#" id="sidepanel-close" class="sidepanel-close d-xl-none">&times;</a>
 		        <div class="app-branding mb-4 text-center">
 		            <a class="app-logo py-4" href="index.php">
-						<img class="logo-icon me-2" src="../assets/img/logo.svg" alt="logo"  style="width: 100%; height: 100%;"/></a>
+						<img class="logo-icon me-2" src="../../assets/img/logo.svg" alt="logo"  style="width: 100%; height: 100%;"/></a>
 		        </div><!--//app-branding-->  
 		        
 			    <nav id="app-nav-main" class="app-nav app-nav-main flex-grow-1">
 				    <ul class="app-menu list-unstyled accordion" id="menu-accordion">
 					    <li class="nav-item">					        
-					        <a class="nav-link active d-flex justify-content-start align-items-center" href="../index.php">
+					        <a class="nav-link d-flex justify-content-start align-items-center" href="../index.php">
 						        <span class="w-40">
 								   <img class="logo-icon" src="../../assets/img/home.svg" alt="logo"  style="width: 100%; height: 100%;"/> 
 								</span>
@@ -374,7 +367,7 @@
 					    </li><!--//nav-item-->
 					    
 					    <li class="nav-item">					        
-					        <a class="nav-link d-flex justify-content-start align-items-center"href="./">
+					        <a class="nav-link active d-flex justify-content-start align-items-center"href="./">
 						        <span class=""> 
 									<img class="logo-icon" src="../../assets/img/profile.svg" alt="profile"  style="width: 100%; height: 100%;"/>
 								 </span>
@@ -475,7 +468,7 @@
                                                                 </div> 
 
                                                                 <div class="form-group col-md-5"> <label class="text_input_label">Date</label>
-                                                                   <input type="text" name="dob" placeholder="Date of Birth" class="form-control form-control-lg dob" />                                                                                                                                                                                  
+                                                                   <input type="text" name="date" placeholder="Date" class="form-control form-control-lg date" />                                                                                                                                                                                  
                                                                 </div> 
 
                                                                 <div class="form-group col-md-6 text-center">
