@@ -19,8 +19,7 @@
     
     <!--  -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-          <!-- Nice Select CSS -->
-    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css'>
+          <!-- Nice Select CSS --> 
           <!-- Telephone Input CSS --> 
     <link rel="preload"    as="font" href="../assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
     <link rel="preload"    as="font" href="../assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
@@ -186,12 +185,12 @@
                                   <span class="percent"></span> 
                           </div>
                     </div>  
-
+                      <div class="form-group ___result"> </div>
                     <div class="form-group">
-                        <button class="btn-block btn btn-primary form-control-lg continue_2 start_button isDisabled"  data-toggle="modal" data-target="#accounModal" type="button">Continue</button>
+                        <button class="btn-block btn btn-primary form-control-lg continue_2 start_button isDisabled" type="submit">Continue</button>
                     </div>   
 
-                    <div class="form-group ___result"> </div>
+                    
                 </fieldset>
 
                 </form>   
@@ -233,11 +232,7 @@
     <script type="text/javascript" src="../assets/js/popper.min.js"></script>
     <script type="text/javascript" src="../assets/js/bootstrap.js"></script>
     <script type="text/javascript" src="../assets/js/lga.js"></script>
-    <!-- <script src="../assets/js/script.js"></script> -->
-
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/js/intlTelInput.js'></script>
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js'></script>
-
+    <!-- <script src="../assets/js/script.js"></script> --> 
     <script type="text/javascript">
         $(document).ready(function(){   
 
@@ -277,6 +272,53 @@
                 console.log(fileName);
                 uploadFile(fileName);
             }
+
+                        //========================================================================     
+            // Uploading the file to Cloudinary and saving the url in the database  //      
+            const CLOUDINARY_URL           = 'https://api.cloudinary.com/v1_1/dkazbyl4x/image/upload';
+            const CLOUDINARY_UPLOAD_PRESET = 'prosecare';  
+            const formData     = new FormData();
+            formData.append('file', file);
+            formData.append('upload_preset', CLOUDINARY_UPLOAD_PRESET);
+              fetch(CLOUDINARY_URL, {
+                  method: 'POST',
+                  body: formData,
+              })
+              .then(response => response.json())
+                  .then((data) => {
+                      if (data.secure_url !== '') {
+                          console.log(data.secure_url);
+                          const uploadedFileUrl = data.secure_url;
+                          localStorage.setItem('consent_doc_Url', uploadedFileUrl);
+                          // get the email of the user when he first started the application from the sessionStorage
+                          let userEmail   = sessionStorage.getItem("userEmail");
+                          let UserData    = {  email: userEmail, consent_doc_Url: uploadedFileUrl };
+                            console.log(data); 
+
+                          fetch('../../api/patients/auth/upload_consent.php', {
+                              method: "POST",
+                              body: JSON.stringify(UserData),
+                              headers: {"Content-type": "application/json; charset=UTF-8"}
+                          })
+                          .then(response => response.json()) 
+                          .then((json)=>{
+                            console.log(json); 
+                            if(json.msg=='success'){
+                              // result.html('<div class="alert alert-success"><span style="color:green;">Successful!</span></div>'); 
+                              console.log("Successfull");
+                              $(".start_button").removeClass("isDisabled"); // enable the NEXT button 
+                              
+                            }else{
+                              // result.html('<span style="color:red;">'+json.msg+'</span>');
+                              console.log(json.msg);
+                            }
+                          })
+                          .catch(err => console.log(err));
+                      }
+                  })
+                .catch(err => console.error(err));
+        
+
         }
 
       function uploadFile(fileName){
@@ -291,7 +333,8 @@
                 $('.percent').html(percentComplete + '% Done');
                 $('.progress_report').css('width', percentComplete+ '%');
                 if(percentComplete>=100){ 
-                    $(".start_button").removeClass("isDisabled");
+                  $(".start_button").html('Please wait...');
+                    setTimeout(()=>{ $(".start_button").removeClass("isDisabled"); $(".start_button").html('Continue');},5000)
                     $(".details").addClass("my-auto");
                     $('.name').html(fileName + " uploaded");
                 } 
@@ -364,6 +407,60 @@
                 // createFormData(image); 
                 uploadFile(image[0].name); 
         });
+
+
+
+        $(document).on('submit','#msform', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result');  
+          // ===========================================================//
+          let hospital         = $('.hospital').val();
+          let folioNumber      = $(".folioNumber").val();
+          let specialty        = $(".specialty").val();
+          let mgt_team         = $(".mgt_team").val(); 
+          let professiobal_bio = $(".professiobal_bio").val(); 
+
+          // =======================================================//
+          let userEmail       = sessionStorage.getItem("userEmail"); 
+          //============================================================//
+          let data  = { 
+                        email: userEmail,
+                        hospital: hospital,
+                        folioNumber: folioNumber,
+                        specialty: specialty,
+                        mgt_team: mgt_team, 
+                        professiobal_bio:professiobal_bio,
+                      };
+              console.log(data);
+              result.html('Please wait...');
+
+            fetch('../../api/hcp/auth/continue-3.php', {
+                method: "POST",
+                body: JSON.stringify(data),
+                headers: {"Content-type": "application/json; charset=UTF-8"}
+            })
+            .then(response => response.json()) 
+            .then((json)=>{
+              console.log(json);
+              
+              if(json.msg=='success'){
+                result.html('<div class="alert alert-success" style="color:green;">Successful!</div>'); 
+                Toast.fire({ icon: 'success',title: 'Successful!'});
+                setTimeout(()=>{  
+                  $('#accounModal').modal('show');
+                 }, 3000);
+              }else{
+                result.html('<div class="alert alert-danger" style="color:red;">'+json.msg+'</div>');
+              }
+            })
+            .catch(err => console.log(err));
+
+            });
+
+
+
+
+
 
         });
     </script>

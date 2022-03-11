@@ -130,7 +130,7 @@
               <p class="text-start">let's get you all set up</p>
             </div>  
             <!-- Start Multiform HTML --> 
-            <form id="msform" method="post" action="./continue-2.php">  
+            <form id="msform" method="post">  
                 <!-- progressbar -->
                 <div id="progressbar" class="d-flex justify-content-between my-3">
                     <a class="firstForm active">1</a>   
@@ -152,6 +152,7 @@
                     <div class="form-group">
                         <small class="input_text_label">Date of Birth</small>
                         <input type="text" name="dob" placeholder="Date of Birth" class="form-control form-control-lg dob" />
+                        <input type="hidden" class="age" />
                     </div>      
     
                     <div class="form-group mb-3">
@@ -162,12 +163,12 @@
                             <option value ="female">Female</option>
                         </select>
                     </div>        
-    
+                    <div class="form-group ___result"> </div>
                     <div class="form-group">
                         <button class="btn-block btn btn-primary btn-lg continue_1" type="submit">Continue</button>
                     </div>   
 
-                    <div class="form-group ___result"> </div>
+                    
                 </fieldset>
 
                 </form>   
@@ -218,9 +219,55 @@
 
           $('.dob').datepicker()
           .on('changeDate', function(e) {
-             // $('.age').val(calculateAge(new Date($(".dob").val())));
+             $('.age').val(calculateAge(new Date($(".dob").val())));
               console.log($(".dob").val());
           });
+
+
+          $(document).on('submit','#msform', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result'); 
+          // ===========================================================//
+          let firstName       = $('.firstName').val();
+          let lastName        = $(".lastName").val(); 
+          let dob             = $(".dob").val();
+          let age             = $(".age").val();
+          let gender          = $(".gender").val();
+          // =======================================================//
+          let userEmail       = sessionStorage.getItem("userEmail"); 
+          //============================================================//
+          let data  = { 
+                        email: userEmail,
+                        firstName: firstName,
+                        lastName: lastName, 
+                        age: age, 
+                        gender: gender,
+                      };
+          console.log(data);
+          result.html('Please wait...');
+
+        fetch('../../api/hcp/auth/continue-1.php', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        })
+        .then(response => response.json()) 
+        .then((json)=>{
+          console.log(json);
+          
+          if(json.msg=='success'){
+            result.html('<div class="alert alert-success" style="color:green;">Successful!</div>'); 
+            Toast.fire({ icon: 'success',title: 'Successful!'});
+            setTimeout(()=>{  window.location.href = './continue-2.php';  }, 3000);
+          }else{
+            result.html('<div class="alert alert-success" style="color:red;">'+json.msg+'</div>');
+          }
+        })
+        .catch(err => console.log(err));
+
+        });
+
+
 
 
 

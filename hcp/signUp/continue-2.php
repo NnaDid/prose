@@ -157,13 +157,13 @@
                         <select name="country" class="form-control form-control-lg country" name ="country" id="country">
                           <option disabled selected>Country</option>
                           <option value="Nigeria">Nigeria</option>
-                          <option value ="Ghana">Ghana</option>
+                          <!-- <option value ="Ghana">Ghana</option> -->
                       </select>
                     </div>    
     
                     <div class="form-group">
                         <small class="input_text_label">State</small>
-                        <select onchange="toggleLGA(this);" name="state" id="state" class="form-control form-control-lg ">
+                        <select onchange="toggleLGA(this);" name="state" id="state" class="form-control form-control-lg state">
                           <option value="" selected="selected">- Select -</option>
                           <option value="Abia">Abia</option>
                           <option value="Adamawa">Adamawa</option>
@@ -207,15 +207,15 @@
     
                     <div class="form-group mb-3">
                         <small class="input_text_label">Town/City</small>
-                        <select name="lga" id="lga" class="form-control  form-control-lg select-lga" required>
+                        <select name="lga" id="lga" class="form-control  form-control-lg select-lga town" required>
                         </select>
                     </div>   
-    
+                    <div class="form-group ___result"> </div>
                     <div class="form-group">
                         <button class="btn-block btn btn-primary   form-control-lg  continue_2" type="submit">Continue</button>
                     </div>   
 
-                    <div class="form-group ___result"> </div>
+                   
                 </fieldset>
 
                 </form>   
@@ -279,6 +279,51 @@
               toast.addEventListener('mouseleave', Swal.resumeTimer)
               }
           });
+
+
+
+          $(document).on('submit','#msform', function(evt){
+          evt.preventDefault();
+          let result          = $('.___result');  
+          // ===========================================================//
+          let phone          = $('.phone').val();
+          let country        = $(".country").val();
+          let state          = $(".state").val();
+          let town           = $(".town").val(); 
+          // =======================================================//
+          let userEmail       = sessionStorage.getItem("userEmail"); 
+          //============================================================//
+          let data  = { 
+                        email: userEmail,
+                        phone: phone,
+                        country: country,
+                        state: state,
+                        town: town, 
+                      };
+          console.log(data);
+          result.html('Please wait...');
+
+        fetch('../../api/hcp/auth/continue-2.php', {
+            method: "POST",
+            body: JSON.stringify(data),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        })
+        .then(response => response.json()) 
+        .then((json)=>{
+          console.log(json);
+          
+          if(json.msg=='success'){
+            result.html('<div class="alert alert-success" style="color:green;">Successful!</div>'); 
+            Toast.fire({ icon: 'success',title: 'Successful!'});
+            setTimeout(()=>{  window.location.href = './continue-3.php';  }, 3000);
+          }else{
+            result.html('<div class="alert alert-danger" style="color:red;">'+json.msg+'</div>');
+          }
+        })
+        .catch(err => console.log(err));
+
+        });
+
 
         });
     </script>

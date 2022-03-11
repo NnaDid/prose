@@ -157,7 +157,7 @@
                         <select name="country" class="form-control form-control-lg country" name ="country" id="country" required>
                           <option disabled selected>Country</option>
                           <option value="Nigeria">Nigeria</option>
-                          <option value ="Ghana">Ghana</option>
+                          <!-- <option value ="Ghana">Ghana</option> -->
                       </select>
                     </div>    
     

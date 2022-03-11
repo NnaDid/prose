@@ -100,8 +100,7 @@
                         <span class="input-group-text"><i class="fa fa-eye-slash togleView"></i></span>
                     </div>
                 </div>
-              </div> 
-
+              </div>  
                 <div class="form-group ___result"> </div>
                 <div class="form-group">
                   <button class="btn-block btn btn-primary btn-lg signIn" type="submit">Sign Up</button>
@@ -158,34 +157,40 @@
             });
 
 
-      $(document).on('submit','.signUpStartForm', function(evt){
-          evt.preventDefault();
-          let result  = $('.___result');
-          let email   = $('#email').val();
-          let data    = {  email: email };
-          console.log(data);
-          result.html('Please wait...');
+            $(document).on('submit','.signUpStartForm', function(evt){
+                  evt.preventDefault();
+                  let result  = $('.___result');
+                  let email   = $('#email').val();
+                  let p1      = $(".pwd").val();
+                  let p2      = $(".pwd2").val();
+                  let userType = sessionStorage.getItem("userType") || "patient";
+                  // Setup the email in sessionStorage to be used during consent upload
+                  sessionStorage.setItem("userEmail", email);
+                  //=================================================================
+                  let data    = {email: email, p1:p1,p2:p2,userType:userType};
+                  console.log(data);
+                  result.html('Please wait...');
 
-        fetch('../../api/patients/register.php', {
-            method: "POST",
-            body: JSON.stringify(data),
-            headers: {"Content-type": "application/json; charset=UTF-8"}
-        })
-        .then(response => response.json()) 
-        .then((json)=>{
-          console.log(json);
-          
-          if(json.msg=='success'){
-            result.html('<span style="color:green;">Successful!</span>'); 
-            Toast.fire({ icon: 'success',title: 'Successful! Please check you email to confirm'});
-            setTimeout(()=>{  window.location.href = './check-mail.php';  }, 2000);
-          }else{
-            result.html('<span style="color:red;">'+json.msg+'</span>');
-          }
-        })
-        .catch(err => console.log(err));
+                fetch('../../api/hcp/auth/register.php', {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                    headers: {"Content-type": "application/json; charset=UTF-8"}
+                })
+                .then(response => response.json()) 
+                .then((json)=>{
+                  console.log(json);
+                  
+                  if(json.msg=='success'){
+                    result.html('<div class="alert alert-success" style="color:green;">Successful!  Please check you email to confirm</div>'); 
+                    Toast.fire({ icon: 'success',title: 'Successful!'});
+                    setTimeout(()=>{  window.location.href = './continue-1.php';  }, 2000);
+                  }else{
+                    result.html('<div class="alert alert-danger" style="color:red;">'+json.msg+'</div>');
+                  }
+                })
+                .catch(err => console.log(err));
 
-        });
+            });
 
 
         });

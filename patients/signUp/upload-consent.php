@@ -58,7 +58,7 @@
               <h4 class="mb-1 begin_text" style="font-size: 36px !important;">Upload Signed Consent Form</h4> 
               <p class="text-muted mb-0">
                 <a href="../../PROSE informed consent.docx" style="color:red !important; font-size:13px !important;" download>
-                  Click here to download and fill the consent form before uploading <i class="fa fa-arrow-down"></i>
+                  <u>Click here to download and fill the consent form before uploading</u> <i class="fa fa-arrow-down"></i>
                 </a>
               </p>
 

@@ -192,7 +192,7 @@
                     </div> 
 
                     <div class="form-group mb-3">
-                        <small class="input_text_label">Choose Managment Team</small>
+                        <small class="input_text_label">Choose Management Team</small>
                         <div class="cancer__type__container mb-3">
                           <select  name="mgt_team" id="mgt_team" class="form-control form-control-lg mgt_team"  required>
                             <option disabled selected>e.g Team A</option>

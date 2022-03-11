@@ -1,16 +1,19 @@
 <?php
 
 trait Common{
-    //Get Heroku ClearDB connection information
-    // public $cleardb_url        = parse_url(getenv("CLEARDB_DATABASE_URL")); 
-    public $host = "localhost" ?? $this->cleardb_url["host"];
-    public $user = "root"      ?? $this->cleardb_url["user"];
-    public $pass = ""          ?? $this->cleardb_url["pass"];
-    public $db   = "prose"     ?? substr($this->cleardb_url["path"],1);
-    //----------------------------------------------------------------//
-    public $active_group   = 'default';
-    public $query_builder  = TRUE;
+    // public $host = "localhost";
+    // public $user = "donewill_prosecare";
+    // public $pass = "PWSZQWP4KMIS";
+    // public $db   = "donewill_prosecare";
 
+    public $host = "localhost";
+    public $user = "root"   ??  "donewill_prosecare";
+    public $pass = ""       ??  "PWSZQWP4KMIS"; 
+    public $db   = "prose"  ??  "donewill_prosecare";
+    //----------------------------------------------------------------//
+    //public $active_group   = 'default';
+    //public $query_builder  = TRUE;
+    //----------------------------------------------------------------------
     // // $cleardb_server         = $cleardb_url["host"];
     // // $cleardb_username       = $cleardb_url["user"];
     // // $cleardb_password       = $cleardb_url["pass"];
