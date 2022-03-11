@@ -357,7 +357,7 @@
 
                 <div class="app-card app-card-basic mx-4">
                      <div class="table-responsive">
-                            <table class="table">
+                            <table class="table table-bordered">
                                 <thead>
                                     <tr>
                                     <th scope="" style="width:180px !important;">PIN</th>
@@ -379,7 +379,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                       <th scope="row">HN001</th>
+                                       <th scope="">HN001</th>
                                         <td> 
                                           <div class="profile_con d-flex justify-content-start align-items-center">
                                               <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
