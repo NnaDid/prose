@@ -1,3 +1,4 @@
+<?php require_once("../../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -16,7 +17,6 @@
     <script defer src="../assets/plugins/fontawesome/js/all.min.js"></script>
     
     <!-- App CSS -->  
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <link id="theme-style" rel="stylesheet" href="../assets/css/portal.css"> 
@@ -25,12 +25,9 @@
 	<link href="../../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
     <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css" />
 
-	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
-	
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
 	<style>
         .removeDrugItem{
             cursor:pointer;
@@ -305,7 +302,7 @@
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
-				            <a href="../../signIn/" title="Logout">Logout </a>
+				            <a href="?u=logout" title="Logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->

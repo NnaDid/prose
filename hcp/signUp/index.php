@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Prose | Start Sign-Up</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A corporate Bootstrap theme by Medium Rare">
+    <meta name="description" content="PROSEcare APP">
     <style>
       @keyframes hideLoader{0%{ width: 100%; height: 100%; } 100%{ width: 0; height: 0; }  }  body > div.loader{ position: fixed; background: white; width: 100%; height: 100%; z-index: 1071; opacity: 0; transition: opacity .5s ease; overflow: hidden; pointer-events: none; display: flex; align-items: center; justify-content: center;}body:not(.loaded) > div.loader{ opacity: 1;}body:not(.loaded){ overflow: hidden;}  body.loaded > div.loader{animation: hideLoader .5s linear .5s forwards;  } /* Typing Animation */.loading-animation {width: 6px;height: 6px;border-radius: 50%;animation: typing 1s linear infinite alternate;position: relative;left: -12px;}@keyframes typing {0% {background-color: rgba(100,100,100, 1);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 0.2);}25% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 2),24px 0px 0px 0px rgba(100,100,100, 0.2);}75% {background-color: rgba(100,100,100, 0.4);box-shadow: 12px 0px 0px 0px rgba(100,100,100, 0.2),24px 0px 0px 0px rgba(100,100,100, 1);}}
     </style>
@@ -171,7 +171,7 @@
                   console.log(data);
                   result.html('Please wait...');
 
-                fetch('../../api/hcp/auth/register.php', {
+                fetch('../../api/hcp/auth/register_first.php', {
                     method: "POST",
                     body: JSON.stringify(data),
                     headers: {"Content-type": "application/json; charset=UTF-8"}

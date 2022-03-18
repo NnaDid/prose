@@ -1,3 +1,4 @@
+<?php require_once("../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -9,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="PROSE">
-    <meta name="author" content="Prose Care">    
+    <meta name="author" content="PROSEcare">    
 	<link rel="shortcut icon" href="../../patients/assets/img/logo.png"> 
     
     <!-- FontAwesome JS-->
@@ -19,19 +20,17 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
+
 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css"> 
     <link id="theme-style" rel="stylesheet" href="../assets/css/custom.css">
 
 	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
-	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
-	
+
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
+ 
 	<style>
         .removeDrugItem{
             cursor:pointer;
@@ -241,12 +240,97 @@
         .activeTab{
             background: #DEF0FF !important;
         }
-	</style>
+/* Alert Messages */
+.danger_message{
+			display: flex; 
+			justify-content: space-between;
+			align-items: center;
+			padding: 8px 24px; 
+			position: absolute;
+			width: 429px;
+			height: 104px;
+			right: 0;
+			top: 39px;
+			z-index: 9999;
+			/* Info/9 */  
+			background: #FDDFD4;
+			border-radius: 15px; 
+         }
+
+		.success_message{
+			display: flex; 
+			justify-content: space-between;
+			align-items: center;
+			padding: 8px 24px; 
+			position: absolute;
+			width: 429px;
+			height: 104px;
+			right: 0;
+			top: 39px;
+			z-index: 9999;
+			/* Info/9 */  
+			background: #C6F9E8;
+			border-radius: 15px;
+		}
+
+		.msg h6{
+			font-family: Inter;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 22px;  
+			color: #002B44; 
+			/* Inside auto layout */ 
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: 4px 0px;
+		}
+
+		.errmsg h6{
+			font-family: Inter;
+			font-style: normal;
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 22px;  
+			color: #67062F;
+			/* Inside auto layout */ 
+			flex: none;
+			order: 0;
+			flex-grow: 0;
+			margin: 4px 0px;
+		}
+
+		.msg p, .errmsg p{
+		   font-size: 12px;
+		}
+		.close_btn{ 
+			cursor: pointer;
+		}
+</style>
 	
 
 </head> 
 
-<body class="app">   	
+<body class="app"> 
+
+<div class="success_message m_alert" style="display:none;">
+		<img src="../assets/img/success_message.svg" alt="info"/>
+		<div class="msg mx-1">
+			<h6>Success!</h6>
+			<p>Medication was successfully logged.</p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div>  
+
+	<div class="danger_message m_alert" style="display:none;">
+		<img src="../assets/img/error_message.svg" alt="info"/>
+		<div class="errmsg mx-1">
+			<h6>Something went wrong</h6>
+			<p>Medication Logging failed. Please try again.</p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div> 	
     <header class="app-header fixed-top">	   	            
         <div class="app-header-inner">                                         
 	        <div class="container-fluid py-2">
@@ -263,18 +347,11 @@
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="./profile">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#">Log Out</a></li>
-							</ul>
+				            <a class="dropdown-toggle" href="#"> <img src="assets/images/user.png" alt="user profile"></a> 
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
-				            <a href="#" title="Logout">Logout </a>
+				            <a href="?u=logout" title="Logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -371,16 +448,16 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box " style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important; background-color:#2EBBB2;">
                                                 <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_chemo" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-9"> Log Chemotherapy </div>
+                                                <div class="log_type py-4 col-md-9 text-white"> Log Chemotherapy </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important; background-color:#FE6ABC;">
                                                 <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_other_medication" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-9">Log Other Medications</div>
+                                                <div class="log_type py-4 col-md-9 text-white">Log Other Medications</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
@@ -389,16 +466,16 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;background-color:#A99CAA;">
                                                 <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_radiotherapy" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-9"> Log Radiotherapy</div>
+                                                <div class="log_type py-4 col-md-9 text-white"> Log Radiotherapy</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important; background-color:#4A3A4B;">
                                                 <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_surgical_procedure" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-9"> Log Surgical Procedure</div>
+                                                <div class="log_type py-4 col-md-9 text-white"> Log Surgical Procedure</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
@@ -407,17 +484,17 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;background-color:#F3897B;">
                                                 <div class="py-3 col-md-3"> <a href="./log_treatment_intruption.php">
 													                        <img src="../../patients/assets/img/add.svg" id="log_treatment_interruption" class="addItem" style="height:100%; width:100%;" /> </a> </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-9">Log Treatment Interruptions </div>
+                                                <div class="log_type py-4 col-md-9 text-white">Log Treatment Interruptions </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;">
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;background-color:#66BAFE;">
                                                 <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="others" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-9"> Other(s) </div>
+                                                <div class="log_type py-4 col-md-9 text-white"> Other(s) </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                    
@@ -447,13 +524,13 @@
                                       <div class="form-group form_drug_input mb-1">
 										<label class="text_input_label" for="drug">Drug</label>
 										<div class="input-group">
-											<input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
+											<input name="drug[0]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
 											<div class="input-group-append">
 												<span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
 											</div>
 										</div>
 									</div>  
-
+									<input type="hidden" name="action" value="log">
 									<div class="mb-3 align-items-right text-right addDrugContainer">
                                         <button type="button" class="btn btn-outline-primary addNewDrug"><span>New Drug</span></button>
 									</div> 
@@ -492,7 +569,7 @@
                 tabsBox.forEach((el)=>{
                     el.addEventListener("click",(e)=>{ 
                         $(".app-card").removeClass("activeTab");  // remove highlighted mark on every other container
-                        e.path[2].classList.add("activeTab");	 // highlight this one that is clicked
+                        e.path[2].classList.add("activeTab");	 // highlight this one that is clicked  
                         console.log(e.path);
 						console.log(el.id);
 						// check if the Id is the same as the one clicked
@@ -506,13 +583,13 @@
 		// when the 
 		// $(document).on("click",".addNewDrug",function(){});
 
-
+		 let counter = 1;
           $(document).on("click",".addNewDrug",function(e){
              $(".addDrugContainer").prepend(`
                         <div class="form-group form_drug_input mb-1">
                            <label class="text_input_label" for="drug">Drug</label> 
                            <div class="input-group">
-                                <input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
+                                <input name="drug[${counter}]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
                                 <div class="input-group-append">
                                     <span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
                                 </div>
@@ -525,6 +602,34 @@
           $(document).on("click",".removeDrugItem", function(e){
               $(this).closest("div.form-group").slideUp(5000).remove();
           });
+
+			// When the ALERT close button is clicked
+			$(document).on("click",".close_btn",function(){
+				$(this).closest("div.m_alert").slideUp(1000).hide(200);
+			}); 
+
+			$(document).on("submit",".log_chemo", function(evt){
+				evt.preventDefault(); 
+				console.log($(".log_chemo").serialize()); 
+				var data = {};
+                 $(".log_chemo").serializeArray().map(function(x){data[x.name] = x.value;}); 
+				 console.log(data);   
+				$.ajax({
+					url:"../../api/patients/medications.php",
+					method:"POST",
+					data:$("form.log_chemo").serialize(),
+					beforeend:function(){
+						$(".log_chemo").slideUp(2000).hide(); 
+					},
+					success:function(data){
+						console.log(data);
+					},
+					error:function(err){
+						console.log(err);
+					},
+
+				});
+			})
           
         });
 

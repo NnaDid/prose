@@ -7,23 +7,10 @@ trait Common{
     // public $db   = "donewill_prosecare";
 
     public $host = "localhost";
-    public $user = "root"   ??  "donewill_prosecare";
-    public $pass = ""       ??  "PWSZQWP4KMIS"; 
-    public $db   = "prose"  ??  "donewill_prosecare";
-    //----------------------------------------------------------------//
-    //public $active_group   = 'default';
-    //public $query_builder  = TRUE;
-    //----------------------------------------------------------------------
-    // // $cleardb_server         = $cleardb_url["host"];
-    // // $cleardb_username       = $cleardb_url["user"];
-    // // $cleardb_password       = $cleardb_url["pass"];
-    // // $cleardb_db             = substr($cleardb_url["path"],1);
-    // // $active_group           = 'default';
-    // // $query_builder          = TRUE;
-    // // Connect to DB
-    // $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-
-
+    public $user = "root";
+    public $pass = ""; 
+    public $db   = "prose";
+   
 public function con(){
     $con = new mysqli($this->host,$this->user,$this->pass,$this->db);
     if ($con->connect_errno) die(" Connection not established");
@@ -88,9 +75,10 @@ public function exists($val,$table,$col){
     }
 }
 
-public function getSideEffects($cancerType, $cancer_array){
-    
-}
+public function getSideEffects($cancerType, $cancer_array){}
+
+
+
 
 //-----------------------------------------------------//
 public function checkLoggedIn($loc){

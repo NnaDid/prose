@@ -172,7 +172,7 @@
           console.log(data);
           result.html('Please wait...');
 
-        fetch('../../api/patients/auth/register.php', {
+        fetch('../../api/patients/auth/register_first.php', {
             method: "POST",
             body: JSON.stringify(data),
             headers: {"Content-type": "application/json; charset=UTF-8"}
@@ -184,7 +184,7 @@
           if(json.msg=='success'){
             result.html('<span style="color:green;">Successful!  Please check you email to confirm</span>'); 
             Toast.fire({ icon: 'success',title: 'Successful!'});
-            setTimeout(()=>{  window.location.href = './check-mail.php';  }, 2000);
+            setTimeout(()=>{  window.location.href = './upload-consent.php';  }, 2000);
           }else{
             result.html('<span style="color:red;">'+json.msg+'</span>');
           }

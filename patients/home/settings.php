@@ -1,3 +1,4 @@
+<?php require_once("../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -9,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="PROSE">
-    <meta name="author" content="Prose Care">    
+    <meta name="author" content="PROSEcare">    
 	<link rel="shortcut icon" href="../../patients/assets/img/logo.png"> 
     
     <!-- FontAwesome JS-->
@@ -18,15 +19,12 @@
     <!-- App CSS -->  
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet"> 
 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css"> 
     <link id="theme-style" rel="stylesheet" href="../assets/css/custom.css">
 
-	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
-	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
+	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" /> 
 	
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
@@ -286,7 +284,7 @@
 			margin: 36px 0px;
 		}
 		/* Alert Messages */
-		.danger_message{
+		.danger_message, .reminder_danger_message{
 			display: flex; 
 			justify-content: space-between;
 			align-items: center;
@@ -302,7 +300,7 @@
 			border-radius: 15px; 
          }
 
-		.success_message{
+		.success_message, .reminder_success_message{
 			display: flex; 
 			justify-content: space-between;
 			align-items: center;
@@ -369,6 +367,7 @@
 			order: 0;
 			flex-grow: 0;
 			margin: 20px 0px;
+			color:#2A2F9E;
 		}
 		.log_type{
 			font-family: Inter;
@@ -384,17 +383,17 @@
 			margin: 4px 0px;
 		}
 
-		.togleView{
+		/* .togleView{
 			cursor: pointer;
 			z-index:4999;
-		}
+		} */
 	</style>
 	
 
 </head> 
 
 <body class="app"> 
-	<div class="success_message m_alert" style="display:non;">
+	<div class="success_message m_alert" style="display:none;">
 		<img src="../assets/img/success_message.svg" alt="info"/>
 		<div class="msg mx-1">
 			<h6>Success!</h6>
@@ -403,11 +402,31 @@
 		<div class="close_btn"><i class="fa fa-times"></i></div>
 	</div>  
 
-	<div class="danger_message m_alert" style="display:non;">
+	<div class="danger_message m_alert" style="display:none;">
 		<img src="../assets/img/error_message.svg" alt="info"/>
 		<div class="errmsg mx-1">
 			<h6>Something went wrong</h6>
 			<p>Your Password was not successfully changed. Please try again.</p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div>  
+<!-- Alerts for time Reminder setters -->
+	<div class="reminder_success_message m_alert" style="display:none;">
+		<img src="../assets/img/success_message.svg" alt="info"/>
+		<div class="msg mx-1">
+			<h6>Success!</h6>
+			<p class="reminder_succ_msg">
+				You have set a daily reminder to log symptoms at 4:00PM
+			</p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div>  
+
+	<div class="reminder_danger_message m_alert" style="display:none;">
+		<img src="../assets/img/error_message.svg" alt="info"/>
+		<div class="errmsg mx-1">
+			<h6>Something went wrong</h6>
+			<p>Reminder was not set.</p>
 		</div>
 		<div class="close_btn"><i class="fa fa-times"></i></div>
 	</div>  
@@ -430,18 +449,11 @@
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="./profile">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#">Log Out</a></li>
-							</ul>
+				            <a class="dropdown-toggle" href="#" > <img src="assets/images/user.png" alt="user profile"></a> 
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
-				            <a href="#" title="Logout">Logout </a>
+				            <a href="?u=logout" title="Logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -916,17 +928,17 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 								<form class="py-4 my-4 changePasswordForm">   
 									<h5 class="auth-heading text-center mb-4 left_heading_text">Change Password</h5>		     
 									 
-									<div class="form-group">
+									    <div class="form-group">
 											<small class="input_text_label">Current Password</small>
 												<div class="input-group mb-3 pass_container">
 												    <div class="input-group-prepend">
 													    <span class="input-group-text border-right-0"><i class="fa fa-lock"></i></span>
+												    </div> 
+													<input type="password" class="form-control form-control-lg pwd currentPwd" name ="currentPwd"  Placeholder="Current Password" required />
+													<div class="input-group-append togglerView">
+													  <span class="input-group-text"><i class="fa fa-eye togleView"></i></span>
 												    </div>
-													<input type="password" class="form-control form-control-lg pwd currentPwd py-3 border-left-0 border-right-0" name ="currentPwd"  Placeholder="Current Password" required />
-													<div class="input-group-append border-left-0">
-													    <span class="input-group-text"><i class="fa fa-eye-slash togleView"></i></span>
-												    </div>
-											</div>
+											  </div>
 										</div>
 										<div class="form-group">
 											<small class="input_text_label">New Password</small>
@@ -934,9 +946,9 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 												    <div class="input-group-prepend">
 													    <span class="input-group-text border-right-0"><i class="fa fa-lock"></i></span>
 												    </div>
-													<input type="password" class="form-control form-control-lg pwd newPwd py-3 border-left-0 border-right-0" name ="newPwd"  Placeholder="Choose New Password" required />
-													<div class="input-group-append border-left-0">
-													   <span class="input-group-text"><i class="fa fa-eye-slash togleView"></i></span>
+													<input type="password" class="form-control form-control-lg pwd newPwd" name ="newPwd"  Placeholder="Choose New Password" required />
+													<div class="input-group-append togglerView">
+													   <span class="input-group-text"><i class="fa fa-eye togleView"></i></span>
 												    </div>
 											</div>
 										</div> 
@@ -946,26 +958,24 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 												    <div class="input-group-prepend">
 													    <span class="input-group-text border-right-0"><i class="fa fa-lock"></i></span>
 												    </div>
-													<input type="password" class="form-control form-control-lg pwd confirmPassword py-3 border-left-0 border-right-0" name ="confirmPassword"  Placeholder="Confirm New Password" required />
-													<div class="input-group-append border-left-0">
-													  <span class="input-group-text"><i class="fa fa-eye-slash togleView"></i></span>
-												   </div>
+													<input type="password" class="form-control form-control-lg pwd confirmPassword" name ="confirmPassword"  Placeholder="Confirm New Password" required />
+													<div class="input-group-append togglerView">
+													  <span class="input-group-text"><i class="fa fa-eye togleView"></i></span>
+												   </div> 
 											</div>
 										</div> 
 
 									<div class="text-center">
 										<button type="submit" class="btn btn-primary btn-block text-center changePasswordBtn" disabled>
-											    <span>Change Password</span> 
-											    <img src="../assets/img/arrow_.svg" class="mx-2"/> 
+											    <span>Change Password</span> <img src="../assets/img/arrow_.svg" class="mx-2"/> 
 										</button>
 									</div>
 								</form><!--//auth-form-->   
    
 							</div><!--//auth-main-col-->
 
-							<div class="col-12 col-md-5 col-lg-8 reminder_Container" style="display:none;margin-bottom:100px;">
-                                    
-								<form class="py-4 my-4 reminderForm">   
+							<div class="col-12 col-md-5 col-lg-8 setReminder_Container" style="display:none;margin-bottom:100px;">
+							    <form class="py-4 my-4 addReminderForm">   
 									<h5 class="text-center mb-4 reminder_heading">Set Reminder to Log Side Effects</h5> 
                                       <div class="form-group form_drug_input mb-1">
 										<label class="text_input_label" for="time">Time</label>  
@@ -1023,32 +1033,23 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 									 </div>   
 									 <div class="text-center my-4">
 										<button type="submit" class="btn btn-primary btn-block text-center setReminderBtn">
-											    <span>Set Reminder</span> 
-											    <img src="../assets/img/arrow_.svg" class="mx-2"/> 
+											    <span>Set Reminder</span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> 
 										</button>
 									</div>
-								</form><!--//auth-form-->   
-   
-
-
-								<form class="py-4 my-4 reminderForm">   
-									<h5 class="text-center mb-4 reminder_heading">Your Reminder(s)</h5> 
-									<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
-                                        <div class="py-1 col-md-3"> <img src="../../patients/assets/img/reminder_calendar.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
-                                            <div class="log_type col-md-9">Logged Side Effects</div> 
-												<div class="log_type col-md-12 text-right">
-														<button class="btn text-success editRadiotherapyRecord">Edit</button>
-														<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
-												</div>
-                                    </div><!--//app-card-->  
-									 <div class="text-center my-4">
-										<button type="submit" class="btnNewReminder text-center setNewReminderBtn">
-											    <span>Set New Reminder</span>  
-										</button>
-									</div>
-								</form><!--//auth-form-->   
+								</form><!--//auth-form-->    
    
 							</div><!--//auth-main-col-->
+
+							<div class="col-12 col-md-5 col-lg-8 reminder_Container" style="display:none;margin-bottom:100px;">
+								<div class="py-4 my-4 reminderList">   
+									<h5 class="text-center mb-4 reminder_heading">Your Reminder(s)</h5> 
+									<div class="reminderListContainer">
+
+									</div>
+								</div><!--//auth-form-->   
+   
+							</div><!--//auth-main-col-->
+
 						</div><!--//app-card-->
 
 				    </div><!--//col--> 
@@ -1063,10 +1064,203 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 
 
     <!-- Javascript -->          
-    <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    <!-- <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  -->
+
+	<!-- Page Specific JS -->
+	<!-- <script src="assets/js/app.js"></script>  -->
+	<!-- Dealing with the Password -->
+	<script type="text/javascript">
+        $(document).ready(function(){  
+
+            let togleView  = document.querySelectorAll(".togglerView"); 
+            togleView.forEach((el)=>{
+              el.addEventListener("click",function(e){ 
+                    $(this).find('span>i.togleView').toggleClass("fa-eye fa-eye-slash");
+                    let atr = $(this).closest('div.input-group').find('input');
+                    (atr.attr('type')==='text') ? atr.attr('type','password') : atr.attr('type','text');
+                },false);
+            }); 
+
+            $(document).on("keyup",".confirmPassword, .newPwd", function(){
+                let cp = $(".currentPwd").val();
+                let p1 = $(".newPwd").val();
+                let p2 = $(".confirmPassword").val(); 
+                if((p1!==p2)){
+                    $(".confirmPassword, .newPwd").css("border","1px solid red");
+                    $(".changePasswordBtn").attr("disabled","disabled");
+                }else{
+                    $(".newPwd, .confirmPassword").css("border","1px solid green");
+                    $(".changePasswordBtn").removeAttr("disabled");
+                    
+                }
+            });
+
+
+			$(document).on('keyup','.currentPwd', function(evt){
+				evt.preventDefault(); 
+				// ===========================================================// 
+				let pwd  = $(".pwd").val(); 
+				// ===========================================================//
+				let data  = {pwd: pwd };     
+				fetch('../../api/patients/verify_currentPassword.php', {
+					method: "POST",
+					body: JSON.stringify(data),
+					headers: {"Content-type": "application/json; charset=UTF-8"}
+				})
+				.then(response => response.json()) 
+				.then((json)=>{
+				    console.log(json); 
+					if(json.msg == 'success'){
+						$(".confirmPassword, .currentPwd").css("border","1px solid green");					
+					}else{
+						$(".confirmPassword, .currentPwd").css("border","1px solid red");
+					}
+				})
+				.catch(err => console.log(err));
+
+			});
+
+			// Update Password
+			$(document).on('submit','.changePasswordForm', function(evt){
+				evt.preventDefault(); 
+				$(this).find('button.changePasswordBtn').html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');
+				// ===========================================================// 
+				let cp = $(".currentPwd").val();
+                let p1 = $(".newPwd").val();
+                let p2 = $(".confirmPassword").val(); 
+				// ===========================================================//
+				let data  = {cp: cp,p1:p1,p2:p2 };     
+				fetch('../../api/patients/updatePassword.php', {
+					method: "POST",
+					body: JSON.stringify(data),
+					headers: {"Content-type": "application/json; charset=UTF-8"}
+				})
+				.then(response => response.json()) 
+				.then((json)=>{
+				    console.log(json); 
+					if(json.msg == 'success'){
+						$(".success_message").show(2000);	
+						$(this).find('button.changePasswordBtn').html('<span>Change Password</span> <img src="../assets/img/arrow_.svg" class="mx-2"/>');				
+					}else{
+						$(".danger_message").show(2000);
+						$(this).find('button.changePasswordBtn').html('<span>Change Password</span> <img src="../assets/img/arrow_.svg" class="mx-2"/>');
+						console.log(json.msg);
+					}
+				})
+				.catch(err => console.log(err));
+
+			});
+
+			// addReminderForm Add Reminder
+			$(document).on('submit','.addReminderForm', function(evt){
+				evt.preventDefault(); 
+				$(this).find('button.setReminderBtn').html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');
+				// ===========================================================// 
+				let time = $(".time option:selected").text();  
+				// ===========================================================//
+				let data  = {__time:time};     
+				fetch('../../api/patients/reminders/addReminders.php', {
+					method: "POST",
+					body: JSON.stringify(data),
+					headers: {"Content-type": "application/json; charset=UTF-8"}
+				})
+				.then(response => response.json()) 
+				.then((json)=>{
+				    console.log(json); 
+					if(json.msg == 'success'){
+						$(".success_message").show(2000);	
+						$(this).find('button.setReminderBtn').html('<span>Set Reminder</span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> ');				
+					}else{
+						$(".danger_message").show(2000);
+						$(this).find('button.setReminderBtn').html('<span>Set Reminder</span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> ');
+						console.log(json.msg);
+					}
+				})
+				.catch(err => console.log(err));
+
+			});
+
+
+
+
+			// When the ALERT close button is clickwd
+			$(document).on("click",".close_btn",function(){
+				$(this).closest("div.m_alert").slideUp(1000).hide(200);
+			}); 
+
+        });
+    </script> 
 	<script>
         $(document).ready(function(){ 
+
+			// load reminders
+			function checkReminders(){
+				fetch('../../api/patients/reminders/getReminders.php', {
+					method: "GET", 
+					headers: {"Content-type": "application/json; charset=UTF-8"}
+				})
+				.then(response => response.json()) 
+				.then((json)=>{
+				    console.log(json);  
+					if(json.msg.success == 'success' && json.msg.data.length>0){
+						console.log(json.msg.data);
+						let reminderData ='';
+						json.msg.data.map((data)=>{
+							reminderData += `<div class="app-card app-card-basic mb-1 d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
+												<div class="py-1 col-md-3"> <img src="../../patients/assets/img/reminder_calendar.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+													<div class="log_type col-md-9">Logged Reminder</div> 
+														<div class="log_type col-md-12 row">
+																<label class="text-center col-md-12">${data.looged_time}</label>
+																<div class="text-right col-md-12">
+																	<button class="btn text-success editReminder" id="${data.id}" data-userId="${data.userId}">Edit</button>
+																	<button class="btn text-danger deleteReminder" id="${data.id}" data-userId="${data.userId}">Delete</button>
+																</div>
+														</div>
+											</div>`; 
+						}); 
+						reminderData+=`<button type="button" class="btnNewReminder text-center setNewReminderBtn"> <span>Set New Reminder</span> </button>`;
+						$(".reminderListContainer").html(reminderData);	  
+						$(".setReminder_Container").hide(10);				
+					}else{ 
+						$(".reminder_Container").html(`<div class="text-center my-4">
+									    <h5 class="text-center mb-4 reminder_heading">You currently have no reminders</h5> 
+										<button type="button" class="btnNewReminder text-center setNewReminderBtn">
+											    <span>Set New Reminder</span>  
+										</button>
+									</div>`); 
+						console.log(json.msg);
+					}
+				})
+				.catch(err => console.log(err));
+			}
+
+			// SET NEW REMINDER
+			$(document).on("click",".setNewReminderBtn",function(evt){
+				evt.preventDefault();
+				$(".reminder_Container").hide(10);
+				$(".setReminder_Container").show(10);
+
+			});
+
+
+			// EDIT REMINDER editReminder
+			$(document).on("click",".editReminder",function(evt){
+				evt.preventDefault();
+				 let id     = $(this).attr('id');
+				 let userId = $(this).attr('data-userId');
+				 console.log(id,userId);
+			});
+
+
+			// DELETE REMINDER
+			$(document).on("click",".deleteReminder",function(evt){
+				evt.preventDefault(); 
+				let id     = $(this).attr('id');
+				let userId = $(this).attr('data-userId');
+				console.log(id,userId);
+			});
+
 
             let tabsBox = document.querySelectorAll(".addItem");
                 tabsBox.forEach((el)=>{
@@ -1085,7 +1279,8 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 						if(el.id == "reminder"){
 							     $(".security_Container").hide(); 
 								 $(".log_begin_cotainer").hide();
-								 $(".reminder_Container").show().css("zoom",0.88);						
+								 $(".reminder_Container").show().css("zoom",0.88);	
+								 checkReminders();					
 						}
 						
                     },false);
@@ -1108,64 +1303,12 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
                     );
           });
           //  $( "li" ).last().css( "background-color", "red" );
-          // Remove DrugItem Added
-          $(document).on("click",".removeDrugItem", function(e){
-              $(this).closest("div.form-group").slideUp(5000).remove();
-          });
           
         });
 
 	</script>
-
-
-
-	<!-- Dealing with the Password -->
-	<script type="text/javascript">
-        $(document).ready(function(){  
-            let togleView  = document.querySelectorAll(".togleView"); 
-
-            togleView.forEach((el)=>{
-              el.addEventListener("click",function(e){
-                    $(this).toggleClass("fa-eye-slash fa-eye");
-                    let atr = $(this).closest('div.pass_container').find('input');
-					alert(atr);
-                    (atr.attr('type')==='text') ? atr.attr('type','password') : atr.attr('type','text');
-                },false);
-            }); 
-
-            $(document).on("keyup",".confirmPassword, .newPwd", function(){
-                let cp = $(".currentPwd").val();
-                let p1 = $(".newPwd").val();
-                let p2 = $(".confirmPassword").val();
-                if((p1!==p2) && cp==''){
-                    $(".confirmPassword, .newPwd").css("border","1px solid red");
-                    $(".changePasswordBtn").attr("disabled","disabled");
-                }else{
-                    $(".newPwd, .confirmPassword").css("border","1px solid green");
-                    $(".changePasswordBtn").removeAttr("disabled");
-                    
-                }
-            });
-
-			// When the ALERT close button is clickwd
-			$(document).on("click",".close_btn",function(){
-				$(this).closest("div.m_alert").slideUp(1000).hide(200);
-			}); 
-
-        });
-    </script>
-
-
-
-
-
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
     
-    <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script>  
-	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
+  
 
 
 

@@ -1,10 +1,4 @@
-<?php
-//  session_start();
-//  require_once('../../api/common.php');
-//  $email = $_SESSION["PROSE_CARE__USER_EMAIL"];
-//  $fname  = $base->getUserByEmail($email)['fname'];
-require_once("../../top.php");
-?>
+<?php require_once("../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -25,9 +19,7 @@ require_once("../../top.php");
     <!-- App CSS -->  
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet"> 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 	<link href="../assets/css/custom.css"    rel="stylesheet" type="text/css" media="all" />
 	<style>
@@ -187,12 +179,11 @@ require_once("../../top.php");
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a> 
+				            <a class="dropdown-toggle" href="#"> <img src="assets/images/user.png" alt="user profile"></a> 
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
-				            <a href="?u=logout" title="Settings">Logout </a>
+				            <a href="?u=logout" title="logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -340,10 +331,10 @@ require_once("../../top.php");
 							        </div><!--//col--> 
 						        </div><!--//row-->
 						    </div><!--//app-card-header-->
-						 <a href="./profile/">
+						 <a href="./treatment.php">
 						    <div class="app-card-body px-4 py-2"> 
 							    <div class="intro mb-4 log_treatment">
-								    <a href="./profile/"><h6 style="color:#005267 !important;">Log your treatment </h6>
+								    <a href="./treatment.php"><h6 style="color:#005267 !important;">Log your treatment </h6>
 										<span class="text_desc">Click here to log your treatment record.</span>
 									</a>
 								</div>

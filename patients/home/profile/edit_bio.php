@@ -1,3 +1,4 @@
+<?php require_once("../../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -300,18 +301,11 @@
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="./index.php">Profile</a></li>
-								<li><a class="dropdown-item" href="../settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="../../signIn/">Log Out</a></li>
-							</ul>
+				            <a class="dropdown-toggle" href="#"><img src="../assets/images/user.png" alt="user profile"></a> 
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
-				            <a href="../../signIn/" title="Logout">Logout </a>
+				            <a href="?u=logout" title="Logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
