@@ -438,33 +438,33 @@
                                                      <section class="personal_information"> 		     
                                                          <div class="row d-flex justify-content-between align-items-center personal_information">
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="holw_old">How old were you when diagnosed with cancer?</label>
-                                                                    <p class="mx-2 log_type" for="holw_old">79 years</p> 
+                                                                    <label class="text_input_label">How old were you when diagnosed with cancer?</label>
+                                                                    <p class="mx-2 log_type how_old">000</p> 
                                                                 </div>
 
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="cancer_type">Type of Cancer</label>
-                                                                    <p class="mx-2 log_type" for="cancer_type">Some cancer type here</p>
+                                                                    <label class="text_input_label">Type of Cancer</label>
+                                                                    <p class="mx-2 log_type cancer_type">***</p>
                                                                 </div> 
  
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="hist_type">Histology Type</label>
-                                                                    <p class="mx-2 log_type" for="hist_type">Some placeholder</p>
+                                                                    <label class="text_input_label">Histology Type</label>
+                                                                    <p class="mx-2 log_type hist_type">***</p>
                                                                 </div>  
 
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="cancer_grade">Cancer grade</label>
-                                                                    <p class="mx-2 log_type" for="cancer_grade">Some placeholder</p>
+                                                                    <label class="text_input_label">Cancer grade</label>
+                                                                    <p class="mx-2 log_type cancer_grade">***</p>
                                                                 </div>  
 
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="cancer_stage">Cancer Stage</label>
-                                                                    <p class="mx-2 log_type" for="cancer_stage">Some placeholder</p>
+                                                                    <label class="text_input_label">Cancer Stage</label>
+                                                                    <p class="mx-2 log_type cancer_stage">***</p>
                                                                 </div>  
-
+                                                                
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="comorbidity">Comorbidity</label>
-                                                                    <p class="mx-2 log_type" for="comorbidity">Some placeholder</p>
+                                                                    <label class="text_input_label">Comorbidity</label>
+                                                                    <p class="mx-2 log_type comorbidity">***</p>
                                                                 </div>  
                                                         </div> 
                                                         
@@ -500,9 +500,7 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 	<script>
         $(document).ready(function(){
-             // // log_begin_cotainer  log_symptom_container
-			// $(".log_begin_cotainer").slideUp(2000).hide();
-			// $(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);      log_begin_cotainer
+             // // log_begin_cotainer  log_symptom_container 
             let tabsBox = document.querySelectorAll(".profileItem ");
                 tabsBox.forEach((el)=>{
                     el.addEventListener("click",(e)=>{ 
@@ -516,39 +514,41 @@
 								 $(".log_OtherMedication_Container").slideUp(2000).show(2000).css("zoom",0.88); 
 						}
                     },false);
-                });
+                }); 
 
-          $(document).on("click",".addNewDrug",function(e){
-             $(this).closest("form").find(".form-group:last").
-                append(`
-                        <div class="form-group form_drug_input mb-1">
-                           <label class="text_input_label" for="drug">Drug</label> 
-                           <div class="input-group">
-                                <input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
-                                <div class="input-group-append">
-                                    <span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
-                                </div>
-                            </div>
-                        </div>`
-                    );
-          });
-          //  $( "li" ).last().css( "background-color", "red" );
-          // Remove DrugItem Added
-          $(document).on("click",".removeDrugItem", function(e){
-              $(this).closest("div.form-group").slideUp(5000).remove();
-          });
+                function getDiseaseXteristics(){
+                        $(".how_old").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".cancer_type").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".hist_type").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".cancer_grade").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".cancer_stage").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".comorbidity").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+
+                        fetch('../../../api/patients/get_disease_xteristics.php', {
+                            method: "GET", 
+                                headers: {"Content-type": "application/json; charset=UTF-8"}
+                            })
+                        .then(response => response.json()) 
+                        .then((json)=>{
+                            console.log(json); 
+                            // inputs `how_old`, `cancer_type`, `histology`, `cancer_grade`, `cancer_stage`, `comorbidity`,
+                            if(json.DS_xteristics || json.DS_xteristics != null){
+                                $(".how_old").html(json.DS_xteristics.how_old); 
+                                $(".cancer_type").html(json.DS_xteristics.cancer_type); 
+                                $(".hist_type").html(json.DS_xteristics.histology); 
+                                $(".cancer_grade").html(json.DS_xteristics.cancer_grade); 
+                                $(".cancer_stage").html(json.DS_xteristics.cancer_stage); 
+                                $(".comorbidity").html(json.DS_xteristics.comorbidity); 
+                            }  
+                        })
+                        .catch(err => console.log(err));
+                }
+                 getDiseaseXteristics(); // Spit the Data to the DOM
           
         });
 
 	</script>
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
-    
-    <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
 
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script> -->
 	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
  
 	<!--Start of Tawk.to Script-->

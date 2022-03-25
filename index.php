@@ -186,7 +186,7 @@
                     <p class="intro_text">
                         Radiotherapy is an essential treatment option in cancer care that uses powerful light (ionizing radiation) to kill cancer cells and shrink tumours. However, radiotherapy not only kills or slows down the growth of cancer cells, it can also cause damage to healthy cells, and result inside effects. 
                     </p> 
-                    <p class="my-4"><a href ="./patients/signUp/intro.php" class="btn btn-primary px-4 py-2 rounded">Learn More <img src="./patients/assets/img/arrow_down.svg" alt="prose arrow" /></a></p>
+                    <p class="my-4"><a href ="./intro.php" class="btn btn-primary px-4 py-2 rounded">Learn More <img src="./patients/assets/img/arrow_down.svg" alt="prose arrow" /></a></p>
              </div>
 
              <div class="col-md-6">

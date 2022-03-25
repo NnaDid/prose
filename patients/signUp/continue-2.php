@@ -155,8 +155,8 @@
                     <div class="form-group">
                         <small class="input_text_label">Country</small>
                         <select name="country" class="form-control form-control-lg country" name ="country" id="country" required>
-                          <option disabled selected>Country</option>
-                          <option value="Nigeria">Nigeria</option>
+                          <option disabled >Country</option>
+                          <option value="Nigeria" selected>Nigeria</option>
                           <!-- <option value ="Ghana">Ghana</option> -->
                       </select>
                     </div>    

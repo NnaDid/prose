@@ -432,13 +432,13 @@
                                         <div class="col-12 col-lg-11 col-md-11  log_OtherMedication_Container" style="">
                                                 <div class="topBio d-flex justify-content-between align-items-center mt-4">
                                                    <h3 class="h3">Anthropometry</h3> 
-                                                   <button type="button" class="btn btn-outline-primary editBio" style="z-index:29999;"><a href="#">Save</a></button>
+                                                   <button type="button" class="btn btn-outline-primary editBio" style="z-index:29999;"><a href="#" class="editAnthropometry">Save</a></button>
                                                 </div>
 
                                                 <form class="bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.90;margin-top:-60px;">   
-                                                     <section class="personal_information"> 		     
-                                                         <div class="row d-flex justify-content-between align-items-center personal_information">
-                                                             
+                                                     <section class="personal_information"> 	
+                                                         <div class="result"></div>	     
+                                                         <div class="row d-flex justify-content-between align-items-center personal_information"> 
                                                                 <div class="form-group mb-2 col-md-8">
                                                                     <label class="text_input_label" for="Height">Height </label>
                                                                     <input type="text" name="Height" id="Height" placeholder="Height" class="form-control form-control-lg Height" />
@@ -496,10 +496,7 @@
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 	<script>
-        $(document).ready(function(){
-             // // log_begin_cotainer  log_symptom_container
-			// $(".log_begin_cotainer").slideUp(2000).hide();
-			// $(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);      log_begin_cotainer
+        $(document).ready(function(){ 
             let tabsBox = document.querySelectorAll(".profileItem ");
                 tabsBox.forEach((el)=>{
                     el.addEventListener("click",(e)=>{ 
@@ -514,33 +511,65 @@
 						}
                     },false);
                 });
+                
+                function getAthropomentry(){  
+                        fetch('../../../api/patients/get_anthropometry.php', {
+                            method: "GET", 
+                                headers: {"Content-type": "application/json; charset=UTF-8"}
+                            })
+                        .then(response => response.json()) 
+                        .then((json)=>{
+                            console.log(json); 
+                            //`height`, `weight`, `bmi`, `waist_circum`, `head_circum`, `createdAt`
+                            if(json.ANTHRO || json.ANTHRO != null){ 
+                                $(".Height").val(json.ANTHRO.height); 
+                                $(".Weight").val(json.ANTHRO.weight); 
+                                $(".bmi").val(json.ANTHRO.bmi); 
+                                $(".Waist").val(json.ANTHRO.waist_circum); 
+                                $(".Head").val(json.ANTHRO.head_circum); 
+                            }  
+                        })
+                        .catch(err => console.log(err));
+                }
+                getAthropomentry(); // Spit the Data to the DOM
 
-          $(document).on("click",".addNewDrug",function(e){
-             $(this).closest("form").find(".form-group:last").
-                append(`
-                        <div class="form-group form_drug_input mb-1">
-                           <label class="text_input_label" for="drug">Drug</label> 
-                           <div class="input-group">
-                                <input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
-                                <div class="input-group-append">
-                                    <span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
-                                </div>
-                            </div>
-                        </div>`
-                    );
-          });
-          //  $( "li" ).last().css( "background-color", "red" );
-          // Remove DrugItem Added
-          $(document).on("click",".removeDrugItem", function(e){
-              $(this).closest("div.form-group").slideUp(5000).remove();
-          });
+                // `height`, `weight`, `bmi`, `waist_circum`, `head_circum`, `createdAt`
+                $(document).on('click',".editAnthropometry",function(evt){
+                        evt.preventDefault();
+                        $(this).html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');
+                        let data = {
+                            height       :$("form.bio_form").find(".Height").val(),
+                            weight       :$("form.bio_form").find(".Weight").val(),
+                            bmi          :$("form.bio_form").find(".bmi").val(),
+                            waist_circum :$("form.bio_form").find(".Waist").val(),
+                            head_circum  :$("form.bio_form").find(".Head").val(),   
+                        }
+                        console.log(data);
+                        fetch('../../../api/patients/edit_anthropometry.php', {
+                                method: "POST",
+                                body: JSON.stringify(data),
+                                headers: {"Content-type": "application/json; charset=UTF-8"}
+                            })
+                            .then(response => response.json()) 
+                            .then((json)=>{
+                                console.log(json); 
+                                console.log(json.status); 
+                                if(json.msg == 'success'){ 
+                                    $(this).html('Save');
+                                    $(".result").html('<div class="alert alert-success"> Successful! </div>');
+                                    setTimeout(()=>{location.href ="./anthropometry.php"},2000)
+                                }else{
+                                    $(this).html('Save');
+                                    $(".result").html('<div class="alert alert-danger"> Request Failed! </div>');
+                                }
+                            })
+                            .catch(err => console.log(err)); 
+    
+                    })
           
         });
 
 	</script>
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
     
     <!-- Page Specific JS -->
     <script src="assets/js/app.js"></script>  

@@ -175,11 +175,19 @@
                             <option value="uneducated">Uneducated</option>
                             <option value="primary">Primary</option>
                             <option value ="secondary">Secondary</option>
-                            <option value ="tertiary">Teriary</option>
+                            <option value ="tertiary">Tertiary</option>
                             <option value ="OND|HND">OND/HND</option>
                             <option value ="others">Others</option>
                         </select>
-                    </div>    
+                    </div>   
+                    <div class="form-group others_section" style="display:none;">
+                        <small class="input_text_label">Enter the other type here</small>
+                        <input type="text" name="others" placeholder="Enter the type of Education here" class="form-control form-control-lg others"/>
+                    </div>
+                    <div class="form-group">
+                        <small class="input_text_label">PIN (Personal Identifier Number)</small>
+                        <input type="text" name="pin_no" placeholder="eg ONC2939" class="form-control form-control-lg pin_no" required/>
+                    </div>   
                   
                     <div class="___result py-2 my-1"> </div>
 
@@ -242,16 +250,24 @@
               console.log($(".dob").val());
           });
 
-
-
-      $(document).on('submit','#msform', function(evt){
+        
+        $(document).on("change",".education_level",function(){ 
+          if($(this).val()=='others'){
+            $(".others_section").show(100);  
+          }else{
+            $(".others_section").hide(100);  
+          }
+        });
+     
+       $(document).on('submit','#msform', function(evt){
           evt.preventDefault();
           let result          = $('.___result'); 
           // ===========================================================//
           let firstName       = $('.firstName').val();
           let lastName        = $(".lastName").val();
-          let education_level = $(".education_level").val();
-          let dob             = $(".dob").val();
+          let dob             = $(".dob").val(); 
+          let education_level = ($(".education_level").val()=='others') ? $(".others").val() : $(".education_level").val();
+          let pin_no          = $(".pin_no").val();
           let age             = $(".age").val();
           let gender          = $(".gender").val();
           // =======================================================//
@@ -265,6 +281,7 @@
                         dob: dob,
                         age: age, 
                         gender: gender,
+                        pin_no:pin_no,
                       };
           console.log(data);
           result.html('Please wait...');

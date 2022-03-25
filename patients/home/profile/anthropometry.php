@@ -435,31 +435,32 @@
                                                 </div>
 
                                                 <form class="bio_form col-11 col-lg-11 col-md-11 ml-4" style="zoom:0.90;margin-top:-60px;">   
-                                                     <section class="personal_information"> 		     
+                                                     <section class="personal_information"> 
+                                                         <div class="result"></div>		     
                                                          <div class="row d-flex justify-content-between align-items-center personal_information">
                                                                 <div class="form-group mb-2 col-md-12">
                                                                     <label class="text_input_label" for="height">Height</label>
-                                                                    <p class="mx-2 log_type" for="height">6.7 Meters</p> 
+                                                                    <p class="mx-2 log_type height" for="height">6.7 Meters</p> 
                                                                 </div>
 
                                                                 <div class="form-group mb-2 col-md-12">
                                                                     <label class="text_input_label" for="weight">Weight</label>
-                                                                    <p class="mx-2 log_type" for="weight">67.3KG</p>
+                                                                    <p class="mx-2 log_type weight" for="weight">67.3KG</p>
                                                                 </div> 
  
                                                                 <div class="form-group mb-2 col-md-12">
                                                                     <label class="text_input_label" for="bmi">Body Mass Index (BMI)</label>
-                                                                    <p class="mx-2 log_type" for="bmi">Some placeholder</p>
+                                                                    <p class="mx-2 log_type bmi" for="bmi">Some placeholder</p>
                                                                 </div>  
 
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="cancer_grade">Waist Circumference</label>
-                                                                    <p class="mx-2 log_type" for="cancer_grade">Some placeholder</p>
+                                                                    <label class="text_input_label" for="waist_circum">Waist Circumference</label>
+                                                                    <p class="mx-2 log_type waist_circum" for="waist_circum">Some placeholder</p>
                                                                 </div>  
 
                                                                 <div class="form-group mb-2 col-md-12">
-                                                                    <label class="text_input_label" for="cancer_stage">Head Circumference</label>
-                                                                    <p class="mx-2 log_type" for="cancer_stage">Some placeholder</p>
+                                                                    <label class="text_input_label" for="head_circum">Head Circumference</label>
+                                                                    <p class="mx-2 log_type head_circum" for="head_circum">Some placeholder</p>
                                                                 </div>    
                                                         </div> 
                                                         
@@ -494,10 +495,7 @@
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 	<script>
-        $(document).ready(function(){
-             // // log_begin_cotainer  log_symptom_container
-			// $(".log_begin_cotainer").slideUp(2000).hide();
-			// $(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);      log_begin_cotainer
+        $(document).ready(function(){ 
             let tabsBox = document.querySelectorAll(".profileItem ");
                 tabsBox.forEach((el)=>{
                     el.addEventListener("click",(e)=>{ 
@@ -513,37 +511,37 @@
                     },false);
                 });
 
-          $(document).on("click",".addNewDrug",function(e){
-             $(this).closest("form").find(".form-group:last").
-                append(`
-                        <div class="form-group form_drug_input mb-1">
-                           <label class="text_input_label" for="drug">Drug</label> 
-                           <div class="input-group">
-                                <input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
-                                <div class="input-group-append">
-                                    <span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
-                                </div>
-                            </div>
-                        </div>`
-                    );
-          });
-          //  $( "li" ).last().css( "background-color", "red" );
-          // Remove DrugItem Added
-          $(document).on("click",".removeDrugItem", function(e){
-              $(this).closest("div.form-group").slideUp(5000).remove();
-          });
+                function getAthropomentry(){  
+                        $(".height").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".weight").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".bmi").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".waist_circum").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+                        $(".head_circum").html('<i class="fa fa-spinner fa-spin" style="font-size:14px"></i>'); 
+
+                        fetch('../../../api/patients/get_anthropometry.php', {
+                            method: "GET", 
+                                headers: {"Content-type": "application/json; charset=UTF-8"}
+                            })
+                        .then(response => response.json()) 
+                        .then((json)=>{
+                            console.log(json); 
+                            // //`id`, `userId`, `height`, `weight`, `bmi`, `waist_circum`, `head_circum`, `createdAt`
+                            if(json.ANTHRO || json.ANTHRO != null){ 
+                                $(".height").html(json.ANTHRO.height); 
+                                $(".weight").html(json.ANTHRO.weight); 
+                                $(".bmi").html(json.ANTHRO.bmi); 
+                                $(".waist_circum").html(json.ANTHRO.waist_circum); 
+                                $(".head_circum").html(json.ANTHRO.head_circum); 
+                            }  
+                        })
+                        .catch(err => console.log(err));
+                }
+                getAthropomentry(); // Spit the Data to the DOM
           
         });
 
 	</script>
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
-    
-    <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
 
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script> -->
 	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
  
 	<!--Start of Tawk.to Script-->

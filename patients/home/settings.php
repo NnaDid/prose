@@ -284,7 +284,7 @@
 			margin: 36px 0px;
 		}
 		/* Alert Messages */
-		.danger_message, .reminder_danger_message{
+		.danger_message, .reminder_danger_message,.edit_danger_message,.delete_danger_message{
 			display: flex; 
 			justify-content: space-between;
 			align-items: center;
@@ -299,8 +299,8 @@
 			background: #FDDFD4;
 			border-radius: 15px; 
          }
-
-		.success_message, .reminder_success_message{
+		 
+		.success_message, .reminder_success_message, .edit_success_message,.delete_success_message{
 			display: flex; 
 			justify-content: space-between;
 			align-items: center;
@@ -410,13 +410,14 @@
 		</div>
 		<div class="close_btn"><i class="fa fa-times"></i></div>
 	</div>  
-<!-- Alerts for time Reminder setters -->
+
+    <!-- Alerts for time Reminder setters -->
 	<div class="reminder_success_message m_alert" style="display:none;">
 		<img src="../assets/img/success_message.svg" alt="info"/>
 		<div class="msg mx-1">
 			<h6>Success!</h6>
 			<p class="reminder_succ_msg">
-				You have set a daily reminder to log symptoms at 4:00PM
+				You have set a daily reminder to log symptoms at <span class="reminderTime"></span>
 			</p>
 		</div>
 		<div class="close_btn"><i class="fa fa-times"></i></div>
@@ -427,6 +428,45 @@
 		<div class="errmsg mx-1">
 			<h6>Something went wrong</h6>
 			<p>Reminder was not set.</p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div> 
+
+    <!-- Alerts for time Reminder Edit  -->  
+	<div class="edit_success_message m_alert" style="display:none;">
+		<img src="../assets/img/success_message.svg" alt="info"/>
+		<div class="msg mx-1">
+			<h6>Success!</h6>
+			<p class="reminder_succ_msg">Your changes has been saved! </p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div>  
+
+	<div class="edit_danger_message m_alert" style="display:none;">
+		<img src="../assets/img/error_message.svg" alt="info"/>
+		<div class="errmsg mx-1">
+			<h6>Something went wrong</h6>
+			<p>Reminder was not set.</p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div>  
+	
+	
+    <!-- Alerts for time Reminder Delete  -->
+	<div class="delete_success_message m_alert" style="display:none;">
+		<img src="../assets/img/success_message.svg" alt="info"/>
+		<div class="msg mx-1">
+			<h6>Success!</h6>
+			<p class="reminder_succ_msg">Reminder Successfully Deleted.</p>
+		</div>
+		<div class="close_btn"><i class="fa fa-times"></i></div>
+	</div>  
+
+	<div class="delete_danger_message m_alert" style="display:none;">
+		<img src="../assets/img/error_message.svg" alt="info"/>
+		<div class="errmsg mx-1">
+			<h6>Something went wrong</h6>
+			<p>Log Medication Reminder was not deleted.</p>
 		</div>
 		<div class="close_btn"><i class="fa fa-times"></i></div>
 	</div>  
@@ -1040,6 +1080,73 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
    
 							</div><!--//auth-main-col-->
 
+							<!--  EDIT REMINDER SECTION -->
+							<div class="col-12 col-md-5 col-lg-8 editReminder_Container" style="display:none;margin-bottom:100px;">
+							    <form class="py-4 my-4 editReminderForm">   
+									<h5 class="text-center mb-4 reminder_heading">Edit Reminder</h5> 
+                                      <div class="form-group form_drug_input mb-1">
+										<label class="text_input_label" for="edit_time">Time</label>  
+												<select name="edit_time" class="form-control form-control-lg edit_time" id="edit_time">
+													<option disabled selected>eg. 4:30pm</option>
+													<option value="00:00">12.00 AM</option>
+													<option value="00:30">12.30 AM</option>
+													<option value="01:00">01.00 AM</option>
+													<option value="01:30">01.30 AM</option>
+													<option value="02:00">02.00 AM</option>
+													<option value="02:30">02.30 AM</option>
+													<option value="03:00">03.00 AM</option>
+													<option value="03:30">03.30 AM</option>
+													<option value="04:00">04.00 AM</option>
+													<option value="04:30">04.30 AM</option>
+													<option value="05:00">05.00 AM</option>
+													<option value="05:30">05.30 AM</option>
+													<option value="06:00">06.00 AM</option>
+													<option value="06:30">06.30 AM</option>
+													<option value="07:00">07.00 AM</option>
+													<option value="07:30">07.30 AM</option>
+													<option value="08:00">08.00 AM</option>
+													<option value="08:30">08.30 AM</option>
+													<option value="09:00">09.00 AM</option>
+													<option value="09:30">09.30 AM</option>
+													<option value="10:00">10.00 AM</option>
+													<option value="10:30">10.30 AM</option>
+													<option value="11:00">11.00 AM</option>
+													<option value="11:30">11.30 AM</option>
+													<option value="12:00">12.00 PM</option>
+													<option value="12:30">12.30 PM</option>
+													<option value="13:00">01.00 PM</option>
+													<option value="13:30">01.30 PM</option>
+													<option value="14:00">02.00 PM</option>
+													<option value="14:30">02.30 PM</option>
+													<option value="15:00">03.00 PM</option>
+													<option value="15:30">03.30 PM</option>
+													<option value="16:00">04.00 PM</option>
+													<option value="16:30">04.30 PM</option>
+													<option value="17:00">05.00 PM</option>
+													<option value="17:30">05.30 PM</option>
+													<option value="18:00">06.00 PM</option>
+													<option value="18:30">06.30 PM</option>
+													<option value="19:00">07.00 PM</option>
+													<option value="19:30">07.30 PM</option>
+													<option value="20:00">08.00 PM</option>
+													<option value="20:30">08.30 PM</option>
+													<option value="21:00">09.00 PM</option>
+													<option value="21:30">09.30 PM</option>
+													<option value="22:00">10.00 PM</option>
+													<option value="22:30">10.30 PM</option>
+													<option value="23:00">11.00 PM</option>
+													<option value="23:30">11.30 PM</option>
+												</select> 
+									 </div>   
+									 <div class="text-center my-4">
+										<button type="submit" class="btn btn-primary btn-block text-center setReminderBtn">
+											    <span> Save </span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> 
+										</button>
+									</div>
+								</form><!--//auth-form-->    
+   
+							</div><!--//auth-main-col-->
+
 							<div class="col-12 col-md-5 col-lg-8 reminder_Container" style="display:none;margin-bottom:100px;">
 								<div class="py-4 my-4 reminderList">   
 									<h5 class="text-center mb-4 reminder_heading">Your Reminder(s)</h5> 
@@ -1064,8 +1171,8 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 
 
     <!-- Javascript -->          
-    <!-- <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
 
 	<!-- Page Specific JS -->
 	<!-- <script src="assets/js/app.js"></script>  -->
@@ -1141,6 +1248,7 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 				    console.log(json); 
 					if(json.msg == 'success'){
 						$(".success_message").show(2000);	
+						$(this).trigger('reset');
 						$(this).find('button.changePasswordBtn').html('<span>Change Password</span> <img src="../assets/img/arrow_.svg" class="mx-2"/>');				
 					}else{
 						$(".danger_message").show(2000);
@@ -1168,11 +1276,12 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 				.then(response => response.json()) 
 				.then((json)=>{
 				    console.log(json); 
-					if(json.msg == 'success'){
-						$(".success_message").show(2000);	
+					if(json.msg == 'success'){  
+						 $(".reminderTime").html(time);
+						$(".reminder_success_message").show(2000);	
 						$(this).find('button.setReminderBtn').html('<span>Set Reminder</span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> ');				
 					}else{
-						$(".danger_message").show(2000);
+						$(".reminder_danger_message").show(2000);
 						$(this).find('button.setReminderBtn').html('<span>Set Reminder</span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> ');
 						console.log(json.msg);
 					}
@@ -1180,9 +1289,7 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 				.catch(err => console.log(err));
 
 			});
-
-
-
+			
 
 			// When the ALERT close button is clickwd
 			$(document).on("click",".close_btn",function(){
@@ -1250,6 +1357,41 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 				 let id     = $(this).attr('id');
 				 let userId = $(this).attr('data-userId');
 				 console.log(id,userId);
+				    $(".reminder_Container").hide(10);
+					$(".setReminder_Container").hide(10);
+					$(".editReminder_Container").show(10);
+				   $('.editReminderForm').submit((evt)=>{ 				
+						evt.preventDefault(); 
+						$(this).find('button.setReminderBtn').html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');
+						// ===========================================================// 
+						let time = $(".edit_time option:selected").text();  
+						// ===========================================================//
+						let data  = {_time:time,id :id, userId :userId};   
+						fetch('../../api/patients/reminders/editReminder.php', {
+							method: "POST",
+							body: JSON.stringify(data),
+							headers: {"Content-type": "application/json; charset=UTF-8"}
+						})
+						.then(response => response.json()) 
+						.then((json)=>{
+							console.log(json); 
+							if(json.msg == 'success'){
+								$(".edit_success_message").show(2000);	
+								$(".reminder_Container").show(10);
+								$(".setReminder_Container").hide(10);
+								$(".editReminder_Container").hide(10);
+								$("#reminder").click(); // this will reload the reminders container 
+								// checkReminders();
+									$('.editReminderForm').find('button.setReminderBtn').html('<span> Save </span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> ');
+							}else{
+								$(".edit_danger_message").show(2000);
+								$('.editReminderForm').find('button.setReminderBtn').html('<span> Save </span>  <img src="../assets/img/arrow_.svg" class="mx-2"/> ');				
+								console.log(json.msg);
+							}
+						})
+						.catch(err => console.log(err));
+					});
+					 			
 			});
 
 
@@ -1259,6 +1401,24 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 				let id     = $(this).attr('id');
 				let userId = $(this).attr('data-userId');
 				console.log(id,userId);
+				let data  = {_time:time,id :id, userId :userId};   
+						fetch('../../api/patients/reminders/deleteReminder.php', {
+							method: "POST",
+							body: JSON.stringify(data),
+							headers: {"Content-type": "application/json; charset=UTF-8"}
+						})
+						.then(response => response.json()) 
+						.then((json)=>{
+							console.log(json); 
+							if(json.msg == 'success'){
+								$(".delete_success_message").show(1000);
+								$("#reminder").click(); // this will reload the reminders container 
+							}else{
+								$(".delete_danger_message").show(1000); 
+								console.log(json.msg);
+							}
+						})
+						.catch(err => console.log(err));
 			});
 
 

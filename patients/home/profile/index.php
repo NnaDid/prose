@@ -441,66 +441,66 @@
                                                          <div class="row d-flex justify-content-between align-items-center personal_information">
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="fname">First Name</label>
-                                                                    <p class="mx-2 log_type" for="fname">Mark</p>
+                                                                    <p class="mx-2 log_type" for="fname"><?=$fname;?></p>
                                                                     
                                                                 </div>
 
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="lname">Last Name</label>
-                                                                    <p class="mx-2 log_type" for="lname">John</p>
+                                                                    <p class="mx-2 log_type" for="lname"><?=$lname;?></p>
                                                                 </div> 
  
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="other_name">Other Names</label>
-                                                                    <p class="mx-2 log_type" for="other_name">Doe</p>
+                                                                    <p class="mx-2 log_type" for="other_name"><?=$fname;?></p>
                                                                 </div> 
 
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="other_name">PIN</label>
-                                                                    <p class="mx-2 log_type" for="other_name">ONC240987</p>
+                                                                    <p class="mx-2 log_type" for="other_name"><?=$pin_no;?></p>
                                                                 </div>  
                                                         </div>
 
                                                         <div class="row d-flex justify-content-between align-items-center">  
                                                                 <div class="form-group mb-2 col-md-6"> 
                                                                     <label class="text_input_label">Gender</label>
-                                                                   <p class="mx-2 log_type" for="other_name">Male</p>
+                                                                   <p class="mx-2 log_type" for="other_name"><?=$gender;?></p>
                                                                 </div> 
 
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label">Date of Birth</label>
-                                                                    <p class="mx-2 log_type" for="other_name">12/12/2000</p>
+                                                                    <p class="mx-2 log_type" for="other_name"><?=$dob;?></p>
                                                                 </div>    
                                                         </div>
  
                                                         <div class="row d-flex justify-content-between align-items-center">  
                                                                 <div class="form-group mb-2 col-md-6"> 
                                                                     <label class="text_input_label">Age</label>
-                                                                   <p class="mx-2 log_type" for="other_name">90</p>
+                                                                   <p class="mx-2 log_type" for="other_name"><?=$age;?></p>
                                                                 </div> 
 
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label">Level of Education</label>
-                                                                    <p class="mx-2 log_type" for="other_name">B.Sc</p>
+                                                                    <p class="mx-2 log_type" for="other_name"><?=$education_level;?></p>
                                                                 </div>    
                                                         </div>
  
                                                         <div class="row d-flex justify-content-between align-items-center">  
                                                                 <div class="form-group mb-2 col-md-6"> 
                                                                     <label class="text_input_label">Tribe</label>
-                                                                   <p class="mx-2 log_type" for="other_name">Yoruba</p>
+                                                                   <p class="mx-2 log_type" for="other_name"><?=$tribe;?></p>
                                                                 </div> 
 
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label">Religion</label>
-                                                                    <p class="mx-2 log_type" for="other_name">Christianity</p>
+                                                                    <p class="mx-2 log_type" for="other_name"><?=$religion;?></p>
                                                                 </div>    
                                                         </div>
  
                                                         <div class="row d-flex justify-content-between align-items-center">  
                                                                 <div class="form-group mb-2 col-md-6"> 
                                                                     <label class="text_input_label">Income Level</label>
-                                                                   <p class="mx-2 log_type" for="other_name">>300M</p>
+                                                                   <p class="mx-2 log_type" for="other_name"><?=$incom_level;?></p>
                                                                 </div>     
                                                         </div>
  
@@ -510,26 +510,26 @@
                                                             <div class="row d-flex justify-content-between align-items-center contact">
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="email">Email</label>
-                                                                        <p class="mx-2 log_type" for="other_name">markjohndoe@gmail.com</p>
+                                                                        <p class="mx-2 log_type" for="other_name"><?=$email;?></p>
                                                                     </div> 
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="phone">Phone Number</label>
-                                                                        <p class="mx-2 log_type" for="other_name">+234908765423</p>
+                                                                        <p class="mx-2 log_type" for="other_name"><?=$phone;?></p>
                                                                     </div>    
                                                             </div>
                                                             <div class="row d-flex justify-content-between align-items-center contact">
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="email">Country</label>
-                                                                        <p class="mx-2 log_type" for="other_name">Nigeria</p>
+                                                                        <p class="mx-2 log_type" for="other_name"><?=$country;?></p>
                                                                     </div> 
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="phone">State of Residence</label>
-                                                                        <p class="mx-2 log_type" for="other_name">Lagos</p>
+                                                                        <p class="mx-2 log_type" for="other_name"><?=$residence_state;?></p>
                                                                     </div>  
                                                                     <!-- ===================================  -->
                                                                     <div class="form-group mb-2 col-md-12">
                                                                         <label class="text_input_label" for="address">Town/City</label>
-                                                                        <p class="mx-2 log_type" for="other_name">Molue</p>
+                                                                        <p class="mx-2 log_type" for="other_name"><?=$town;?></p>
                                                                     </div>  
                                                             </div>
 
@@ -538,16 +538,16 @@
                                                             <div class="row d-flex justify-content-between align-items-center contact">
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_name">Name</label>
-                                                                        <p class="mx-2 log_type" for="nk_name">Magnus Linus Doe</p>
+                                                                        <p class="mx-2 log_type nk_name" for="nk_name">Magnus Linus Doe</p>
                                                                     </div> 
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_phone">Phone Number</label>
-                                                                        <p class="mx-2 log_type" for="nk_phone">+234918165923</p>
+                                                                        <p class="mx-2 log_type nk_phone" for="nk_phone">+234918165923</p>
                                                                     </div>  
                                                                     <!-- ===================================  -->
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_address">Address</label>
-                                                                        <p class="mx-2 log_type" for="nk_address">No 16 Nupe Road Molue</p>
+                                                                        <p class="mx-2 log_type nk_address" for="nk_address">No 16 Nupe Road Molue</p>
                                                                     </div>  
                                                             </div>
 
@@ -557,16 +557,16 @@
                                                             <div class="row d-flex justify-content-between align-items-center contact">
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_name">Type of Device Used</label>
-                                                                        <p class="mx-2 log_type" for="nk_name">Laptop</p>
+                                                                        <p class="mx-2 log_type" for="nk_name"><?=$device_type;?></p>
                                                                     </div> 
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_phone">Who will report your side-effects?</label>
-                                                                        <p class="mx-2 log_type" for="nk_phone">Nurse</p>
+                                                                        <p class="mx-2 log_type" for="nk_phone"><?=$effect_reporter;?></p>
                                                                     </div>  
                                                                     <!-- ===================================  -->
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_address">Relationship with caregiver</label>
-                                                                        <p class="mx-2 log_type" for="nk_address">Nurse</p>
+                                                                        <p class="mx-2 log_type" for="nk_address"><?=$care_giver_relationship;?></p>
                                                                     </div>  
                                                             </div>
                                                         

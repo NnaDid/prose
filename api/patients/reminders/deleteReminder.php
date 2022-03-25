@@ -2,26 +2,25 @@
 session_start();
 require_once('../../common.php');
 
-class AddReminders{
+class DeleteReminder{
     use Common;
 
     private $result = [];
 
     public function __construct(){
-          $this->addReminders(); 
+          $this->deleteReminder(); 
     }
 
     //`id`, `userId`, `looged_time`, `createdAt`
 
-    public function addReminders(){
+    public function deleteReminder(){
         $con        = $this->con();
         $jsonInput = file_get_contents('php://input');  
         $obj       = json_decode($jsonInput,true); 
 
-        $email      = $_SESSION["PROSE_CARE__USER_EMAIL"]; 
-        $reminder   = $obj['__time'];  
-        $userId     = $this->getUserByEmail($email)['userId'];
-        $sql        = "INSERT INTO `reminders`(`userId`, `looged_time`, `createdAt`) VALUES('$userId','$reminder', NOW())";
+        $id         = $obj['id'];  
+        $userId     = $obj['userId'];;
+        $sql        = "DELETE FROM `reminders` WHERE `userId`='$userId' AND `id`='$id'";
         $query      = $con->query($sql);
         if($query){
             $this->result['msg']   = "success";
@@ -35,7 +34,7 @@ class AddReminders{
 
 }
 
-new AddReminders();
+new DeleteReminder();
 
 
 

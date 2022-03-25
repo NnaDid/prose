@@ -2,9 +2,9 @@
 
 trait Common{
     // public $host = "localhost";
-    // public $user = "donewill_prosecare";
-    // public $pass = "PWSZQWP4KMIS";
-    // public $db   = "donewill_prosecare";
+    // public $user = "proscibg_prosecare";
+    // public $pass = "Z37ZYP23JBBF";
+    // public $db   = "proscibg_prosecare";
 
     public $host = "localhost";
     public $user = "root";
@@ -28,6 +28,21 @@ public function getUserByEmail($email){
 public function getUserById($uid){
     $con        = $this->con();
     $queryRow   = $con->query("SELECT * FROM `users` WHERE `id` ='$uid'")->fetch_assoc();
+    return  $queryRow;
+}
+
+// Get User Contacts By userId
+public function getUserContactById($userId){
+    $con        = $this->con();
+    $queryRow   = $con->query("SELECT * FROM `users_contact` WHERE `userId` ='$userId'")->fetch_assoc();
+    return  $queryRow;
+}
+
+
+// Get User Next of Kin By userId   
+public function getUserNextOfKinById($userId){
+    $con        = $this->con();
+    $queryRow   = $con->query("SELECT * FROM `users_next_of_kin` WHERE `userId` ='$userId'")->fetch_assoc();
     return  $queryRow;
 }
 

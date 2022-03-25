@@ -142,7 +142,7 @@
                     <span class="float-right  text-small input_text_label">Forgot Password? &nbsp; <a href="../recover/"> Click here <img src="../patients/assets/img/Forward Arrow.png" /></a></span> 
               </div> 
 
-                <div class="form-group ___result"> </div>
+                <div class="___result"> </div>
                 <div class="form-group mt-4">
                   <button class="btn-block btn btn-primary btn-lg signIn" type="submit">Sign in</button>
                 </div>  

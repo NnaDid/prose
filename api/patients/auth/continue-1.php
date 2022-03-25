@@ -30,9 +30,10 @@ class Register {
         $dob              = $obj['dob'];  
         $age              = $obj['age'];  
         $gender           = $obj['gender'];  
+        $pin_no           = $obj['pin_no'];  
       
       if(self::exists($email,"users","email")){ 
-                $sql      = "UPDATE `users` SET `gender`='$gender',`fname`='$firstName',`lname`='$lastName',`dob`='$dob',`age`='$age',`education_level`='$education_level',`updatedAt`=NOW() WHERE `email`='$email'";
+                $sql      = "UPDATE `users` SET `pin_no`='$pin_no',`gender`='$gender',`fname`='$firstName',`lname`='$lastName',`dob`='$dob',`age`='$age',`education_level`='$education_level',`updatedAt`=NOW() WHERE `email`='$email'";
                 $statment = $con->query($sql);
                 if($statment){
                       
