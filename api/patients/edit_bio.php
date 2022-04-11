@@ -60,11 +60,11 @@ class EditBio {
         }
         $query = $con->query($sql);
         if($query){
-            return true;
             $this->result['status'] = "Next Of Kin Update Successful!";
+            return true;
         }else{
-            return false;
             $this->result['status'] = "Next Of Kin Update Failed";
+            return false;
         }
         $con->close();
         //---------------------------------------------------------------------------------------
@@ -103,11 +103,11 @@ class EditBio {
                                        `country`='$country',`residence_state`='$resdence_state',`town`='$town_city' WHERE `email`='$email'";
             $query = $con->query($sql);
             if($query){
-                return true;
                 $this->result['status'] = "Bio Updated Successfully";
+                return true;
             }else{
-                return false;
                 $this->result['status'] = "Bio Update Failed";
+                return false;
             }
         }
         $con->close();

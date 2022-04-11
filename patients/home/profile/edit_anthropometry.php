@@ -27,9 +27,9 @@
 
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-	<style>
+<style>
         .removeDrugItem{
             cursor:pointer;
         }

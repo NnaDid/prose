@@ -27,8 +27,8 @@
 	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
 	
 	<!-- Page Specific JS -->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+ <style>
         .btn-outline-primary {
             color: #8D2D91 !important;
             border-color: #8D2D91 !important;
@@ -576,15 +576,10 @@ attended to as soon as possible.
           
         });
 
-	</script>
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
+	</script> 
     
     <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script> -->
+    <script src="assets/js/app.js"></script>  
 	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
 
 

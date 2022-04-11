@@ -28,9 +28,9 @@
 	
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-	<style>
+<style>
 	.active, .today{
 			background: #8D2D91 !important;
 			color:#fff !important;
@@ -916,15 +916,9 @@
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
     
     <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script> -->
+    <script src="assets/js/app.js"></script>  
 	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
 
 

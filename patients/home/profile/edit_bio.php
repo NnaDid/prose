@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Prose | Profile...</title>
+    <title>Prose | Edit Bio</title>
     
     <!-- Meta mc-calendar.min.js-->
     <meta charset="utf-8">
@@ -16,22 +16,18 @@
     <!-- FontAwesome JS-->
     <script defer src="../assets/plugins/fontawesome/js/all.min.js"></script>
     
-    <!-- App CSS -->  
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
+    <!-- App CSS -->   
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <link id="theme-style" rel="stylesheet" href="../assets/css/portal.css"> 
     <link id="theme-style" rel="stylesheet" href="../../assets/css/custom.css">
 
 	<link href="../../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
-    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css" />
-
-	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
+    <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css" /> 
 	
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
 	<style>
         .removeDrugItem{
             cursor:pointer;

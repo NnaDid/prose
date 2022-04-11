@@ -73,20 +73,17 @@ private function getRefererIdByUserId($userId){
 public function exists($val,$table,$col){
     $con     = $this->con();
     if(!empty($val)){
-    $sql       = "SELECT * FROM `".$table."` WHERE `".$col."`=?";
-    $stmt      = $con->prepare($sql);
-    $stmt->bind_param("s",$val);
-    $exec      = $stmt->execute();
-    if($exec){
-    $result   = $stmt->get_result();
-    $num_rows = $result->num_rows;
-    if($num_rows>0){
-        return true;
-    }else{
-        return false;
-    }
-    $stmt->close();
-    }
+        $sql       = "SELECT * FROM `".$table."` WHERE `".$col."`='$val'";
+        $query      = $con->query($sql); 
+        if($query){ 
+            $num_rows = $query->num_rows;
+            if($num_rows>0){
+                return true;
+            }else{
+                return false;
+            }
+         $con->close();
+        }
     }
 }
 

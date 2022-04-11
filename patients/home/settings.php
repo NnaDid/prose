@@ -28,9 +28,8 @@
 	
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
-	<style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<style>
         .removeDrugItem{
             cursor:pointer;
         }
@@ -608,7 +607,7 @@
                                     <div class="col-12 box"> 
 										<h6 class="link"><a href="mailto:info@prosecare.com" class="link">Contact Us</a></h6>
 										<h6 class="link"><a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal" data-bs-whatever="@mdo" class="link">Privacy Policy</a></h6>
-										<h6 class="link"><a href="#"  data-bs-toggle="modal" data-bs-target="#TCModal" data-bs-whatever="@mdo"class="link">Terms & Conditions</a></h6> 
+										<h6 class="link"><a href="#" data-bs-toggle="modal" data-bs-target="#TCModal" data-bs-whatever="@mdo"class="link">Terms & Conditions</a></h6> 
                                     </div><!--//col--> 
                                 </div> <!-- //row-->  
 
@@ -1425,9 +1424,9 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
             let tabsBox = document.querySelectorAll(".addItem");
                 tabsBox.forEach((el)=>{
                     el.addEventListener("click",(e)=>{ 
-                        $(".app-card").removeClass("activeTab");  // remove highlighted mark on every other container
+                        $(".app-card").removeClass("activeTab");                 // remove highlighted mark on every other container
 						$(e.target).closest(".app-card").addClass("activeTab"); // add highlight to current container
-                        // e.path[2].classList.add("activeTab");	 // highlight this one that is clicked
+                        // e.path[2].classList.add("activeTab");	           // highlight this one that is clicked
                         console.log(e.path);
 						console.log(el.id);
 						// check if the Id is the same as the one clicked

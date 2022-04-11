@@ -16,8 +16,7 @@
     <!-- FontAwesome JS-->
     <script defer src="../assets/plugins/fontawesome/js/all.min.js"></script>
     
-    <!-- App CSS -->  
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
+    <!-- App CSS -->   
 	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
     <link id="theme-style" rel="stylesheet" href="../assets/css/portal.css"> 
@@ -25,14 +24,11 @@
 
 	<link href="../../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
     <link rel='stylesheet' href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/12.1.2/css/intlTelInput.css" />
-
-	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
 	
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
-	<style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script> 
+<style>
         .removeDrugItem{
             cursor:pointer;
         }
@@ -602,9 +598,7 @@
 	</script>
     
     <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script> -->
+    <script src="assets/js/app.js"></script>  
 	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
  
 	<!--Start of Tawk.to Script-->

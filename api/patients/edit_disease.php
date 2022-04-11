@@ -19,7 +19,7 @@ class EditDisease {
         $obj         = json_decode($jsonInput,true);  
         $con         = self::con(); 
 
-        $email           = "test@gmail.com" ?? $_SESSION["PROSE_CARE__USER_EMAIL"]; 
+        $email           = $_SESSION["PROSE_CARE__USER_EMAIL"]; 
         $userId          = $this->getUserByEmail($email)['userId'];
         //`userId`, `how_old`, `cancer_type`, `histology`, `cancer_grade`, `cancer_stage`, `comorbidity`
         $how_old        = $obj['how_old'];

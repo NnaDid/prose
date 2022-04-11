@@ -12,9 +12,14 @@ $userId         = $base->getUserByEmail($email)['userId'];
 //-------------------------------------------------------------------------------
 $cancer_type    = $base->getUserByEmail($email)['cancer_type'];
 //-------------------------------------------------------------------------------
-
-
+  // NEXT of KIN
+//-------------------------------------------------------------------------------
+$next_of_kin_name    = $base->getUserNextOfKinById($userId)['name']    ?? "***";
+$next_of_kin_phone   = $base->getUserNextOfKinById($userId)['phone']   ?? "***";
+$next_of_kin_address = $base->getUserNextOfKinById($userId)['address'] ?? "***";
 //------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
+
 $dob                = $base->getUserByEmail($email)['dob'];
 $age                = $base->getUserByEmail($email)['age'];
 $gender             = $base->getUserByEmail($email)['gender'];
@@ -44,5 +49,7 @@ $professional_bio          = $base->getUserByEmail($email)['professional_bio'];
 // `professional_bio`, `createdAt`, `updatedAt`
 
 //------------------------------------------------------------------------------
+//echo shell_exec('wmic bios get serialnumber');
+// echo exec("wmic bios get serialnumber");
 ?>
  

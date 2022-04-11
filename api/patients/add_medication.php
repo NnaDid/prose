@@ -8,10 +8,13 @@ class Medication{
     private $result = [];
 
     public function __construct(){
-         $action = $_POST['action'];
+        $jsonInput  = file_get_contents('php://input');  
+        $obj        = json_decode($jsonInput,true); 
+        $action     = $obj['action'];
+        $drug       = $obj['drugs'];
          switch($action){
-            case 'log':  $this->logMedication();   break;
-            case 'getlog': $this->getMedication(); break;
+            case 'logDrug': $this->logMedication($drug); break;
+            case 'getDrug': $this->getMedication();      break;
          }
     }
 
@@ -25,29 +28,29 @@ class Medication{
         return  $queryRow;
     }
 
-    public function logMedication(){
-        $con = $this->con(); 
+    public function logMedication($drug){
+        $con        = $this->con(); 
         $email      = $_SESSION["PROSE_CARE__USER_EMAIL"];
         $userId     = $this->getUserByEmail($email)['userId'];
-        $i = 0;
-        $inputCount = count($_POST['drugName']);
+        $i          = 0;
+        $inputCount = count($drug); 
         while($i<$inputCount){
-            $drugName = $_POST['drugName'][$i]; 
+            $drugName = $drug[$i]; 
             $sql      = "INSERT INTO `other_medications`(`userId`,`drugName`,`createdAt`) VALUES ('$userId', '$drugName', NOW())";
             $query    = $con->query($sql);
-           if($query){
-                if($i==$inputCount){
-                    $this->result['status'] = "success";
-                }
+           if($query){ 
+                if($i==($inputCount-1)){   $this->result['msg'] = "success";}
            }else{
-                    $this->result['status'] = "Error";
+             $this->result['msg'] = "Error";
            }
 
           $i++;
         }
+        echo json_encode($this->result);
     }
 }
 
+new Medication();
 
 
 ?>

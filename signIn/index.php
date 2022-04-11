@@ -143,9 +143,9 @@
               </div> 
 
                 <div class="___result"> </div>
-                <div class="form-group mt-4">
-                  <button class="btn-block btn btn-primary btn-lg signIn" type="submit">Sign in</button>
-                </div>  
+                  <div class="form-group mt-4">
+                      <button class="btn-block btn btn-primary btn-lg signIn" type="submit">Sign in</button>
+                  </div>  
                   <div class="text-center text-small input_text_label my-4">
                     <span>Don't have account? <a href="../intro.php?onco_type=signUp"> SignUp here <img src="../patients/assets/img/Forward Arrow.png" /></a>
                     </span>
@@ -190,7 +190,7 @@
 
       $(document).on('submit','.signInForm', function(evt){
           evt.preventDefault();
-          let result          = $('.___result'); 
+          let result      = $('.___result'); 
           // ===========================================================//
           let email       = $('.email').val();
           let pwd         = $(".pwd").val(); 

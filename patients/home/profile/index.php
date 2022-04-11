@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="PROSE">
-    <meta name="author" content="Prose Care">    
+    <meta name="author" content="PROSEcare">    
 	<link rel="shortcut icon" href="../../assets/img/logo.png"> 
     
     <!-- FontAwesome JS-->
@@ -27,8 +27,8 @@
 
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="../assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-	<style>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+ <style>
         .removeDrugItem{
             cursor:pointer;
         }
@@ -533,21 +533,21 @@
                                                                     </div>  
                                                             </div>
 
-                                                            <!-- Nexy of Kin -->
+                                                            <!-- Nexy of Kin --> 
                                                             <h4 class="auth-heading text-center mb-4 left_heading-text">Next of Kin</h4>		     
                                                             <div class="row d-flex justify-content-between align-items-center contact">
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_name">Name</label>
-                                                                        <p class="mx-2 log_type nk_name" for="nk_name">Magnus Linus Doe</p>
+                                                                        <p class="mx-2 log_type nk_name" for="nk_name"><?=$next_of_kin_name;?></p>
                                                                     </div> 
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_phone">Phone Number</label>
-                                                                        <p class="mx-2 log_type nk_phone" for="nk_phone">+234918165923</p>
+                                                                        <p class="mx-2 log_type nk_phone" for="nk_phone"><?=$next_of_kin_phone;?></p>
                                                                     </div>  
                                                                     <!-- ===================================  -->
                                                                     <div class="form-group mb-2 col-md-6">
                                                                         <label class="text_input_label" for="nk_address">Address</label>
-                                                                        <p class="mx-2 log_type nk_address" for="nk_address">No 16 Nupe Road Molue</p>
+                                                                        <p class="mx-2 log_type nk_address" for="nk_address"><?=$next_of_kin_address;?></p>
                                                                     </div>  
                                                             </div>
 
@@ -654,9 +654,7 @@
 
 	</script>
     <!-- Charts JS -->
-    <script src="../assets/js/bootstrap-datepicker.min.js"></script> 
-    <!-- <script src="../assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="../assets/js/index-charts.js"></script>  -->
+    <script src="../assets/js/bootstrap-datepicker.min.js"></script>  
 
         <script>
             $(document).ready(function(){

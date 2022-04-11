@@ -29,29 +29,29 @@
 
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
  
-	<style>
+  <style>
         .removeDrugItem{
             cursor:pointer;
         }
         .btn-outline-primary {
             color: #8D2D91 !important;
             border-color: #8D2D91 !important;
-     }
-
-    .btn-outline-primary:hover {
-        color: #fff !important;
-        background-color: #8D2D91 !important;
-        border-color: #8D2D91 !important;
-    }
-	.active, .today{
-			background: #8D2D91 !important;
-			color:#fff !important;
-			font-weight: 600 !important;
 		}
-	.app{
-			background: #eacfed83 !important;
+
+		.btn-outline-primary:hover {
+			color: #fff !important;
+			background-color: #8D2D91 !important;
+			border-color: #8D2D91 !important;
+		}
+		.active, .today{
+				background: #8D2D91 !important;
+				color:#fff !important;
+				font-weight: 600 !important;
+			}
+		.app{
+				background: #eacfed83 !important;
 		}
 		.nav-link.active,.topBase,.topBase h3{
 			background: #8D2D91 !important;
@@ -238,10 +238,10 @@
             background-clip:padding-box; 
         }
         .activeTab{
-            background: #DEF0FF !important;
+            background: #BEF00F !important;
         }
 /* Alert Messages */
-.danger_message{
+		.danger_message{
 			display: flex; 
 			justify-content: space-between;
 			align-items: center;
@@ -307,7 +307,7 @@
 		.close_btn{ 
 			cursor: pointer;
 		}
-</style>
+    </style>
 	
 
 </head> 
@@ -448,15 +448,15 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box " style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important; background-color:#2EBBB2;">
-                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_chemo" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row addItem"  id="log_chemo" style="border-radius:8px !important; background-color:#2EBBB2;">
+                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-9 text-white"> Log Chemotherapy </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important; background-color:#FE6ABC;">
-                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_other_medication" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row addItem" id="log_other_medication" style="border-radius:8px !important; background-color:#FE6ABC;">
+                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-9 text-white">Log Other Medications</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
@@ -466,15 +466,15 @@
                                 <!--  Over lapping cards row-->
                                 <div class="row">
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;background-color:#A99CAA;">
-                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_radiotherapy" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row addItem" id="log_radiotherapy" style="border-radius:8px !important;background-color:#A99CAA;">
+                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-9 text-white"> Log Radiotherapy</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
                                     
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important; background-color:#4A3A4B;">
-                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="log_surgical_procedure" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row addItem" id="log_surgical_procedure" style="border-radius:8px !important; background-color:#4A3A4B;">
+                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-9 text-white"> Log Surgical Procedure</div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
@@ -483,17 +483,17 @@
                                 </div> <!-- //row-->
                                 <!--  Over lapping cards row-->
                                 <div class="row">
-                                    <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;background-color:#F3897B;">
-                                                <div class="py-3 col-md-3"> <a href="./log_treatment_intruption.php">
-													                        <img src="../../patients/assets/img/add.svg" id="log_treatment_interruption" class="addItem" style="height:100%; width:100%;" /> </a> </div><!--//icon-holder-->
-                                                <div class="log_type py-4 col-md-9 text-white">Log Treatment Interruptions </div>
-                                        </div><!--//app-card-->
-                                    </div><!--//col-->
+                                      
+										  <div class="col-6 box" style=""> 
+												<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row addItem" id="log_treatment_interruption" style="border-radius:8px !important;background-color:#F3897B;">
+													<div class="py-3 col-md-3"> <a href="./log_treatment_intruption.php"> <img src="../../patients/assets/img/add.svg" style="height:100%; width:100%;" /> </a> </div><!--//icon-holder-->
+													<div class="log_type py-4 col-md-9 text-white"><a href="./log_treatment_intruption.php">Log Treatment Interruptions </a></div>
+											</div>  <!--//app-card-->
+										</div> <!--//col-->
                                     
                                     <div class="col-6 box" style="">
-                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row" style="border-radius:8px !important;background-color:#66BAFE;">
-                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" id="others" class="addItem" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+                                        <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row addItem" id="others"  style="border-radius:8px !important;background-color:#66BAFE;">
+                                                <div class="py-3 col-md-3"> <img src="../../patients/assets/img/add.svg" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
                                                 <div class="log_type py-4 col-md-9 text-white"> Other(s) </div>
                                         </div><!--//app-card-->
                                     </div><!--//col-->
@@ -518,23 +518,23 @@
 							
 							<div class="col-12 col-md-5 col-lg-8 log_OtherMedication_Container" style="display:none;margin-bottom:100px;">
                                     
-								<form class="py-4 my-4 log_chemo">   
+								<form class="py-4 my-4 log_chemo_form">   
 									<h5 class="auth-heading text-center mb-4 left_heading-text"><a href="#start">Log Other Medications</a></h5>		     
-									 
-                                      <div class="form-group form_drug_input mb-1">
+									
+                                    <div class="form-group form_drug_input mb-1">
 										<label class="text_input_label" for="drug">Drug</label>
 										<div class="input-group">
-											<input name="drug[0]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
+											<input name="drug" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
 											<div class="input-group-append">
 												<span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
 											</div>
 										</div>
-									</div>  
-									<input type="hidden" name="action" value="log">
-									<div class="mb-3 align-items-right text-right addDrugContainer">
+									</div>   									
+									<div class="mb-3 align-items-right text-right">
                                         <button type="button" class="btn btn-outline-primary addNewDrug"><span>New Drug</span></button>
 									</div> 
-
+									<input type="hidden" name="action" value="log">
+									<div class="result"></div>
 									<div class="text-center">
 										<button type="submit" class="btn btn-primary btn-block mx-auto d-flex justify-content-between align-items-center">
 											    <span>Log Medication</span> 
@@ -562,14 +562,13 @@
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
 	<script>
         $(document).ready(function(){
-             // // log_begin_cotainer  log_symptom_container
-			// $(".log_begin_cotainer").slideUp(2000).hide();
-			// $(".log_symptom_container").slideUp(2000).show(2000).css("zoom",0.88);      log_begin_cotainer
+             // // log_begin_cotainer  log_symptom_container 
             let tabsBox = document.querySelectorAll(".addItem");
                 tabsBox.forEach((el)=>{
                     el.addEventListener("click",(e)=>{ 
                         $(".app-card").removeClass("activeTab");  // remove highlighted mark on every other container
-                        e.path[2].classList.add("activeTab");	 // highlight this one that is clicked  
+                        // e.path[2].classList.add("activeTab");	 // highlight this one that is clicked  
+						$(e.target).closest(".app-card").addClass("activeTab");
                         console.log(e.path);
 						console.log(el.id);
 						// check if the Id is the same as the one clicked
@@ -580,24 +579,20 @@
                     },false);
                 });
 
-		// when the 
-		// $(document).on("click",".addNewDrug",function(){});
-
-		 let counter = 1;
           $(document).on("click",".addNewDrug",function(e){
-             $(".addDrugContainer").prepend(`
+            $( "form.log_chemo_form div.form-group" ).last().append(`
                         <div class="form-group form_drug_input mb-1">
                            <label class="text_input_label" for="drug">Drug</label> 
                            <div class="input-group">
-                                <input name="drug[${counter}]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
+                                <input name="drug" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
                                 <div class="input-group-append">
                                     <span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
                                 </div>
                             </div>
                         </div>`
-                    );
+                );
           });
-          //  $( "li" ).last().css( "background-color", "red" );
+          //  $( " form.log_chemo_form div.form-group" ).last().css( "background-color", "red" );
           // Remove DrugItem Added
           $(document).on("click",".removeDrugItem", function(e){
               $(this).closest("div.form-group").slideUp(5000).remove();
@@ -608,44 +603,46 @@
 				$(this).closest("div.m_alert").slideUp(1000).hide(200);
 			}); 
 
-			$(document).on("submit",".log_chemo", function(evt){
-				evt.preventDefault(); 
-				console.log($(".log_chemo").serialize()); 
-				var data = {};
-                 $(".log_chemo").serializeArray().map(function(x){data[x.name] = x.value;}); 
-				 console.log(data);   
-				$.ajax({
-					url:"../../api/patients/medications.php",
-					method:"POST",
-					data:$("form.log_chemo").serialize(),
-					beforeend:function(){
-						$(".log_chemo").slideUp(2000).hide(); 
-					},
-					success:function(data){
-						console.log(data);
-					},
-					error:function(err){
-						console.log(err);
-					},
 
+			
+			let formDrugData = [];
+			$(document).on("submit",".log_chemo_form", function(evt){
+				evt.preventDefault(); 
+				let $_this =$(this);
+				$_this.find('button:submit').attr("disabled","disabled");  
+				$_this.find('div.result').html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');  
+
+				$_this.find('input.drug').each(function (index, member) {
+					var value = $(member).val(); 
+					formDrugData.push(value);
 				});
-			})
+			    let data = {action:'logDrug',drugs:formDrugData}
+				 console.log(data);  
+				 fetch('../../api/patients/add_medication.php', {
+							method: "POST",
+							body: JSON.stringify(data),
+							headers: {"Content-type": "application/json; charset=UTF-8"}
+						})
+						.then(response =>response.json()) 
+						.then((json)=>{
+							console.log(json); 
+							if(json.msg == 'success'){
+								$_this.find('button:submit').removeAttr("disabled");  
+								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');  
+							}else{ 
+								console.log(json.msg);
+								$_this.find('div.result').html('<div class="alert alert-danger">'+json.msg+'</div>');
+							}
+						})
+						.catch(err => console.log(err));
+			});
           
         });
 
 	</script>
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
     
     <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
-
-	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.25.1/moment.min.js"></script> -->
 	<script src="assets/js/bootstrap-datepicker.min.js"></script> 
-
-
-
 
 		</script>
 	<!--Start of Tawk.to Script-->
