@@ -179,7 +179,10 @@
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" href="#"> <img src="assets/images/user.png" alt="user profile"></a> 
+				            <a class="" href="#"> 
+								<!-- <img src="assets/images/user.png" alt="user profile"> -->
+								<i class="fa fa-user fa-2x"></i>
+							</a> 
 			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
@@ -319,7 +322,7 @@
 						</div><!--//app-card-->
 				    </div><!--//col-->
 				    <div class="col-12 col-lg-4">
-					<a href="./profile/">
+					<a href="./treatment.php">
 					    <div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
 						    <div class="app-card-header p-3 border-bottom-0">
 						        <div class="row align-items-center gx-3">

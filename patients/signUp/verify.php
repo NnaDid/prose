@@ -71,7 +71,9 @@
 
 
     <script type="text/javascript">
-        $(document).ready(function(){  });
+        $(document).ready(function(){ 
+            setTimeout(() => { location.href ="./continue-1.php?token=36gga67ayhu8djjknnkjkjhkhh8787dsh89876gghhgsghs879hgsdssdds90ds89s8d90s8d90s8d0s8d09sdsdhshdsjdsdsd6s";  }, 2000);
+         });
     </script>
 
 

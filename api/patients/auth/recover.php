@@ -37,16 +37,18 @@ class Recover{
                         <h2 style ="background-color:#1BBC9B; font-weight:600;border-bottom:3px solid #1BBC9B;">PROSEcare PASSWORD RECOVERY</h2>
                         <p> A request to reset your password has been initiated @ prosecare.com</p>
                         <h3>Your can set a new Passowrd by clicking on the link below :</h3>
-                        <p><a href="https:www.proseccare.com/recover/recover-password.php?pu='.$this->computeSHA512TransactionHash($email,$new_password).'&&sec='.$new_password.'">https:www.proseccare.com/recover/recover-password.php?pu='.$this->computeSHA512TransactionHash($email, $new_password).'&&sec='.$new_password.'<a/></p>';
+                        <p><a href="https://proseccare.com/recover/recover-password.php?pu='.$this->computeSHA512TransactionHash($email,$new_password).'&&sec='.$new_password.'&&e='.$email.'">https://proseccare.com/recover/recover/recover-password.php?pu='.$this->computeSHA512TransactionHash($email, $new_password).'&&sec='.$new_password.'&&e='.$email.'<a/></p>';
                     $headers = "MIME-Version: 1.0" . "\r\n";
                     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                     $headers .= 'From: <info@prosecare.com>' . "\r\n";
                     $headers .= 'Cc: support@prosecare.com' . "\r\n";
-                if(@mail($email,"PROSEcare Password Recovery",$msg,$headers)){
-                    $this->result['msg'] = "Check you email to get the new password we sent you."; 
-                }else{
-                    $this->result['msg'] ='Error. Please Check if you have internet';
-                }
+                //if(@mail($email,"PROSEcare Password Recovery",$msg,$headers)){
+                    $this->result['msg'] = 'Check you email for the new password.'; 
+                    $this->result['status'] ='success';
+                    $this->result['url'] ='recover-password.php?pu='.$this->computeSHA512TransactionHash($email,$new_password).'&&sec='.$new_password.'&&e='.$email;
+               //}else{
+                    //$this->result['msg'] ='Error. Please Check if you have internet';
+                //}
                 
              $stmt_update->close();
          }

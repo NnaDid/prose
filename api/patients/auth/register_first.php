@@ -43,7 +43,7 @@ class Register {
                                     Kindly verify your email to enable you proceed with the reporting of your side effects.
                                     We encourage you to promptly report your side effects.
                                  <p>
-                                 <p>Click on this link to continue: <a href="https://prosecare.herokuapp.com/patient/signUp/verify.php?email='.$email.'">https://prosecare.herokuapp.com/patient/signUp/verify.php?email='.$email.'</a></p>
+                                 <p>Click on this link to continue: <a href="https://prosecare.com/patient/signUp/verify.php?email='.$email.'">https://prosecare.com/patient/signUp/verify.php?email='.$email.'</a></p>
                                  <p>Please contact us if you have any questions or concerns via info@prosecare.com
                                      Thank you
                                 </p>

@@ -189,12 +189,11 @@
         })
         .then(response => response.json()) 
         .then((json)=>{
-          console.log(json);
-          
-          if(json.msg=='success'){
+          console.log(json); 
+          if(json.status=='success'){
             result.html('<span class="alert alert-success" style="color:green;">Successful!</span>'); 
             Toast.fire({ icon: 'success',title: 'Successful!'});
-            setTimeout(()=>{  window.location.href = './check-email.php';  }, 3000);
+            setTimeout(()=>{  window.location.href = json.url;  }, 3000);
           }else{
             result.html('<span class="alert alert-success" style="color:red;">'+json.msg+'</span>');
           }

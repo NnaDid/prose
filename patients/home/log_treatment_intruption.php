@@ -306,10 +306,14 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto"> 
+		            <div class="app-utilities col-auto d-flex justify-content-center align-items-center"> 
 			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" href="#" role="button"><img src="assets/images/user.png" alt="user profile"></a> 
-			            </div><!--//app-user-dropdown--> 
+				            <a class="dropdown-toggle" href="#" role="button">
+								<!-- <img src="assets/images/user.png" alt="user profile"> -->
+								<i class="fa fa-user fa-2x"></i>
+							</a> 
+							
+						</div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
 				            <a href="?u=logout" title="logout">Logout </a>

@@ -119,17 +119,17 @@
     </div>
 
     <section class="row no-gutters min-vh-100 p-0">
-      <div class="col-lg-4 bg-primary-3 d-flex justify-content-end">
-        <img src="../assets/img/prose_bg.png" alt="Image" class="bg-image">
+        <div class="col-lg-4 bg-primary-3 d-flex justify-content-end">
+          <img src="../patients/assets/img/prose_bg.svg" alt="Image" class="bg-image">
         <div class="divider divider-vertical d-none d-lg-block">
-          <img src="../assets/img/dividers/divider-vertical-1.svg" alt="graphical divider" data-inject-svg />
+          <!-- <img src="../../assets/img/dividers/divider-vertical-1.svg" alt="graphical divider" data-inject-svg /> -->
         </div>
       </div>
       <div class="col px-5 position-relative d-flex align-items-center">
         <div class="row justify-content-center w-100">
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="text-center mb-4">
-              <img src="../assets/img/logo.png" height ="" width ="100%" alt="prose" style="transform: scale(0.7);"/> 
+              <img src="../patients/assets/img/logo.svg" height ="" width ="100%" alt="prose" style="transform: scale(0.7);"/> 
               <h1 class="mb-1 begin_text">Recover Password</h1>
               <p class="text-start">Create your new password here</p>
             </div>  
