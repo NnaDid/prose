@@ -176,8 +176,6 @@
 .__footer_top{
   width: 100%;
   height: 461px;
-  left: 0px;
-  bottom: -2px; 
   background: #212121;
 }
   .__footer{ 
@@ -233,6 +231,52 @@
   order: 0;
   flex-grow: 0; 
   padding: 10px ;
+}
+
+.top__circle__level__solution{
+  position: relative;
+  width: 52px;
+  height: 53px;
+  top:45px;
+  left:200px;
+  border-radius:50%;
+  background: #EBECFF;
+  mix-blend-mode: normal;
+  opacity: 0.9;
+}
+
+.top_circle__level{
+  position: relative;
+  width: 52px;
+  height: 53px;
+  top:25px;
+  left:100px;
+  border-radius:50%;
+  background: #EBECFF;
+  mix-blend-mode: normal;
+  opacity: 0.9;
+}
+.diameter_circle__level{
+  position: relative;
+  width: 66px;
+  height: 67px;
+  top:200px;
+  left:-50px;
+  border-radius:50%; 
+  background: #FEE6FF;
+  mix-blend-mode: normal;
+  opacity: 0.9;
+}
+.bottom_circle__level{
+  position: relative;
+  width: 95px;
+  height: 96px;
+  top:-100px;
+  left:120px;
+  border-radius:50%; 
+  background: #DEF0FF;
+  mix-blend-mode: normal;
+  opacity: 0.9;                      
 }
 
 
@@ -306,7 +350,9 @@
                  <div class="inner__container justify-content-center align-items-center">
                          <div class="inner__inner__container">
                                <!-- <div class="__first_lady"><img src="./patients/assets/img/landing/first_lady.svg" alt="prose" /></div> -->
-                               <div class="__center__lady"><img src="./patients/assets/img/artboard.png" alt="prose" /></div>
+                               <div class="__center__lady">
+                                  <img src="./patients/assets/img/artboard.png" style="width:150%;" alt="prose" />
+                                </div>
                                <!-- <div class="__top_guy"><img src="./patients/assets/img/landing/top_guy.svg" alt="prose" /></div> -->
                                <!-- <div class="__bottom_guy"><img src="./patients/assets/img/landing/bottom_guy.svg" alt="prose" /></div> -->
                         </div>
@@ -400,7 +446,12 @@
                         Researchers have noted that the <strong>majority of patients undergoing radiotherapy</strong> have a high incidence of side effects, <strong>do not report their symptoms regularly</strong>,
                         and experience difficulties while trying to report them. These events may cause patients to suffer unnecessarily from preventable side effects during treatment. 
                     </div>
-                    <div class="problem__image col-md-4"> <img src="./patients/assets/img/problem.svg" alt="problems image" /> </div>
+                 <div class="problem__image col-md-4"> 
+                      <div class="diameter_circle__level"></div>
+                      <div class="top_circle__level"></div>
+                      <img src="./patients/assets/img/problem.svg" alt="problems image" /> 
+                      <div class="bottom_circle__level"></div>
+                    </div>
               </div>
           </div>
 
@@ -410,7 +461,9 @@
             </div> 
             <div class="problem__container d-flex justify-content-between align-items-center row">
                   <div class="problem__image col-md-4">  
+                      <div class="top__circle__level__solution"></div>
                       <div class="inner__img__container" style="background-image:url('./patients/assets/img/solution.png'); background-repeat:no-repeat; background-position:center;height:250px;">
+                          <!-- <div class="top_circle__level"></div> -->
                           <img src="./patients/assets/img/solution_part_one.svg" style="height:120px; wieight:120px;" alt="prose" class="__top_guy"/> 
                           <img src="./patients/assets/img/solution_part_two.svg" style="height:120px; wieight:120px;" alt="prose"  class="__bottom_guy"/>
                       </div>
@@ -487,7 +540,7 @@
                 <div class="col-md-8 text-white">
                     We aim to help patients experiencing radiotherapy-induced side effects improve their 
                     treatment outcomes, decrease morbidity, prevent hospitalization, and save cost through the use of the PROSEcare app.
-                   <p> <a href="#" class="btn btn-prosecare">Sign up for PROSEcare</a> </p>
+                   <p> <a href="./intro.php?onco_type=signUp" class="btn btn-prosecare">Sign up for PROSEcare</a> </p>
                 </div>
             </div>
          </div>
@@ -503,7 +556,7 @@
                           Department of Radiation Biology, Radiotherapy and Radio-diagnosis, College of Medicine, University of Lagos, Lagos Nigeria.
                           (Mon-Fri from 8am-4pm)  
                       </p>
-                    <p>+234-818-752-7806, +234-803-553-0802</p>
+                    <p><small>+234-818-752-7806, +234-803-553-0802</small></p>
                     <p>research@oncopadi.com</p>
                     <p class="d-flex justify-content-between align-items-center">
                       <span class="fa fa-facebook fa-2x"></span> 
