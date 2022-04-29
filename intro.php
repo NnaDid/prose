@@ -19,6 +19,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="patients/assets/img/logo.png">  
+    <script>
+      function onlyOne(checkbox) {
+          var checkboxes = document.getElementsByName('user_type')
+          checkboxes.forEach((item) => {
+              if (item !== checkbox) item.checked = false
+          })
+        }
+    </script>
    <style>
      body{
             font-family: Inter !important;
@@ -136,30 +144,30 @@
 
               <p class="text_heading">Select your profile.</p>
 
-              <div class="custom-control custom-checkbox d-flex justify-content-start">
+              <div class="custom-control custom-checkbox d-flex justify-content-start text-left">
                 <div class="round mx-4">
-                  <input type="checkbox" class="custom-control-input form-control-lg consent__patient give_consent" name ="user_type[]" value="patient" id="checkbox_1" /> 
+                  <input type="checkbox" class="custom-control-input form-control-lg consent__patient give_consent" onclick="onlyOne(this)" name ="user_type" value="patient" id="checkbox_1" /> 
                   <label for="checkbox_1"></label>
                 </div>
                 <label class="" style=""> I am receiving treatment </label>
               </div> 
 
-              <div class="custom-control custom-checkbox d-flex justify-content-start">
+              <div class="custom-control custom-checkbox d-flex justify-content-start text-left">
                 <div class="round mx-4">
-                  <input type="checkbox" class="custom-control-input consent__care_giver give_consent" name ="user_type[]" value="care_giver" id="checkbox_2" />  
+                  <input type="checkbox" class="custom-control-input consent__care_giver give_consent" onclick="onlyOne(this)" name ="user_type" value="care_giver" id="checkbox_2" />  
                   <label for="checkbox_2"></label>
                 </div>
                 <label class="" style=""> I am caring for someone with cancer </label>
               </div> 
 
-              <div class="custom-control custom-checkbox d-flex justify-content-start">
+              <div class="custom-control custom-checkbox d-flex justify-content-start text-left">
                 <div class="round mx-4">
-                  <input type="checkbox" class="custom-control-input consent__care_giver give_consent" name ="user_type[]" value="professional" id="checkbox_3" />    
+                  <input type="checkbox" class="custom-control-input consent__care_giver give_consent" onclick="onlyOne(this)" name ="user_type" value="professional" id="checkbox_3" />    
                   <label for="checkbox_3"></label>
                 </div>
                 <label class="" style=""> I am a Health Care Professional</label>
               </div>  
-              
+              <!-- <input type ="hidde" name="userType" name="userType"/> -->
               <div class="form-group mt-2">
                 <a href="#" class="btn-block btn btn-primary btn-lg start_button isDisabled" disabled>Continue</a>
               </div>

@@ -295,14 +295,7 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-                    <div class="app-utilities col-auto d-flex justify-content-center align-items-center"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" href="#" role="button">
-                                <!-- <img src="assets/images/user.png" alt="user profile"> -->
-                                <i class="fa fa-user fa-2x"></i>
-                            </a> 
-							
-						</div><!--//app-user-dropdown--> 
+                    <div class="app-utilities col-auto d-flex justify-content-center align-items-center">   
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
 				            <a href="?u=logout" title="logout">Logout </a>
@@ -542,7 +535,14 @@
                                 $(".cancer_grade").html(json.DS_xteristics.cancer_grade); 
                                 $(".cancer_stage").html(json.DS_xteristics.cancer_stage); 
                                 $(".comorbidity").html(json.DS_xteristics.comorbidity); 
-                            }  
+                            } else{
+                                $(".how_old").html("No Record"); 
+                                $(".cancer_type").html("No Record"); 
+                                $(".hist_type").html("No Record"); 
+                                $(".cancer_grade").html("No Record"); 
+                                $(".cancer_stage").html("No Record"); 
+                                $(".comorbidity").html("No Record"); 
+                            } 
                         })
                         .catch(err => console.log(err));
                 }

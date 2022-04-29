@@ -177,13 +177,7 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="" href="#"> 
-								<!-- <img src="assets/images/user.png" alt="user profile"> -->
-								<i class="fa fa-user fa-2x"></i>
-							</a> 
-			            </div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto">  
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
 				            <a href="?u=logout" title="logout">Logout </a>
@@ -313,7 +307,7 @@
 								
 								 <div class="app-card-body px-4 py-2">  
 									<div class="intro mb-4 report_log_treatment">
-										<a href="./side-effect.php"><h6 class="" style="color:#57166A !important;">Report a effect</h6></a>
+										<a href="./side-effect.php"><h6 class="" style="color:#57166A !important;">Report a Side Effect</h6></a>
 										<span class="text_desc">Click here to report a side effect you are experiencing.</span>									
 									</div>
 								</div>

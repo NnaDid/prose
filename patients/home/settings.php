@@ -486,13 +486,7 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto d-flex justify-content-center align-items-center"href=> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-						     <a class="dropdown-toggle" href="#"> 
-								<!-- <img src="assets/images/user.png" alt="user profile"> -->
-								<i class="fa fa-user fa-2x"></i>
-							</a> 
-						</div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto d-flex justify-content-center align-items-center">  
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
 				            <a href="?u=logout" title="Logout">Logout </a>
@@ -616,7 +610,7 @@
 
 																		  
 <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+   <div class="modal-dialog modal-xl">
 	<div class="modal-content">
 	 <div class="modal-header">
 	<h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
@@ -626,15 +620,26 @@
 <pre>
 <h2>PROSEcare PRIVACY POLICY </h2>
 <h5>INTRODUCTION</h5>
-This Privacy Policy is intended to describe to visitors and users (hereinafter referred to as “users”, “you”) of our websites, web applications, and other online services to which this Privacy Policy is posted (collectively, our "Services" or “Services Platforms”) how personal data is collected, used, stored, and disclosed by PROSECare, (hereinafter referred to as "PROSECare" "we," "us," and "our"); how such data may be used and with whom it may be shared and the choices relating to such uses and disclosure. 
-We respect your privacy, and we want you to understand how we may collect personal data about you through our Services platforms and how that information may be used, maintained, and in some cases shared. 
-This Privacy Policy lays out the privacy practices and policies governing the use of our Services. By using our Services, you are accepting the practices and policies described in this Privacy Policy and you consent to the collection, use, transfer, and disclosure of the data following this Privacy Policy and applicable laws. 
-All data collected through the use of our Services shall be employed solely for purposes of providing the best services to the users. This Privacy Policy is part of our Terms of Use. 
-By using our Services, you agree to all the terms stated in this Privacy Policy; if you do not agree with any of these terms, do not access or otherwise use our Services or any information contained therein. 
+This Privacy Policy is intended to describe to visitors and users (hereinafter referred to as “users”, “you”) 
+of our websites, web applications, and other online services to which this Privacy Policy is posted 
+(collectively, our "Services" or “Services Platforms”) how personal data is collected, used, stored, 
+and disclosed by PROSECare, (hereinafter referred to as "PROSECare" "we," "us," and "our"); how such 
+data may be used and with whom it may be shared and the choices relating to such uses and disclosure. 
+We respect your privacy, and we want you to understand how we may collect personal data about you 
+through our Services platforms and how that information may be used, maintained, and in some cases shared. 
+This Privacy Policy lays out the privacy practices and policies governing the use of our Services. 
+By using our Services, you are accepting the practices and policies described in this Privacy Policy 
+and you consent to the collection, use, transfer, and disclosure of the data following this Privacy 
+Policy and applicable laws. 
+All data collected through the use of our Services shall be employed solely for purposes of providing 
+the best services to the users. This Privacy Policy is part of our Terms of Use. 
+By using our Services, you agree to all the terms stated in this Privacy Policy; if you do not agree 
+with any of these terms, do not access or otherwise use our Services or any information contained therein. 
 
 
 <h5>APPLICATION OF THIS PRIVACY POLICY</h5>
-This Privacy Policy applies to your use of our Services. You may access or use our Services through a desktop, laptop, mobile phone, tablet, or other electronic devices. 
+This Privacy Policy applies to your use of our Services. You may access or use our Services through a desktop, 
+laptop, mobile phone, tablet, or other electronic devices. 
 
 
 <h5>INFORMATION WE COLLECT</h5>
@@ -658,11 +663,13 @@ associated or combined with Personal Information, such Analytics will be conside
 for purposes of this Privacy Policy. Information that we automatically collect in connection with your 
 access or use of our Services may include: Device Information: We may collect Device-specific information 
 (such as hardware model, operating system version, unique device identifiers, and mobile network information, 
-including your mobile phone number). We may associate your Device identifiers or mobile phone number with your PROSEcare account. 
-Log Information: We may record or log information from your devices, software, and your activity in accessing or using our Services. 
-This information may include: The Device's Internet Protocol ("IP") address, identification numbers associated with your Devices,
- device event information, such as crashes, system activity, and hardware settings, location preferences, date and time stamps of 
- transactions, System configuration information, and other interactions with our Services. 
+including your mobile phone number). We may associate your Device identifiers or mobile phone number 
+with your PROSEcare account. 
+Log Information: We may record or log information from your devices, software, and your activity in 
+accessing or using our Services. This information may include: The Device's Internet Protocol ("IP") address,
+identification numbers associated with your Devices, device event information, such as crashes, system activity,
+and hardware settings, location preferences, date and time stamps of transactions, System configuration information, 
+and other interactions with our Services. 
 
 <strong>c. Information Collected Through Cookies and Similar Technologies </strong>
 We use cookies to personalize our Services for you and to collect aggregate information about the usage of our Services. 
@@ -670,86 +677,132 @@ Cookies are a text file or other local storage identifier provided by your brows
 We use cookies for record-keeping purposes and to enhance the quality of your use of our Services. 
 The cookies assign random, unique numbers to your Devices to enable our systems to recognize your 
 Devices and to allow us to see how you use our Services. The cookies we use in connection with our 
-Services include: Session cookies: Session cookies are temporary cookies that expire and are automatically 
-erased whenever you close your browser window. We use session cookies to grant users access to content and 
-to enable actions they must be logged into their PROSEcare account to perform. 
-Persistent cookies: Persistent cookies usually have an expiration date in the distant future and remain in your browser 
-until they expire or you manually delete them. We use persistent cookies to better understand usage patterns so we can 
-improve our Services. For example, we may use a persistent cookie to associate you with your PROSEcare account or to 
-remember your choices for our Services. Third-party cookies: We permit certain third parties to place cookies through our 
-Services to provide us with better insights into the use of our Services and user demographics and to advertise our Services to you. 
-These third parties may collect information about your online activities over time and across different websites when you access or 
-use our Services. For example, we utilize Google Analytics to analyze usage patterns for our Services. Google Analytics generates a 
-cookie to capture information about your use of our Services, which Google uses to compile reports on website activity for us and to 
-provide other related services. Google may use a portion of your IP address to identify its cookie, but this will not be associated
-with any other data held by Google. By accessing or using our Services, you consent to the placement of cookies on your Devices as 
-described in this Privacy Policy. If you prefer not to receive cookies through our Services, you may control how your browser responds 
-to cookies by changing the privacy and security settings of your web browser. Unless you set your browser settings to refuse all cookies, 
-our system may issue cookies when you access or use our Services. If you set your browser settings to refuse all cookies, the performance of certain features of our Services may be limited or may not work at all. 
+Services include: Session cookies: Session cookies are temporary cookies that expire and are 
+automatically erased whenever you close your browser window. We use session cookies to grant users 
+access to content and to enable actions they must be logged into their PROSEcare account to perform. 
+Persistent cookies: Persistent cookies usually have an expiration date in the distant future and remain 
+in your browser until they expire or you manually delete them. We use persistent cookies to better 
+understand usage patterns so we can improve our Services. For example, we may use a persistent cookie 
+to associate you with your PROSEcare account or to remember your choices for our Services. Third-party 
+cookies: We permit certain third parties to place cookies through our Services to provide us with better 
+insights into the use of our Services and user demographics and to advertise our Services to you. 
+These third parties may collect information about your online activities over time and across different 
+websites when you access or use our Services. For example, we utilize Google Analytics to analyze usage 
+patterns for our Services. Google Analytics generates a cookie to capture information about your use of 
+our Services, which Google uses to compile reports on website activity for us and to provide other related 
+services. Google may use a portion of your IP address to identify its cookie, but this will not be associated
+with any other data held by Google. By accessing or using our Services, you consent to the placement of cookies 
+on your Devices as described in this Privacy Policy. If you prefer not to receive cookies through our Services, 
+you may control how your browser responds to cookies by changing the privacy and security settings of your web 
+browser. Unless you set your browser settings to refuse all cookies, our system may issue cookies when you access
+or use our Services. If you set your browser settings to refuse all cookies, the performance of certain features 
+of our Services may be limited or may not work at all. 
 
 <h5>USE OF INFORMATION</h5>
 The following describes how we use the information we collect from you: 
-1. We may use Analytics from the Personal Information provided by you for research and commercial purposes, such as to improve our Services.
+1. We may use Analytics from the Personal Information provided by you for research and commercial
+   purposes, such as to improve our Services.
 
-2. We may use your email address to respond to your inquiries and to provide you with information about our Services. 
-   You may elect not to receive promotional emails from us either by "unsubscribing" to an email you receive from us or 
-   by contacting us as indicated below. If you unsubscribe from receiving emails from us, we may still send you 
-   non-promotional emails, such as emails about your PROSEcare account or our ongoing business relations, unless you 
+2. We may use your email address to respond to your inquiries and to provide you with information 
+   about our Services. You may elect not to receive promotional emails from us either by 
+   "unsubscribing" to an email you receive from us or by contacting us as indicated below. 
+   If you unsubscribe from receiving emails from us, we may still send you non-promotional emails, 
+   such as emails about your PROSEcare account or our ongoing business relations, unless you 
    withdraw your consent to receive electronic communications as provided in our Terms of Use. 
 
 
 <h5>REGISTRATION</h5>	
-Users are required to register for our Services using correct and accurate personal data. During the registration process, 
-your current mobile phone number will be requested, and once you input your phone number, you agree to receive text messages 
-and phone calls (from us or our third-party providers). 
-We may request that you grant us access to your phone address book to allow access to certain services. 
-Your acceptance of this request will grant us access to your phone address book. 
+	Users are required to register for our Services using correct and accurate personal data. 
+	During the registration process, your current mobile phone number will be requested, and 
+	once you input your phone number, you agree to receive text messages 
+	and phone calls (from us or our third-party providers). 
+	We may request that you grant us access to your phone address book to allow access 
+	to certain services. Your acceptance of this request will grant us access to your 
+	phone address book. 
 
 
 <h5>GENERAL PROVISIONS REGARDING AGE REQUIREMENTS</h5>
-You must be at least 18 years old to use our Services. By using our services, you represent, acknowledge, 
-and agree that you are at least 18 years of age. 
+	You must be at least 18 years old to use our Services. By using our services, you represent, 
+	acknowledge, and agree that you are at least 18 years of age. 
 
 
 <h5>HOW WE SHARE INFORMATION</h5>
-Generally, we do not share your Personal Information with (1) other health institutions, Research institutions, for joint marketing purposes; (2) affiliated companies for their everyday business purposes; or (3) any third parties so they can market to you. 
-We may share your Personal Information with unaffiliated third parties: 
-(1) If you request or authorize it; 
-(2) If the information is provided to help complete a transaction for you; 
-(3) If the information is provided to: (a) comply with applicable laws, rules, regulations, -governmental requests, court orders, or subpoenas; (b) enforce our Terms of Use or other agreements; or (c) protect our rights, property, or safety or the rights, property, or safety of our users or others; 
-(4) If the disclosure is done as part of a purchase, transfer, or sale of services or assets (e.g., if substantially all of our assets are acquired by another party, your Personal Information may be one of the transferred assets); 
-(5) If the information is provided to our third-party service providers to perform functions on our behalf; 
-(6) As permitted by applicable law or otherwise described in this Privacy Policy. 
+	Generally, we do not share your Personal Information with (1) other health institutions, 
+	Research institutions, for joint marketing purposes; (2) affiliated companies for their 
+	everyday business purposes; or (3) any third parties so they can market to you. 
+	We may share your Personal Information with unaffiliated third parties: 
+	(1) If you request or authorize it; 
+	(2) If the information is provided to help complete a transaction for you; 
+	(3) If the information is provided to: (a) comply with applicable laws, rules, regulations, 
+	    -governmental requests, court orders, or subpoenas; (b) enforce our Terms of Use or other 
+		 agreements; or (c) protect our rights, property, or safety or the rights, property, or 
+		 safety of our users or others; 
+	(4) If the disclosure is done as part of a purchase, transfer, or sale of services or assets 
+	    (e.g., if substantially all of our assets are acquired by another party, your Personal 
+		Information may be one of the transferred assets); 
+	(5) If the information is provided to our third-party service providers to perform functions on our behalf; 
+	(6) As permitted by applicable law or otherwise described in this Privacy Policy. 
 
 
 <h5>DEVICES AND SOFTWARE</h5>	
-You must provide certain devices, software, and data connections to use our Services, which we otherwise do not supply. For as long as you use our Services, you consent to downloading and installing updates to our Services as requested on our Services Platforms. 
-FEES AND TAXES
-You are responsible for all carrier data plans and other fees and taxes associated with your use of our Services. 
-All procedures of payment for any services where applicable must be followed including applicable taxes. 
+	You must provide certain devices, software, and data connections to use our Services, 
+	which we otherwise do not supply. For as long as you use our Services, you consent to 
+	downloading and installing updates to our Services as requested on our Services Platforms. 
+	FEES AND TAXES
+	You are responsible for all carrier data plans and other fees and taxes associated with 
+	your use of our Services. All procedures of payment for any services where applicable 
+	must be followed including applicable taxes. 
 
 
 <h5>OPT-OUT RIGHTS</h5>
-If you do not wish to receive offers or other notices from us in the future, you can "opt-out" by contacting us as indicated at the end of this Privacy Policy or by following the "unsubscribe" instructions in any communication you receive from us. Please be aware that you are not able to opt out of receiving communications about your PROSEcare account or related transactions with us. 
+	If you do not wish to receive offers or other notices from us in the future, you can "opt-out" 
+	by contacting us as indicated at the end of this Privacy Policy or by following the "unsubscribe" 
+	instructions in any communication you receive from us. Please be aware that you are not able to 
+	opt out of receiving communications about your PROSEcare account or related transactions with us. 
 
 
 <h5>ACCESSING YOUR INFORMATION</h5>
-You must notify us of any change in your Personal Information by updating your PROSEcare account profile through our Services. Any changes will affect only future uses of your Personal Information. 
-Subject to applicable law, which might, from time to time, oblige us to store your Personal Information for a certain period, we will respect your wishes to correct inaccurate information. Otherwise, we will hold your Personal Information for as long as we believe it will help us achieve our objectives as detailed in this Privacy Policy. You may request that a copy of the personal information collected by us be sent to you. Before sending you any Personal Information, we will ask you to provide proof of your identity. If you are not able to provide proof of your identity, we reserve the right to refuse to send you any Personal Information. 
+	You must notify us of any change in your Personal Information by updating your PROSEcare 
+	account profile through our Services. Any changes will affect only future uses of your 
+	Personal Information. Subject to applicable law, which might, from time to time, oblige 
+	us to store your Personal Information for a certain period, we will respect your wishes 
+	to correct inaccurate information. Otherwise, we will hold your Personal Information for 
+	as long as we believe it will help us achieve our objectives as detailed in this Privacy 
+	Policy. You may request that a copy of the personal information collected by us be sent 
+	to you. Before sending you any Personal Information, we will ask you to provide proof of 
+	your identity. If you are not able to provide proof of your identity, we reserve the right
+	to refuse to send you any Personal Information. 
 
 
 <h5>INFORMATION YOU SHARE SOCIALLY OR VIA OUR SERVICES CHAT PLATFORMS</h5>
-Our Services may allow you to connect and share your actions, comments, content, and information publicly or with friends. 
-We are not responsible for maintaining the confidentiality of any information you share publicly or with friends. 
-Our Services may also allow you to connect with us on, share on, and use third-party websites, applications, and services. Please be mindful of your personal privacy needs and the privacy needs of others, as you choose whom to connect with and what to share and make public. We cannot control the privacy or security of information you choose to make public or share with others. We also do not control the privacy practices of third parties. Please contact those sites and services directly if you want to learn about their privacy practices. 
+	Our Services may allow you to connect and share your actions, comments, content, 
+	and information publicly or with friends. We are not responsible for maintaining 
+	the confidentiality of any information you share publicly or with friends. 
+	Our Services may also allow you to connect with us on, share on, and use 
+	third-party websites, applications, and services. Please be mindful of your 
+	personal privacy needs and the privacy needs of others, as you choose whom to 
+	connect with and what to share and make public. We cannot control the privacy 
+	or security of information you choose to make public or share with others. 
+	We also do not control the privacy practices of third parties. 
+	Please contact those sites and services directly if you want to learn 
+	about their privacy practices. 
 
 
 <h5>SECURITY</h5>
-PROSEcare is committed to securing the data of its users and keeping same confidential. 
-Our services are protected by Secure Sockets Layer (SSL) and the database on the website is not publicly accessible. 
-In addition, we take steps to protect all user data we collect against any unauthorized access. However, we cannot guarantee the absolute protection of the personal data of users. You also play a role in protecting your Personal Information and must put reasonable effort into protecting same. 
-You are required to safeguard your username and password for your PROSEcare account. Under no condition should you share your password with others. PROSECare shall not be responsible for any fraud or losses that may be occasioned as a result of any attempt at sharing passwords. Any instruction received by us through your PROSECare account login information will be considered as an authorized instruction from you. 
-You agree to notify us immediately of any unauthorized use of your PROSEcare account or any other breach of security. We reserve the right, in our sole discretion, to refuse to provide our Services, terminate PROSECare accounts, and remove or edit content. 
+	PROSEcare is committed to securing the data of its users and keeping same confidential. 
+	Our services are protected by Secure Sockets Layer (SSL) and the database on the website 
+	is not publicly accessible. In addition, we take steps to protect all user data we collect 
+	against any unauthorized access. However, we cannot guarantee the absolute protection of 
+	the personal data of users. You also play a role in protecting your Personal Information 
+	and must put reasonable effort into protecting same. You are required to safeguard your 
+	username and password for your PROSEcare account. Under no condition should you share your 
+	password with others. PROSECare shall not be responsible for any fraud or losses that may 
+	be occasioned as a result of any attempt at sharing passwords. Any instruction received by 
+	us through your PROSECare account login information will be considered as an authorized 
+	instruction from you. You agree to notify us immediately of any unauthorized use of your 
+	PROSEcare account or any other breach of security. We reserve the right, in our sole 
+	discretion, to refuse to provide our Services, terminate PROSECare accounts, and remove 
+	or edit content. 
 
 
 <h5>LINKS TO THIRD-PARTY WEBSITES</h5>
@@ -757,18 +810,37 @@ This Privacy Policy only applies to our Services.
 
 
 <h5>CHANGES TO OUR PRIVACY POLICY</h5>
-Subject to applicable law, we may revise this Privacy Policy at any time and our sole discretion. When we revise this Privacy Policy, we will post the revised version via our Services and will update the date at the top of this Privacy Policy. The revised Privacy Policy will be effective upon posting via our Services, unless otherwise set forth therein or as otherwise required by applicable law. 
-You are free to decide whether or not to accept a revised version of this Privacy Policy, but accepting this Privacy Policy, as revised, is required for your continued access or use of our Services. 
-If you do not agree to the terms of this Privacy Policy or any revised version of this Privacy Policy, your sole recourse is to terminate your access and use of our Services. Except as otherwise expressly stated by us, your access and use of our Services are subject to the version of this Privacy Policy in effect at the time of access or use. 
+	Subject to applicable law, we may revise this Privacy Policy at any time and 
+	our sole discretion. When we revise this Privacy Policy, we will post the revised 
+	version via our Services and will update the date at the top of this Privacy Policy. 
+	The revised Privacy Policy will be effective upon posting via our Services, unless 
+	otherwise set forth therein or as otherwise required by applicable law. 
+	You are free to decide whether or not to accept a revised version of this Privacy 
+	Policy, but accepting this Privacy Policy, as revised, is required for your continued 
+	access or use of our Services.If you do not agree to the terms of this Privacy Policy 
+	or any revised version of this Privacy Policy, your sole recourse is to terminate your 
+	access and use of our Services. Except as otherwise expressly stated by us, your access 
+	and use of our Services are subject to the version of this Privacy Policy in effect at 
+	the time of access or use. 
 
 
 <h5>GOVERNING LAW AND DISPUTE RESOLUTION</h5>
-By choosing to make use of our services, you agree that any dispute over privacy or the terms contained in this Privacy Policy will be governed by Nigerian law. 
-PROSEcare shall apply its best endeavors to amicably settle any dispute or difference of opinion that may arise from or in connection with this Privacy Policy through mutual discussion. In the unlikely event, it is unable to resolve the dispute through mutual discussion, the dispute or difference of opinion shall be referred to as Arbitration. The parties shall write to any internationally recognized body seeking the appointment of an independent Arbitrator. Such independent Arbitrator shall be charged with the responsibility of resolving the said dispute and the Arbitrator’s fees shall be borne equally by both parties. 
+	By choosing to make use of our services, you agree that any dispute over privacy 
+	or the terms contained in this Privacy Policy will be governed by Nigerian law. 
+	PROSEcare shall apply its best endeavors to amicably settle any dispute or 
+	difference of opinion that may arise from or in connection with this Privacy 
+	Policy through mutual discussion. In the unlikely event, it is unable to 
+	resolve the dispute through mutual discussion, the dispute or difference 
+	of opinion shall be referred to as Arbitration. The parties shall write 
+	to any internationally recognized body seeking the appointment of an 
+	independent Arbitrator. Such independent Arbitrator shall be charged 
+	with the responsibility of resolving the said dispute and the Arbitrator’s 
+	fees shall be borne equally by both parties. 
 
 
 <h5>How can I contact PROSEcare?</h5>
-If you have any questions, comments, or concerns regarding these Terms or the Services, please contact us at info@prosecare.com, +234 8147700146
+	If you have any questions, comments, or concerns regarding these Terms 
+	or the Services, please contact us at info@prosecare.com, +234 8147700146
 
 </pre> 
 											
@@ -786,7 +858,7 @@ If you have any questions, comments, or concerns regarding these Terms or the Se
 
 
 <div class="modal fade" id="TCModal" tabindex="-1" aria-labelledby="TCModalLabel" aria-hidden="true">
-   <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+   <div class="modal-dialog modal-xl">
 	<div class="modal-content">
 	 <div class="modal-header">
 	<h5 class="modal-title" id="TCModalLabel">Terms and Conditions</h5>
@@ -868,17 +940,24 @@ that the alleged offender is duly sanctioned.
 If you submit any information to us through our service platforms, you shall ensure that such information is 
 not confidential and that you have all necessary permission to submit or otherwise make available such information. 
 You further agree that: 
-You will not reproduce, duplicate, copy, sell, resell, or exploit the Services, its Content, its software, or any portion of any of the foregoing; 
+You will not reproduce, duplicate, copy, sell, resell, or exploit the Services, its Content, its software, or 
+any portion of any of the foregoing; 
 You will not use the Services for any purpose in violation of local, state, national or international laws; 
 You will not solicit another person’s password or personal information under pretenses; 
-You will not impersonate another person or entity or otherwise misrepresent your affiliation with a person or entity, and/or use or access another user’s account or password without permission; 
+You will not impersonate another person or entity or otherwise misrepresent your affiliation with a person or entity, 
+and/or use or access another user’s account or password without permission; 
 You will not violate the legal rights of others, including defaming, abuse, stalking, or threatening users; 
 You will not infringe the intellectual property rights, privacy rights, or moral rights of any third party; 
-You will not post or transmit any Content that is (or you reasonably believe or should reasonably believe to be) illegal, fraudulent, or unauthorized, or furthers such activity, or that involves (or you reasonably believe or should reasonably believe to involve) any stolen, illegal, counterfeit, fraudulent, pirated, or unauthorized material; 
+You will not post or transmit any Content that is (or you reasonably believe or should reasonably believe to be) illegal, 
+fraudulent, or unauthorized, or furthers such activity, or that involves (or you reasonably believe or should reasonably 
+believe to involve) any stolen, illegal, counterfeit, fraudulent, pirated, or unauthorized material; 
 You will not publish falsehoods or misrepresentations, including for any medical or health information; and 
-You will not post or transmit any Content that is (or reasonably should be understood to be) libelous, defamatory, obscene, offensive (including material promoting or glorifying hate, violence, bigotry, or otherwise inappropriate to the community ethos of the Service). 
-You agree not to interfere or attempt to interfere with the proper working of the Service or to disrupt the operations or violate the security of the Service. Violations of system or network operation or security may result in civil or criminal liability. 
-You agree not to discuss or incite illegal activity.
+You will not post or transmit any Content that is (or reasonably should be understood to be) libelous, defamatory, 
+obscene, offensive (including material promoting or glorifying hate, violence, bigotry, or otherwise inappropriate 
+to the community ethos of the Service). 
+You agree not to interfere or attempt to interfere with the proper working of the Service or to disrupt the operations 
+or violate the security of the Service. Violations of system or network operation or security may result in civil or 
+criminal liability. ou agree not to discuss or incite illegal activity.
 This list of prohibitions is not exhaustive as PROSEcare reserves the right to 
 (a) terminate access to your account, your ability to post to this Service platform, and 
 (b) refuse, delete or remove any Submissions; with or without cause and with or without 
@@ -916,22 +995,36 @@ implied warranty of merchantability, fitness for a particular purpose, or non-in
 PROSEcare does not provide any warranties against viruses, spyware, or malware that may be installed on your computer. 
 PROSEcare engages the services of Consultants and as such, the Consultants engaged by PROSEcare are responsible for 
 the quality of care the users receives. You agree and acknowledge that PROSEcare does not provide medical services or 
-function as a Hospital, Clinic, or dispensary and that all consultations are provided by independent third (3rd) party Professionals. 
+function as a Hospital, Clinic, or dispensary and that all consultations are provided by independent third (3rd) 
+party Professionals. 
 
 <h5>LIMITATION OF LIABILITY</h5>
-You agree to comply with all user responsibilities and obligations as stated in these Terms. 
-Non-enforcement or our failure to act concerning a breach of these Terms by you does not constitute consent or waiver, 
-and we reserve the right to enforce such term at our sole discretion. No waiver of any breach or default hereunder shall be deemed to be a waiver of any preceding or subsequent breach or default. Nothing contained in this Agreement shall be construed to limit the actions or remedies available to us concerning any prohibited activity or conduct. We will upon the investigation of suspected violations of these Terms or illegal and inappropriate behavior through the Service platforms notify and fully cooperate with any law enforcement investigation or court order directing us to disclose the identity, behavior, or activities of any user believed to have violated this Agreement or to have engaged in illegal behavior. 
+	You agree to comply with all user responsibilities and obligations as stated in these Terms. 
+	Non-enforcement or our failure to act concerning a breach of these Terms by you does not constitute consent or waiver, 
+	and we reserve the right to enforce such term at our sole discretion. No waiver of any breach or default hereunder 
+	shall be deemed to be a waiver of any preceding or subsequent breach or default. Nothing contained in this Agreement 
+	shall be construed to limit the actions or remedies available to us concerning any prohibited activity or conduct. 
+	We will upon the investigation of suspected violations of these Terms or illegal and inappropriate behavior through 
+	the Service platforms notify and fully cooperate with any law enforcement investigation or court order directing us 
+	to disclose the identity, behavior, or activities of any user believed to have violated this Agreement or to have 
+	engaged in illegal behavior. 
 
 <h5>GOVERNING LAW AND JURISDICTION</h5>
 These Terms will be subject to and construed under the laws of the Federal Republic of Nigeria. 
 
 <h5>ARBITRATION</h5>
-PROSEcare shall apply their best endeavors to settle any dispute or difference of opinion between them, 
-arising from or in connection with these terms amicably through mutual discussion. In the unlikely event that parties are unable to resolve the dispute through mutual discussion, the dispute or difference of opinion shall be referred to as Mediation. Both parties shall write to any internationally recognized body seeking the appointment of an independent Mediator. Such independent Mediator shall be charged with the responsibility of resolving the said dispute and the Mediator’s fees shall be borne equally by both parties. 
+	PROSEcare shall apply their best endeavors to settle any dispute or difference of opinion between them, 
+	arising from or in connection with these terms amicably through mutual discussion. In the unlikely event that 
+	parties are unable to resolve the dispute through mutual discussion, the dispute or difference of opinion shall 
+	be referred to as Mediation. Both parties shall write to any internationally recognized body seeking the 
+	appointment of an independent Mediator. Such independent Mediator shall be charged with the responsibility 
+	of resolving the said dispute and the Mediator’s fees shall be borne equally by both parties. 
 
 <h5>FORCE MAJEURE</h5>
-Notwithstanding anything herein to the contrary, PROSEcare shall not be liable for any losses arising out of the delay or interruption of its performance of any obligations due to any act of God, governmental authority, war, or any other cause beyond reasonable control. THESE TERMS SHALL COMMENCE UPON THE DATE YOU FIRST ACCESS THE SERVICE PLATFORM. 
+	Notwithstanding anything herein to the contrary, PROSEcare shall not be liable for any losses arising out 
+	of the delay or interruption of its performance of any obligations due to any act of God, governmental 
+	authority, war, or any other cause beyond reasonable control. 
+	THESE TERMS SHALL COMMENCE UPON THE DATE YOU FIRST ACCESS THE SERVICE PLATFORM. 
 
                                          
 </pre> 
@@ -1452,8 +1545,7 @@ Notwithstanding anything herein to the contrary, PROSEcare shall not be liable f
 
           $(document).on("click",".addNewDrug",function(e){
              $(this).closest("form").find(".form-group:last").
-                append(`
-                        <div class="form-group form_drug_input mb-1">
+                append(`<div class="form-group form_drug_input mb-1">
                            <label class="text_input_label" for="drug">Drug</label> 
                            <div class="input-group">
                                 <input name="drug[]" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />

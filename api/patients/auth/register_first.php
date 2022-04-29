@@ -38,7 +38,7 @@ class Register {
                 if($statment){
                     $_SESSION["PROSE_CARE__USER_EMAIL"]	  = $email;  
 
-                    $msg 	  ='<h5 class="text-muted">Hi '.$email.'</h5> 
+                    $msg 	  ='<h5 class="text-muted">Hi!</h5> 
                                  <p>Thank you for signing up to PROSECare .
                                     Kindly verify your email to enable you proceed with the reporting of your side effects.
                                     We encourage you to promptly report your side effects.

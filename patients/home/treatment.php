@@ -345,14 +345,8 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto d-flex justify-content-center align-items-center"href=> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" href="#"> 
-								<!-- <img src="assets/images/user.png" alt="user profile"> -->
-								<i class="fa fa-user fa-2x"></i>
-							</a> 
-							
-						</div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto d-flex justify-content-center align-items-center"> 
+			             
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
 				            <a href="?u=logout" title="Logout">Logout </a>
@@ -548,6 +542,36 @@
 								</form><!--//auth-form-->   
    
 							</div><!--//auth-main-col-->
+							<div class="col-12 col-md-5 col-lg-8 view__medications" style="display:none;margin-bottom:100px;">
+                                    
+								<form class="py-4 my-4 log_chemo_form">   
+									<h5 class="auth-heading text-center mb-4 left_heading-text"><a href="#start">Log Other Medications</a></h5>		     
+									
+                                    <div class="form-group form_drug_input mb-1">
+										<label class="text_input_label" for="drug">Drug</label>
+										<div class="input-group">
+											<input name="drug" type="text" id ="drug" class="form-control form-control-lg drug" placeholder="Drug name" required="required" />
+											<div class="input-group-append">
+												<span class="input-group-text"> <span class="removeDrugItem text-danger">x</span></span>
+											</div>
+										</div>
+									</div>   									
+									<div class="mb-3 align-items-right text-right">
+                                        <button type="button" class="btn btn-outline-primary addNewDrug"><span>New Drug</span></button>
+									</div> 
+									<input type="hidden" name="action" value="log">
+									<div class="result"></div>
+									<div class="text-center">
+										<button type="submit" class="btn btn-primary btn-block mx-auto d-flex justify-content-between align-items-center">
+											    <span>Log Medication</span> 
+											    <img src="../assets/img/arrow_.svg"/> 
+										</button>
+									</div>
+								</form><!--//auth-form-->   
+   
+							</div><!--//auth-main-col-->
+
+
 						</div><!--//app-card-->
 
 				    </div><!--//col--> 
@@ -582,6 +606,55 @@
 						}
                     },false);
                 });
+
+
+		// load reminders
+		function checkMedications(){
+				fetch('../../api/patients/get_medications.php', {
+					method: "GET", 
+					headers: {"Content-type": "application/json; charset=UTF-8"}
+				})
+				.then(response => response.json()) 
+				.then((json)=>{
+				    console.log(json);  
+					if(json.msg === 'success' && json.MEDICS.length>0){
+						//console.log(json.MEDICS);
+						let dataTest = json.MEDICS; 
+						dataTest.filter((data)=>(data.createdAt === dataTest.createdAt))
+						.map((i,item)=>console.log(i +"--"+item));
+
+						let reminderData ='';
+						json.MEDICS.map((data)=>{
+							reminderData += `<div class="app-card app-card-basic mb-1 d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
+												<div class="py-1 col-md-3"> <img src="../../patients/assets/img/reminder_calendar.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div><!--//icon-holder-->
+													<div class="log_type col-md-9">Your Logged Medications</div> 
+														<div class="log_type col-md-12 row">
+																<label class="text-center col-md-12">${data.createdAt}</label>
+																<div class="text-right col-md-12">
+																	<button class="btn text-success editReminder" id="${data.id}" data-userId="${data.userId}">Edit</button>
+																	<button class="btn text-danger deleteReminder" id="${data.id}" data-userId="${data.userId}">Delete</button>
+																</div>
+														</div>
+											</div>`; 
+						}); 
+						reminderData+=`<button type="button" class="btnNewReminder text-center setNewReminderBtn"> <span>Set New Reminder</span> </button>`;
+						$(".log_begin_cotainer").hide();
+					    $(".log_OtherMedication_Container").hide(); 				
+					    $(".view__medications").show(); 				
+					}else{ 
+						$(".reminder_Container").html(`<div class="text-center my-4">
+									    <h5 class="text-center mb-4 reminder_heading">You currently have no reminders</h5> 
+										<button type="button" class="btnNewReminder text-center setNewReminderBtn">
+											    <span>Set New Reminder</span>  
+										</button>
+									</div>`); 
+						console.log(json.msg);
+					}
+				})
+				.catch(err => console.log(err));
+			}
+
+			checkMedications();
 
           $(document).on("click",".addNewDrug",function(e){
             $( "form.log_chemo_form div.form-group" ).last().append(`
@@ -622,6 +695,7 @@
 				});
 			    let data = {action:'logDrug',drugs:formDrugData}
 				 console.log(data);  
+				 console.log(JSON.stringify(data));  
 				 fetch('../../api/patients/add_medication.php', {
 							method: "POST",
 							body: JSON.stringify(data),

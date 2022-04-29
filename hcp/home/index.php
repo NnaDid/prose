@@ -272,8 +272,39 @@
 				    </div><!--//inner-->
 			    </div><!--//app-card-->
 
+							<!--  Over lapping cards row-->
+			   <div class="row g-4 mx-3 overlapping_cards"  style="position: relative; top:-90px;">
+				    <div class="col-12 col-lg-4">
+					    <div class="app-card d-flex px-4 py-4 justify-content-space-between align-items-center shadow-sm">
+						  <img src="../assets/img/chat.svg" style="width:60px; height: 60px; margin-left:20px;"/>
+							 <div class="di mx-2 mt-2">
+								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number">10,000</span><br/>
+									<span class="text_desc">Patients</span>
+							 </div> 
+						</div><!--//app-card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4">
+					    <div class="app-card d-flex px-4 py-4 justify-content-space-between align-items-center shadow-sm"> 
+						    <img src="../assets/img/patients.svg" style="width:60px; height: 60px; margin-left:20px;"/>
+							 <div class="di mx-1 mt-2">
+								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number">60</span><br/>
+									<span class="text_desc text-left" style="text-align:left !important;">Health Care Professionals</span>
+							 </div>
+						</div><!--//app-card-->
+				    </div><!--//col-->
+				    <div class="col-12 col-lg-4">
+					    <div class="app-card d-flex px-4 py-4 justify-content-space-between align-items-center shadow-sm"> 
+						     <img src="../assets/img/chat.svg" style="width:60px; height: 60px; margin-left:20px;"/>
+								<div class="di mx-2 mt-2">
+									<span style="margin-top:20px; margin-bottom:-30px;" class="text_number">20</span><br/>
+									<span class="text_desc">Unread Messages</span>
+								</div>
+						</div><!--//app-card-->
+				    </div><!--//col-->
+	           </div>
+
   				<!--  Over lapping cards row-->
-			    <div class="row g-4 mx-3 overlapping_cards" style="position: relative; top:-100px;">
+			    <div class="row g-4 mx-3 overlapping_cards"  style="position: relative; top:-40px;">
 				    <div class="col-12 col-lg-4">
 					    <div class="app-card app-card-basic d-flex flex-column align-items-start shadow-sm">
 						    <div class="app-card-header p-3 border-bottom-0">
@@ -287,16 +318,16 @@
 						        </div><!--//row-->
 						    </div><!--//app-card-header-->
 						    <div class="app-card-body px-4 py-2">  
-							    <div class="intro mb-4 report_log_treatment">
-									<a><h6 class="" style="color:#57166A !important;">Read Unread Messages</h6></a>
-									<span class="text_desc">Read your unread messages/notifications</span>
+							    <div class="intro mb-4 report_log_treatment text-left">
+									<a><h6 class="text-left" style="color:#57166A !important;">Read Unread Messages</h6></a>
+									<span class="text_desc text-left">Read your unread messages/notifications</span>
 								</div>
 						    </div><!--//app-card-body--> 
 						</div><!--//app-card-->
-				    </div><!--//col-->
-					
-
+				    </div><!--//col--> 
+				</div>
 				<!--app-card-->
+
 				<div class="app-card alert alert-dismissible shadow-md mb-4" role="alert">
 				    <div class="inner">
 					    <div class="app-card-body p-3 p-lg-4">
@@ -330,27 +361,11 @@
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
     
     <!-- Page Specific JS -->
     <script src="assets/js/app.js"></script> 
 
-	<!--Start of Tawk.to Script-->
-	<script type="text/javascript">
-		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-		(function(){
-		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-		s1.async=true;
-		s1.src='https://embed.tawk.to/61e27af1b84f7301d32b21fb/1fpeb0g84';
-		s1.charset='UTF-8';
-		s1.setAttribute('crossorigin','*');
-		s0.parentNode.insertBefore(s1,s0);
-		})();
-	</script>
-	<!--End of Tawk.to Script-->
+
 
 </body>
 </html> 

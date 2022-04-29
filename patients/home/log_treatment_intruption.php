@@ -33,7 +33,7 @@
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
-	<style>
+<style>
 	.active, .today{
 			background: #8D2D91 !important;
 			color:#fff !important;
@@ -306,14 +306,7 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto d-flex justify-content-center align-items-center"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" href="#" role="button">
-								<!-- <img src="assets/images/user.png" alt="user profile"> -->
-								<i class="fa fa-user fa-2x"></i>
-							</a> 
-							
-						</div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto d-flex justify-content-center align-items-center">
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
 				            <a href="?u=logout" title="logout">Logout </a>
@@ -448,28 +441,29 @@
 	  						<!--=================================== THE LOGGED ITEMS ===================================================== /-->
 
 							  <!-- REMOVE DISAPLY:none to display -->
-								     	<!-- <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;"> -->
-                                              <!-- <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div> -->
+								     	<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
+                                              <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div>
 											  <!--//icon-holder-->
-                                                <!-- <div class="log_type col-md-9">Missed Radiotherapy</div>
+                                                 <div class="log_type col-md-9">Missed Radiotherapy</div> 
                                                 <div class="log_type col-md-12 mx-4 py-1"><strong>Reason:</strong> I missed the appointment</div>
                                                 <div class="log_type col-md-12 text-right">
 													<button class="btn text-success editRadiotherapyRecord">Edit</button>
 													<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
 												</div>
-                                        </div>   -->
+                                        </div>   
 										<!--//app-card-->
-	  									<!-- <p>&nbsp;</p> -->
-								     	<!-- <div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;"> -->
-                                                <!-- <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div>
-												//icon-holder
+	  									<p>&nbsp;</p>
+								     	<div class="app-card app-card-basic d-flex align-items-center justify-content-between shadow-sm row " style="border-radius:8px !important;">
+                                                <div class="py-1 col-md-3"> <img src="../../patients/assets/img/record.svg" id="missed_radiotherapy_record" class="__MissedRadioRecord" style="height:100%; width:100%;" />  </div> 
+												<!-- //icon-holder -->
                                                 <div class="log_type col-md-9">Missed Radiotherapy</div> 
+	  											  Nnamek
 												  <div class="log_type col-md-12 text-right">
 													<button class="btn text-success editRadiotherapyRecord">Edit</button>
 													<button class="btn text-danger deleteRadioTherapyRecord">Delete</button>
 												</div>
-                                        </div> -->
-										<!--//app-card-->
+                                        </div> 
+										<!--//app-card -->
 							<!-- =================================== THE LOGGED ITEMS ===================================================== /- -->
 
 
@@ -498,10 +492,11 @@
                                     </form>
                                 </div><!--//logMissedChemoForm Cotainer-->
 
+								<!--//logMissedRadiotherapyForm Cotainer--> 
                                 <div class="row my-auto mx-auto radiotherapySection" style="display:none;">
                                    <h5 class="h5_heading_text">Log Missed Radiotherapy</h5> 
                                    <p class="log_type"> Click on any of the options below </p>
-                                    <form class="logMissedChemoForm col-12">
+                                    <form class="logMissedRadioTherapyForm col-12">
 									       <div class="custom-control custom-checkbox d-flex justify-content-start">
                                                 <div class="round mx-4">
                                                     <input type="checkbox" class="custom-control-input no_treatment give_consent radio_consent" name ="no_treatment" value="no_treatment" id="checkbox_4" />  
@@ -570,13 +565,15 @@
                 }
          });
 
+
  		// Handles the selection Options for Chemodtherapy
 		 $(document).on("change", ".give_consent",function(e){
 			let id_section = $(this).attr("id");
 			$("input [type=checkbox]").attr("checked",false);
 			$(this).attr("checked",true);
 			if(id_section=="checkbox_2" && $("#"+id_section).is(":checked")){
-				$(".next__Missed").html(`<div class="text-center my-4">
+				$(".next__Missed").html(`<div class="result"></div>
+										  <div class="text-center my-4">
 											<button type="submit" class="btn btn-primary btn-block text-center">
 													<span> Save </span> 
 													<img src="../assets/img/arrow_.svg" class="mx-2"/> 
@@ -587,6 +584,7 @@
 												<label class="text_input_label" for="tired">Reason for missed treatment</label>
 												<textarea name="missed_treatment_reason" placeholder="Type your reason here:" class="form-control form-control-lg missed_treatment_reason"></textarea>
 											</div> 
+											<div class="result"></div>
 											<div class="text-center my-4">
 												<button type="submit" class="btn btn-primary btn-block text-center">
 														<span> Save </span> 
@@ -606,14 +604,14 @@
 			$("input [type=checkbox]").attr("checked",false);
 			$(this).attr("checked",true);
 			if(id_section=="checkbox_4" && $("#"+id_section).is(":checked")){
-				$(".next__Radio__Missed").html(`<div class="text-center my-4">
-											<button type="submit" class="btn btn-primary btn-block text-center">
-													<span> Save </span> 
-													<img src="../assets/img/arrow_.svg" class="mx-2"/> 
-											</button>
-										</div>`);
+				$(".next__Radio__Missed").html(`<div class="result"></div>
+				                                    <div class="text-center my-4"> 
+													<button type="submit" class="btn btn-primary btn-block text-center">
+															<span> Save </span> 
+															<img src="../assets/img/arrow_.svg" class="mx-2"/> 
+													</button> </div>`);
 			}else if(id_section=="checkbox_5" && $("#"+id_section).is(":checked")){
-				$(".next__Radio__Missed").html(` <div class="form-group mb-3 mt-4">
+				$(".next__Radio__Missed").html(`<div class="form-group mb-3 mt-4">
 													<label class="text_input_label" for="tired">Reason for missed treatment</label>
 													<textarea name="missed_treatment_reason" placeholder="Type your reason here" class="form-control form-control-lg missed_treatment_reason"></textarea>
 												</div>  
@@ -621,17 +619,87 @@
 													<label class="text_input_label" for="tired">Change in Treatment Schedule</label>
 													<textarea name="new_treatment_schedule" placeholder="Type here" class="form-control form-control-lg new_treatment_schedule"></textarea>
 												</div> 
-											<div class="text-center my-4">
-												<button type="submit" class="btn btn-primary btn-block text-center">
-														<span> Save </span> 
-														<img src="../assets/img/arrow_.svg" class="mx-2"/> 
-												</button>
-											</div> `);
+												<div class="result"></div>
+												<div class="text-center my-4">
+													<button type="submit" class="btn btn-primary btn-block text-center">
+															<span> Save </span> 
+															<img src="../assets/img/arrow_.svg" class="mx-2"/> 
+													</button>
+												</div>`);
 			}else{
 				$(".next__Radio__Missed").html(``);
 			}
 			
 
+		 });
+
+		 // Covert Serialzed FOrm Input to Object
+		 function converToOjbect(formData){
+			    let data = formData.split("&"); 
+				var obj  = {};
+				for(var key in data) { obj[data[key].split("=")[0]] = data[key].split("=")[1]; }
+				return obj;
+		 }
+
+		 //logMissedRadiotherapyForm    logMissedChemoForm
+		 $(document).on("submit",".logMissedRadiotherapyForm",function(evt){
+			evt.preventDefault();
+			let formData    = $(this).serialize();
+            let dataObject  = converToOjbect(formData); 			
+			console.info(dataObject); 
+			let $_this =$(this);
+				$_this.find('button:submit').attr("disabled","disabled");  
+				$_this.find('div.result').html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');  
+
+			      fetch('../../api/patients/treatment_interuption/radiotherapy.php', {
+							method: "POST",
+							body: JSON.stringify(dataObject),
+							headers: {"Content-type": "application/json; charset=UTF-8"}
+						})
+						.then(response =>response.json()) 
+						.then((json)=>{
+							console.log(json); 
+							if(json.msg == 'success'){
+								$_this.find('button:submit').removeAttr("disabled");  
+								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');  
+							}else{ 
+								console.log(json.msg);
+								$_this.find('div.result').html('<div class="alert alert-danger">'+json.msg+'</div>');
+								$_this.find('button:submit').removeAttr("disabled"); 
+							}
+						})
+						.catch(err => console.log(err));
+		 });
+
+
+
+		 $(document).on("submit","logMissedChemoForm",function(evt){
+			evt.preventDefault();
+			let formData    = $(this).serialize();
+            let dataObject  = converToOjbect(formData); 			
+			console.info(dataObject); 
+			let $_this =$(this);
+				$_this.find('button:submit').attr("disabled","disabled");  
+				$_this.find('div.result').html('<i class="fa fa-spinner fa-spin" style="font-size:24px"></i>');  
+
+			      fetch('../../api/patients/treatment_interuption/chemotherapy.php', {
+							method: "POST",
+							body: JSON.stringify(dataObject),
+							headers: {"Content-type": "application/json; charset=UTF-8"}
+						})
+						.then(response =>response.json()) 
+						.then((json)=>{
+							console.log(json); 
+							if(json.msg == 'success'){
+								$_this.find('button:submit').removeAttr("disabled");  
+								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');  
+							}else{ 
+								console.log(json.msg);
+								$_this.find('div.result').html('<div class="alert alert-danger">'+json.msg+'</div>');
+								$_this.find('button:submit').removeAttr("disabled"); 
+							}
+						})
+						.catch(err => console.log(err));
 		 });
 		  
 		 
@@ -640,19 +708,8 @@
 	</script>
 
 		</script>
-	<!--Start of Tawk.to Script-->
-	<script type="text/javascript">
-		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-		(function(){
-		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-		s1.async=true;
-		s1.src='https://embed.tawk.to/61e27af1b84f7301d32b21fb/1fpeb0g84';
-		s1.charset='UTF-8';
-		s1.setAttribute('crossorigin','*');
-		s0.parentNode.insertBefore(s1,s0);
-		})();
-	</script>
-	<!--End of Tawk.to Script-->
+	<!--Start of CHAT APPLIACTION HERE-->
+
 
 </body>
 </html> 

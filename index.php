@@ -16,14 +16,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter" rel="stylesheet"> 
 
     <link href="./patients/assets/css/theme.min.css" rel="stylesheet" type="text/css" media="all" />
     <link href="./patients/assets/css/custom.css"    rel="stylesheet" type="text/css" media="all" />
     <link href="./patients/assets/css/swal.css"      rel="stylesheet" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> 
-    <link rel="preload" as="font" href="./patients/assets/fonts/Inter-UI-upright.var.woff2" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" as="font" href="./patients/assets/fonts/Inter-UI.var.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">  
     <link rel="shortcut icon" href="./patients/assets/img/logo.png">  
     <script src="./patients/assets/js/swal.js"></script>
     <style>
@@ -32,6 +30,11 @@
         font-style: normal;
         font-weight: normal;
       }
+
+      .btn_rounded{
+        border-radius:2em;
+      }
+
       .intro_text{
         font-family: Inter;
         font-style: normal;
@@ -69,9 +72,18 @@
         flex-grow: 0;
         margin: 20px 0px;
       }
+      
+      
+      
+    .__treatment_side__effects{
+        font-family: Inter;
+        font-style: normal;
+        font-weight: 800; 
+      }
+      
     .btn-outline-primary{
       background-color: #fff !important;
-      border: 1px solid #6E7191 !important;
+      border: 1px solid rgba(141, 45, 145, 0.8) !important;
       color: rgba(141, 45, 145, 0.8) !important;
     }
     .btn-outline-primary:hover{
@@ -198,7 +210,7 @@
   .footer_section_content{
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
+    font-weight: normal !important;
     font-size: 14px;
     line-height: 24px; 
     font-feature-settings: 'salt' on, 'liga' off;
@@ -206,6 +218,7 @@
   }
   .footer_section_content p>a{
     color: #FFFFFF !important;
+    font-weight:normal !important;
   }
 
 .call_to_action_section{
@@ -230,8 +243,14 @@
   flex: none;
   order: 0;
   flex-grow: 0; 
-  padding: 10px ;
+  padding: 12px ;
 }
+
+  .btn-prosecare:hover{
+    background: linear-gradient(180deg, #57166A 0%, rgba(87, 22, 106, 0.8) 100%) !important;
+    border:1px solid #fff;
+    color: #fff !important;
+  }
 
 .top__circle__level__solution{
   position: relative;
@@ -327,14 +346,14 @@
             <div class="logo__holder">
                 <a href="/"><img src="./patients/assets/img/logo.svg" alt="prose Logo" /> </a>
             </div>
-            <div class="btn-group" role="group" aria-label="Oncopadi"> 
-                <a href ="./intro.php?onco_type=signUp" class="btn btn-primary mx-2 rounded">SignUp</a>
-                <a href ="./signIn/" class="btn btn-outline-primary rounded">SignIn</a>
+            <div class="btn-groupp" role="group" aria-label="Oncopadi"> 
+                <a href ="./intro.php?onco_type=signUp" class="btn btn-primary mx-2 btn_rounded">SignUp</a>
+                <a href ="./signIn/" class="btn btn-outline-primary btn_rounded">SignIn</a>
             </div>
     </div>
 
     <section class="row __margin d-flex justify-content-between align-items-center">
-             <div class="col-md-5"> 
+             <div class="col-md-5 text-left"> 
                     <p class="heading">Help us <label style="color:rgb(141, 45, 145);">help you</label>.</p>
                     <p class="intro_text">
                          <strong style="font-weight:900; color:black;">About 60% of people</strong> diagnosed with cancer require radiotherapy at some point in their care.
@@ -343,18 +362,13 @@
                     <p class="intro_text">
                         Radiotherapy is an essential treatment option in cancer care that uses powerful light (ionizing radiation) to kill cancer cells and shrink tumours. However, radiotherapy not only kills or slows down the growth of cancer cells, it can also cause damage to healthy cells, and result inside effects. 
                     </p> 
-                    <p class="my-4"><a href ="./intro.php" class="btn btn-primary px-4 py-2 rounded">Learn More <img src="./patients/assets/img/arrow_down.svg" alt="prose arrow" /></a></p>
+                    <p class="my-4"><a href ="./intro.php" class="btn btn-primary px-4 py-2 btn_rounded">Get Started</a></p>
              </div>
 
              <div class="col-md-5 ml-4">
                  <div class="inner__container justify-content-center align-items-center">
-                         <div class="inner__inner__container">
-                               <!-- <div class="__first_lady"><img src="./patients/assets/img/landing/first_lady.svg" alt="prose" /></div> -->
-                               <div class="__center__lady">
-                                  <img src="./patients/assets/img/artboard.png" style="width:150%;" alt="prose" />
-                                </div>
-                               <!-- <div class="__top_guy"><img src="./patients/assets/img/landing/top_guy.svg" alt="prose" /></div> -->
-                               <!-- <div class="__bottom_guy"><img src="./patients/assets/img/landing/bottom_guy.svg" alt="prose" /></div> -->
+                         <div class="inner__inner__container"> 
+                         <img src="./patients/assets/img/artboard.png" style="width:150%; position:relative;left:140px; top:20px; transform:scale(1.3); height:90%;" alt="prose" /> 
                         </div>
                  </div>
              </div>
@@ -386,7 +400,7 @@
                 <div class="card-body">
                   <img src="./patients/assets/img/breast.svg" alt="breast">
                   <h3 class="headr__cancer_type">Breast</h3>
-                    <ul>
+                    <ul class="text-left">
                         <li>Fatigue</li>
                         <li>Hair loss</li>
                         <li>Skin changes</li>
@@ -401,7 +415,7 @@
                 <div class="card-body"> 
                   <img src="./patients/assets/img/head_neck.svg" alt="head_neck">
                     <h3 class="headr__cancer_type">Head and Neck</h3>
-                    <ul> 
+                    <ul class="text-left"> 
                         <li>Fatigue</li>
                         <li>Hair loss</li>
                         <li>Mouth changes</li>
@@ -417,7 +431,7 @@
                 <div class="card-body"> 
                   <img src="./patients/assets/img/pelvic.svg" alt="Pelvic">
                   <h3 class="headr__cancer_type">Pelvic</h3>
-                    <ul>
+                    <ul class="text-left">
                     <li>Diarrhea</li>
                     <li>Fatigue</li>
                     <li>Hair loss</li>
@@ -437,8 +451,8 @@
    <!-- Problem and soulution section -->
     <section class="problem__solution __margin" style="background: #FFF;">
           <div class="problem__c">
-              <div class="header d-flex justify-content-start align-items-center"> 
-                    <h2 class="__treatment_side__effects">The Problem</h2>
+              <div class="header d-flex justify-content-center align-items-center"> 
+                    <h2 class="__treatment_side__effects text-center">The Problem</h2>
               </div>
 
               <div class="problem__container d-flex justify-content-between align-items-center row mb-4">
@@ -540,7 +554,7 @@
                 <div class="col-md-8 text-white">
                     We aim to help patients experiencing radiotherapy-induced side effects improve their 
                     treatment outcomes, decrease morbidity, prevent hospitalization, and save cost through the use of the PROSEcare app.
-                   <p> <a href="./intro.php?onco_type=signUp" class="btn btn-prosecare">Sign up for PROSEcare</a> </p>
+                   <p> <a href="./intro.php?onco_type=signUp" class="btn btn-prosecare btn_rounded mt-4">Sign up for PROSEcare</a> </p>
                 </div>
             </div>
          </div>
@@ -549,26 +563,31 @@
 <!-- footer Section  -->
     <div class="__footer_top">
           <div class="row __margin pt-4">
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <h4 class="footer__headers">Contact Us</h4>
-                  <div class="footer_section_content">
-                    <p> RBRR Digital Health hub
-                          Department of Radiation Biology, Radiotherapy and Radio-diagnosis, College of Medicine, University of Lagos, Lagos Nigeria.
+                  <div class="footer_section_content text-left">
+                    <p> RBRR Digital Health hub<br/>
+                          Department of Radiation Biology, <br/>
+                          Radiotherapy and Radio-diagnosis, College of Medicine, University of Lagos, Lagos, Nigeria.<br/>
                           (Mon-Fri from 8am-4pm)  
                       </p>
-                    <p><small>+234-818-752-7806, +234-803-553-0802</small></p>
-                    <p>research@oncopadi.com</p>
-                    <p class="d-flex justify-content-between align-items-center">
-                      <span class="fa fa-facebook fa-2x"></span> 
-                      <span class="fa fa-twitter fa-2x"></span> 
-                      <span class="fa fa-instagram fa-2x"></span> 
-                      <span class="fa fa-linkedin fa-2x"></span> 
-                      <span class="fa fa-youtube fa-2x"></span> 
-                    </p>
-                  </div>
+                    <p class="font-weight-normal">+234-818-752-7806, +234-803-553-0802</p>
+                    <p>research@oncopadi.com</p> 
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="d-flex justify-content-between align-items-center"> 
+                                  <a href="https://www.facebook.com/oncopadiapp/" target="__blank"><img src="./patients/assets/img/social/Facebook.svg"  width="17" height="17" alt="facebook" /> </a>
+                                  <a href="https://twitter.com/oncopadiapp" target="__blank"><img src="./patients/assets/img/social/Twitter.svg"   width="17" height="17" alt="twitter" /> </a>
+                                  <a href="https://www.instagram.com/accounts/login/?next=/oncopadiapp/" target="__blank"><img src="./patients/assets/img/social/Instagram.svg" width="17" height="17" alt="instagram" /></a> 
+                                  <a href="https://www.linkedin.com/company/oncopadi/" target="__blank"><img src="./patients/assets/img/social/LinkedIn.svg"  width="17" height="17" alt="linkedin" /> </a>
+                                  <a href="https://www.youtube.com/channel/UCHXLkjmyqWhUrqOdbuGdlfg?view_as=subscriber" target="__blank"><img src="./patients/assets/img/social/YouTube.svg"   width="17" height="17" alt="Youtube" /> </a>
+                              </div>
+                         </div>
+                      </div>
+                   </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-md-2 ml-4">
                     <h4 class="footer__headers">Quick Links</h4>
                     <div class="footer_section_content">
                       <p> <a  href ="./intro.php?onco_type=signUp">SignUp</a></p>
@@ -580,18 +599,18 @@
                 <div class="col-md-3">
                    <h4 class="footer__headers">Legal</h4>
                    <div class="footer_section_content">
-                      <p> <a href="#">Privacy Policy</a></p>
-                      <p> <a href="#">Terms of Service</a></p>
+                      <p> <a href="https://oncopadi.com/privacy-policy" target="__blank">Privacy Policy</a></p>
+                      <p> <a href="https://oncopadi.com/terms-and-conditions" target="__blank">Terms of Service</a></p>
                    </div>
                 </div>
 
-                <div class="col-md-3">
-                   <img src="./patients/assets/img/logo.svg" alt="prose Logo" />
+                <div class="col-md-2">
+                   <img src="./patients/assets/img/logo.svg" class="mt-4" alt="prose Logo" />
                 </div>
           </div>
     </div>
 
-    <div class="__footer text-center d-flex justify-content-center align-items-center">
+    <div class="__footer text-center d-flex justify-content-center align-items-center text-white">
          © 2022 ONCOPADI TECHNOLOGIES LIMITED. ALL RIGHTS RESERVED
     </div>
 
