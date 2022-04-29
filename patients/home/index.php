@@ -405,10 +405,10 @@
 										</div><!--//col--> 
 									</div><!--//row-->
 								</div><!--//app-card-header-->
-							<a href="../../Quality of life Questionnaire.pdf" download>
+							<a href="#" download>
 								<div class="app-card-body px-4 py-2">  
 									<div class="intro mb-4">
-									<a href="../../Quality of life Questionnaire.pdf" download><h6 style="color:#1C6804">Quality of Life Survey</h6>
+									<a href="#" download><h6 style="color:#1C6804">Quality of Life Survey</h6>
 										<span class="text_desc">Fill in your QOL at the start, midpoint and end of your treatment.</span>
 										</a>
 									</div>

@@ -441,7 +441,7 @@
 			    <div class="row g-4 mb-4">
 				    <div class="col-12 col-lg-7" style="min-height:100vh; overflow-y: hidden;">
 					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
-							<h1 class="h1">Treaments</h1>
+							<h1 class="h1">Treatments</h1>
 							<p class="left_heading-text mx-1">Log your treatments here</p> 
                                 <!--  Over lapping cards row-->
                                 <div class="row">
