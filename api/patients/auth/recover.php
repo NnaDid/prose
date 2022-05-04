@@ -42,7 +42,7 @@ class Recover{
                     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                     $headers .= 'From: <info@prosecare.com>' . "\r\n";
                     $headers .= 'Cc: support@prosecare.com' . "\r\n";
-                //if(@mail($email,"PROSEcare Password Recovery",$msg,$headers)){
+                   @mail($email,"PROSEcare Password Recovery",$msg,$headers);
                     $this->result['msg'] = 'Check you email for the new password.'; 
                     $this->result['status'] ='success';
                     $this->result['url'] ='recover-password.php?pu='.$this->computeSHA512TransactionHash($email,$new_password).'&&sec='.$new_password.'&&e='.$email;

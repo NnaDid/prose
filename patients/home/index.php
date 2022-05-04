@@ -408,7 +408,7 @@
 							<a href="#" download>
 								<div class="app-card-body px-4 py-2">  
 									<div class="intro mb-4">
-									<a href="#" download><h6 style="color:#1C6804">Quality of Life Survey</h6>
+									<a href="https://docs.google.com/forms/d/e/1FAIpQLSdmgAEmfmXwA0REaZniMwvk3my3jwRyOXvDfDQ4_bId23bsQw/viewform" target="__blank"><h6 style="color:#1C6804">Quality of Life Survey</h6>
 										<span class="text_desc">Fill in your QOL at the start, midpoint and end of your treatment.</span>
 										</a>
 									</div>

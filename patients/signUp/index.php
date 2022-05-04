@@ -183,8 +183,9 @@
           
           if(json.msg=='success'){
             result.html('<span style="color:green;">Successful!  Please check you email to confirm</span>'); 
+            console.log(json.verifyUrl);
             Toast.fire({ icon: 'success',title: 'Successful!'});
-            setTimeout(()=>{  window.location.href = './upload-consent.php';  }, 2000);
+            setTimeout(()=>{  window.location.href = "./check-mail.php";  }, 2000);
           }else{
             result.html('<span style="color:red;">'+json.msg+'</span>');
           }

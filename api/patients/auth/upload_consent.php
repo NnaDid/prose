@@ -18,7 +18,7 @@ class Consent {
         $obj       = json_decode($jsonInput,true);   
 
         $consent_doc_url = $obj['consent_doc_Url'];     
-        $email           = $obj['email'] ?? $_SESSION["PROSE_CARE__USER_EMAIL"];   
+        $email           = $_SESSION["PROSE_CARE__USER_EMAIL"];   
       
       if(self::exists($email,"users","email")){ 
                 $sql      = "UPDATE `users` SET `consent_doc_url`='$consent_doc_url',`updatedAt`=NOW() WHERE `email`='$email'";

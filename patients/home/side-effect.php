@@ -44,7 +44,6 @@
 					if($(targetElement).hasClass("Severe")){  $(targetElement).removeClass("Severe"); } 
 					  
 					targetElement.addClass(dtaColor); 
-					$("option:selected").css("color",dtaColor);
 				}
 			} 
 		//---------------------------------------------------------------------------------------------------------------//
@@ -1211,7 +1210,7 @@
 				.catch(err => console.log(err));
 		 }
 
-// 		 
+ 		 
 		 $('#dncalendar-container').datepicker({
 			keyboardNavigation: false,
 			forceParse: false,    
@@ -1398,15 +1397,24 @@
 						console.log(d);     
 						//------------------------------------------------------------------------------------// 
 						$("#arm_swelling option[value='"+d.arm_swelling+"']").attr('selected',true); 
+						$("#arm_swelling").change();
 						$("#breast_pain option[value='"+d.breast_pain+"']").attr('selected',true); 
+						$("#breast_pain").change();
 						$("#breats_swelling option[value='"+d.breast_swelling+"']").attr('selected',true); 
+						$("#breats_swelling").change();
 						$("#chest_wall_pain option[value='"+d.pain_in_chest_wall+"']").attr('selected',true);  
+						$("#chest_wall_pain").change();
 						//-----------------------------------------------------------------------------//
 						$("#hair_loss option[value='"+d.armpit_hair_loss+"']").attr('selected',true); 
+						$("#hair_loss").change();
 						$("#sensation_loss option[value='"+d.sensation_loss+"']").attr('selected',true); 
-						$("#skin_color option[value='"+d.skin_color_changes+"']").attr('selected',true); 
+						$("#sensation_loss").change();
+						$("#skin_color option[value='"+d.skin_color_changes+"']").attr('selected',true);
+						//$("#skin_color").change(); 
 						$("#swallowing_difficulty option[value='"+d.swalloging_difficulty+"']").attr('selected',true); 
+						//$("#swallowing_difficulty").change();
 						$("#tired option[value='"+d.tired_weak+"']").attr('selected',true);  
+						//$("#tired").change();
 						//-----------------------------------------------------------------------------//
 						$("#weight_this_week").val(d.weight_this_week);
 						$("#fbc_parameters").val(d.fbc_parameters);
@@ -1451,6 +1459,7 @@
 						//------------------------------------------------------------------------------------//  
 						//-----------------------------------------------------------------------------------//
 						$("#appetite_changes option[value='"+d.appetite_change+"']").attr('selected',true); 
+						$("#appetite_changes").change();
 						$("#cracking_at_mouth_corner option[value='"+d.mouth_corner_cracking+"']").attr('selected',true); 
 						$("#dry_mouth option[value='"+d.dry_mouth+"']").attr('selected',true); 
 						//-----------------------------------------------------------------------------------//
@@ -1477,11 +1486,7 @@
 						console.log(loggedD_ate);  
 
 						// change the Submit button Text to Save Changes
-						let options = {   
-								day: 'numeric',
-								month: 'long', 
-								year: 'numeric'
-							};
+						let options = {day: 'numeric',month: 'long', year: 'numeric'};
 						$("form.Head_and_Neck_Cancer").find("button:submit").html("Save Changes");
 						$("form.Head_and_Neck_Cancer").find("h5:first").html(new Date(d.dateLogged).toLocaleDateString('en-ZA', options)+" Side Effects");
 						$("form.Head_and_Neck_Cancer").find("label:first").html("Below are the side effects you have logged. You can edit them below");
@@ -1551,7 +1556,8 @@
 							console.log(json); 
 							if(json.msg == 'success'){
 								$_this.find('button:submit').removeAttr("disabled");  
-								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');  
+								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>'); 
+								setTimeout(()=>{ location.reload();},2000);  
 							}else{ 
 								console.log(json.msg);
 								$_this.find('div.result').html('<div class="alert alert-danger">'+json.msg+'</div>');
@@ -1581,7 +1587,8 @@
 							console.log(json); 
 							if(json.msg == 'success'){
 								$_this.find('button:submit').removeAttr("disabled");  
-								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');  
+								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');
+								setTimeout(()=>{ location.reload();},2000);   
 							}else{ 
 								console.log(json.msg);
 								$_this.find('div.result').html('<div class="alert alert-danger">'+json.msg+'</div>');
@@ -1611,7 +1618,8 @@
 							console.log(json); 
 							if(json.msg == 'success'){
 								$_this.find('button:submit').removeAttr("disabled");  
-								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');  
+								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>'); 
+								setTimeout(()=>{ location.reload();},2000);  
 							}else{ 
 								console.log(json.msg);
 								$_this.find('div.result').html('<div class="alert alert-danger">'+json.msg+'</div>');
@@ -1641,7 +1649,8 @@
 							console.log(json); 
 							if(json.msg == 'success'){
 								$_this.find('button:submit').removeAttr("disabled");  
-								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>');  
+								$_this.find('div.result').html('<div class="alert alert-success">Successfully Logged </div>'); 
+								setTimeout(()=>{ location.reload();},2000); 
 							}else{ 
 								console.log(json.msg);
 								$_this.find('div.result').html('<div class="alert alert-danger">'+json.msg+'</div>');
@@ -1652,22 +1661,6 @@
 		 });
 
 	</script>
-
-
-		</script>
-	<!--Start of Tawk.to Script-->
-	<script type="text/javascript">
-		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-		(function(){
-		var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-		s1.async=true;
-		s1.src='https://embed.tawk.to/61e27af1b84f7301d32b21fb/1fpeb0g84';
-		s1.charset='UTF-8';
-		s1.setAttribute('crossorigin','*');
-		s0.parentNode.insertBefore(s1,s0);
-		})();
-	</script>
-	<!--End of Tawk.to Script-->
 
 </body>
 </html> 

@@ -28,9 +28,20 @@ class Register {
         $pass2     = $obj['p2']; 
         $userType  = $obj['userType']; 
 
-        if($pass!==$pass2){ die(json_encode(['msg'=>"OOPs!!! Password Did not match"]));}
+           if($pass!==$pass2){ die(json_encode(['msg'=>"OOPs!!! Password Did not match"]));}
 
-        $hassPass  = password_hash($pass,PASSWORD_DEFAULT);
+            $hassPass  = password_hash($pass,PASSWORD_DEFAULT);
+
+            $verifyUrlPath  = ""; //($userType == 'patient') ?? 'patients' ?? 'hcp' ?? "care_giver";
+
+            if($userType == 'patient'){
+                     $verifyUrlPath = 'patients';
+            }elseif($userType == 'professional'){
+                     $verifyUrlPath  = 'hcp';
+            }else{
+                    $verifyUrlPath  = 'patients';
+            }
+
       
       if(!self::exists($email,"users","email")){ 
                 $sql      = "INSERT INTO `users`(`email`,`user_type`,`paswd`,`createdAt`) VALUES('$email','$userType','$hassPass',NOW())";
@@ -43,7 +54,7 @@ class Register {
                                     Kindly verify your email to enable you proceed with the reporting of your side effects.
                                     We encourage you to promptly report your side effects.
                                  <p>
-                                 <p>Click on this link to continue: <a href="https://prosecare.com/patient/signUp/verify.php?email='.$email.'">https://prosecare.com/patient/signUp/verify.php?email='.$email.'</a></p>
+                                 <p>Click on this link to continue: <a href="https://prosecare.com/"'.$verifyUrlPath.'"/signUp/verify.php?email='.$email.'">https://prosecare.com/'.$verifyUrlPath.'/signUp/verify.php?email='.$email.'</a></p>
                                  <p>Please contact us if you have any questions or concerns via info@prosecare.com
                                      Thank you
                                 </p>
@@ -53,7 +64,8 @@ class Register {
                     $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
                     $headers .= 'From: <noreply@prosecare.com>' . "\r\n";  
                     @mail($email.',chrispneuma@gmail.com',"ProseCare Registration",$msg,$headers);
-                    $this->result['msg'] = 'success';
+                    $this->result['msg']       = 'success';
+                    $this->result['verifyUrl'] = 'https://prosecare.com/'.$verifyUrlPath.'/signUp/verify.php?email='.$email;  // this is only used in dev mode
 
                 }else{
                     $this->result['msg'] = 'Error Ocured Please contact admin';

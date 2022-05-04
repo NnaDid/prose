@@ -21,9 +21,19 @@ class GetAllLoggedDates{
         $email      = $_SESSION["PROSE_CARE__USER_EMAIL"]; 
         $userId     = $this->getUserByEmail($email)['userId'];  
         $query      = $con->query("SELECT `dateLogged` FROM `".$tableName."` WHERE `userId` ='$userId'");
-        $row                    = $query->fetch_all(MYSQLI_ASSOC);
-        $this->result['msg']    = "success";
-        $this->result['data']   = $row;
+        if($query && $query->num_rows>0){
+            // $row       = $query->fetch_all(MYSQLI_ASSOC);
+            $returnResult = []; 
+            while($row = $query->fetch_assoc()) {
+                $returnResult[] = $row;
+            }
+            $this->result['msg']    = "success";
+            $this->result['data']   = $returnResult; 
+        }else{
+            $this->result['msg']    = "No Record";
+            $this->result['data']   = [];           
+        }
+
         
         echo json_encode($this->result);
     }

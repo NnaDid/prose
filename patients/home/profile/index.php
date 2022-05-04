@@ -498,6 +498,10 @@
                                                                     <label class="text_input_label">Income Level</label>
                                                                    <p class="mx-2 log_type" for="other_name"><?=$incom_level;?></p>
                                                                 </div>     
+                                                                <div class="form-group mb-2 col-md-6"> 
+                                                                    <label class="text_input_label">Managing Team</label>
+                                                                   <p class="mx-2 log_type" for="other_name"><?=$managing_team;?></p>
+                                                                </div>     
                                                         </div>
  
 

@@ -19,10 +19,14 @@ class GetMedications {
         $userId = $this->getUserByEmail($email)['userId'];
         $sql    = "SELECT * FROM `other_medications` WHERE `userId`='$userId'";
         $query  = $con->query($sql);
-        if($query){
-            $rows   = $query->fetch_all(MYSQLI_ASSOC);
+        if($query && $query->num_rows>0){
+            // $rows   = $query->fetch_all(MYSQLI_ASSOC);
+            $returnResult = []; 
+            while($row = $query->fetch_assoc()) {
+                $returnResult[] = $row;
+            }
             $this->result['msg']     =  'success';
-            $this->result['MEDICS']  =  $rows;
+            $this->result['MEDICS']  =  $returnResult;
         }
         $con->close();  
         echo json_encode($this->result);      

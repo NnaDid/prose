@@ -133,7 +133,7 @@
               <h1 class="mb-1 begin_text">Recover Password</h1>
               <p class="text-start">Create your new password here</p>
             </div>  
-            <form class ="forgotPasswordForm" action="../signIn" method="post">
+            <form class ="forgotPasswordForm" method="post">
                 <div class="form-group">
                     <small class="input_text_label">New Password</small>
                      <div class="input-group">
@@ -199,7 +199,7 @@
         $(document).on("keyup",".pwd, .pwd2", function(){
                 let p1 = $(".pwd").val();
                 let p2 = $(".pwd2").val();
-                if(p1!==p2){
+                if((p1!==p2) || (p1=="" && p2=="") || (p1.length <6)){
                     $(".pwd, .pwd2").css("border","1px solid red");
                     $(".signIn").attr("disabled","disabled");
                 }else{
@@ -208,6 +208,44 @@
                     
                 }
             });
+
+            $(document).on('submit','.forgotPasswordForm', function(evt){
+                evt.preventDefault();
+                let result  = $('.___result'); 
+                let p1      = $(".pwd").val();
+                let p2      = $(".pwd2").val(); 
+                // Get the email in sessionStorage  stored as "userEmail"
+                let searchParams = new URLSearchParams(location.search);
+                let email = (searchParams.has('e')) ? searchParams.get('e') : sessionStorage.getItem("userEmail");
+                //sessionStorage.setItem("userEmail", email);
+                //=================================================================
+                let data    = { email: email, p1:p1, p2:p2 };
+                console.log(data);
+                result.html('Please wait...');
+
+              fetch('../api/patients/auth/setNewPassword.php', {
+                  method: "POST",
+                  body: JSON.stringify(data),
+                  headers: {"Content-type": "application/json; charset=UTF-8"}
+              })
+              .then(response => response.json()) 
+              .then((json)=>{
+                console.log(json);
+                
+                if(json.status=='success'){
+                  result.html('<span style="color:green;">'+json.msg+'</span>'); 
+                  console.log(json.verifyUrl);
+                  Toast.fire({ icon: 'success',title: 'Successful!'});
+                  setTimeout(()=>{  window.location.href = '../signIn';  }, 2000);
+                }else{
+                  result.html('<span style="color:red;">'+json.msg+'</span>');
+                }
+              })
+              .catch(err => console.log(err));
+
+              });
+
+
 
         });
     </script>

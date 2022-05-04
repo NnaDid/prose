@@ -40,7 +40,7 @@ $pin_no                    = $base->getUserByEmail($email)['pin_no'];
 $hospital                  = $base->getUserByEmail($email)['hospital'];
 $folioNumber               = $base->getUserByEmail($email)['folioNumber'];
 $specialty                 = $base->getUserByEmail($email)['specialty'];
-$managing_team             = $base->getUserByEmail($email)['managing_team'];
+$managing_team             = $base->getUserByEmail($email)['mgt_team'];
 $professional_bio          = $base->getUserByEmail($email)['professional_bio'];
 
 // `userId`, `user_type`, `email`, `paswd`, `profile_pix_url`, `consent_doc_url`, `licence_url`, `fname`, `lname`, `dob`, `age`, `gender`, 

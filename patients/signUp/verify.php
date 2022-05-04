@@ -72,7 +72,15 @@
 
     <script type="text/javascript">
         $(document).ready(function(){ 
-            setTimeout(() => { location.href ="./continue-1.php?token=36gga67ayhu8djjknnkjkjhkhh8787dsh89876gghhgsghs879hgsdssdds90ds89s8d90s8d90s8d0s8d09sdsdhshdsjdsdsd6s";  }, 2000);
+              let searchParams = new URLSearchParams(location.search);
+              let hashCode     = function(s){  return s.split("").reduce(function(a,b){a=((a<<5)-a)+b.charCodeAt(0);return a&a},0); }
+              if(searchParams.has('email')){
+                  let emailUser  = searchParams.get('email');
+                  setTimeout(() => { location.href ="../index.php?token="+hashCode(emailUser)+"&&email="+emailUser;  }, 2000);
+              }else{ 
+                  alert("Sorry your email is absent");
+                  history.go(-1);  // goback by 1 page in history
+              }
          });
     </script>
 
