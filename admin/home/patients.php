@@ -443,7 +443,7 @@
 			    <div class="row g-4 mb-4"> 
 					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
                             <div class="topHeader d-flex justify-content-between align-items-center">
-                                <h1 class="h1 mx-2">&nbsp;Patients <span><i class="fa fa-users"></i> 32</span></h1>  
+                                <h1 class="h1 mx-2">&nbsp;Patients <span><i class="fa fa-users"></i> <label id="patientCounter"></label></span></h1>  
                                 <div class="d-flex align-items-center">
                                     <span style="position:relative;left:30px;"><i class="fa fa-search"></i></span>
                                     <input type="text" class="form-control searchInput" placeholder="Search table" value="search table"/> 
@@ -595,7 +595,8 @@
                      console.log(json.data);  
 
                      let Patients = json.data.filter((item)=>item.user_type=='patient'); 
-                     let patatientString ="";                   
+                     let patatientString ="";  
+                     $("#patientCounter").html(Patients.length);                 
                       Patients.map((item,i)=>(
                           patatientString+=`<tr> <th scope="row">${++i}</th>
                                                  <td>${item.lname + ' '+item.fname }</td>
