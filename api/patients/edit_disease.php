@@ -22,7 +22,7 @@ class EditDisease {
         $email           = $_SESSION["PROSE_CARE__USER_EMAIL"]; 
         $userId          = $this->getUserByEmail($email)['userId'];
         //`userId`, `how_old`, `cancer_type`, `histology`, `cancer_grade`, `cancer_stage`, `comorbidity`
-        $how_old        = $obj['how_old'];
+        $how_old         = $obj['how_old'];
         $cancer_type  	 = $obj['cancer_type'];
         $hist_type       = $obj['hist_type'];
         $cancer_grade    = $obj['cancer_grade'];

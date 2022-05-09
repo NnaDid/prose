@@ -21,6 +21,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet"> 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 	<link href="../assets/css/custom.css"    rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<style>
 		.app{ 
 			background: #f5d5f848 !important;
@@ -168,7 +169,7 @@
         table th, table td {
             border: 0 !important; 
             padding: 10px !important;
-            text-align: center;
+            text-align: left;
             vertical-align:middle;
 			border-radius:10px;
         }
@@ -181,10 +182,14 @@
             /* identical to box height */ 
             font-feature-settings: 'ss01' on; 
             color: #8D2D91;
-            text-align: center;
+            text-align: left;
             vertical-align: middle;
 			border-radius:10px;
         }
+
+		table tr td>a{
+			text-decoration:underline;
+		}
 
         .bottom_page_hints{   
             height: 46px;  
@@ -234,11 +239,7 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a href="#" role="button" aria-expanded="false"><img src="assets/images/user.png" alt="user profile"></a>
-				            
-			            </div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto">  
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
 				            <a href="?u=logout" title="logout">Logout </a>
@@ -335,7 +336,7 @@
 					    <div class="app-card d-flex px-2 justify-content-space-between align-items-center shadow-sm">
 						  <img src="../assets/img/chat.svg" style="width:60px; height: 60px; margin-left:20px;"/>
 							 <div class="di mx-2 mt-2">
-								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number">20</span>
+								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number patients_number">0</span>
 									<span class="text_desc">Patients</span>
 							 </div> 
 						</div><!--//app-card-->
@@ -344,7 +345,7 @@
 					    <div class="app-card d-flex px-2 justify-content-space-between align-items-center shadow-sm"> 
 						    <img src="../assets/img/patients.svg" style="width:60px; height: 60px; margin-left:20px;"/>
 							 <div class="di mx-1 mt-2">
-								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number">60</span>
+								    <span  style="margin-top:20px; margin-bottom:-30px;" class="text_number professionals_number">0</span>
 									<span class="text_desc">Health Care Professionals</span>
 							 </div>
 						</div><!--//app-card-->
@@ -353,7 +354,7 @@
 					    <div class="app-card d-flex px-2 justify-content-space-between align-items-center shadow-sm"> 
 						     <img src="../assets/img/chat.svg" style="width:60px; height: 60px; margin-left:20px;"/>
 								<div class="di mx-2 mt-2">
-									<span style="margin-top:20px; margin-bottom:-30px;" class="text_number">20</span>
+									<span style="margin-top:20px; margin-bottom:-30px;" class="text_number messages_number">0</span>
 									<span class="text_desc">Unread Messages</span>
 								</div>
 						</div><!--//app-card-->
@@ -370,69 +371,11 @@
 										<th scope="col">Name</th>
 										<th scope="col">Age</th>
 										<th scope="col">Gender</th>
-										<th scope="col">Cancer Type</th>
-										<th scope="col">Last logged symptom</th>
+										<th scope="col">User Type</th> 
 										<th scope="col"></th>
 										</tr>
 									</thead>
-									<tbody>
-										<tr>
-										<th scope="row">1</th>
-											<td> 
-											<div class="profile_con d-flex justify-content-start align-items-center">
-												<img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-												<span class="mx-1">Mark</span>
-											</div> 
-											</td>
-											<td>56</td>
-											<td>Male</td>
-											<td>Cancer Type</td>
-											<td>Today</td>
-											<td><a href="./profile/user_details.php?userId=12&name=Mark">View More</a></td>
-										</tr> 
-										<tr>
-										<th scope="row">2</th>
-											<td>
-											<div class="profile_con d-flex justify-content-start align-items-center">
-												<img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-												<span class="mx-1">Mark</span>
-											</div>
-											</td>
-											<td>76</td>
-											<td>Female</td>
-											<td>Cancer Type</td>
-											<td>Today</td>
-										<td><a href="./profile/user_details.php?userId=12&name=Mark">View More</a></td>
-										</tr> 
-										<tr>
-										<th scope="row">3</th>
-											<td>
-											<div class="profile_con d-flex justify-content-start align-items-center">
-												<img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-												<span class="mx-1">Melinda</span>
-											</div>
-											</td>
-											<td>76</td>
-											<td>Female</td>
-											<td>Cancer Type</td>
-											<td>Today</td>
-											<td><a href="./profile/user_details.php?userId=13&name=Melinda">View More</a></td>
-										</tr> 
-										<tr>
-										<th scope="row">4</th>
-											<td>
-											<div class="profile_con d-flex justify-content-start align-items-center">
-												<img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-												<span class="mx-1">Gates</span>
-											</div>
-											</td>
-											<td>66</td>
-											<td>Female</td>
-											<td>Cancer Type</td>
-											<td>Today</td>
-										<td><a href="./profile/user_details.php?userId=14&name=Gates">View More</a></td>
-										</tr> 
-									</tbody>
+									<tbody id="users_record">     </tbody>
 								</table>
 						</div>
 					</div>
@@ -474,14 +417,44 @@
  
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
-
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
-    
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>      
     <!-- Page Specific JS -->
     <script src="assets/js/app.js"></script> 
+	<script>
+        $(document).ready(function(){
+            var settings = {
+                    "url": "../../api/admin/patients.php",
+                    "method": "GET",
+                    "timeout": 0,
+                    "headers": { "Content-Type": "application/json" },
+                };  
+                
+                $.ajax(settings).done(function (response) {
+                     console.log(response);  
+                     let json = JSON.parse(response);                   
+                     console.log(json.data);  
+
+                     let Patients     = json.data.filter((item)=>item.user_type=='patient').length; 
+                     let Professional = json.data.filter((item)=>item.user_type=='professional').length; 
+                     let CareGiver    = json.data.filter((item)=>item.user_type=='"care_giver"').length; 
+					 $(".patients_number").html(Patients);
+					 $(".professionals_number").html(Professional);
+
+                     let users_record ="";                   
+					 json.data.map((item,i)=>(
+						users_record+=`<tr> <th scope="row">${++i}</th>
+                                                 <td>${item.lname + ' '+item.fname }</td>
+                                                 <td>${item.age}</td>
+                                                 <td>${item.gender}</td>
+                                                 <td>${item.user_type}</td>  
+                                                <td> <a href="#" class ="patientClass" id='patient__'${item.userId}>View More</a> </td>
+                                            </tr>`
+                      )); 
+                       $("#users_record").html(users_record);                 
+                }); 
+                
+        });
+    </script>
 </body>
 </html> 
 
