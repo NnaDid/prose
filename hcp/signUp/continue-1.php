@@ -152,7 +152,7 @@
                     <div class="form-group">
                         <small class="input_text_label">Date of Birth</small>
                         <input type="text" name="dob" placeholder="Date of Birth" class="form-control form-control-lg dob" />
-                        <input type="hidden" class="age" />
+                        <input type="hidden" name="age" class="age" />
                     </div>      
     
                     <div class="form-group mb-3">
@@ -219,7 +219,7 @@
 
           $('.dob').datepicker()
           .on('changeDate', function(e) {
-             $('.age').val(calculateAge(new Date($(".dob").val())));
+             $('.age').val(calculateAge(new Date($(".dob").val())));  //calculate and set Age value
               console.log($(".dob").val());
           });
 
@@ -241,9 +241,12 @@
                         firstName: firstName,
                         lastName: lastName, 
                         age: age, 
+                        dob:dob,
                         gender: gender,
                       };
           console.log(data);
+          console.log(JSON.stringify(data));
+
           result.html('Please wait...');
 
         fetch('../../api/hcp/auth/continue-1.php', {

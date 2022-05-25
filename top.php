@@ -1,7 +1,9 @@
 <?php
 session_start();
 require_once("api/common.php");
-$base->logOut();
+$base->logOut();  // Patients
+// $base->logOut();  // studycoordinator
+// $base->logOut();  // healthcare professional
 //-------------------------------------------------------------------------------
 $email          = $_SESSION["PROSE_CARE__USER_EMAIL"]; 
 //------------------------------------------------------------------------------

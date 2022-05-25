@@ -1,0 +1,4 @@
+[19-May-2022 09:14:56 America/New_York] PHP Notice:  Undefined index: email in /home/proscibg/public_html/api/patients/auth/continue-1.php on line 26
+[19-May-2022 09:14:59 America/New_York] PHP Notice:  Undefined index: email in /home/proscibg/public_html/api/patients/auth/continue-1.php on line 26
+[19-May-2022 09:15:27 America/New_York] PHP Notice:  Undefined index: email in /home/proscibg/public_html/api/patients/auth/continue-1.php on line 26
+[19-May-2022 09:17:57 America/New_York] PHP Notice:  Undefined index: email in /home/proscibg/public_html/api/patients/auth/continue-1.php on line 26

@@ -1,0 +1,31 @@
+[29-Apr-2022 19:13:43 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_all() in /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php:25
+Stack trace:
+#0 /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php(11): GetAllLoggedDates->getSideEffectsDates()
+#1 /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php(40): GetAllLoggedDates->__construct()
+#2 {main}
+  thrown in /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php on line 25
+[29-Apr-2022 19:16:21 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_all() in /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php:25
+Stack trace:
+#0 /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php(11): GetAllLoggedDates->getSideEffectsDates()
+#1 /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php(40): GetAllLoggedDates->__construct()
+#2 {main}
+  thrown in /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php on line 25
+[29-Apr-2022 19:18:20 America/New_York] PHP Fatal error:  Uncaught Error: Call to undefined method mysqli_result::fetch_all() in /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php:25
+Stack trace:
+#0 /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php(11): GetAllLoggedDates->getSideEffectsDates()
+#1 /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php(40): GetAllLoggedDates->__construct()
+#2 {main}
+  thrown in /home/proscibg/public_html/api/patients/side-effects/fetchAllLoggedDates.php on line 25
+[30-Apr-2022 09:27:02 America/New_York] PHP Notice:  Undefined index: tired in /home/proscibg/public_html/api/patients/side-effects/breast.php on line 41
+[30-Apr-2022 09:27:10 America/New_York] PHP Notice:  Undefined index: tired in /home/proscibg/public_html/api/patients/side-effects/breast.php on line 41
+[30-Apr-2022 09:27:21 America/New_York] PHP Notice:  Undefined index: tired in /home/proscibg/public_html/api/patients/side-effects/breast.php on line 41
+[30-Apr-2022 09:27:44 America/New_York] PHP Notice:  Undefined index: tired in /home/proscibg/public_html/api/patients/side-effects/breast.php on line 41
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: appetite_changes in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 32
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: cracking_at_mouth_corner in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 33
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: dry_mouth in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 35
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: loss_of_smell in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 39
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: nausea in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 42
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: skin_color_changes in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 45
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: tired_weak in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 49
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: voice_changes in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 50
+[01-May-2022 16:00:42 America/New_York] PHP Notice:  Undefined index: vomiting in /home/proscibg/public_html/api/patients/side-effects/head_neck.php on line 51

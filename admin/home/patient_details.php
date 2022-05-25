@@ -372,7 +372,7 @@
                                                          <div class="row d-flex justify-content-between align-items-center personal_information">
                                                                 <div class="form-group mb-2 col-md-6">
                                                                     <label class="text_input_label" for="fname">First Name</label>
-                                                                    <p class="mx-2 log_type" for="fname">Mark</p>
+                                                                    <p class="mx-2 log_type fname" for="fname">Mark</p>
                                                                    
                                                                 </div>
 

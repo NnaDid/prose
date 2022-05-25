@@ -307,8 +307,17 @@
           let religion       = $(".religion").val();
           let income_level   = $(".income_level").val();
           // =======================================================//
-          let userEmail       = sessionStorage.getItem("userEmail"); 
+        //   let userEmail       = sessionStorage.getItem("userEmail"); 
           //============================================================//
+          
+          let userEmail;  
+          let searchParams = new URLSearchParams(location.search);
+          if(searchParams.has('email')){
+                userEmail    =  searchParams.get('email'); 
+               }else{
+                 alert("Email is Lost");
+                 history.go(-1);
+             }
           let data  = { 
                         email: userEmail,
                         phone: phone,
@@ -334,7 +343,7 @@
           if(json.msg=='success'){
             result.html('<span class="alert alert-success" style="color:green;">Successful!</span>'); 
             Toast.fire({ icon: 'success',title: 'Successful!'});
-            setTimeout(()=>{  window.location.href = './continue-3.php';  }, 3000);
+            setTimeout(()=>{  window.location.href = './continue-3.php?email='+userEmail;  }, 3000);
           }else{
             result.html('<span class="alert alert-danger" style="color:red;">'+json.msg+'</span>');
           }

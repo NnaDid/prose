@@ -1,3 +1,4 @@
+<?php require_once("../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -350,20 +351,10 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.php">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="../signIn/">Log Out</a></li>
-							</ul>
-			            </div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto">  
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
-				            <a href="../signIn" title="Settings">Logout </a>
+				            <a href="?u=logout" title="logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -599,7 +590,7 @@
                      $("#patientCounter").html(Patients.length);                 
                       Patients.map((item,i)=>(
                           patatientString+=`<tr> <th scope="row">${++i}</th>
-                                                 <td>${item.lname + ' '+item.fname }</td>
+                                                 <td>${item.lname+ ' '+item.fname }</td>
                                                  <td>${item.age}</td>
                                                  <td>${item.gender}</td>
                                                  <td>${item.cancer_type}</td> 

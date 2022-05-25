@@ -55,30 +55,34 @@
           <div class="col-md-8 col-lg-7 col-xl-6">
             <div class="text-center mb-4">
               <img src="../assets/img/logo.svg" height ="" width ="100%" alt="prose" style="transform: scale(0.5);"/> 
-              <h4 class="mb-1 begin_text" style="font-size: 36px !important;">Upload Signed Consent Form</h4> 
+              <!--<h4 class="mb-1 begin_text" style="font-size: 36px !important;">Upload Signed Consent Form</h4> -->
               <p class="text-muted mb-0">
-                <a href="../../PROSE informed consent.docx" style="color:red !important; font-size:13px !important;" download>
-                  <u>Click here to download and fill the consent form before uploading</u> <i class="fa fa-arrow-down"></i>
+                <!--<a href="../../PROSE informed consent.docx" style="color:red !important; font-size:13px !important;" download>-->
+                  <!--<u>Click here to download and fill the consent form before uploading</u> <i class="fa fa-arrow-down"></i>-->
+                <!--</a>-->
+                <a href="../../PROSE informed consent.docx" style="color:red !important; font-size:17px !important;">
+                        <u>Great Job! Click on Next to continue</u>
                 </a>
               </p>
 
-                <form action ="#" enctype ="multipart/form-data" class="drag_drop_area_form text-center card my-4" style="height:200px; border:1px dotted #ccc; border-radius:4px;">
-                    <input type="file" class="consent_file" name="file" hidden>
-                    <div class="uploader_container d-flex flex-column align-items-center justify-content-cemter my-auto" id="drop-area">
-                            <img src="../assets/img/upload.png" style="height: 60px; width: 60px;" alt="Image" class="upload-consent-image">
-                            <p>Drag and drop to upload</p>        
-                    </div>
-                    <div class="details" style="padding:4px; margin:10px;"> 
-                            <span class="name"></span> 
-                            <div class="progress_report" style="height:10px; display:none; background-color:#8D2D91; border-radius:6px;"></div>
-                            <span class="percent"></span> 
-                    </div>
-              </form> 
+              <!--  <form action ="#" enctype ="multipart/form-data" class="drag_drop_area_form text-center card my-4" style="height:200px; border:1px dotted #ccc; border-radius:4px;">-->
+              <!--      <input type="file" class="consent_file" name="file" hidden>-->
+              <!--      <div class="uploader_container d-flex flex-column align-items-center justify-content-cemter my-auto" id="drop-area">-->
+              <!--              <img src="../assets/img/upload.png" style="height: 60px; width: 60px;" alt="Image" class="upload-consent-image">-->
+              <!--              <p>Drag and drop to upload</p>        -->
+              <!--      </div>-->
+              <!--      <div class="details" style="padding:4px; margin:10px;"> -->
+              <!--              <span class="name"></span> -->
+              <!--              <div class="progress_report" style="height:10px; display:none; background-color:#8D2D91; border-radius:6px;"></div>-->
+              <!--              <span class="percent"></span> -->
+              <!--      </div>-->
+              <!--</form> -->
 
-              <span class="___result"></span>
+              <!--<span class="___result"></span>-->
 
-              <div class="form-group my-2" style="margin-top:120px !important;">
-                <a  href="./continue-1.php" class="btn-block btn btn-primary btn-lg start_button isDisabled"> Next </a>
+              <div class="form-group my-2" style="margin-top:50px !important;">
+                <!--<a  href="./continue-1.php" class="btn-block btn btn-primary btn-lg start_button isDisabled"> Next </a>-->
+                <a  href="#" class="btn-block btn btn-primary btn-lg start_button next_button"> Next </a>
               </div>
 
           </div>
@@ -101,6 +105,23 @@
             $(".start_button").addClass("isDisabled");
            }
         });
+        
+        $(document).on("click",".next_button",function(evt){
+            evt.preventDefault();
+            let searchParams = new URLSearchParams(location.search);
+            $(".start_button").click(function(e){
+               e.preventDefault();
+               if(searchParams.has('email')){
+                   let emailUser    =  searchParams.get('email');
+                   location.href    = "./continue-1.php?email="+emailUser;
+               }else{
+                   alert("Email is Lost");
+                 history.go(-1);;
+               }
+            });
+            
+        });
+        
 
         // Triger file upload when the form is clicked
         let form         = document.querySelector('form');

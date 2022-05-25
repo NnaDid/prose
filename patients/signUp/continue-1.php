@@ -271,7 +271,17 @@
           let age             = $(".age").val();
           let gender          = $(".gender").val();
           // =======================================================//
-          let userEmail       = sessionStorage.getItem("userEmail"); 
+        //   let userEmail       = sessionStorage.getItem("userEmail");  
+          let userEmail;  
+          let searchParams = new URLSearchParams(location.search);
+          if(searchParams.has('email')){
+                userEmail    =  searchParams.get('email'); 
+               }else{
+                 alert("Email is Lost");
+                 history.go(-1);;
+             }
+         
+ 
           //============================================================//
           let data  = { 
                         email: userEmail,
@@ -298,7 +308,7 @@
           if(json.msg=='success'){
             result.html('<span class="alert alert-success" style="color:green;">Successful!</span>'); 
             Toast.fire({ icon: 'success',title: 'Successful!'});
-            setTimeout(()=>{  window.location.href = './continue-2.php';  }, 3000);
+            setTimeout(()=>{  window.location.href = './continue-2.php?email='+userEmail;  }, 3000);
           }else{
             result.html('<span class="alert alert-success" style="color:red;">'+json.msg+'</span>');
           }

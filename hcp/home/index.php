@@ -20,6 +20,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet"> 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 	<link href="../assets/css/custom.css"    rel="stylesheet" type="text/css" media="all" />
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<style>
 		.app{ 
 			background: #f5d5f848 !important;
@@ -177,14 +178,10 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a> 
-			            </div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto">  
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
-				            <a href="?u=logout" title="Settings">Logout </a>
+				            <a href="?u=logout" title="logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->

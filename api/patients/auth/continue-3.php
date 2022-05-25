@@ -36,6 +36,11 @@ class Register {
                 if($statment){
                       
                     $this->result['msg'] = 'success';
+                    
+                    if(!isset($_SESSION["PROSE_CARE__USER_EMAIL"])){
+                        $_SESSION["PROSE_CARE__USER_EMAIL"]  = $email;  // set the session if not set 
+                    }
+                    
 
                 }else{
                     $this->result['msg'] = 'Error Ocured';

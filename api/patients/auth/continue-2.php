@@ -23,7 +23,7 @@ class Register {
         $jsonInput = file_get_contents('php://input');  
         $obj       = json_decode($jsonInput,true);   
         
-        $email    = $_SESSION["PROSE_CARE__USER_EMAIL"] ?? $obj['email']; 
+        $email    = isset($_SESSION["PROSE_CARE__USER_EMAIL"]) ? $_SESSION["PROSE_CARE__USER_EMAIL"] : $obj['email']; 
         $phone    = $obj['phone']; 
         $country  = $obj['country']; 
         $state    = $obj['state'];  

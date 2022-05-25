@@ -1,3 +1,4 @@
+<?php require_once("../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
@@ -18,19 +19,16 @@
     <!-- App CSS -->  
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet">
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> -->
-	<!-- <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet"> -->
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Lato&display=swap" rel="stylesheet"> 
 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css"> 
     <link id="theme-style" rel="stylesheet" href="../assets/css/custom.css">
 
-	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" />
-	<!-- <link href="../assets/css/dncalendar-skin.css"    rel="stylesheet" type="text/css" media="all" /> -->
+	<link href="../assets/css/theme-software-library.min.css"    rel="stylesheet" type="text/css" media="all" /> 
 	
 	<!-- Page Specific JS -->
 	<link id="theme-style" rel="stylesheet" href="assets/css/bootstrap-datepicker.min.css">
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 	<!-- <script src="../assets/js/dncalendar.min.js"></script>  -->
 	<style>
         .removeDrugItem{
@@ -38,25 +36,25 @@
         }
         .btn-outline-primary {
             color: #8D2D91 !important;
-            border-color: #8D2D91 !important;
-     }
+				border-color: #8D2D91 !important;
+		}
 
-    .btn-outline-primary:hover {
-        color: #fff !important;
-        background-color: #8D2D91 !important;
-        border-color: #8D2D91 !important;
-    }
-	.active, .today{
-			background: #8D2D91 !important;
-			color:#fff !important;
-			font-weight: 600 !important;
+		.btn-outline-primary:hover {
+			color: #fff !important;
+			background-color: #8D2D91 !important;
+			border-color: #8D2D91 !important;
 		}
-	.app{
-			background: #eacfed83 !important;
-		}
-		.nav-link.active,.topBase,.topBase h3{
-			background: #8D2D91 !important;
-			color:#fff !important;
+		.active, .today{
+				background: #8D2D91 !important;
+				color:#fff !important;
+				font-weight: 600 !important;
+			}
+		.app{
+				background: #eacfed83 !important;
+			}
+			.nav-link.active,.topBase,.topBase h3{
+				background: #8D2D91 !important;
+				color:#fff !important;
 			font-weight: 600 !important;
 		}
 		.topBase{
@@ -261,20 +259,10 @@
 				    </div><!--//col--> 
  
 					<!--//app-search-box-->
-		            <div class="app-utilities col-auto"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="./profile">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#">Log Out</a></li>
-							</ul>
-			            </div><!--//app-user-dropdown--> 
+		            <div class="app-utilities col-auto">  
 						<!--//app-utility-item-->
 			            <div class="app-utility-item mr-4">
-				            <a href="#" title="Logout">Logout </a>
+				            <a  href="?u=logout" title="logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->

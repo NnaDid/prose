@@ -293,9 +293,18 @@
           let caregiver_relationship   = $(".caregiver_relationship").val(); 
           let mgt_team                  = $(".mgt_team").val(); 
 
-          // =======================================================//
-          let userEmail       = sessionStorage.getItem("userEmail"); 
+           // =======================================================//
+           //   let userEmail       = sessionStorage.getItem("userEmail"); 
           //============================================================//
+          let userEmail;  
+          let searchParams = new URLSearchParams(location.search);
+          if(searchParams.has('email')){
+                userEmail    =  searchParams.get('email'); 
+             }else{
+             alert("Email is Lost");
+             history.go(-1);;
+           }
+           
           let data  = { 
                         email: userEmail,
                         cancer_type: cancer_type,
@@ -303,7 +312,7 @@
                         effect_reporter: effect_reporter,
                         caregiver_relationship: caregiver_relationship, 
                         mgt_team:mgt_team,
-                      };
+             };
               console.log(data);
               result.html('Please wait...');
 

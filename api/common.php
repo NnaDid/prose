@@ -2,9 +2,9 @@
 
 trait Common{
     // public $host = "localhost";
-    // public $user = "proscibg_prosecare";
-    // public $pass = "Z37ZYP23JBBF";
-    // public $db   = "proscibg_prosecare";
+    // public $user = "proscibg_prosecare" ?? "root";
+    // public $pass = "Z37ZYP23JBBF" ?? "";
+    // public $db   = "proscibg_prosecare" ?? "prose";
 
     public $host = "localhost";
     public $user = "root";

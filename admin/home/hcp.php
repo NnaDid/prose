@@ -1,7 +1,8 @@
+<?php require_once("../../top.php");?>
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-    <title>Prose | HCP ~ HCP</title>
+    <title>Prose | HCP </title>
     
     <!-- Meta mc-calendar.min.js-->
     <meta charset="utf-8">
@@ -19,6 +20,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet"> 
     <link id="theme-style" rel="stylesheet" href="assets/css/portal.css">
 	<link href="../assets/css/custom.css"    rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <link href="../assets/css/swal.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="../assets/js/swal.js"></script>
 	<style>
 		.app{ 
 			background: #f5d5f848 !important;
@@ -59,51 +63,7 @@
         text-align: center;
         letter-spacing: 0.75px;
         color: #4E4B66;
-      }
-      .text_desc{
-		font-family: Inter;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 16px;
-		line-height: 24px; 
-		/* Grey/9 */
-		color: #7A667B;
-		/* Inside auto layout */
-		flex: none;
-		order: 1;
-		flex-grow: 0;
-		margin: 4px 0px;
-		text-align:left !important;
-      }
-	  .nav-link-text{
-		font-family: Inter;
-		font-family: Inter;
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-		line-height: 24px; 
-		/* color: #8A92A6;  */
-		flex: none;
-		order: 1;
-		flex-grow: 0;
-		margin: 0px 12px;
-	  }
-
-      input::placeholder{
-        font-family: Inter;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 16px;
-        line-height: 24px;
-        /* identical to box height, or 150% */
-        /* White */ 
-        color: #FFFFFF;
-        /* Inside auto layout */
-        flex: none;
-        order: 0;
-        flex-grow: 0;
-        margin: 0px 305px;
-      }  
+      } 
       
         .chat_input_container{
             display: flex;
@@ -206,7 +166,7 @@
         table th, table td {
             border: 0 !important; 
             padding: 10px !important;
-            text-align: center;
+            text-align: left;
             vertical-align:middle;
         }
 
@@ -218,7 +178,7 @@
             /* identical to box height */ 
             font-feature-settings: 'ss01' on; 
             color: #8D2D91;
-            text-align: center;
+            text-align: left;
             vertical-align: middle;
         }
 
@@ -259,19 +219,9 @@
  
 					<!--//app-search-box-->
 		            <div class="app-utilities col-auto"> 
-			            <div class="app-utility-item app-user-dropdown dropdown">
-				            <a class="dropdown-toggle" id="user-dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">
-							<img src="assets/images/user.png" alt="user profile"></a>
-				            <ul class="dropdown-menu" aria-labelledby="user-dropdown-toggle">
-								<li><a class="dropdown-item" href="account.php">Profile</a></li>
-								<li><a class="dropdown-item" href="settings.php">Settings</a></li>
-								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="../signIn/">Log Out</a></li>
-							</ul>
-			            </div><!--//app-user-dropdown--> 
 						<!--//app-utility-item-->
 			            <div class="app-utility-item ">
-				            <a href="../signIn" title="Settings">Logout </a>
+				            <a  href="?u=logout" title="logout">Logout </a>
 					    </div><!--//app-utility-item-->
 
 		            </div><!--//app-utilities-->
@@ -319,7 +269,7 @@
 					    </li><!--//nav-item-->
 					    
 					    <li class="nav-item"> 					        
-					        <a class="nav-link d-flex justify-content-start align-items-center"href="chat.php">
+					        <a class="nav-link d-flex justify-content-start align-items-center" href="chat.php">
 						        <span class=""> 
 									<img class="logo-icon" src="../assets/img/chat.svg" alt="logo"  style="width: 100%; height: 100%;"/>
 								 </span>
@@ -350,7 +300,7 @@
 			    <div class="row g-4 mb-4"> 
 					    <div class="app-card app-card-basic my-4"  style="background: #e5d2e80c !important;">
                             <div class="topHeader d-flex justify-content-between align-items-center">
-                                <h1 class="h1 mx-2">&nbsp;Health Care Professionals <span><i class="fa fa-users"></i> 32</span></h1>  
+                                <h1 class="h1 mx-2">&nbsp;Health Care Professionals <span><i class="fa fa-users"></i> <label class="professionalCounter"></label></span></h1>  
                                 <div class="d-flex align-items-center">
                                     <span style="position:relative;left:30px;"><i class="fa fa-search"></i></span>
                                     <input type="text" class="form-control searchInput" placeholder="Search table" value="search table"/> 
@@ -370,64 +320,16 @@
                                 <thead>
                                     <tr>
                                     <th scope="col">SN</th>
-                                    <th scope="col">Name</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Phone</th>
+                                    <th scope="col">Name</th> 
                                     <th scope="col">Age</th>
                                     <th scope="col">Gender</th>
                                     <th scope="col">Hospital</th>
-                                    <th scope="col">Specialty</th>
-                                    <th scope="col">Managing Team</th>
-                                    <th scope="col">Last Time Active</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col">Specialty</th> 
+                                    <th scope="col"></th>
                                     </tr>
                                 </thead>
-                                <tbody>
-                                    <tr>
-                                       <th scope="row">1</th>
-                                        <td> 
-                                          <div class="profile_con d-flex justify-content-start align-items-center">
-                                              <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Ada Momodu</span>
-                                          </div> 
-                                        </td>
-                                        <td>ada@gmail.com</td>
-                                        <td>08076543256</td>
-                                        <td>56</td>
-                                        <td>Female</td>
-                                        <td>LASU</td>
-                                        <td>Oncology</td>
-                                        <td>A</td>
-                                        <td>Tuestday, 11 am</td> 
-                                        <td>
-                                            <a href="./profile/user_details.php?userId=12&name=Mark">View More</a>
-                                            <a href="./profile/user_details.php?userId=12&name=Mark"> <i class="fa fa-trash text-danger"></i> </a>
-                                    
-                                    </td>
-                                    </tr>
-                                    
-                                    <tr>
-                                       <th scope="row">2</th>
-                                        <td> 
-                                          <div class="profile_con d-flex justify-content-start align-items-center">
-                                              <img src="assets/images/user.png" style="width: 60px; height: 60px;" alt="user profile">
-                                              <span class="mx-1">Ada Nna</span>
-                                          </div> 
-                                        </td>
-                                        <td>ada@gmail.com</td>
-                                        <td>08076543256</td>
-                                        <td>56</td>
-                                        <td>Female</td>
-                                        <td>LASU</td>
-                                        <td>Oncology</td>
-                                        <td>A</td>
-                                        <td>Tuestday, 11 am</td> 
-                                        <td>
-                                            <a href="./profile/user_details.php?userId=12&name=Mark">View More</a>
-                                            <a href="./profile/user_details.php?userId=12&name=Mark"> <i class="fa fa-trash text-danger"></i> </a>
-                                    
-                                    </td>
-                                    </tr>  
+                                <tbody id="professioalTableList">
+                                     
                                 </tbody>
                             </table>
                      </div>
@@ -471,13 +373,77 @@
     <!-- Javascript -->          
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>  
+    <script>
+        $(document).ready(function(){
+            const Toast = Swal.mixin({
+              toast: true,
+              position: 'top-end',
+              showConfirmButton: false,
+              timer: 3000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer)
+              toast.addEventListener('mouseleave', Swal.resumeTimer)
+              }
+          });
 
-    <!-- Charts JS -->
-    <script src="assets/plugins/chart.js/chart.min.js"></script> 
-    <script src="assets/js/index-charts.js"></script> 
-    
-    <!-- Page Specific JS -->
-    <script src="assets/js/app.js"></script> 
+            var settings = {
+                    "url": "../../api/admin/patients.php",
+                    "method": "GET",
+                    "timeout": 0,
+                    "headers": { "Content-Type": "application/json" },
+                };  
+                
+                $.ajax(settings).done(function (response) {
+                     console.log(response);  
+                     let json = JSON.parse(response);                   
+                     console.log(json.data);  
+
+                     let Professional = json.data.filter((item)=>item.user_type=='professional'); 
+                     let patatientString ="";  
+                     $(".professionalCounter").html(Professional.length);                 
+                      Professional.map((item,i)=>(
+                          patatientString+=`<tr> <th scope="row">${++i}</th>
+                                                 <td>${item.lname+ ' '+item.fname }</td>
+                                                 <td>${item.age}</td>
+                                                 <td>${item.gender}</td>
+                                                 <td>${item.hospital}</td> 
+                                                 <td>Today</td> 
+                                                <td> 
+                                                   <a href="#" class ="patientClass" id='patient__${item.userId}'>View More</a> 
+                                                   <a href="#" class ="patientClassDelete mx-4" id='patient__${item.userId}'><i class="fa fa-trash text-danger"></i></a> 
+                                                </td>
+                                            </tr>`
+                      )); 
+                       $("#professioalTableList").html(patatientString);                 
+                });
+
+                $(document).on("click",".patientClassDelete",function(e){
+                    e.preventDefault();
+                    let id = $(this).attr("id").split("__")[1]; 
+                    if(confirm("Are you sure you want to delete this user?")){
+                        fetch('../../api/deleteUser.php', {                                       
+                                    method: "POST",
+                                    body: JSON.stringify({uid:id}),
+                                    headers: {"Content-type": "application/json; charset=UTF-8"}
+                                })
+                                .then(response =>response.json()) 
+                                .then((json)=>{
+                                    if(json.status == 'success'){
+                                        console.log(json);  
+                                        Toast.fire({ icon: 'success',title: 'Successfully deleted' });
+                                        setTimeout(() => {  location.reload();  }, 2000);
+                                    }else{ 
+                                        console.log(json); 
+                                        Toast.fire({ icon: 'error',title: 'Error Deleting this user!'});
+                                    }
+                                })
+                                .catch(err => console.log(err));
+                        }
+                });
+
+        });
+    </script>
 </body>
 </html> 
 
